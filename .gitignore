@@ -1,0 +1,38 @@
+# Virtual environments
+env/
+venv/
+.venv/
+ENV/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Django SQLite database
+db.sqlite3
+
+# Django migrations
+**/migrations/*.py
+**/migrations/__pycache__/
+
+# Test cache (pytest)
+.pytest_cache/
+
+# Log files
+*.log
+
+# Environment variables
+.env
+
+# IDE/editor configurations
+.vscode/
+.idea/
+
+# System files
+.DS_Store
+Thumbs.db
+
+# Node
+node_modules/
+npm-debug.log
