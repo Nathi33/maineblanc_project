@@ -1,0 +1,59 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-08-03 20:22+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
+"1 : 2;\n"
+#: .\maineblanc_project\settings.py:102
+msgid "French"
+msgstr ""
+
+#: .\maineblanc_project\settings.py:103
+msgid "English"
+msgstr ""
+
+#: .\maineblanc_project\settings.py:104
+msgid "Spanish"
+msgstr ""
+
+#: .\maineblanc_project\settings.py:105
+msgid "German"
+msgstr ""
+
+#: .\reservations\templates\reservations\base.html:43
+msgid "Accueil"
+msgstr "Bienvenido"
+
+#: .\reservations\templates\reservations\base.html:46
+msgid "A propos"
+msgstr "Acerca de"
+
+#: .\reservations\templates\reservations\base.html:49
+msgid "Services"
+msgstr "Servicios"
+
+#: .\reservations\templates\reservations\base.html:52
+msgid "Hébergements & Réservations"
+msgstr "Alojamiento & Reservas"
+
+#: .\reservations\templates\reservations\base.html:55
+msgid "Aux alentours"
+msgstr "Alrededor"
+
+#: .\reservations\templates\reservations\base.html:58
+msgid "Contact"
+msgstr "Contacto"
