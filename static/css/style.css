@@ -1,0 +1,68 @@
+/******** Général ********/
+
+body {
+  font-family: "Comic Sans MS", "Comic Sans", cursive !important;
+  background-color: #f1f8fc;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  color: #000;
+  margin-top: 20px;
+}
+
+/******** Header ********/
+
+.logo {
+  width: 80px;
+  height: auto;
+  border-radius: 50%;
+}
+
+.navbar {
+    background-color: #483D8B !important;
+}
+
+.navbar .nav-item {
+    margin-right: 25px;
+}
+
+.navbar .nav-link {
+    color: #fff !important;
+}
+
+.nav-link {
+  transition: transform 0.2s ease-in-out;
+}
+
+.nav-link:hover {
+  transform: scale(1.2);
+}
+
+.flag {
+  width: 30px;
+  height: auto;
+  padding-right: 0;
+  margin-right: 0;
+}
+
+.dropdown {
+    margin-left: 50px;
+}
+
+.flag-menu {
+   min-width: unset !important;
+   width: auto;
+}
+
+
+
+
+
