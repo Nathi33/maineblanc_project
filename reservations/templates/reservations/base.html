@@ -1,113 +1,142 @@
-{% load static %}
+{% load static i18n %}
+
 <!DOCTYPE html>
-<html lang="fr">
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Accueil | Camping{% endblock %}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="{{ LANGUAGE_CODE|default:"fr" }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Accueil | Camping{% endblock %}</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <link rel="stylesheet" href="{% static 'css/style.css' %}" />
-        {% block styles %}{% endblock %}
-        <!-- Bootstrap CSS via CDN -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <link
-            rel="icon"
-            type="image/png"
-            href="{% static 'images/favicon.ico' %}"
-            />
-    </head>
+    <!-- CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+        rel="icon"
+        type="image/png"
+        href="{% static 'images/favicon.ico' %}"
+    />
 
-    <body>
-        <header class="header">
-            <nav class="navbar navbar-expand-lg fixed-top">
-                <div class="container-fluid">
-                    <a class="navbar-brand" href="#">
-                        <img
-                        src="{% static 'pictures/logo-maine-blanc.png' %}"
-                        alt="Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus du nom camping le Maine Blanc"
-                        class="logo"
-                        />
-                    </a>
-                                      
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    {% block styles %}{% endblock %}
+</head>
+
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="#">
+                    <img
+                    src="{% static 'pictures/logo-maine-blanc.png' %}"
+                    alt="Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus du nom camping le Maine Blanc"
+                    class="logo"
+                    />
+                </a>
+
+                <!-- Toggle button for mobile view -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
-                    </button>
+                </button>
 
-                    <div class="collapse navbar-collapse" id="navbarNav">
-                        <ul class="navbar-nav ms-auto">
-                            <li class="nav-item">
-                                <a class="nav-link active" aria-current="page" href="#">Accueil</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">A propos</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Services</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link">Hébergements & Réservations</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Aux alentours</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Contact</a>
-                            </li>
+                <!-- Menu -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">{% trans "Accueil" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">{% trans "A propos" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">{% trans "Services" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">{% trans "Hébergements & Réservations" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">{% trans "Aux alentours" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">{% trans "Contact" %}</a>
+                        </li>
 
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <img
-                                        src="{% static 'pictures/flag-french.png' %}"
-                                        alt="Drapeau français"
-                                        class="flag"
-                                    />
-                                </a>
-                                <ul class="dropdown-menu flag-menu">
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            <img
-                                            src="{% static 'pictures/flag-UK.png' %}"
-                                            alt="Drapeau britannique"
-                                            class="flag"
-                                            />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            <img
-                                            src="{% static 'pictures/flag-spain.png' %}"
-                                            alt="Drapeau espagnol"
-                                            class="flag"
-                                            />
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a class="dropdown-item" href="#">
-                                            <img
-                                            src="{% static 'pictures/flag-deutsch.png' %}"
-                                            alt="Drapeau allemand"
-                                            class="flag"
-                                            />
-                                        </a>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </div>
+                        <!-- Language Dropdown -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                {% get_current_language as LANGUAGE_CODE %}
+                                {% if LANGUAGE_CODE == "fr" %}
+                                    <img src="{% static 'pictures/flag-french.png' %}" alt="FR" class="flag"/>
+                                {% elif LANGUAGE_CODE == "en" %}
+                                    <img src="{% static 'pictures/flag-UK.png' %}" alt="EN" class="flag"/>
+                                {% elif LANGUAGE_CODE == "es" %}
+                                    <img src="{% static 'pictures/flag-spain.png' %}" alt="ES" class="flag"/>
+                                {% elif LANGUAGE_CODE == "de" %}
+                                    <img src="{% static 'pictures/flag-deutsch.png' %}" alt="DE" class="flag"/>
+                                {% else %}
+                                    <img src="{% static 'pictures/flag-french.png' %}" alt="FR" class="flag"/>
+                                {% endif %}
+                            </a>
+                            <ul class="dropdown-menu flag-menu">
+                                <li>
+                                    <form action="{% url 'set_language' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="fr">
+                                        <input type="hidden" name="next" value="{{ request.path }}">
+                                        <button type="submit" class="dropdown-item">
+                                            <img src="{% static 'pictures/flag-french.png' %}" alt="FR" class="flag"/>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form action="{% url 'set_language' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="en">
+                                        <input type="hidden" name="next" value="{{ request.path }}">
+                                        <button type="submit" class="dropdown-item">
+                                            <img src="{% static 'pictures/flag-UK.png' %}" alt="EN" class="flag"/>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form action="{% url 'set_language' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="es">
+                                        <input type="hidden" name="next" value="{{ request.path }}">
+                                        <button type="submit" class="dropdown-item">
+                                            <img src="{% static 'pictures/flag-spain.png' %}" alt="ES" class="flag"/>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form action="{% url 'set_language' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="de">
+                                        <input type="hidden" name="next" value="{{ request.path }}">
+                                        <button type="submit" class="dropdown-item">
+                                            <img src="{% static 'pictures/flag-deutsch.png' %}" alt="DE" class="flag"/>
+                                        </button>
+                                    </form>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
                 </div>
-            </nav>
+            </div>
+        </nav>
         {% block navbar %}{% endblock %}
-        
-        </header>
+    </header>
 
-        <main></main>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
 
-        <footer></footer>
+    <footer>
+        {% block footer %}{% endblock %}
+    </footer>
 
-        <!-- Bootstrap JS via CDN (Popper included) -->
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-        {% block extra_js %}{% endblock %}
-    </body>
+    <!-- JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    {% block extra_js %}{% endblock %}
+</body>
 </html>
 
 
