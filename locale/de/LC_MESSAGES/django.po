@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-03 20:22+0200\n"
+"POT-Creation-Date: 2025-08-04 15:52+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,42 +17,51 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-#: .\maineblanc_project\settings.py:102
+
+#: .\maineblanc_project\settings.py:104
 msgid "French"
 msgstr ""
 
-#: .\maineblanc_project\settings.py:103
+#: .\maineblanc_project\settings.py:105
 msgid "English"
 msgstr ""
 
-#: .\maineblanc_project\settings.py:104
+#: .\maineblanc_project\settings.py:106
 msgid "Spanish"
 msgstr ""
 
-#: .\maineblanc_project\settings.py:105
+#: .\maineblanc_project\settings.py:107
 msgid "German"
 msgstr ""
 
-#: .\reservations\templates\reservations\base.html:43
+#: .\reservations\templates\reservations\base.html:44
 msgid "Accueil"
 msgstr "Willkommen"
 
-#: .\reservations\templates\reservations\base.html:46
+#: .\reservations\templates\reservations\base.html:47
 msgid "A propos"
 msgstr "Über uns"
 
-#: .\reservations\templates\reservations\base.html:49
+#: .\reservations\templates\reservations\base.html:50
 msgid "Services"
 msgstr "Dienstleistungen"
 
-#: .\reservations\templates\reservations\base.html:52
+#: .\reservations\templates\reservations\base.html:53
 msgid "Hébergements & Réservations"
 msgstr "Unterkunft & Reservierungen"
 
-#: .\reservations\templates\reservations\base.html:55
+#: .\reservations\templates\reservations\base.html:56
 msgid "Aux alentours"
 msgstr "In der Umgebung"
 
-#: .\reservations\templates\reservations\base.html:58
+#: .\reservations\templates\reservations\base.html:59
 msgid "Contact"
 msgstr "Kontakt"
+
+#: .\reservations\templates\reservations\home.html:14
+msgid "Bienvenue au Camping Le Maine Blanc"
+msgstr "Willkommen auf dem Campingplatz Le Maine Blanc"
+
+#: .\reservations\templates\reservations\home.html:15
+msgid "Un coin de nature au cœur de la Gironde"
+msgstr "Eine ecke natur im herzen der Gironde"
