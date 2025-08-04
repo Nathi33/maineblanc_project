@@ -1,10 +1,18 @@
 {% extends "reservations/base.html" %}
 
+{% load static i18n %}
+
 {% block title %}Accueil | Camping{% endblock %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %}
+
 {% block content %}
-<div class="container mt-5">
-  <h1 class="text-center">Bienvenue au camping le Maine Blanc</h1>
-  <p class="lead text-center">Vos prochaines vacances en pleine nature commencent ici.</p>
-</div>
+  <section id="home" class="home-image">
+    <div class="home-content">
+      <h1>{% trans "Bienvenue au Camping Le Maine Blanc" %}</h1>
+      <p>{% trans "Un coin de nature au cœur de la Gironde" %}</p>
+    </div>
+</section>
 {% endblock %}

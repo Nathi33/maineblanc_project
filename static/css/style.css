@@ -7,6 +7,10 @@ body {
   padding: 0;
 }
 
+main {
+    padding-top: 125px;
+}
+
 h1,
 h2,
 h3,
@@ -21,9 +25,8 @@ h6 {
 /******** Header ********/
 
 .logo {
-  width: 80px;
-  height: auto;
-  border-radius: 50%;
+  width: 120px;
+  height: 100px;
 }
 
 .navbar {
@@ -36,13 +39,14 @@ h6 {
 
 .navbar .nav-link {
     color: #fff !important;
+    font-size: 1.2rem;
 }
 
-.nav-link {
+.nav-link, .logo {
   transition: transform 0.2s ease-in-out;
 }
 
-.nav-link:hover {
+.nav-link:hover, .logo:hover {
   transform: scale(1.2);
 }
 
