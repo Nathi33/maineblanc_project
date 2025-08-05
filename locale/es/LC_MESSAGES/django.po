@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-04 15:49+0200\n"
+"POT-Creation-Date: 2025-08-05 12:45+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,50 +19,137 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
 "1 : 2;\n"
 
-#: .\maineblanc_project\settings.py:104
-msgid "French"
-msgstr ""
+#: .\core\templates\core\about.html:5
+#, fuzzy
+#| msgid "Bienvenue au Camping Le Maine Blanc"
+msgid "À propos | Camping Le Maine Blanc"
+msgstr "Acerca de | Camping Le Maine Blanc"
 
-#: .\maineblanc_project\settings.py:105
-msgid "English"
-msgstr ""
 
-#: .\maineblanc_project\settings.py:106
-msgid "Spanish"
-msgstr ""
+#: .\core\templates\core\about.html:16 .\core\templates\core\about.html:20
+#, fuzzy
+#| msgid "Bienvenue au Camping Le Maine Blanc"
+msgid "Camping le Maine Blanc"
+msgstr "Camping Le Maine Blanc"
 
-#: .\maineblanc_project\settings.py:107
-msgid "German"
-msgstr ""
+#: .\core\templates\core\about.html:20
+msgid "étoile"
+msgstr "estrella"
 
-#: .\reservations\templates\reservations\base.html:44
+#: .\core\templates\core\about.html:21
+msgid "Envie de nature, de calme et de simplicité ?"
+msgstr "¿Quieres naturaleza, paz y sencillez?"
+
+#: .\core\templates\core\about.html:22
+msgid ""
+"Bienvenue au Camping Le Maine Blanc, un petit coin de paradis niché en "
+"pleine forêt de la Gironde, à seulement 5 minutes de Saint-Christoly-de-"
+"Blaye et 40 minutes de Bordeaux, dans un cadre verdoyant et paisible. Ici, "
+"on pose ses valises au coeur de la forêt, entre chant des oiseaux, "
+"emplacements ombragés et ambiance familiale à taille humaine."
+msgstr ""
+"Bienvenido al Camping Le Maine Blanc, un pequeño rincón de paraíso situado en "
+"el corazón del bosque de Gironda, a solo 5 minutos de Saint-Christoly-de-"
+"Blaye y a 40 minutos de Burdeos, en un entorno verde y tranquilo. Aquí, "
+"dejamos nuestras maletas en el corazón del bosque, entre el canto de los pájaros, "
+"parcelas sombreadas y un ambiente familiar a escala humana."
+
+#: .\core\templates\core\about.html:23
+msgid ""
+"Installez votre tente, caravane ou camping-car sur l'un de nos emplacements "
+"avec ou sans électricité, ou optez pour un mobil-home tout confort, idéal "
+"pour des vacances au vert sans compromis."
+msgstr ""
+"Monta tu tienda, caravana o autocaravana en una de nuestras parcelas "
+"con o sin electricidad, o bien optar por una cómoda casa móvil, ideal "
+"para unas vacaciones verdes sin concesiones."
+
+#: .\core\templates\core\about.html:24
+msgid ""
+"L'été, profitez de la piscine extérieure, des aires de jeux, des animaux du "
+"camping et des activités pour toute la famille. Coté papilles, food-trucks, "
+"pizzas, épicerie et bar avec terrasse vous régalent dans la bonne humeur. Et "
+"pour bien commencer la journée, pensez à commander votre pain et vos "
+"viennoiseries la veille pour les récupérer frais le lendemain matin à la "
+"réception."
+msgstr ""
+"En verano, disfruta de la piscina al aire libre, de los parques infantiles, de los animales del "
+"camping y actividades para toda la familia. Para deleitar el paladar, food trucks, "
+"pizzas, supermercado y bar con terraza te deleitarán con buen humor. Y "
+"para empezar bien el día, recuerda pedir tu pan y tu "
+"pasteles el día anterior para recogerlos frescos a la mañana siguiente en el "
+"recepción."
+
+
+#: .\core\templates\core\about.html:25
+msgid ""
+"Que vous cherchiez un camping familial en Gironde, un camping nature près de "
+"Bordeaux, ou un séjour simple et authentique en Nouvelle-Aquitaine, vous "
+"êtes au bon endroit."
+msgstr ""
+"Ya sea que busque un camping familiar en Gironde, un camping natural cerca "
+"Bordeaux, o una estancia sencilla y auténtica en Nueva Aquitania, "
+"estás en el lugar correcto."
+
+#: .\core\templates\core\base.html:18 .\core\templates\core\home.html:5
+#, fuzzy
+#| msgid "Bienvenue au Camping Le Maine Blanc"
+msgid "Accueil | Camping Le Maine Blanc"
+msgstr "Bienvenido | Camping Le Maine Blanc"
+
+#: .\core\templates\core\base.html:30
+msgid ""
+"Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus "
+"du nom camping le Maine Blanc"
+msgstr ""
+"Logotipo que representa un abeto, una tienda de campaña, una fogata y un sol encima "
+"llamado así por el camping Maine Blanc."
+
+
+#: .\core\templates\core\base.html:44
 msgid "Accueil"
 msgstr "Bienvenido"
 
-#: .\reservations\templates\reservations\base.html:47
+#: .\core\templates\core\base.html:47
 msgid "A propos"
 msgstr "Acerca de"
 
-#: .\reservations\templates\reservations\base.html:50
+#: .\core\templates\core\base.html:50
 msgid "Services"
 msgstr "Servicios"
 
-#: .\reservations\templates\reservations\base.html:53
+#: .\core\templates\core\base.html:53
 msgid "Hébergements & Réservations"
 msgstr "Alojamiento & Reservas"
 
-#: .\reservations\templates\reservations\base.html:56
+#: .\core\templates\core\base.html:56
 msgid "Aux alentours"
 msgstr "Alrededor"
 
-#: .\reservations\templates\reservations\base.html:59
+#: .\core\templates\core\base.html:59
 msgid "Contact"
 msgstr "Contacto"
 
-#: .\reservations\templates\reservations\home.html:14
+#: .\core\templates\core\home.html:14
 msgid "Bienvenue au Camping Le Maine Blanc"
 msgstr "Bienvenido al Camping Le Maine Blanc"
 
-#: .\reservations\templates\reservations\home.html:15
+#: .\core\templates\core\home.html:15
 msgid "Un coin de nature au cœur de la Gironde"
 msgstr "Un rincón de naturaleza en el corazón de la Gironda"
+
+#: .\maineblanc_project\settings.py:105
+msgid "French"
+msgstr ""
+
+#: .\maineblanc_project\settings.py:106
+msgid "English"
+msgstr ""
+
+#: .\maineblanc_project\settings.py:107
+msgid "Spanish"
+msgstr ""
+
+#: .\maineblanc_project\settings.py:108
+msgid "German"
+msgstr ""
