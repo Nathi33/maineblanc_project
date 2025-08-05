@@ -15,7 +15,7 @@
         type="image/png"
         href="{% static 'pictures/faviconMB.ico' %}"
     />
-    <title>{% block title %}Accueil | Camping{% endblock %}</title>
+    <title>{% block title %}{% trans "Accueil | Camping Le Maine Blanc" %}{% endblock %}</title>
     {% block styles %}{% endblock %}
 </head>
 
@@ -24,10 +24,10 @@
         <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container-fluid">
                 <!-- Logo -->
-                <a class="navbar-brand" href="#">
+                <a class="navbar-brand" href="{% url 'home' %}">
                     <img
                     src="{% static 'pictures/logoMB.png' %}"
-                    alt="Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus du nom camping le Maine Blanc"
+                    alt="{% trans 'Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus du nom camping le Maine Blanc' %}"
                     class="logo"
                     />
                 </a>
@@ -41,22 +41,22 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">{% trans "Accueil" %}</a>
+                            <a class="nav-link {% if request.resolver_match.url_name == 'home' %}active{% endif%}" aria-current="{% if request.resolver_match.url_name == 'home' %}page{% endif %}" href="{% url 'home' %}">{% trans "Accueil" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{% trans "A propos" %}</a>
+                            <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif%}" href="{% url 'about' %}">{% trans "A propos" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{% trans "Services" %}</a>
+                            <a class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif%}" href="{% url 'services' %}">{% trans "Services" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{% trans "Hébergements & Réservations" %}</a>
+                            <a class="nav-link {% if request.resolver_match.url_name == 'accommodations' %}active{% endif%}" href="{% url 'accommodations' %}">{% trans "Hébergements & Réservations" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{% trans "Aux alentours" %}</a>
+                            <a class="nav-link {% if request.resolver_match.url_name == 'activities' %}active{% endif%}" href="{% url 'activities' %}">{% trans "Aux alentours" %}</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">{% trans "Contact" %}</a>
+                            <a class="nav-link {% if request.resolver_match.url_name == 'contact' %}active{% endif%}" href="{% url 'contact' %}">{% trans "Contact" %}</a>
                         </li>
 
                         <!-- Language Dropdown -->
