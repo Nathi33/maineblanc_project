@@ -4,8 +4,8 @@
 <html lang="{{ LANGUAGE_CODE|default:"fr" }}">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}Accueil | Camping{% endblock %}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Le Maine Blanc, camping familial en Gironde, près de Bordeaux. Emplacements ombragés, mobil-homes, piscine, nature et convivialité à Saint-Christoly-de-Blaye.">
 
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
@@ -15,7 +15,7 @@
         type="image/png"
         href="{% static 'pictures/faviconMB.ico' %}"
     />
-
+    <title>{% block title %}Accueil | Camping{% endblock %}</title>
     {% block styles %}{% endblock %}
 </head>
 
