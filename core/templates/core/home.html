@@ -1,0 +1,19 @@
+{% extends "core/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Accueil | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section class="home-image">
+    <div class="home-content">
+      <h1>{% trans "Bienvenue au Camping Le Maine Blanc" %}</h1>
+      <p>{% trans "Un coin de nature au cœur de la Gironde" %}</p>
+    </div>
+  </section>
+
+{% endblock %}
