@@ -1,8 +1,164 @@
-{% extends "base.html" %}
+{% extends "core/base.html" %}
+
+{% load static i18n %}
 
 {% block title %}Services | Camping Le Maine Blanc{% endblock %}
 
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/services.css' %}" />
+{% endblock %}
+
 {% block content %}
-<h1>Nos Services au Camping Le Maine Blanc</h1>
-<p>C'est ici que débutera ton contenu sur les services.</p>
+<section class="container py-5">
+    <div class="container-title text-center">
+        <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-left"/>
+        <h2 class="title-services">{{ t.services_title }} </h2>
+        <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-right"/>
+    </div>
+
+  <p class="text-center mb-5">{{ t.services_subtitle }}</p>
+
+  <div class="row g-4">
+    <!-- Piscine -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="card-title text-center">
+            <h3 class="card-title">{{ t.pool_title }}</h3>
+            <img src="{% static 'pictures/piscine.png' %}" alt="Piscine" class=" logo-services img-fluid mb-3">
+          </div>
+          <p class="card-text">{{ t.pool_desc_1 }}</p>
+          <p class="card-text">{{ t.pool_desc_2 }}</p>
+          <div class="info">
+            <img src="{% static 'pictures/attention.png' %}" alt="Attention" class="logo-services-info">
+            <p class="card-text"><strong>{{ t.pool_warning_1 }}</strong> {{ t.pool_warning_2 }}</p>
+          </div>
+          <div class="info">
+            <img src="{% static 'pictures/cadenas.png' %}" alt="Attention" class="logo-services-info">
+            <p class="card-text"><strong>{{ t.pool_warning_3 }}</strong> {{ t.pool_warning_4 }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Restauration -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="card-title text-center">
+            <h3 class="card-title">{{ t.catering_title }}</h3>
+            <img src="{% static 'pictures/food-restaurant.png' %}" alt="Restauration" class="logo-services img-fluid mb-3">
+          </div>
+
+          <div class="info">
+            <img src="{% static 'pictures/camion.png' %}" alt="Attention" class="logo-services-info">
+            <p class="card-text-title">{{ t.catering_foodtrucks }}</p>
+          </div>
+          <ul class="list-unstyled">
+            <li><span class="list-title">{{ t.catering_burger }}</span> : {{ t.catering_burger_hours }}</li>
+            <li><span class="list-title">{{ t.catering_pizza }}</span> : {{ t.catering_pizza_hours }}</li>
+          </ul>
+          
+          <div class="info">
+            <img src="{% static 'pictures/croissant.png' %}" alt="Attention" class="logo-services-info">
+            <p class="card-text-title">{{ t.catering_bakery_title }}</p>
+          </div>
+          <p class="card-text">{{ t.catering_bakery_desc }}</p>
+
+          <div class="info">
+            <img src="{% static 'pictures/caddie.png' %}" alt="Attention" class="logo-services-info">
+            <p class="card-text-title">{{ t.catering_shop_title }}</p>
+          </div>
+          <p class="card-text">{{ t.catering_shop_desc }}</p>
+
+          <div class="info">
+            <img src="{% static 'pictures/bar.png' %}" alt="Attention" class="logo-services-info">
+            <p class="card-text-title">{{ t.catering_bar_title }}</p>
+          </div>
+          <p class="card-text">{{ t.catering_bar_desc }}</p>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Laverie -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="card-title text-center">
+            <h3 class="card-title">{{ t.laundry_title }}</h3>
+            <img src="{% static 'pictures/machine.png' %}" alt="Laverie" class="logo-services img-fluid mb-3">
+          </div>
+          <p class="card-text-title pb-2">{{ t.laundry_question }}</p>
+          <p class="card-text">{{ t.laundry_desc_1 }}</p>
+          <ul>
+            <li>{{ t.laundry_li_1 }}</li>
+            <li>{{ t.laundry_li_2 }}</li>
+            <li>{{ t.laundry_li_3 }}</li>
+          </ul>
+          <p class="card-text"><strong>{{ t.laundry_token }}</strong>.</p>
+          <p class="card-text">{{ t.laundry_detergent }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Animaux -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="card-title text-center">
+            <h3 class="card-title">{{ t.pets_title }}</h3>
+            <img src="{% static 'pictures/animaux.png' %}" alt="Animaux" class="logo-services img-fluid mb-3">
+          </div>
+          <p class="card-text">({{ t.pets_restriction }}</p>
+            <img src="{% static 'pictures/chien.png' %}" alt="Attention" class="logo-services-info">)
+          </p>                   
+          <p class="card-text"><strong>{{ t.pets_leash }}</strong> {{ t.pets_leash_desc }}</p>
+          <p class="card-text"><strong>{{ t.pets_pickup }} ?</strong> {{ t.pets_pickup_desc }}</p>
+          <div class="info">
+            <img src="{% static 'pictures/interdit.png' %}" alt="Attention" class="logo-services-info">
+            <p class="card-text"><strong>{{ t.pets_humans_only }}</strong> {{ t.pets_humans_only_desc }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wi-Fi -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="card-title text-center">
+            <h3 class="card-title">{{ t.wifi_title }}</h3>
+            <img src="{% static 'pictures/wifi.png' %}" alt="Wi-Fi" class="logo-services img-fluid mb-3">
+          </div>
+          <p class="card-text-title-wifi">{{ t.wifi_question }}</p>
+          <p class="card-text">{{ t.wifi_desc }}</p>
+          <p class="card-text">{{ t.wifi_info }}</p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Paiements -->
+    <div class="col-md-4">
+      <div class="card h-100">
+        <div class="card-body">
+          <div class="card-title text-center">
+            <h3 class="card-title">{{ t.payments_title }}</h3>
+            <img src="{% static 'pictures/paiements.png' %}" alt="Paiements" class="logo-services img-fluid mb-3">
+          </div>
+          <p class="card-text-title-pay">{{ t.payments_info }}</p>
+          <ul>
+            {% for mode in t.payments_list %}
+              <li>{{ mode }}</li>
+            {% endfor %}
+          </ul>
+          <p class="card-text">{{ t.payments_card }}</p>
+          <p class="card-text-pay">{{ t.payments_note }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 {% endblock %}
