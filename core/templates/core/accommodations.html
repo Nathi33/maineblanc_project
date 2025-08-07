@@ -1,0 +1,49 @@
+{% extends "core/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}Hébergements | Camping Le Maine Blanc{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/accommodations.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="container-title text-center">
+            <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-left"/>
+            <h2 class="title-accommodations">Nos hébergements </h2>
+            <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-right"/>
+    </div>
+
+    <div class="row">
+    <!-- Première carte -->
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <img src="{% static 'pictures/bus.jpg' %}" class="pictures-card card-img-top w-100" alt="Photo d'un bus sur parcelle">
+            <div class="card-body">
+                <h3 class="card-title">{{ t.tent_title }}</h3>
+                <p class="card-text">{{ t.tent_text_1 }}</p>
+                <p class="card-text">{{ t.tent_text_2 }}</p>
+                <a href="{% url 'bookings'%}" class="btn btn-primary">{{ t.tent_button }}</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Deuxième carte -->
+    <div class="col-md-6 mb-4">
+        <div class="card h-100">
+            <img src="{% static 'pictures/mobil-home.jpg' %}" class="pictures-card card-img-top w-100" alt="Photo d'un mobil-home">
+            <div class="card-body">
+                <h3 class="card-title">{{ t.mobile_title }}</h3>
+                <p class="card-text">{{ t.mobile_text_1 }}</p>
+                <p class="card-text">{{ t.mobile_text_2 }}</p>
+                <a href="{% url 'contact' %}" class="btn btn-primary">{{ t.mobile_button }}</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+</section>
+{% endblock %}
