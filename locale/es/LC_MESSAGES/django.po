@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-05 12:45+0200\n"
+"POT-Creation-Date: 2025-08-12 17:33+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,15 +20,10 @@ msgstr ""
 "1 : 2;\n"
 
 #: .\core\templates\core\about.html:5
-#, fuzzy
-#| msgid "Bienvenue au Camping Le Maine Blanc"
 msgid "À propos | Camping Le Maine Blanc"
 msgstr "Acerca de | Camping Le Maine Blanc"
 
-
 #: .\core\templates\core\about.html:16 .\core\templates\core\about.html:20
-#, fuzzy
-#| msgid "Bienvenue au Camping Le Maine Blanc"
 msgid "Camping le Maine Blanc"
 msgstr "Camping Le Maine Blanc"
 
@@ -48,11 +43,11 @@ msgid ""
 "on pose ses valises au coeur de la forêt, entre chant des oiseaux, "
 "emplacements ombragés et ambiance familiale à taille humaine."
 msgstr ""
-"Bienvenido al Camping Le Maine Blanc, un pequeño rincón de paraíso situado en "
-"el corazón del bosque de Gironda, a solo 5 minutos de Saint-Christoly-de-"
+"Bienvenido al Camping Le Maine Blanc, un pequeño rincón de paraíso situado "
+"en el corazón del bosque de Gironda, a solo 5 minutos de Saint-Christoly-de-"
 "Blaye y a 40 minutos de Burdeos, en un entorno verde y tranquilo. Aquí, "
-"dejamos nuestras maletas en el corazón del bosque, entre el canto de los pájaros, "
-"parcelas sombreadas y un ambiente familiar a escala humana."
+"dejamos nuestras maletas en el corazón del bosque, entre el canto de los "
+"pájaros, parcelas sombreadas y un ambiente familiar a escala humana."
 
 #: .\core\templates\core\about.html:23
 msgid ""
@@ -60,9 +55,9 @@ msgid ""
 "avec ou sans électricité, ou optez pour un mobil-home tout confort, idéal "
 "pour des vacances au vert sans compromis."
 msgstr ""
-"Monta tu tienda, caravana o autocaravana en una de nuestras parcelas "
-"con o sin electricidad, o bien optar por una cómoda casa móvil, ideal "
-"para unas vacaciones verdes sin concesiones."
+"Monta tu tienda, caravana o autocaravana en una de nuestras parcelas con o "
+"sin electricidad, o bien optar por una cómoda casa móvil, ideal para unas "
+"vacaciones verdes sin concesiones."
 
 #: .\core\templates\core\about.html:24
 msgid ""
@@ -73,13 +68,12 @@ msgid ""
 "viennoiseries la veille pour les récupérer frais le lendemain matin à la "
 "réception."
 msgstr ""
-"En verano, disfruta de la piscina al aire libre, de los parques infantiles, de los animales del "
-"camping y actividades para toda la familia. Para deleitar el paladar, food trucks, "
-"pizzas, supermercado y bar con terraza te deleitarán con buen humor. Y "
-"para empezar bien el día, recuerda pedir tu pan y tu "
-"pasteles el día anterior para recogerlos frescos a la mañana siguiente en el "
-"recepción."
-
+"En verano, disfruta de la piscina al aire libre, de los parques infantiles, "
+"de los animales del camping y actividades para toda la familia. Para "
+"deleitar el paladar, food trucks, pizzas, supermercado y bar con terraza te "
+"deleitarán con buen humor. Y para empezar bien el día, recuerda pedir tu pan "
+"y tu pasteles el día anterior para recogerlos frescos a la mañana siguiente "
+"en el recepción."
 
 #: .\core\templates\core\about.html:25
 msgid ""
@@ -88,12 +82,18 @@ msgid ""
 "êtes au bon endroit."
 msgstr ""
 "Ya sea que busque un camping familiar en Gironde, un camping natural cerca "
-"Bordeaux, o una estancia sencilla y auténtica en Nueva Aquitania, "
-"estás en el lugar correcto."
+"Bordeaux, o una estancia sencilla y auténtica en Nueva Aquitania, estás en "
+"el lugar correcto."
+
+#: .\core\templates\core\accommodations.html:5
+msgid "Hébergements | Camping Le Maine Blanc"
+msgstr "Alojamientos | Camping Le Maine Blanc"
+
+#: .\core\templates\core\accommodations.html:15
+msgid "Nos hébergements"
+msgstr "Nuestro alojamiento"
 
 #: .\core\templates\core\base.html:18 .\core\templates\core\home.html:5
-#, fuzzy
-#| msgid "Bienvenue au Camping Le Maine Blanc"
 msgid "Accueil | Camping Le Maine Blanc"
 msgstr "Bienvenido | Camping Le Maine Blanc"
 
@@ -102,9 +102,8 @@ msgid ""
 "Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus "
 "du nom camping le Maine Blanc"
 msgstr ""
-"Logotipo que representa un abeto, una tienda de campaña, una fogata y un sol encima "
-"llamado así por el camping Maine Blanc."
-
+"Logotipo que representa un abeto, una tienda de campaña, una fogata y un sol "
+"encima llamado así por el camping Maine Blanc."
 
 #: .\core\templates\core\base.html:44
 msgid "Accueil"
@@ -138,18 +137,181 @@ msgstr "Bienvenido al Camping Le Maine Blanc"
 msgid "Un coin de nature au cœur de la Gironde"
 msgstr "Un rincón de naturaleza en el corazón de la Gironda"
 
+#: .\core\templates\core\services.html:5
+msgid "Services | Camping Le Maine Blanc"
+msgstr "Servicios | Camping Le Maine Blanc"
+
 #: .\maineblanc_project\settings.py:105
 msgid "French"
-msgstr ""
+msgstr "Francés"
 
 #: .\maineblanc_project\settings.py:106
 msgid "English"
-msgstr ""
+msgstr "Inglés"
 
 #: .\maineblanc_project\settings.py:107
 msgid "Spanish"
-msgstr ""
+msgstr "Español"
 
 #: .\maineblanc_project\settings.py:108
 msgid "German"
+msgstr "Alemán"
+
+#: .\reservations\forms.py:7
+msgid "Nom"
+msgstr "Nombre"
+
+#: .\reservations\forms.py:11
+msgid "Prénom"
+msgstr "Apellido"
+
+#: .\reservations\forms.py:15
+msgid "Adresse"
+msgstr "Dirección"
+
+#: .\reservations\forms.py:19
+msgid "Code postal"
+msgstr "Código postal"
+
+#: .\reservations\forms.py:23
+msgid "Ville"
+msgstr "Ciudad"
+
+#: .\reservations\forms.py:27
+msgid "Téléphone"
+msgstr "Teléfono"
+
+#: .\reservations\forms.py:31
+msgid "Adresse email"
+msgstr "Correo electrónico"
+
+#: .\reservations\forms.py:35
+msgid "Message"
+msgstr "Mensaje"
+
+#: .\reservations\forms.py:42
+msgid "Date d'arrivée"
+msgstr "Fecha de llegada"
+
+#: .\reservations\forms.py:52
+msgid "Date de départ"
+msgstr "Fecha de salida"
+
+#: .\reservations\forms.py:63
+msgid "Choisissez un type"
+msgstr "Elige un tipo"
+
+#: .\reservations\forms.py:64
+msgid "Tente / Voiture tente"
+msgstr "Tienda / Coche tienda"
+
+#: .\reservations\forms.py:65
+msgid "Caravane / Fourgon aménagé / Van"
+msgstr "Caravana / Furgón adaptado / Van"
+
+#: .\reservations\forms.py:66
+msgid "Camping-car"
+msgstr "Autocaravana"
+
+#: .\reservations\forms.py:67
+msgid "Mobil-home"
+msgstr "Casa móvil"
+
+#: .\reservations\forms.py:70
+#: .\reservations\templates\reservations\reservation_request.html:116
+msgid "Type d'hébergement"
+msgstr "Tipo de alojamiento"
+
+#: .\reservations\forms.py:76
+#: .\reservations\templates\reservations\reservation_request.html:127
+msgid "Adultes"
+msgstr "Adultos"
+
+#: .\reservations\forms.py:85
+#: .\reservations\templates\reservations\reservation_request.html:136
+msgid "+8 ans"
+msgstr "+8 años"
+
+#: .\reservations\forms.py:94
+#: .\reservations\templates\reservations\reservation_request.html:145
+msgid "-8 ans"
+msgstr "-8 años"
+
+#: .\reservations\forms.py:103
+#: .\reservations\templates\reservations\reservation_request.html:154
+msgid "Animaux"
+msgstr "Animales"
+
+#: .\reservations\forms.py:113
+msgid "Avec électricité"
+msgstr "Con electricidad"
+
+#: .\reservations\forms.py:114
+msgid "Sans électricité"
+msgstr "Sin electricidad"
+
+#: .\reservations\forms.py:117
+#: .\reservations\templates\reservations\reservation_request.html:164
+msgid "Électricité"
+msgstr "Electricidad"
+
+#: .\reservations\forms.py:133
+msgid "La date d'arrivée ne peut pas être antérieure à aujourd'hui."
+msgstr "La fecha de llegada no puede ser anterior a hoy."
+
+#: .\reservations\forms.py:137
+msgid "La date de départ doit être postérieure à la date d'arrivée."
+msgstr "La fecha de salida debe ser posterior a la fecha de llegada."
+
+#: .\reservations\templates\reservations\reservation_request.html:9
+msgid "Contact | Camping Le Maine Blanc"
+msgstr "Contacto | Camping Le Maine Blanc"
+
+#: .\reservations\templates\reservations\reservation_request.html:14
+#: .\reservations\templates\reservations\reservation_request.html:16
+msgid "Décoration"
+msgstr "Decoración"
+
+#: .\reservations\templates\reservations\reservation_request.html:15
+msgid "Nous contacter"
+msgstr "Contáctenos"
+
+#: .\reservations\templates\reservations\reservation_request.html:24
+msgid "Attention"
+msgstr "Atención"
+
+#: .\reservations\templates\reservations\reservation_request.html:24
+msgid "Veuillez corriger les erreurs suivantes :"
+msgstr "Por favor corrija los siguientes errores :"
+
+#: .\reservations\templates\reservations\reservation_request.html:53
+msgid "Vos coordonnées"
+msgstr "Su información de contacto"
+
+#: .\reservations\templates\reservations\reservation_request.html:99
+msgid "Détails de la réservation"
+msgstr "Detalles de la reserva"
+
+#: .\reservations\templates\reservations\reservation_request.html:123
+msgid "Nombre d'occupants"
+msgstr "Número de ocupantes"
+
+#: .\reservations\templates\reservations\reservation_request.html:177
+msgid "Localisation du camping"
+msgstr "Localización del camping"
+
+#: .\reservations\templates\reservations\reservation_request.html:190
+msgid "Champs obligatoires"
+msgstr "Campos obligatorios"
+
+#: .\reservations\templates\reservations\reservation_request.html:194
+msgid "Envoyer la demande"
+msgstr "Enviar la solicitud"
+
+#: .\reservations\views.py:35
+msgid ""
+"Votre demande de réservation a bien été envoyée, nous reviendrons vers vous "
+"très rapidement."
 msgstr ""
+"Su solicitud de reserva ha sido enviada correctamente, nos pondremos en "
+"contacto con usted muy pronto."

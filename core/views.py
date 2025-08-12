@@ -32,7 +32,11 @@ def pricing_view(request):
     return render(request, 'core/pricing.html')
 
 def contact_view(request):
-    return render(request, 'core/contact.html')
+    context = {
+        'range_0_10': range(11),  # 0 à 10 inclus
+        'range_0_3': range(3),    # pour les animaux (0 à 2)
+    }
+    return render(request, 'core/contact.html', context)
 
 def bookings_view(request):
     return render(request, 'core/bookings.html')
