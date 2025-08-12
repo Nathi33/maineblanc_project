@@ -9,7 +9,6 @@ urlpatterns = [
     path('services/', views.services_view, name='services'),
     path('activites/', views.activities_view, name='activities'),
     path('tarifs/', views.pricing_view, name='pricing'),
-    path('contact/', views.contact_view, name='contact'),
     path('reserver/', views.bookings_view, name='bookings'),
     path('mentions-legales/', views.legal_view, name='legal'),
 ]
