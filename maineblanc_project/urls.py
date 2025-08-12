@@ -10,5 +10,6 @@ urlpatterns = [
 urlpatterns += i18n_patterns(
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
+    path('reservations/', include('reservations.urls')),
 )
 

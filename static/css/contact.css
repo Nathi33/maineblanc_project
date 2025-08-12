@@ -25,9 +25,12 @@
     font-weight:900;
 }
 
-.pictures-card {
-        max-height: 250px;
-        object-fit: cover;
+.title-form {
+    padding-bottom: 20px;
+}
+
+textarea.form-control {
+    height: 180px;
 }
 
 .btn {
@@ -46,3 +49,4 @@
   color: #483D8B;
   border: 1px solid #483D8B;
 }
+
