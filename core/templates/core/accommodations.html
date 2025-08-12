@@ -2,7 +2,7 @@
 
 {% load static i18n %}
 
-{% block title %}Hébergements | Camping Le Maine Blanc{% endblock %}
+{% block title %}{% trans "Hébergements | Camping Le Maine Blanc" %}{% endblock %}
 
 {% block styles %}
     <link rel="stylesheet" href="{% static 'css/accommodations.css' %}" />
@@ -12,7 +12,7 @@
 <section class="container py-5">
     <div class="container-title text-center">
             <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-left"/>
-            <h2 class="title-accommodations">Nos hébergements </h2>
+            <h2 class="title-accommodations">{% trans "Nos hébergements" %} </h2>
             <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-right"/>
     </div>
 
@@ -25,7 +25,7 @@
                 <h3 class="card-title">{{ t.tent_title }}</h3>
                 <p class="card-text">{{ t.tent_text_1 }}</p>
                 <p class="card-text">{{ t.tent_text_2 }}</p>
-                <a href="{% url 'bookings'%}" class="btn btn-primary">{{ t.tent_button }}</a>
+                <a href="{% url 'bookings'%}" class="btn">{{ t.tent_button }}</a>
             </div>
         </div>
     </div>
@@ -38,7 +38,7 @@
                 <h3 class="card-title">{{ t.mobile_title }}</h3>
                 <p class="card-text">{{ t.mobile_text_1 }}</p>
                 <p class="card-text">{{ t.mobile_text_2 }}</p>
-                <a href="{% url 'contact' %}" class="btn btn-primary">{{ t.mobile_button }}</a>
+                <a href="{% url 'reservation_request' %}" class="btn">{{ t.mobile_button }}</a>
             </div>
         </div>
     </div>

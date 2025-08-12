@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-05 13:04+0200\n"
+"POT-Creation-Date: 2025-08-12 18:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,14 +19,10 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\core\templates\core\about.html:5
-#, fuzzy
-#| msgid "Bienvenue au Camping Le Maine Blanc"
 msgid "À propos | Camping Le Maine Blanc"
 msgstr "Über uns | Campingplatz Le Maine Blanc"
 
 #: .\core\templates\core\about.html:16 .\core\templates\core\about.html:20
-#, fuzzy
-#| msgid "Bienvenue au Camping Le Maine Blanc"
 msgid "Camping le Maine Blanc"
 msgstr "Campingplatz Le Maine Blanc"
 
@@ -46,11 +42,12 @@ msgid ""
 "on pose ses valises au coeur de la forêt, entre chant des oiseaux, "
 "emplacements ombragés et ambiance familiale à taille humaine."
 msgstr ""
-"Willkommen auf dem Campingplatz Le Maine Blanc, einem kleinen Paradies inmitten "
-"herzen des Gironde-Waldes, nur 5 Minuten von Saint-Christoly-de-"
-"Blaye und 40 Minuten von Bordeaux entfernt, in einer grünen und ruhigen Umgebung. Hier, "
-"wir stellten unsere Koffer mitten im Wald ab, zwischen Vogelgezwitscher, "
-"schattige Stellplätze und eine familiäre Atmosphäre im menschlichen Maßstab."
+"Willkommen auf dem Campingplatz Le Maine Blanc, einem kleinen Paradies "
+"inmitten herzen des Gironde-Waldes, nur 5 Minuten von Saint-Christoly-de-"
+"Blaye und 40 Minuten von Bordeaux entfernt, in einer grünen und ruhigen "
+"Umgebung. Hier, wir stellten unsere Koffer mitten im Wald ab, zwischen "
+"Vogelgezwitscher, schattige Stellplätze und eine familiäre Atmosphäre im "
+"menschlichen Maßstab."
 
 #: .\core\templates\core\about.html:23
 msgid ""
@@ -58,9 +55,9 @@ msgid ""
 "avec ou sans électricité, ou optez pour un mobil-home tout confort, idéal "
 "pour des vacances au vert sans compromis."
 msgstr ""
-"Stellen Sie Ihr Zelt, Ihren Wohnwagen oder Ihr Wohnmobil auf einem unserer Stellplätze auf "
-"mit oder ohne Strom, oder entscheiden Sie sich für ein komfortables Mobilheim, ideal "
-"für einen grünen Urlaub ohne Kompromisse."
+"Stellen Sie Ihr Zelt, Ihren Wohnwagen oder Ihr Wohnmobil auf einem unserer "
+"Stellplätze auf mit oder ohne Strom, oder entscheiden Sie sich für ein "
+"komfortables Mobilheim, ideal für einen grünen Urlaub ohne Kompromisse."
 
 #: .\core\templates\core\about.html:24
 msgid ""
@@ -71,12 +68,12 @@ msgid ""
 "viennoiseries la veille pour les récupérer frais le lendemain matin à la "
 "réception."
 msgstr ""
-"Im Sommer genießen Sie das Freibad, die Spielplätze, die Tiere der "
-"camping und Aktivitäten für die ganze Familie. Auf der Geschmacksknospenseite, Food Trucks, "
-"pizzen, Lebensmittelgeschäft und Bar mit Terrasse werden Sie in guter Stimmung begeistern. Und "
-"um den Tag richtig zu beginnen, denken Sie daran, Ihr Brot und Ihre "
-"Gebäck am Vortag, um es am nächsten Morgen frisch abzuholen "
-"rezeption."
+"Im Sommer genießen Sie das Freibad, die Spielplätze, die Tiere der camping "
+"und Aktivitäten für die ganze Familie. Auf der Geschmacksknospenseite, Food "
+"Trucks, pizzen, Lebensmittelgeschäft und Bar mit Terrasse werden Sie in "
+"guter Stimmung begeistern. Und um den Tag richtig zu beginnen, denken Sie "
+"daran, Ihr Brot und Ihre Gebäck am Vortag, um es am nächsten Morgen frisch "
+"abzuholen rezeption."
 
 #: .\core\templates\core\about.html:25
 msgid ""
@@ -84,13 +81,19 @@ msgid ""
 "Bordeaux, ou un séjour simple et authentique en Nouvelle-Aquitaine, vous "
 "êtes au bon endroit."
 msgstr ""
-"Ob Sie einen Familiencampingplatz in der Gironde suchen, einen Naturcampingplatz in der Nähe "
-"Bordeaux oder ein einfacher und authentischer Aufenthalt in Neu-Aquitanien, Sie "
-"sind Sie hier richtig."
+"Ob Sie einen Familiencampingplatz in der Gironde suchen, einen "
+"Naturcampingplatz in der Nähe Bordeaux oder ein einfacher und authentischer "
+"Aufenthalt in Neu-Aquitanien, Sie sind Sie hier richtig."
+
+#: .\core\templates\core\accommodations.html:5
+msgid "Hébergements | Camping Le Maine Blanc"
+msgstr "Unterkünfte | Campingplatz Le Maine Blanc"
+
+#: .\core\templates\core\accommodations.html:15
+msgid "Nos hébergements"
+msgstr "Unsere Unterkünfte"
 
 #: .\core\templates\core\base.html:18 .\core\templates\core\home.html:5
-#, fuzzy
-#| msgid "Bienvenue au Camping Le Maine Blanc"
 msgid "Accueil | Camping Le Maine Blanc"
 msgstr "Willkommen | Campingplatz Le Maine Blanc"
 
@@ -132,20 +135,183 @@ msgstr "Willkommen auf dem Campingplatz Le Maine Blanc"
 
 #: .\core\templates\core\home.html:15
 msgid "Un coin de nature au cœur de la Gironde"
-msgstr "Eine ecke natur im herzen der Gironde"
+msgstr "Eine Ecke Natur im Herzen der Gironde"
+
+#: .\core\templates\core\services.html:5
+msgid "Services | Camping Le Maine Blanc"
+msgstr "Dienstleistungen | Campingplatz Le Maine Blanc"
 
 #: .\maineblanc_project\settings.py:105
 msgid "French"
-msgstr ""
+msgstr "Französisch"
 
 #: .\maineblanc_project\settings.py:106
 msgid "English"
-msgstr ""
+msgstr "Englisch"
 
 #: .\maineblanc_project\settings.py:107
 msgid "Spanish"
-msgstr ""
+msgstr "Spanisch"
 
 #: .\maineblanc_project\settings.py:108
 msgid "German"
+msgstr "Deutsch"
+
+#: .\reservations\forms.py:7
+msgid "Nom"
+msgstr "Name"
+
+#: .\reservations\forms.py:11
+msgid "Prénom"
+msgstr "Vorname"
+
+#: .\reservations\forms.py:15
+msgid "Adresse"
+msgstr "Adresse"
+
+#: .\reservations\forms.py:19
+msgid "Code postal"
+msgstr "Postleitzahl"
+
+#: .\reservations\forms.py:23
+msgid "Ville"
+msgstr "Stadt"
+
+#: .\reservations\forms.py:27
+msgid "Téléphone"
+msgstr "Telefon"
+
+#: .\reservations\forms.py:31
+msgid "Adresse email"
+msgstr "E-Mail-Adresse"
+
+#: .\reservations\forms.py:35
+msgid "Message"
+msgstr "Nachricht"
+
+#: .\reservations\forms.py:42
+msgid "Date d'arrivée"
+msgstr "Anreisedatum"
+
+#: .\reservations\forms.py:52
+msgid "Date de départ"
+msgstr "Abreisedatum"
+
+#: .\reservations\forms.py:63
+msgid "Choisissez un type"
+msgstr "Wählen Sie einen Typ"
+
+#: .\reservations\forms.py:64
+msgid "Tente / Voiture tente"
+msgstr "Zelt / Autozelt"
+
+#: .\reservations\forms.py:65
+msgid "Caravane / Fourgon aménagé / Van"
+msgstr "Caravan / Wohnmobil / Van"
+
+#: .\reservations\forms.py:66
+msgid "Camping-car"
+msgstr "Campingbus"
+
+#: .\reservations\forms.py:67
+msgid "Mobil-home"
+msgstr "Mobilheim"
+
+#: .\reservations\forms.py:70
+#: .\reservations\templates\reservations\reservation_request.html:116
+msgid "Type d'hébergement"
+msgstr "Art der Unterkunft"
+
+#: .\reservations\forms.py:76
+#: .\reservations\templates\reservations\reservation_request.html:127
+msgid "Adultes"
+msgstr "Erwachsene"
+
+#: .\reservations\forms.py:85
+#: .\reservations\templates\reservations\reservation_request.html:136
+msgid "+8 ans"
+msgstr "+8 Jahre"
+
+#: .\reservations\forms.py:94
+#: .\reservations\templates\reservations\reservation_request.html:145
+msgid "-8 ans"
+msgstr "-8 Jahre"
+
+#: .\reservations\forms.py:103
+#: .\reservations\templates\reservations\reservation_request.html:154
+msgid "Animaux"
+msgstr "Tiere"
+
+#: .\reservations\forms.py:113
+msgid "Avec électricité"
+msgstr "Mit Strom"
+
+#: .\reservations\forms.py:114
+msgid "Sans électricité"
+msgstr "Ohne Strom"
+
+#: .\reservations\forms.py:117
+#: .\reservations\templates\reservations\reservation_request.html:164
+msgid "Électricité"
+msgstr "Strom"
+
+#: .\reservations\forms.py:133
+msgid "La date d'arrivée ne peut pas être antérieure à aujourd'hui."
+msgstr "Das Ankunftsdatum kann nicht vor heute liegen."
+
+#: .\reservations\forms.py:137
+msgid "La date de départ doit être postérieure à la date d'arrivée."
+msgstr "Das Abreisedatum muss nach dem Ankunftsdatum liegen."
+
+#: .\reservations\templates\reservations\reservation_request.html:9
+msgid "Contact | Camping Le Maine Blanc"
+msgstr "Kontakt | Campingplatz Le Maine Blanc"
+
+#: .\reservations\templates\reservations\reservation_request.html:14
+#: .\reservations\templates\reservations\reservation_request.html:16
+msgid "Décoration"
+msgstr "Dekoration"
+
+#: .\reservations\templates\reservations\reservation_request.html:15
+msgid "Nous contacter"
+msgstr "Kontaktieren Sie uns"
+
+#: .\reservations\templates\reservations\reservation_request.html:24
+msgid "Attention"
+msgstr "Achtung"
+
+#: .\reservations\templates\reservations\reservation_request.html:24
+msgid "Veuillez corriger les erreurs suivantes :"
+msgstr "Bitte korrigieren Sie die folgenden Fehler:"
+
+#: .\reservations\templates\reservations\reservation_request.html:53
+msgid "Vos coordonnées"
+msgstr "Ihre Kontaktdaten"
+
+#: .\reservations\templates\reservations\reservation_request.html:99
+msgid "Détails de la réservation"
+msgstr "Reservierungsdetails"
+
+#: .\reservations\templates\reservations\reservation_request.html:123
+msgid "Nombre d'occupants"
+msgstr "Anzahl der Personen"
+
+#: .\reservations\templates\reservations\reservation_request.html:177
+msgid "Localisation du camping"
+msgstr "Standort des Campingplatzes"
+
+#: .\reservations\templates\reservations\reservation_request.html:190
+msgid "Champs obligatoires"
+msgstr "Pflichtfelder"
+
+#: .\reservations\templates\reservations\reservation_request.html:194
+msgid "Envoyer la demande"
+msgstr "Anfrage senden"
+
+#: .\reservations\views.py:35
+msgid ""
+"Votre demande de réservation a bien été envoyée, nous reviendrons vers vous "
+"très rapidement."
 msgstr ""
+"Ihre Reservierungsanfrage wurde erfolgreich gesendet, wir werden uns "
+"sofort bei Ihnen melden."

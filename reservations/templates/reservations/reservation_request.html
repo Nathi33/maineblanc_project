@@ -1,0 +1,220 @@
+{% extends "core/base.html" %}
+
+{% load i18n static %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/contact.css' %}" />
+{% endblock %}
+
+{% block title %}{% trans "Contact | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="container-title text-center">
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
+        <h2 class="title-accommodations">{% trans "Nous contacter" %}</h2>
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-10">
+
+            {% if form.errors %}
+            <div class="alert alert-danger" role="alert" style="border-radius: 8px; padding: 12px 16px;">
+                <h5 class="mb-2"><img src="{% static 'pictures/attention.png' %}" alt="{% trans "Attention" %}" class="logo-form-info" style="width:25px; height:25px; margin-right:10px;"> {% trans "Veuillez corriger les erreurs suivantes :" %}</h5>
+                <ul class="mb-0">
+                    {% for field in form %}
+                        {% for error in field.errors %}
+                            <li><strong>{{ field.label }} :</strong> {{ error }}</li>
+                        {% endfor %}
+                    {% endfor %}
+                    {% for error in form.non_field_errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+
+            {% if messages %}
+                {% for message in messages %}
+                    <div class="alert alert-success" role="alert">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+
+
+            
+            <form method="post" action='{% url "reservation_request" %}' novalidate>
+                {% csrf_token %}
+                <div class="row">
+                    <!-- Colonne gauche : coordonnées -->
+                    <div class="col-md-6">
+                        <h3 class="title-form">{% trans "Vos coordonnées" %}</h3>
+
+                        <div class="mb-3">
+                            {{ form.name.label_tag }} <span class="text-danger">*</span>
+                            {{ form.name }}
+                            
+                        </div>
+                        <div class="mb-3">
+                            {{ form.first_name.label_tag }} <span class="text-danger">*</span>
+                            {{ form.first_name }}
+                            
+                        </div>
+                        <div class="mb-3">
+                            {{ form.address.label_tag }} <span class="text-danger">*</span>
+                            {{ form.address }}
+                        
+                        </div>
+                        <div class="mb-3">
+                            {{ form.postal_code.label_tag }} <span class="text-danger">*</span>
+                            {{ form.postal_code }}
+                    
+                        </div>
+                        <div class="mb-3">
+                            {{ form.city.label_tag }} <span class="text-danger">*</span>
+                            {{ form.city }}
+                            
+                        </div>
+                        <div class="mb-3">
+                            {{ form.phone.label_tag }} <span class="text-danger">*</span>
+                            {{ form.phone }}
+                            
+                        </div>
+                        <div class="mb-3">
+                            {{ form.email.label_tag }} <span class="text-danger">*</span>
+                            {{ form.email }}
+                            
+                        </div>
+                        <div class="mb-3">
+                            {{ form.message.label_tag }} 
+                            {{ form.message }}
+                            
+                        </div>
+                    </div>
+
+                    <!-- Colonne droite : réservation -->
+                    <div class="col-md-6">
+                        <h3 class="title-form">{% trans "Détails de la réservation" %}</h3>
+
+                        <div class="row mb-3">
+                            <div class="col-md-6">
+                                {{ form.start_date.label_tag }} <span class="text-danger">*</span>
+                                {{ form.start_date }}
+                                
+                            </div>
+                            <div class="col-md-6">
+                                {{ form.end_date.label_tag }} <span class="text-danger">*</span>
+                                {{ form.end_date }}
+                              
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.accommodation_type.id_for_label }}" class="form-label">
+                                {% trans "Type d'hébergement" %} <span class="text-danger">*</span>
+                            </label>
+                            {{ form.accommodation_type }}
+                            
+                        </div>
+
+                        <div class="row mb-3">
+                            <label class="form-label">{% trans "Nombre d'occupants" %} <span class="text-danger">*</span></label>
+
+                            <div class="col-md-6 col-lg-3">
+                                <select class="form-select" id="{{ form.adults.id_for_label }}" name="{{ form.adults.html_name }}" required>
+                                    <option value="" disabled selected>{% trans "Adultes" %}</option>
+                                    {% for val, label in form.adults.field.choices %}
+                                        <option value="{{ val }}">{{ label }}</option>
+                                    {% endfor %}
+                                </select> 
+                            
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <select class="form-select" id="{{ form.children_over_8.id_for_label }}" name="{{ form.children_over_8.html_name }}" required>
+                                    <option value="" disabled selected>{% trans "+8 ans" %}</option>
+                                    {% for val, label in form.children_over_8.field.choices %}
+                                        <option value="{{ val }}">{{ label }}</option>
+                                    {% endfor %}
+                                </select>
+                                
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <select class="form-select" id="{{ form.children_under_8.id_for_label }}" name="{{ form.children_under_8.html_name }}" required>
+                                    <option value="" disabled selected>{% trans "-8 ans" %}</option>
+                                    {% for val, label in form.children_under_8.field.choices %}
+                                        <option value="{{ val }}">{{ label }}</option>
+                                    {% endfor %}
+                                </select>
+                    
+                            </div>
+                            <div class="col-md-6 col-lg-3">
+                                <select class="form-select" id="{{ form.pets.id_for_label }}" name="{{ form.pets.html_name }}" required>
+                                    <option value="" disabled selected>{% trans "Animaux" %}</option>
+                                    {% for val, label in form.pets.field.choices %}
+                                        <option value="{{ val }}">{{ label }}</option>
+                                    {% endfor %}
+                                </select>
+                            
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">{% trans "Électricité" %} <span class="text-danger">*</span></label>
+                            <div>
+                                {% for radio in form.electricity %}
+                                <div class="form-check form-check-inline">
+                                        {{ radio.tag }}
+                                        <label class="form-check-label" for="{{ radio.id_for_label }}">{{ radio.choice_label }}</label>
+                                </div>
+                                {% endfor %}
+                                
+                            </div>
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label">{% trans "Localisation du camping" %}</label>
+                            <div class="ratio ratio-4x3">
+                                <iframe 
+                                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2546.836672914667!2d-0.4893340242588966!3d45.13958425503974!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x48002e3f944d6d01%3A0xb22125c18d297349!2sCamping%20Le%20Maine%20Blanc!5e1!3m2!1sfr!2sfr!4v1754593114884!5m2!1sfr!2sfr" 
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <p class="small text-muted mt-3">
+                    <span class="text-danger">*</span> {% trans "Champs obligatoires" %}
+                </p>
+
+                <div class="text-center mt-4">
+                    <button type="submit" class="btn">{% trans "Envoyer la demande" %}</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Sélectionne tous les messages (erreurs et succès)
+            const alerts = document.querySelectorAll(".alert");
+
+            // Après 5 secondes, on les fait disparaître
+            setTimeout(() => {
+                alerts.forEach(alert => {
+                    alert.style.transition = "opacity 0.5s ease";
+                    alert.style.opacity = "0";
+
+                    // On supprime l'élément après la transition
+                    setTimeout(() => alert.remove(), 500);
+                });
+            }, 5000);
+        });
+    </script>
+
+</section>
+
+{% endblock %}
