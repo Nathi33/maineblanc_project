@@ -71,6 +71,8 @@
                                     <img src="{% static 'pictures/flag-spain.png' %}" alt="ES" class="flag"/>
                                 {% elif LANGUAGE_CODE == "de" %}
                                     <img src="{% static 'pictures/flag-deutsch.png' %}" alt="DE" class="flag"/>
+                                {% elif LANGUAGE_CODE == "nl" %}
+                                    <img src="{% static 'pictures/flag-nederlands.png' %}" alt="NL" class="flag"/>
                                 {% else %}
                                     <img src="{% static 'pictures/flag-french.png' %}" alt="FR" class="flag"/>
                                 {% endif %}
@@ -113,6 +115,16 @@
                                         <input type="hidden" name="next" value="{{ request.path }}">
                                         <button type="submit" class="dropdown-item">
                                             <img src="{% static 'pictures/flag-deutsch.png' %}" alt="DE" class="flag"/>
+                                        </button>
+                                    </form>
+                                </li>
+                                <li>
+                                    <form action="{% url 'set_language' %}" method="post">
+                                        {% csrf_token %}
+                                        <input type="hidden" name="language" value="nl">
+                                        <input type="hidden" name="next" value="{{ request.path }}">
+                                        <button type="submit" class="dropdown-item">
+                                            <img src="{% static 'pictures/flag-nederlands.png' %}" alt="NL" class="flag"/>
                                         </button>
                                     </form>
                                 </li>
