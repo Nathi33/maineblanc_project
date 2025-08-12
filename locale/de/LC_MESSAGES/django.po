@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-12 18:05+0200\n"
+"POT-Creation-Date: 2025-08-12 18:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -156,6 +156,10 @@ msgstr "Spanisch"
 #: .\maineblanc_project\settings.py:108
 msgid "German"
 msgstr "Deutsch"
+
+#: .\maineblanc_project\settings.py:109
+msgid "Nederlands"
+msgstr ""
 
 #: .\reservations\forms.py:7
 msgid "Nom"
@@ -313,5 +317,5 @@ msgid ""
 "Votre demande de réservation a bien été envoyée, nous reviendrons vers vous "
 "très rapidement."
 msgstr ""
-"Ihre Reservierungsanfrage wurde erfolgreich gesendet, wir werden uns "
-"sofort bei Ihnen melden."
+"Ihre Reservierungsanfrage wurde erfolgreich gesendet, wir werden uns sofort "
+"bei Ihnen melden."
