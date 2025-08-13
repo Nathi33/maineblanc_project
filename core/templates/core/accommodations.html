@@ -11,21 +11,21 @@
 {% block content %}
 <section class="container py-5">
     <div class="container-title text-center">
-            <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-left"/>
+            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
             <h2 class="title-accommodations">{% trans "Nos hébergements" %} </h2>
-            <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-right"/>
+            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
     </div>
 
     <div class="row">
     <!-- Première carte -->
     <div class="col-md-6 mb-4">
         <div class="card h-100">
-            <img src="{% static 'pictures/bus.jpg' %}" class="pictures-card card-img-top w-100" alt="Photo d'un bus sur parcelle">
+            <img src="{% static 'pictures/bus.jpg' %}" class="pictures-card card-img-top w-100" alt="{% trans "Photo d'un bus sur parcelle" %}">
             <div class="card-body">
-                <h3 class="card-title">{{ t.tent_title }}</h3>
-                <p class="card-text">{{ t.tent_text_1 }}</p>
-                <p class="card-text">{{ t.tent_text_2 }}</p>
-                <a href="{% url 'bookings'%}" class="btn">{{ t.tent_button }}</a>
+                <h3 class="card-title">{% trans "Emplacements Tente, Caravane, Camping-Car" %}</h3>
+                <p class="card-text">{% trans "Profitez d’un séjour au plus près de la nature grâce à nos emplacements spacieux et ombragés, avec ou sans électricité, adaptés aux tentes, caravanes et camping-cars. Chaque parcelle est délimitée et située à proximité des sanitaires pour votre confort." %}</p>
+                <p class="card-text">{% trans "Réservez dès maintenant en toute simplicité et laissez-nous vous accueillir dans les meilleures conditions !" %}</p>
+                <a href="{% url 'bookings'%}" class="btn">{% trans "Réserver maintenant" %}</a>
             </div>
         </div>
     </div>
@@ -33,12 +33,12 @@
     <!-- Deuxième carte -->
     <div class="col-md-6 mb-4">
         <div class="card h-100">
-            <img src="{% static 'pictures/mobil-home.jpg' %}" class="pictures-card card-img-top w-100" alt="Photo d'un mobil-home">
+            <img src="{% static 'pictures/mobil-home.jpg' %}" class="pictures-card card-img-top w-100" alt="{% trans "Photo d'un mobil-home" %}">
             <div class="card-body">
-                <h3 class="card-title">{{ t.mobile_title }}</h3>
-                <p class="card-text">{{ t.mobile_text_1 }}</p>
-                <p class="card-text">{{ t.mobile_text_2 }}</p>
-                <a href="{% url 'reservation_request' %}" class="btn">{{ t.mobile_button }}</a>
+                <h3 class="card-title">{% trans "Location de Mobil-Homes" %}</h3>
+                <p class="card-text">{% trans "Confort et tranquillité vous attendent dans nos mobil-homes tout équipés, parfaits pour un séjour en famille ou entre amis. Chaque hébergement dispose d’un espace extérieur pour profiter du cadre verdoyant du camping." %}</p>
+                <p class="card-text">{% trans "La réservation se fait uniquement par téléphone afin de vous proposer la meilleure disponibilité." %}</p>
+                <a href="{% url 'reservation_request' %}" class="btn">{% trans "Contactez-nous" %}</a>
             </div>
         </div>
     </div>

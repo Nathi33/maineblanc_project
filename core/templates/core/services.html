@@ -11,12 +11,12 @@
 {% block content %}
 <section class="container py-5">
     <div class="container-title text-center">
-        <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-left"/>
-        <h2 class="title-services">{{ t.services_title }} </h2>
-        <img src="{% static 'pictures/peindre.png' %}" alt="Décoration" class="img-deco-right"/>
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
+        <h2 class="title-services">{% trans "Nos Services" %}</h2>
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
     </div>
 
-  <p class="text-center mb-5">{{ t.services_subtitle }}</p>
+  <p class="text-center mb-5">{% trans "Confort, détente et convivialité au cœur de votre séjour"%}</p>
 
   <div class="row g-4">
     <!-- Piscine -->
@@ -24,18 +24,18 @@
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
-            <h3 class="card-title">{{ t.pool_title }}</h3>
-            <img src="{% static 'pictures/piscine.png' %}" alt="Piscine" class=" logo-services img-fluid mb-3">
+            <h3 class="card-title">{% trans "Piscine" %}</h3>
+            <img src="{% static 'pictures/piscine.png' %}" alt="{% trans "Piscine" %}" class=" logo-services img-fluid mb-3">
           </div>
-          <p class="card-text">{{ t.pool_desc_1 }}</p>
-          <p class="card-text">{{ t.pool_desc_2 }}</p>
+          <p class="card-text">{% trans "Ouverte en haute saison, de mi-juin à mi-septembre, notre piscine extérieure vous accueille tous les jours de 10h à 21h pour un moment de fraîcheur et de détente." %}</p>
+          <p class="card-text">{% trans "Non couverte et non chauffée, elle est idéale pour se rafraîchir durant les belles journées d'été." %}</p>
           <div class="info">
-            <img src="{% static 'pictures/attention.png' %}" alt="Attention" class="logo-services-info">
-            <p class="card-text"><strong>{{ t.pool_warning_1 }}</strong> {{ t.pool_warning_2 }}</p>
+            <img src="{% static 'pictures/attention.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <p class="card-text"><strong>{% trans "Attention : la baignade n'est pas surveillée." %}</strong> {% trans "Les enfants doivent être accompagnés et rester sous la vigilance des parents." %}</p>
           </div>
           <div class="info">
-            <img src="{% static 'pictures/cadenas.png' %}" alt="Attention" class="logo-services-info">
-            <p class="card-text"><strong>{{ t.pool_warning_3 }}</strong> {{ t.pool_warning_4 }}</p>
+            <img src="{% static 'pictures/cadenas.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <p class="card-text"><strong>{% trans "Piscine privée" %}</strong> {% trans "réservée exclusivement à la clientèle du camping." %}</p>
           </div>
         </div>
       </div>
@@ -46,36 +46,36 @@
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
-            <h3 class="card-title">{{ t.catering_title }}</h3>
-            <img src="{% static 'pictures/food-restaurant.png' %}" alt="Restauration" class="logo-services img-fluid mb-3">
+            <h3 class="card-title">{% trans "Restauration" %}</h3>
+            <img src="{% static 'pictures/food-restaurant.png' %}" alt="{% trans "Restauration" %}" class="logo-services img-fluid mb-3">
           </div>
 
           <div class="info">
-            <img src="{% static 'pictures/camion.png' %}" alt="Attention" class="logo-services-info">
-            <p class="card-text-title">{{ t.catering_foodtrucks }}</p>
+            <img src="{% static 'pictures/camion.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <p class="card-text-title">{% trans "Food trucks en soirée pour tous les goûts :"%}</p>
           </div>
           <ul class="list-unstyled">
-            <li><span class="list-title">{{ t.catering_burger }}</span> : {{ t.catering_burger_hours }}</li>
-            <li><span class="list-title">{{ t.catering_pizza }}</span> : {{ t.catering_pizza_hours }}</li>
+            <li><span class="list-title">{% trans "Burger : " %}</span> : {% trans "tous les soirs sauf mercredi et jeudi, de 18h à 21h30" %}</li>
+            <li><span class="list-title">{% trans "Pizza : " %}</span> : {% trans "uniquement le jeudi soir, même horaire" %}</li>
           </ul>
           
           <div class="info">
-            <img src="{% static 'pictures/croissant.png' %}" alt="Attention" class="logo-services-info">
-            <p class="card-text-title">{{ t.catering_bakery_title }}</p>
+            <img src="{% static 'pictures/croissant.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <p class="card-text-title">{% trans "Pain frais et viennoiseries chaque matin : " %}</p>
           </div>
-          <p class="card-text">{{ t.catering_bakery_desc }}</p>
+          <p class="card-text">{% trans "Pensez à réserver la veille avant 19h à l'accueil, auprès d'Isabelle." %}</p>
 
           <div class="info">
-            <img src="{% static 'pictures/caddie.png' %}" alt="Attention" class="logo-services-info">
-            <p class="card-text-title">{{ t.catering_shop_title }}</p>
+            <img src="{% static 'pictures/caddie.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <p class="card-text-title">{% trans "Epicerie ouverte toute l'année : "%}</p>
           </div>
-          <p class="card-text">{{ t.catering_shop_desc }}</p>
+          <p class="card-text">{% trans "Produits salés, sucrés, d'entretien... L'épicerie du camping est toujours là pour vous sauver la mise !" %}</p>
 
           <div class="info">
-            <img src="{% static 'pictures/bar.png' %}" alt="Attention" class="logo-services-info">
-            <p class="card-text-title">{{ t.catering_bar_title }}</p>
+            <img src="{% static 'pictures/bar.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <p class="card-text-title">{% trans "Bar ouvert tous les jours jusqu'à 21h : " %}</p>
           </div>
-          <p class="card-text">{{ t.catering_bar_desc }}</p>
+          <p class="card-text">{% trans "Un lieu idéal pour boire un verre, savourer une glace et profiter de l’ambiance du camping." %}</p>
 
         </div>
       </div>
@@ -86,18 +86,18 @@
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
-            <h3 class="card-title">{{ t.laundry_title }}</h3>
-            <img src="{% static 'pictures/machine.png' %}" alt="Laverie" class="logo-services img-fluid mb-3">
+            <h3 class="card-title">{% trans "Laverie" %}</h3>
+            <img src="{% static 'pictures/machine.png' %}" alt="{% trans "Laverie" %}" class="logo-services img-fluid mb-3">
           </div>
-          <p class="card-text-title pb-2">{{ t.laundry_question }}</p>
-          <p class="card-text">{{ t.laundry_desc_1 }}</p>
+          <p class="card-text-title pb-2">{% trans "Du linge à faire ?" %}</p>
+          <p class="card-text">{% trans "Pas de panique, même en vacances, on a pensé à tout :" %}</p>
           <ul>
-            <li>{{ t.laundry_li_1 }}</li>
-            <li>{{ t.laundry_li_2 }}</li>
-            <li>{{ t.laundry_li_3 }}</li>
+            <li>{% trans "Une machine à laver pour 4€" %}</li>
+            <li>{% trans "Un sèche-linge pour 2€ les 20 minutes" %}</li>
+            <li>{% trans "Des lavabos pour les adeptes du lavage à la main (ou pour les chaussettes en mission spéciale)" %}</li>
           </ul>
-          <p class="card-text"><strong>{{ t.laundry_token }}</strong>.</p>
-          <p class="card-text">{{ t.laundry_detergent }}</p>
+          <p class="card-text"><strong>{% trans "Les jetons sont en vente à l'accueil." %}</strong>.</p>
+          <p class="card-text">{% trans "Pensez à votre lessive... ou passez à l'épicerie, on en vend aussi !" %}</p>
         </div>
       </div>
     </div>
@@ -107,17 +107,17 @@
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
-            <h3 class="card-title">{{ t.pets_title }}</h3>
-            <img src="{% static 'pictures/animaux.png' %}" alt="Animaux" class="logo-services img-fluid mb-3">
+            <h3 class="card-title">{% trans "Animaux bienvenus" %}</h3>
+            <img src="{% static 'pictures/animaux.png' %}" alt="{% trans "Animaux" %}" class="logo-services img-fluid mb-3">
           </div>
-          <p class="card-text">({{ t.pets_restriction }}</p>
-            <img src="{% static 'pictures/chien.png' %}" alt="Attention" class="logo-services-info">)
+          <p class="card-text">({% trans "sauf catégories 1 & 2, désolés les toutous costauds" %}
+            <img src="{% static 'pictures/chien.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">)
           </p>                   
-          <p class="card-text"><strong>{{ t.pets_leash }}</strong> {{ t.pets_leash_desc }}</p>
-          <p class="card-text"><strong>{{ t.pets_pickup }} ?</strong> {{ t.pets_pickup_desc }}</p>
+          <p class="card-text"><strong>{% trans "La laisse ?" %}</strong> {% trans "Oui, même pour une petite balade, dans le camping ou juste devant la tente !" %}</p>
+          <p class="card-text"><strong>{% trans "Un petit besoin ?" %}</strong> {% trans "On ramasse, c'est plus sympa pour tout le monde." %}</p>
           <div class="info">
-            <img src="{% static 'pictures/interdit.png' %}" alt="Attention" class="logo-services-info">
-            <p class="card-text"><strong>{{ t.pets_humans_only }}</strong> {{ t.pets_humans_only_desc }}</p>
+            <img src="{% static 'pictures/interdit.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <p class="card-text"><strong>{% trans "Les sanitaires" %}</strong> {% trans "c'est réservé aux humains !"%}</p>
           </div>
         </div>
       </div>
@@ -128,12 +128,12 @@
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
-            <h3 class="card-title">{{ t.wifi_title }}</h3>
-            <img src="{% static 'pictures/wifi.png' %}" alt="Wi-Fi" class="logo-services img-fluid mb-3">
+            <h3 class="card-title">{% trans "Wi-Fi gratuit" %}</h3>
+            <img src="{% static 'pictures/wifi.png' %}" alt="{% trans "Wi-Fi" %}" class="logo-services img-fluid mb-3">
           </div>
-          <p class="card-text-title-wifi">{{ t.wifi_question }}</p>
-          <p class="card-text">{{ t.wifi_desc }}</p>
-          <p class="card-text">{{ t.wifi_info }}</p>
+          <p class="card-text-title-wifi">{% trans "Besoin de rester connecté ?" %}</p>
+          <p class="card-text">{% trans "Le wifi est gratuit sur le camping !" %}</p>
+          <p class="card-text">{% trans "(Pensez à passer à l'accueil pour les conditions d'accès.)" %}</p>
         </div>
       </div>
     </div>
@@ -144,17 +144,21 @@
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
-            <h3 class="card-title">{{ t.payments_title }}</h3>
-            <img src="{% static 'pictures/paiements.png' %}" alt="Paiements" class="logo-services img-fluid mb-3">
+            <h3 class="card-title">{% trans "Paiements sécurisés" %}</h3>
+            <img src="{% static 'pictures/paiements.png' %}" alt="{% trans "Paiements" %}" class="logo-services img-fluid mb-3">
           </div>
-          <p class="card-text-title-pay">{{ t.payments_info }}</p>
+          <p class="card-text-title-pay">{% trans "Pour régler votre séjour, plusieurs options s'offrent à vous à l'arrivée : " %}</p>
           <ul>
-            {% for mode in t.payments_list %}
-              <li>{{ mode }}</li>
-            {% endfor %}
+              <li>{% trans "American Express" %}</li>
+              <li>{% trans "Espèces" %}</li>
+              <li>{% trans "Maestro" %}</li>
+              <li>{% trans "Mastercard" %}</li>
+              <li>{% trans "Visa" %}</li>
+              <li>{% trans "Chèques vacances (ANCV)" %}</li>
+              <li>{% trans "Virement" %}</li>
           </ul>
-          <p class="card-text">{{ t.payments_card }}</p>
-          <p class="card-text-pay">{{ t.payments_note }}</p>
+          <p class="card-text">{% trans "La carte bancaire est acceptée à partir de 8€." %}</p>
+          <p class="card-text-pay">{% trans "Petit rappel : par mesure de sécurité, nous ne prenons plus les chèques." %}</p>
         </div>
       </div>
     </div>
