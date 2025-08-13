@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-12 18:59+0200\n"
+"POT-Creation-Date: 2025-08-13 15:24+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -88,9 +88,80 @@ msgstr ""
 msgid "Hébergements | Camping Le Maine Blanc"
 msgstr "Accommodations | Camping Le Maine Blanc"
 
+#: .\core\templates\core\accommodations.html:14
+#: .\core\templates\core\accommodations.html:16
+#: .\core\templates\core\services.html:14
+#: .\core\templates\core\services.html:16
+#: .\reservations\templates\reservations\reservation_request.html:14
+#: .\reservations\templates\reservations\reservation_request.html:16
+msgid "Décoration"
+msgstr "Decoration"
+
 #: .\core\templates\core\accommodations.html:15
 msgid "Nos hébergements"
 msgstr "Our Accommodations"
+
+#: .\core\templates\core\accommodations.html:23
+msgid "Photo d'un bus sur parcelle"
+msgstr "Photo of a bus on a plot"
+
+#: .\core\templates\core\accommodations.html:25
+msgid "Emplacements Tente, Caravane, Camping-Car"
+msgstr "Tent, Caravan, Motorhome Pitches"
+
+#: .\core\templates\core\accommodations.html:26
+msgid ""
+"Profitez d’un séjour au plus près de la nature grâce à nos emplacements "
+"spacieux et ombragés, avec ou sans électricité, adaptés aux tentes, "
+"caravanes et camping-cars. Chaque parcelle est délimitée et située à "
+"proximité des sanitaires pour votre confort."
+msgstr ""
+"Enjoy a stay close to nature with our "
+"spacious and shaded pitches, with or without electricity, suitable for tents, "
+"caravans, and motorhomes. Each plot is clearly marked and located "
+"near the sanitary facilities for your comfort."
+
+#: .\core\templates\core\accommodations.html:27
+msgid ""
+"Réservez dès maintenant en toute simplicité et laissez-nous vous accueillir "
+"dans les meilleures conditions !"
+msgstr ""
+"Book now with ease and let us welcome you "
+"in the best possible conditions !"
+
+#: .\core\templates\core\accommodations.html:28
+msgid "Réserver maintenant"
+msgstr "Book now"
+
+#: .\core\templates\core\accommodations.html:36
+msgid "Photo d'un mobil-home"
+msgstr "Photo of a mobile home"
+
+#: .\core\templates\core\accommodations.html:38
+msgid "Location de Mobil-Homes"
+msgstr "Mobile Home Rentals"
+
+#: .\core\templates\core\accommodations.html:39
+msgid ""
+"Confort et tranquillité vous attendent dans nos mobil-homes tout équipés, "
+"parfaits pour un séjour en famille ou entre amis. Chaque hébergement dispose "
+"d’un espace extérieur pour profiter du cadre verdoyant du camping."
+msgstr ""
+"Comfort and tranquility await you in our fully equipped mobile homes, "
+"perfect for a family or friends getaway. Each accommodation has "
+"an outdoor space to enjoy the lush surroundings of the campsite."
+
+#: .\core\templates\core\accommodations.html:40
+msgid ""
+"La réservation se fait uniquement par téléphone afin de vous proposer la "
+"meilleure disponibilité."
+msgstr ""
+"Reservations are made by phone only to offer you the "
+"best availability."
+
+#: .\core\templates\core\accommodations.html:41
+msgid "Contactez-nous"
+msgstr "Contact us"
 
 #: .\core\templates\core\base.html:18 .\core\templates\core\home.html:5
 msgid "Accueil | Camping Le Maine Blanc"
@@ -139,6 +210,270 @@ msgstr "A natural haven in the heart of Gironde"
 #: .\core\templates\core\services.html:5
 msgid "Services | Camping Le Maine Blanc"
 msgstr "Services | Camping Le Maine Blanc"
+
+#: .\core\templates\core\services.html:15
+msgid "Nos Services"
+msgstr "Our Services"
+
+#: .\core\templates\core\services.html:19
+msgid "Confort, détente et convivialité au cœur de votre séjour"
+msgstr "Comfort, relaxation and friendliness at the heart of your stay."
+
+#: .\core\templates\core\services.html:27
+#: .\core\templates\core\services.html:28
+msgid "Piscine"
+msgstr "Swimming Pool"
+
+#: .\core\templates\core\services.html:30
+msgid ""
+"Ouverte en haute saison, de mi-juin à mi-septembre, notre piscine extérieure "
+"vous accueille tous les jours de 10h à 21h pour un moment de fraîcheur et de "
+"détente."
+msgstr ""
+"Open during high season, from mid-June to mid-September, our outdoor pool "
+"welcomes you every day from 10 a.m. to 9 p.m. for a refreshing and relaxing "
+"break."
+
+#: .\core\templates\core\services.html:31
+msgid ""
+"Non couverte et non chauffée, elle est idéale pour se rafraîchir durant les "
+"belles journées d'été."
+msgstr ""
+"Uncovered and unheated, it’s perfect for cooling off during sunny summer "
+"days."
+
+#: .\core\templates\core\services.html:33
+#: .\core\templates\core\services.html:37
+#: .\core\templates\core\services.html:54
+#: .\core\templates\core\services.html:63
+#: .\core\templates\core\services.html:69
+#: .\core\templates\core\services.html:75
+#: .\core\templates\core\services.html:114
+#: .\core\templates\core\services.html:119
+#: .\reservations\templates\reservations\reservation_request.html:24
+msgid "Attention"
+msgstr "Attention"
+
+#: .\core\templates\core\services.html:34
+msgid "Attention : la baignade n'est pas surveillée."
+msgstr "Please note : swimming is not supervised."
+
+#: .\core\templates\core\services.html:34
+msgid ""
+"Les enfants doivent être accompagnés et rester sous la vigilance des parents."
+msgstr "Children must be accompanied and remain under parental supervision."
+
+#: .\core\templates\core\services.html:38
+msgid "Piscine privée"
+msgstr "Private pool"
+
+#: .\core\templates\core\services.html:38
+msgid "réservée exclusivement à la clientèle du camping."
+msgstr "exclusively reserved for campsite guests."
+
+#: .\core\templates\core\services.html:49
+#: .\core\templates\core\services.html:50
+msgid "Restauration"
+msgstr "Catering"
+
+#: .\core\templates\core\services.html:55
+msgid "Food trucks en soirée pour tous les goûts :"
+msgstr "Evening food trucks for every taste : "
+
+#: .\core\templates\core\services.html:58
+msgid "Burger : "
+msgstr "Burger "
+
+#: .\core\templates\core\services.html:58
+msgid "tous les soirs sauf mercredi et jeudi, de 18h à 21h30"
+msgstr "every evening except Wednesday and Thursday, from 6 p.m. to 9:30 p.m."
+
+#: .\core\templates\core\services.html:59
+msgid "Pizza : "
+msgstr "Pizza "
+
+#: .\core\templates\core\services.html:59
+msgid "uniquement le jeudi soir, même horaire"
+msgstr "Thursday evenings only, same hours"
+
+#: .\core\templates\core\services.html:64
+msgid "Pain frais et viennoiseries chaque matin : "
+msgstr "Fresh bread and pastries every morning : "
+
+#: .\core\templates\core\services.html:66
+msgid "Pensez à réserver la veille avant 19h à l'accueil, auprès d'Isabelle."
+msgstr ""
+"Remember to order the day before by 7 p.m. at the reception with Isabelle."
+
+#: .\core\templates\core\services.html:70
+msgid "Epicerie ouverte toute l'année : "
+msgstr "Grocery store open all year round : "
+
+#: .\core\templates\core\services.html:72
+msgid ""
+"Produits salés, sucrés, d'entretien... L'épicerie du camping est toujours là "
+"pour vous sauver la mise !"
+msgstr ""
+"Savory snacks, sweet treats, cleaning products… the campsite’s shop has you "
+"covered !"
+
+#: .\core\templates\core\services.html:76
+msgid "Bar ouvert tous les jours jusqu'à 21h : "
+msgstr "Bar open daily until 9 p.m. : "
+
+#: .\core\templates\core\services.html:78
+msgid ""
+"Un lieu idéal pour boire un verre, savourer une glace et profiter de "
+"l’ambiance du camping."
+msgstr ""
+"An ideal place to enjoy a drink, savor an ice cream, and soak up the "
+"campsite atmosphere."
+
+#: .\core\templates\core\services.html:89
+#: .\core\templates\core\services.html:90
+msgid "Laverie"
+msgstr "Laundry Room"
+
+#: .\core\templates\core\services.html:92
+msgid "Du linge à faire ?"
+msgstr "Need to do laundry ?"
+
+#: .\core\templates\core\services.html:93
+msgid "Pas de panique, même en vacances, on a pensé à tout :"
+msgstr "No worries, even on holiday, we’ve got it all covered :"
+
+#: .\core\templates\core\services.html:95
+msgid "Une machine à laver pour 4€"
+msgstr "Washing machine for €4"
+
+#: .\core\templates\core\services.html:96
+msgid "Un sèche-linge pour 2€ les 20 minutes"
+msgstr "Dryer for €2 per 20 minutes"
+
+#: .\core\templates\core\services.html:97
+msgid ""
+"Des lavabos pour les adeptes du lavage à la main (ou pour les chaussettes en "
+"mission spéciale)"
+msgstr "Basins for handwashing fans (or socks on a special mission)"
+
+#: .\core\templates\core\services.html:99
+msgid "Les jetons sont en vente à l'accueil."
+msgstr "Tokens are available at the reception."
+
+#: .\core\templates\core\services.html:100
+msgid "Pensez à votre lessive... ou passez à l'épicerie, on en vend aussi !"
+msgstr "Don't forget your detergent… or grab some at the grocery store !"
+
+#: .\core\templates\core\services.html:110
+msgid "Animaux bienvenus"
+msgstr "Pets Welcome"
+
+#: .\core\templates\core\services.html:111 .\reservations\forms.py:103
+#: .\reservations\templates\reservations\reservation_request.html:154
+msgid "Animaux"
+msgstr "Pets"
+
+#: .\core\templates\core\services.html:113
+msgid "sauf catégories 1 & 2, désolés les toutous costauds"
+msgstr "except categories 1 & 2 – sorry, strong doggies"
+
+#: .\core\templates\core\services.html:116
+msgid "La laisse ?"
+msgstr "Leash?"
+
+#: .\core\templates\core\services.html:116
+msgid ""
+"Oui, même pour une petite balade, dans le camping ou juste devant la tente !"
+msgstr ""
+"Yes, even for a short walk, inside the campsite or just in front of your "
+"tent !"
+
+#: .\core\templates\core\services.html:117
+msgid "Un petit besoin ?"
+msgstr "A little potty break?"
+
+#: .\core\templates\core\services.html:117
+msgid "On ramasse, c'est plus sympa pour tout le monde."
+msgstr "Let’s clean up — it’s nicer for everyone."
+
+#: .\core\templates\core\services.html:120
+msgid "Les sanitaires"
+msgstr "The toilets, "
+
+#: .\core\templates\core\services.html:120
+msgid "c'est réservé aux humains !"
+msgstr "they’re for humans only !"
+
+#: .\core\templates\core\services.html:131
+msgid "Wi-Fi gratuit"
+msgstr "Free Wi-Fi"
+
+#: .\core\templates\core\services.html:132
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: .\core\templates\core\services.html:134
+msgid "Besoin de rester connecté ?"
+msgstr "Need to stay connected ?"
+
+#: .\core\templates\core\services.html:135
+msgid "Le wifi est gratuit sur le camping !"
+msgstr "Wi-Fi is free throughout the campsite !"
+
+#: .\core\templates\core\services.html:136
+msgid "(Pensez à passer à l'accueil pour les conditions d'accès.)"
+msgstr "(Please visit reception for access details.)"
+
+#: .\core\templates\core\services.html:147
+msgid "Paiements sécurisés"
+msgstr "Secure Payments"
+
+#: .\core\templates\core\services.html:148
+msgid "Paiements"
+msgstr "Payments"
+
+#: .\core\templates\core\services.html:150
+msgid ""
+"Pour régler votre séjour, plusieurs options s'offrent à vous à l'arrivée : "
+msgstr ""
+"To pay for your stay, you have several options available upon arrival :"
+
+#: .\core\templates\core\services.html:152
+msgid "American Express"
+msgstr "American Express"
+
+#: .\core\templates\core\services.html:153
+msgid "Espèces"
+msgstr "Cash"
+
+#: .\core\templates\core\services.html:154
+msgid "Maestro"
+msgstr "Maestro"
+
+#: .\core\templates\core\services.html:155
+msgid "Mastercard"
+msgstr "Mastercard"
+
+#: .\core\templates\core\services.html:156
+msgid "Visa"
+msgstr "Visa"
+
+#: .\core\templates\core\services.html:157
+msgid "Chèques vacances (ANCV)"
+msgstr "Holiday vouchers (ANCV)"
+
+#: .\core\templates\core\services.html:158
+msgid "Virement"
+msgstr "Bank transfer"
+
+#: .\core\templates\core\services.html:160
+msgid "La carte bancaire est acceptée à partir de 8€."
+msgstr "Card payments accepted from €8."
+
+#: .\core\templates\core\services.html:161
+msgid ""
+"Petit rappel : par mesure de sécurité, nous ne prenons plus les chèques."
+msgstr "Important: Due to past issues, we no longer accept cheques."
 
 #: .\maineblanc_project\settings.py:105
 msgid "French"
@@ -240,11 +575,6 @@ msgstr "+8 Years"
 msgid "-8 ans"
 msgstr "-8 Years"
 
-#: .\reservations\forms.py:103
-#: .\reservations\templates\reservations\reservation_request.html:154
-msgid "Animaux"
-msgstr "Pets"
-
 #: .\reservations\forms.py:113
 msgid "Avec électricité"
 msgstr "With Electricity"
@@ -270,18 +600,9 @@ msgstr "The departure date must be later than the arrival date."
 msgid "Contact | Camping Le Maine Blanc"
 msgstr "Contact | Camping Le Maine Blanc"
 
-#: .\reservations\templates\reservations\reservation_request.html:14
-#: .\reservations\templates\reservations\reservation_request.html:16
-msgid "Décoration"
-msgstr "Decoration"
-
 #: .\reservations\templates\reservations\reservation_request.html:15
 msgid "Nous contacter"
 msgstr "Contact Us"
-
-#: .\reservations\templates\reservations\reservation_request.html:24
-msgid "Attention"
-msgstr "Attention"
 
 #: .\reservations\templates\reservations\reservation_request.html:24
 msgid "Veuillez corriger les erreurs suivantes :"
