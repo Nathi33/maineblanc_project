@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-12 18:31+0200\n"
+"POT-Creation-Date: 2025-08-13 15:44+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
 #: .\core\templates\core\about.html:5
 msgid "À propos | Camping Le Maine Blanc"
 msgstr "Over ons | Camping Le Maine Blanc"
@@ -41,11 +42,11 @@ msgid ""
 "on pose ses valises au coeur de la forêt, entre chant des oiseaux, "
 "emplacements ombragés et ambiance familiale à taille humaine."
 msgstr ""
-"Welkom op Camping Le Maine Blanc, een klein stukje paradijs verscholen in"
-"het hart van de Gironde, op slechts 5 minuten van Saint-Christoly-de-"
-"Blaye en 40 minuten van Bordeaux, in een groene en rustige omgeving. Hier "
-"zetten we onze koffers neer in het hart van het bos, tussen het gezang van "
-"de vogels, schaduwrijke plaatsen en een familiale sfeer."
+"Welkom op Camping Le Maine Blanc, een klein stukje paradijs verscholen inhet "
+"hart van de Gironde, op slechts 5 minuten van Saint-Christoly-de-Blaye en 40 "
+"minuten van Bordeaux, in een groene en rustige omgeving. Hier zetten we onze "
+"koffers neer in het hart van het bos, tussen het gezang van de vogels, "
+"schaduwrijke plaatsen en een familiale sfeer."
 
 #: .\core\templates\core\about.html:23
 msgid ""
@@ -66,12 +67,12 @@ msgid ""
 "viennoiseries la veille pour les récupérer frais le lendemain matin à la "
 "réception."
 msgstr ""
-"In de zomer kunt u genieten van het buitenzwembad, de speeltuinen, de dieren van de camping "
-"en activiteiten voor het hele gezin. Wat betreft de smaakpapillen, foodtrucks, "
-"pizza's, kruidenierswinkel en bar met terras verwennen u in een goede sfeer. "
-"En om de dag goed te beginnen, vergeet niet om uw brood en gebak de dag ervoor "
-"te bestellen, zodat u ze de volgende ochtend vers kunt ophalen bij de "
-"receptie."
+"In de zomer kunt u genieten van het buitenzwembad, de speeltuinen, de dieren "
+"van de camping en activiteiten voor het hele gezin. Wat betreft de "
+"smaakpapillen, foodtrucks, pizza's, kruidenierswinkel en bar met terras "
+"verwennen u in een goede sfeer. En om de dag goed te beginnen, vergeet niet "
+"om uw brood en gebak de dag ervoor te bestellen, zodat u ze de volgende "
+"ochtend vers kunt ophalen bij de receptie."
 
 #: .\core\templates\core\about.html:25
 msgid ""
@@ -80,16 +81,87 @@ msgid ""
 "êtes au bon endroit."
 msgstr ""
 "Als u op zoek bent naar een gezinscamping in de Gironde, een natuurcamping "
-"bij Bordeaux, of een eenvoudige en authentieke vakantie in Nouvelle-Aquitaine, "
-"dan bent u hier aan het juiste adres."
+"bij Bordeaux, of een eenvoudige en authentieke vakantie in Nouvelle-"
+"Aquitaine, dan bent u hier aan het juiste adres."
 
 #: .\core\templates\core\accommodations.html:5
 msgid "Hébergements | Camping Le Maine Blanc"
 msgstr "Accommodaties | Camping Le Maine Blanc"
 
+#: .\core\templates\core\accommodations.html:14
+#: .\core\templates\core\accommodations.html:16
+#: .\core\templates\core\services.html:14
+#: .\core\templates\core\services.html:16
+#: .\reservations\templates\reservations\reservation_request.html:14
+#: .\reservations\templates\reservations\reservation_request.html:16
+msgid "Décoration"
+msgstr "Decoratie"
+
 #: .\core\templates\core\accommodations.html:15
 msgid "Nos hébergements"
 msgstr "Onze accommodaties"
+
+#: .\core\templates\core\accommodations.html:23
+msgid "Photo d'un bus sur parcelle"
+msgstr "Foto van een bus op een perceel"
+
+#: .\core\templates\core\accommodations.html:25
+msgid "Emplacements Tente, Caravane, Camping-Car"
+msgstr "Staanplaatsen voor Tent, Caravan, Camper"
+
+#: .\core\templates\core\accommodations.html:26
+msgid ""
+"Profitez d’un séjour au plus près de la nature grâce à nos emplacements "
+"spacieux et ombragés, avec ou sans électricité, adaptés aux tentes, "
+"caravanes et camping-cars. Chaque parcelle est délimitée et située à "
+"proximité des sanitaires pour votre confort."
+msgstr ""
+"Geniet van een verblijf dicht bij de natuur dankzij onze ruime en "
+"schaduwrijke staanplaatsen, met of zonder elektriciteit, geschikt voor "
+"tenten, caravans en campers. Elke plaats is afgebakend en bevindt zich in "
+"de buurt van de sanitaire voorzieningen voor uw comfort."
+
+#: .\core\templates\core\accommodations.html:27
+msgid ""
+"Réservez dès maintenant en toute simplicité et laissez-nous vous accueillir "
+"dans les meilleures conditions !"
+msgstr ""
+"Boek nu eenvoudig en laat ons u onder de "
+"beste voorwaarden verwelkomen!"
+
+#: .\core\templates\core\accommodations.html:28
+msgid "Réserver maintenant"
+msgstr "Nu boeken"
+
+#: .\core\templates\core\accommodations.html:36
+msgid "Photo d'un mobil-home"
+msgstr "Foto van een mobil-home"
+
+#: .\core\templates\core\accommodations.html:38
+msgid "Location de Mobil-Homes"
+msgstr "Verhuur van Mobilhomes"
+
+#: .\core\templates\core\accommodations.html:39
+msgid ""
+"Confort et tranquillité vous attendent dans nos mobil-homes tout équipés, "
+"parfaits pour un séjour en famille ou entre amis. Chaque hébergement dispose "
+"d’un espace extérieur pour profiter du cadre verdoyant du camping."
+msgstr ""
+"Comfort en rust wachten op u in onze volledig uitgeruste mobilhomes, "
+"perfect voor een verblijf met familie of vrienden. Elke accommodatie heeft "
+"een buitenruimte om te genieten van de groene omgeving van de camping."
+
+#: .\core\templates\core\accommodations.html:40
+msgid ""
+"La réservation se fait uniquement par téléphone afin de vous proposer la "
+"meilleure disponibilité."
+msgstr ""
+"De reservering kan alleen telefonisch worden gedaan om u de beste "
+"beschikbaarheid te bieden."
+
+#: .\core\templates\core\accommodations.html:41
+msgid "Contactez-nous"
+msgstr "Contacteer ons"
 
 #: .\core\templates\core\base.html:18 .\core\templates\core\home.html:5
 msgid "Accueil | Camping Le Maine Blanc"
@@ -138,6 +210,277 @@ msgstr "Een stukje natuur in het hart van de Gironde"
 #: .\core\templates\core\services.html:5
 msgid "Services | Camping Le Maine Blanc"
 msgstr "Diensten | Camping Le Maine Blanc"
+
+#: .\core\templates\core\services.html:15
+msgid "Nos Services"
+msgstr "Onze Diensten"
+
+#: .\core\templates\core\services.html:19
+msgid "Confort, détente et convivialité au cœur de votre séjour"
+msgstr "Comfort, ontspanning en gezelligheid in het hart van uw verblijf"
+
+#: .\core\templates\core\services.html:27
+#: .\core\templates\core\services.html:28
+msgid "Piscine"
+msgstr "Zwembad"
+
+#: .\core\templates\core\services.html:30
+msgid ""
+"Ouverte en haute saison, de mi-juin à mi-septembre, notre piscine extérieure "
+"vous accueille tous les jours de 10h à 21h pour un moment de fraîcheur et de "
+"détente."
+msgstr ""
+"Ons buitenzwembad is geopend in het hoogseizoen, van half juni tot half "
+"september, en verwelkomt u elke dag van 10.00 tot 21.00 uur voor een "
+"verfrissend en ontspannend moment."
+
+#: .\core\templates\core\services.html:31
+msgid ""
+"Non couverte et non chauffée, elle est idéale pour se rafraîchir durant les "
+"belles journées d'été."
+msgstr ""
+"Niet overdekt en niet verwarmd, het is ideaal om af te koelen op mooie "
+"zomerdagen."
+
+#: .\core\templates\core\services.html:33
+#: .\core\templates\core\services.html:37
+#: .\core\templates\core\services.html:54
+#: .\core\templates\core\services.html:63
+#: .\core\templates\core\services.html:69
+#: .\core\templates\core\services.html:75
+#: .\core\templates\core\services.html:114
+#: .\core\templates\core\services.html:119
+#: .\reservations\templates\reservations\reservation_request.html:24
+msgid "Attention"
+msgstr "Aandacht"
+
+#: .\core\templates\core\services.html:34
+msgid "Attention : la baignade n'est pas surveillée."
+msgstr "Aandacht: het zwemmen wordt niet bewaakt."
+
+#: .\core\templates\core\services.html:34
+msgid ""
+"Les enfants doivent être accompagnés et rester sous la vigilance des parents."
+msgstr ""
+"Kinderen moeten worden begeleid en onder toezicht van hun ouders blijven."
+
+#: .\core\templates\core\services.html:38
+msgid "Piscine privée"
+msgstr "Privé zwembad"
+
+#: .\core\templates\core\services.html:38
+msgid "réservée exclusivement à la clientèle du camping."
+msgstr "exclusief gereserveerd voor de gasten van de camping."
+
+#: .\core\templates\core\services.html:49
+#: .\core\templates\core\services.html:50
+msgid "Restauration"
+msgstr "Horeca"
+
+#: .\core\templates\core\services.html:55
+msgid "Food trucks en soirée pour tous les goûts :"
+msgstr "Foodtrucks in de avond voor alle smaken:"
+
+#: .\core\templates\core\services.html:58
+msgid "Burger : "
+msgstr "Hamburger "
+
+#: .\core\templates\core\services.html:58
+msgid "tous les soirs sauf mercredi et jeudi, de 18h à 21h30"
+msgstr "elke avond behalve woensdag en donderdag, van 18.00 tot 21.30 uur"
+
+#: .\core\templates\core\services.html:59
+msgid "Pizza : "
+msgstr "Pizza "
+
+#: .\core\templates\core\services.html:59
+msgid "uniquement le jeudi soir, même horaire"
+msgstr "alleen op donderdagavond, dezelfde tijd"
+
+#: .\core\templates\core\services.html:64
+msgid "Pain frais et viennoiseries chaque matin : "
+msgstr "Vers brood en gebak elke ochtend : "
+
+#: .\core\templates\core\services.html:66
+msgid "Pensez à réserver la veille avant 19h à l'accueil, auprès d'Isabelle."
+msgstr ""
+"Vergeet niet om de avond ervoor voor 19.00 uur bij de receptie te "
+"reserveren, bij Isabelle."
+
+#: .\core\templates\core\services.html:70
+msgid "Epicerie ouverte toute l'année : "
+msgstr "Supermarkt het hele jaar door geopend : "
+
+#: .\core\templates\core\services.html:72
+msgid ""
+"Produits salés, sucrés, d'entretien... L'épicerie du camping est toujours là "
+"pour vous sauver la mise !"
+msgstr ""
+"Zoute, zoete en onderhoudsproducten... De campingwinkel is er altijd om u te "
+"helpen!"
+
+#: .\core\templates\core\services.html:76
+msgid "Bar ouvert tous les jours jusqu'à 21h : "
+msgstr "Bar elke dag geopend tot 21.00 uur : "
+
+#: .\core\templates\core\services.html:78
+msgid ""
+"Un lieu idéal pour boire un verre, savourer une glace et profiter de "
+"l’ambiance du camping."
+msgstr ""
+"Een ideale plek om een drankje te doen, van een ijsje te genieten en te "
+"genieten van de sfeer van de camping."
+
+#: .\core\templates\core\services.html:89
+#: .\core\templates\core\services.html:90
+msgid "Laverie"
+msgstr "Wasserette"
+
+#: .\core\templates\core\services.html:92
+msgid "Du linge à faire ?"
+msgstr "Wassen te doen?"
+
+#: .\core\templates\core\services.html:93
+msgid "Pas de panique, même en vacances, on a pensé à tout :"
+msgstr "Geen paniek, zelfs op vakantie hebben we aan alles gedacht:"
+
+#: .\core\templates\core\services.html:95
+msgid "Une machine à laver pour 4€"
+msgstr "Een wasmachine voor 4€"
+
+#: .\core\templates\core\services.html:96
+msgid "Un sèche-linge pour 2€ les 20 minutes"
+msgstr "Een droger voor 2€ per 20 minuten"
+
+#: .\core\templates\core\services.html:97
+msgid ""
+"Des lavabos pour les adeptes du lavage à la main (ou pour les chaussettes en "
+"mission spéciale)"
+msgstr ""
+"Wasbakken voor de liefhebbers van de handwas (of voor de sokken op speciale "
+"missie)"
+
+#: .\core\templates\core\services.html:99
+msgid "Les jetons sont en vente à l'accueil."
+msgstr "De munten zijn te koop bij de receptie."
+
+#: .\core\templates\core\services.html:100
+msgid "Pensez à votre lessive... ou passez à l'épicerie, on en vend aussi !"
+msgstr ""
+"Vergeet uw was niet... of ga naar de supermarkt, we verkopen het daar ook!"
+
+#: .\core\templates\core\services.html:110
+msgid "Animaux bienvenus"
+msgstr "Huisdieren welkom"
+
+#: .\core\templates\core\services.html:111 .\reservations\forms.py:103
+#: .\reservations\templates\reservations\reservation_request.html:154
+msgid "Animaux"
+msgstr "Huisdieren"
+
+#: .\core\templates\core\services.html:113
+msgid "sauf catégories 1 & 2, désolés les toutous costauds"
+msgstr "behalve categorieën 1 en 2, sorry sterke hondjes"
+
+#: .\core\templates\core\services.html:116
+msgid "La laisse ?"
+msgstr "De lijn?"
+
+#: .\core\templates\core\services.html:116
+msgid ""
+"Oui, même pour une petite balade, dans le camping ou juste devant la tente !"
+msgstr "Ja, zelfs voor een korte wandeling, op de camping of net voor de tent!"
+
+#: .\core\templates\core\services.html:117
+msgid "Un petit besoin ?"
+msgstr "Een beetje behoefte?"
+
+#: .\core\templates\core\services.html:117
+msgid "On ramasse, c'est plus sympa pour tout le monde."
+msgstr "We ruimen op, dat is leuker voor iedereen."
+
+#: .\core\templates\core\services.html:120
+msgid "Les sanitaires"
+msgstr "De sanitaire voorzieningen"
+
+#: .\core\templates\core\services.html:120
+msgid "c'est réservé aux humains !"
+msgstr "is gereserveerd voor mensen!"
+
+#: .\core\templates\core\services.html:131
+msgid "Wi-Fi gratuit"
+msgstr "Gratis Wi-Fi"
+
+#: .\core\templates\core\services.html:132
+msgid "Wi-Fi"
+msgstr "Wi-Fi"
+
+#: .\core\templates\core\services.html:134
+msgid "Besoin de rester connecté ?"
+msgstr "Moet je verbonden blijven?"
+
+#: .\core\templates\core\services.html:135
+msgid "Le wifi est gratuit sur le camping !"
+msgstr "De wifi is gratis op de camping!"
+
+#: .\core\templates\core\services.html:136
+msgid "(Pensez à passer à l'accueil pour les conditions d'accès.)"
+msgstr ""
+"(Vergeet niet om bij de receptie te vragen naar de toegangsvoorwaarden.)"
+
+#: .\core\templates\core\services.html:147
+msgid "Paiements sécurisés"
+msgstr "Veilige betalingen"
+
+#: .\core\templates\core\services.html:148
+msgid "Paiements"
+msgstr "Betalingen"
+
+#: .\core\templates\core\services.html:150
+msgid ""
+"Pour régler votre séjour, plusieurs options s'offrent à vous à l'arrivée : "
+msgstr ""
+"Om uw verblijf te betalen, zijn er verschillende opties beschikbaar bij "
+"aankomst: "
+
+#: .\core\templates\core\services.html:152
+msgid "American Express"
+msgstr "American Express"
+
+#: .\core\templates\core\services.html:153
+msgid "Espèces"
+msgstr "Contant"
+
+#: .\core\templates\core\services.html:154
+msgid "Maestro"
+msgstr "Maestro"
+
+#: .\core\templates\core\services.html:155
+msgid "Mastercard"
+msgstr "Mastercard"
+
+#: .\core\templates\core\services.html:156
+msgid "Visa"
+msgstr "Visa"
+
+#: .\core\templates\core\services.html:157
+msgid "Chèques vacances (ANCV)"
+msgstr "Vakantiecheques (ANCV)"
+
+#: .\core\templates\core\services.html:158
+msgid "Virement"
+msgstr "Overschrijving"
+
+#: .\core\templates\core\services.html:160
+msgid "La carte bancaire est acceptée à partir de 8€."
+msgstr "De creditcard wordt geaccepteerd vanaf 8€."
+
+#: .\core\templates\core\services.html:161
+msgid ""
+"Petit rappel : par mesure de sécurité, nous ne prenons plus les chèques."
+msgstr ""
+"Een kleine herinnering: uit veiligheidsredenen accepteren we geen cheques "
+"meer."
 
 #: .\maineblanc_project\settings.py:105
 msgid "French"
@@ -239,11 +582,6 @@ msgstr "+8 jaar"
 msgid "-8 ans"
 msgstr "-8 jaar"
 
-#: .\reservations\forms.py:103
-#: .\reservations\templates\reservations\reservation_request.html:154
-msgid "Animaux"
-msgstr "Huisdieren"
-
 #: .\reservations\forms.py:113
 msgid "Avec électricité"
 msgstr "Met elektriciteit"
@@ -269,18 +607,9 @@ msgstr "De vertrekdatum moet later zijn dan de aankomstdatum."
 msgid "Contact | Camping Le Maine Blanc"
 msgstr "Contact | Camping Le Maine Blanc"
 
-#: .\reservations\templates\reservations\reservation_request.html:14
-#: .\reservations\templates\reservations\reservation_request.html:16
-msgid "Décoration"
-msgstr "Decoratie"
-
 #: .\reservations\templates\reservations\reservation_request.html:15
 msgid "Nous contacter"
 msgstr "Neem contact met ons op"
-
-#: .\reservations\templates\reservations\reservation_request.html:24
-msgid "Attention"
-msgstr "Aandacht"
 
 #: .\reservations\templates\reservations\reservation_request.html:24
 msgid "Veuillez corriger les erreurs suivantes :"
@@ -314,6 +643,4 @@ msgstr "Verzend de aanvraag"
 msgid ""
 "Votre demande de réservation a bien été envoyée, nous reviendrons vers vous "
 "très rapidement."
-msgstr ""
-"Uw reserveringsaanvraag is verzonden, wij nemen snel contact met "
-"u op."
+msgstr "Uw reserveringsaanvraag is verzonden, wij nemen snel contact met u op."
