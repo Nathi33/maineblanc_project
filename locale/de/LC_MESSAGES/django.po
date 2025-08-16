@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-13 15:38+0200\n"
+"POT-Creation-Date: 2025-08-16 11:06+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -91,6 +91,8 @@ msgstr "Unterkünfte | Campingplatz Le Maine Blanc"
 
 #: .\core\templates\core\accommodations.html:14
 #: .\core\templates\core\accommodations.html:16
+#: .\core\templates\core\activities.html:15
+#: .\core\templates\core\activities.html:17
 #: .\core\templates\core\services.html:14
 #: .\core\templates\core\services.html:16
 #: .\reservations\templates\reservations\reservation_request.html:14
@@ -117,18 +119,18 @@ msgid ""
 "caravanes et camping-cars. Chaque parcelle est délimitée et située à "
 "proximité des sanitaires pour votre confort."
 msgstr ""
-"Genießen Sie einen Aufenthalt inmitten der Natur mit unseren "
-"geräumigen und schattigen Stellplätzen, mit oder ohne Strom, die für Zelte, "
-"Wohnwagen und Wohnmobile geeignet sind. Jeder Stellplatz ist klar "
-"abgegrenzt und befindet sich in der Nähe der sanitären Einrichtungen für Ihren Komfort."
+"Genießen Sie einen Aufenthalt inmitten der Natur mit unseren geräumigen und "
+"schattigen Stellplätzen, mit oder ohne Strom, die für Zelte, Wohnwagen und "
+"Wohnmobile geeignet sind. Jeder Stellplatz ist klar abgegrenzt und befindet "
+"sich in der Nähe der sanitären Einrichtungen für Ihren Komfort."
 
 #: .\core\templates\core\accommodations.html:27
 msgid ""
 "Réservez dès maintenant en toute simplicité et laissez-nous vous accueillir "
 "dans les meilleures conditions !"
 msgstr ""
-"Reservieren Sie jetzt ganz einfach und lassen Sie uns Sie unter den "
-"besten Bedingungen willkommen heißen !"
+"Reservieren Sie jetzt ganz einfach und lassen Sie uns Sie unter den besten "
+"Bedingungen willkommen heißen !"
 
 #: .\core\templates\core\accommodations.html:28
 msgid "Réserver maintenant"
@@ -149,9 +151,9 @@ msgid ""
 "d’un espace extérieur pour profiter du cadre verdoyant du camping."
 msgstr ""
 "Komfort und Ruhe erwarten Sie in unseren voll ausgestatteten Mobilheimen, "
-"die perfekt für einen Aufenthalt mit der Familie oder Freunden geeignet sind. "
-"Jede Unterkunft verfügt über einen Außenbereich, um die grüne Umgebung des "
-"Campingplatzes zu genießen."
+"die perfekt für einen Aufenthalt mit der Familie oder Freunden geeignet "
+"sind. Jede Unterkunft verfügt über einen Außenbereich, um die grüne Umgebung "
+"des Campingplatzes zu genießen."
 
 #: .\core\templates\core\accommodations.html:40
 msgid ""
@@ -164,6 +166,250 @@ msgstr ""
 #: .\core\templates\core\accommodations.html:41
 msgid "Contactez-nous"
 msgstr "Kontaktieren Sie uns"
+
+#: .\core\templates\core\activities.html:5
+msgid "Aux alentours | Camping Le Maine Blanc"
+msgstr "Umgebung | Campingplatz Le Maine Blanc"
+
+#: .\core\templates\core\activities.html:16
+msgid "Activités aux alentours du camping"
+msgstr "Aktivitäten in der Umgebung des Campingplatzes"
+
+#: .\core\templates\core\activities.html:21
+msgid "Activités à 5 - 10 minutes du camping"
+msgstr "Aktivitäten in 5 - 10 Minuten Entfernung vom Campingplatz"
+
+#: .\core\templates\core\activities.html:25
+#: .\core\templates\core\activities.html:27
+msgid "Lac du Moulin Blanc"
+msgstr "Moulin Blanc See"
+
+#: .\core\templates\core\activities.html:29
+msgid ""
+"Le domaine des Lacs du Moulin Blanc à Saint-Christoly-de-Blaye est une base "
+"de loisirs en pleine forêt, avec deux lacs : l’un dédié à la baignade "
+"surveillée et aux activités nautiques, l’autre à la pêche. On y trouve aussi "
+"des sentiers de promenade, des aires de jeux, des parcours sportifs et des "
+"espaces de pique-nique, le tout dans un cadre naturel préservé."
+msgstr ""
+"Das Gebiet der Seen von Moulin Blanc in Saint-Christoly-de-Blaye ist eine "
+"Freizeitanlage im Herzen des Waldes, mit zwei Seen: einer für das "
+"überwachte Baden und Wassersport, der andere für das Angeln. Es gibt auch "
+"Wanderwege, Spielplätze, Sportparcours und Picknickplätze, alles in einer "
+"geschützten Naturlandschaft."
+""
+
+#: .\core\templates\core\activities.html:32
+#: .\core\templates\core\activities.html:46
+#: .\core\templates\core\activities.html:61
+#: .\core\templates\core\activities.html:75
+#: .\core\templates\core\activities.html:95
+#: .\core\templates\core\activities.html:109
+#: .\core\templates\core\activities.html:124
+#: .\core\templates\core\activities.html:138
+#: .\core\templates\core\activities.html:158
+#: .\core\templates\core\activities.html:173
+#: .\core\templates\core\activities.html:187
+#: .\core\templates\core\activities.html:202
+msgid "En savoir +"
+msgstr "Erfahren Sie mehr"
+
+#: .\core\templates\core\activities.html:39
+#: .\core\templates\core\activities.html:41
+msgid "Natéa"
+msgstr "Natéa"
+
+#: .\core\templates\core\activities.html:43
+msgid ""
+"Natéa, à Saint-Savin, est un parc de loisirs de 20 hectares offrant plus de "
+"20 activités pour tous les âges, dont accrobranche, tyrolienne, paintball, "
+"lasergame et minigolf. Le site propose aussi restauration, aires de pique-"
+"nique et organisation d’événements festifs."
+msgstr ""
+"Natéa, in Saint-Savin, ist ein 20 Hektar großer Freizeitpark mit mehr als 20 "
+"Aktivitäten für alle Altersgruppen, darunter Baumklettern, Ziplining, Paintball, "
+"Lasergame und Minigolf. Der Park bietet auch Gastronomie, Picknickbereiche und "
+"die Organisation von Festveranstaltungen."
+
+#: .\core\templates\core\activities.html:54
+#: .\core\templates\core\activities.html:56
+msgid "Califourchon"
+msgstr "Califourchon"
+
+#: .\core\templates\core\activities.html:58
+msgid ""
+"Califourchon, c’est une ferme vivante et pleine de bonne humeur à deux pas "
+"de Saint-Savin, où petits et grands peuvent câliner les animaux, faire des "
+"balades à poney ou en calèche et s’amuser avec plein de jeux en plein air. "
+"Tout au long de l’année, l’équipe organise aussi des journées à thème dans "
+"une ambiance conviviale et familiale."
+msgstr ""
+"Califourchon ist ein lebendiger und fröhlicher Bauernhof in der Nähe von "
+"Saint-Savin, wo Klein und Groß die Tiere streicheln, Pony- oder Kutschfahrten "
+"machen und sich mit vielen Spielen im Freien vergnügen können. Das ganze Jahr "
+"über organisiert das Team auch Themenveranstaltungen in einer freundlichen und "
+"familiären Atmosphäre."
+
+#: .\core\templates\core\activities.html:68
+#: .\core\templates\core\activities.html:70
+msgid "CastorWakePark"
+msgstr "CastorWakePark"
+
+#: .\core\templates\core\activities.html:72
+msgid ""
+"Le Castor Wakepark, c’est le spot parfait pour s’amuser au bord de l’eau : "
+"wakeboard, ski nautique, wakeskate, bouées tractées ou encore paddle, pédalo "
+"et kayak sont au menu. Ensuite, on se pose sur la plage aménagée avec "
+"transats, regarde les glisseurs, sirote une boisson fraîche ou grignote une "
+"glace ou des tapas sur place."
+msgstr ""
+"Der Castor Wakepark ist der perfekte Ort, um am Wasser Spaß zu haben: "
+"Wakeboard, Wasserski, Wakeskate, Bananenboot oder auch Paddle, Tretboot "
+"und Kajak stehen auf dem Programm. Danach kann man sich am angelegten Strand "
+"mit Liegen entspannen, den Fahrern zusehen, ein erfrischendes Getränk "
+"genießen oder ein Eis oder Tapas vor Ort naschen."
+
+#: .\core\templates\core\activities.html:84
+msgid "Activités 20 minutes du camping"
+msgstr "Aktivitäten 20 Minuten vom Campingplatz"
+
+#: .\core\templates\core\activities.html:88
+#: .\core\templates\core\activities.html:90
+msgid "La citadelle de Blaye"
+msgstr "Die Zitadelle von Blaye"
+
+#: .\core\templates\core\activities.html:92
+msgid ""
+"La citadelle de Blaye est un site historique classé au patrimoine mondial de "
+"l'UNESCO, offrant une vue imprenable sur l'estuaire de la Gironde. Les "
+"visiteurs peuvent explorer ses remparts, ses bastions et son musée, tout en "
+"profitant d'animations et d'événements tout au long de l'année."
+msgstr ""
+"Die Zitadelle von Blaye ist ein historischer Ort, der zum UNESCO-Weltkulturerbe "
+"gehört und einen atemberaubenden Blick auf die Gironde bietet. Die Besucher "
+"können die Mauern, Bastionen und das Museum erkunden und dabei von "
+"Veranstaltungen und Aktivitäten im Laufe des Jahres profitieren."
+
+#: .\core\templates\core\activities.html:102
+#: .\core\templates\core\activities.html:104
+msgid "Terres d'oiseaux"
+msgstr "Terres d'oiseaux"
+
+#: .\core\templates\core\activities.html:106
+msgid ""
+"Terres d'oiseaux est un parc ornithologique offrant un cadre naturel "
+"préservé pour observer de nombreuses espèces d'oiseaux dans leur habitat. "
+"Les visiteurs peuvent profiter de sentiers de promenade, d'aires de pique-"
+"nique et d'activités pédagogiques tout au long de l'année."
+msgstr ""
+"Terres d'oiseaux ist ein ornithologischer Park, der einen geschützten "
+"Naturraum bietet, um zahlreiche Vogelarten in ihrem Lebensraum zu beobachten. "
+"Die Besucher können das ganze Jahr über Wanderwege, Picknickplätze und "
+"pädagogische Aktivitäten genießen."
+
+#: .\core\templates\core\activities.html:117
+#: .\core\templates\core\activities.html:119
+msgid "Grotte : Pair-non-Pair"
+msgstr "Grotte : Pair-non-Pair"
+
+#: .\core\templates\core\activities.html:121
+msgid ""
+"La grotte de Pair-non-Pair est un site préhistorique remarquable. Les "
+"visiteurs peuvent y découvrir des peintures rupestres anciennes et en "
+"apprendre davantage sur la vie des hommes préhistoriques grâce à des visites "
+"guidées et des ateliers."
+msgstr ""
+"Die Grotte von Pair-non-Pair ist eine bemerkenswerte prähistorische Stätte. "
+"Die Besucher können dort alte Felsmalereien entdecken und mehr über das "
+"Leben der prähistorischen Menschen durch Führungen und Workshops erfahren."
+
+#: .\core\templates\core\activities.html:131
+#: .\core\templates\core\activities.html:133
+msgid "Au ptit Cro Magnon"
+msgstr "Au ptit Cro Magnon"
+
+#: .\core\templates\core\activities.html:135
+msgid ""
+"Au ptit Cro Magnon est un parc de loisirs offrant une variété d'activités "
+"pour toute la famille. Les visiteurs peuvent profiter de parcours "
+"accrobranche, de balades en poney et d'ateliers pédagogiques sur la "
+"préhistoire."
+msgstr ""
+"Au ptit Cro Magnon ist ein Freizeitpark, der eine Vielzahl von Aktivitäten "
+"für die ganze Familie bietet. Die Besucher können Kletterparcours, Ponyreiten "
+"und pädagogische Workshops zur Prähistorie genießen."
+
+#: .\core\templates\core\activities.html:147
+msgid "Activités à plus de 40 minutes du camping"
+msgstr "Aktivitäten mehr als 40 Minuten vom Campingplatz"
+
+#: .\core\templates\core\activities.html:151
+#: .\core\templates\core\activities.html:153
+msgid "Les Antilles de Jonzac"
+msgstr "Die Antillen von Jonzac"
+
+#: .\core\templates\core\activities.html:155
+msgid ""
+"Les Antilles de Jonzac est un parc aquatique situé à Jonzac, offrant une "
+"variété d'attractions aquatiques pour toute la famille. Les visiteurs "
+"peuvent profiter de toboggans, de piscines à vagues et d'espaces de détente "
+"dans un cadre tropical."
+msgstr ""
+"Die Antillen von Jonzac ist ein Wasserpark in Jonzac, der eine Vielzahl von "
+"Wasserattraktionen für die ganze Familie bietet. Die Besucher können "
+"Rutschen, Wellenbecken und Entspannungsbereiche in einer tropischen Umgebung "
+"genießen."
+
+#: .\core\templates\core\activities.html:166
+#: .\core\templates\core\activities.html:168
+msgid "Bordeaux"
+msgstr "Bordeaux"
+
+#: .\core\templates\core\activities.html:170
+msgid ""
+"Bordeaux est une ville dynamique et culturelle, célèbre pour son vin et son "
+"architecture. Les visiteurs peuvent explorer le centre historique, classé au "
+"patrimoine mondial de l'UNESCO, et déguster des vins dans les nombreuses "
+"caves et domaines viticoles de la région."
+msgstr ""
+"Bordeaux ist eine dynamische und kulturelle Stadt, die für ihren Wein und ihre "
+"Architektur bekannt ist. Die Besucher können das historische Zentrum, das "
+"zum UNESCO-Weltkulturerbe gehört, erkunden und in den zahlreichen Weinkellern "
+"und Weingütern der Region Wein probieren."
+
+#: .\core\templates\core\activities.html:180
+#: .\core\templates\core\activities.html:182
+msgid "Saint-Émilion"
+msgstr "Saint-Émilion"
+
+#: .\core\templates\core\activities.html:184
+msgid ""
+"Saint-Émilion est une charmante ville médiévale, célèbre pour ses vins "
+"prestigieux. Les visiteurs peuvent explorer les ruelles pavées, visiter les "
+"vignobles environnants et déguster des grands crus dans les caves "
+"historiques."
+msgstr ""
+"Saint-Émilion ist eine charmante mittelalterliche Stadt, die für ihre "
+"hochwertigen Weine bekannt ist. Die Besucher können die gepflasterten Gassen "
+"erkunden, die umliegenden Weinberge besuchen und in den Weinkellern "
+"exquisite Weine probieren."
+
+#: .\core\templates\core\activities.html:195
+#: .\core\templates\core\activities.html:197
+msgid "Bassin d'Arcachon"
+msgstr "Bassin d'Arcachon"
+
+#: .\core\templates\core\activities.html:199
+msgid ""
+"Le Bassin d'Arcachon est une destination prisée pour ses paysages côtiers, "
+"ses plages et ses activités nautiques. Les visiteurs peuvent déguster des "
+"huîtres, explorer les dunes du Pilat et profiter des charmants villages de "
+"pêcheurs."
+msgstr ""
+"Das Bassin d'Arcachon ist ein beliebtes Ziel für seine Küstenlandschaften, "
+"Strände und Wassersportaktivitäten. Die Besucher können Austern probieren, "
+"die Düne von Pilat erkunden und die charmanten Fischerdörfer der Umgebung "
+"genießen."
 
 #: .\core\templates\core\base.html:18 .\core\templates\core\home.html:5
 msgid "Accueil | Camping Le Maine Blanc"
