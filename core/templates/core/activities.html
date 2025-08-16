@@ -1,8 +1,214 @@
 {% extends "core/base.html" %}
 
-{% block title %}Activités | Camping Le Maine Blanc{% endblock %}
+{% load static i18n %}
+
+{% block title %}{% trans "Aux alentours | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/activities.css' %}" />
+{% endblock %}
 
 {% block content %}
-<h1>Activités au Camping Le Maine Blanc</h1>
-<p>C'est ici que débutera ton contenu sur les activités.</p>
+<section class="container py-5">
+
+    <div class="container-title">
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
+        <h2 class="title-services">{% trans "Activités aux alentours du camping" %}</h2>
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+    </div>
+
+    <div class="activities-list-1">
+        <h3 class="title-activities">{% trans "Activités à 5 - 10 minutes du camping" %}</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/lac-moulin-blanc.jpg' %}" class="img-activities card-img-top" alt="{% trans "Lac du Moulin Blanc" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Lac du Moulin Blanc" %}</h4>
+                        <p class="card-text">
+                            {% trans "Le domaine des Lacs du Moulin Blanc à Saint-Christoly-de-Blaye est une base de loisirs en pleine forêt, avec deux lacs : l’un dédié à la baignade surveillée et aux activités nautiques, l’autre à la pêche. On y trouve aussi des sentiers de promenade, des aires de jeux, des parcours sportifs et des espaces de pique-nique, le tout dans un cadre naturel préservé." %}
+                        </p>
+                        <a href="https://www.saint-christoly.fr/index.php?option=com_quix&view=page&id=45" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/Natea.jpg' %}" class="img-activities card-img-top" alt="{% trans "Natéa" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Natéa" %}</h4>
+                        <p class="card-text">
+                            {% trans "Natéa, à Saint-Savin, est un parc de loisirs de 20 hectares offrant plus de 20 activités pour tous les âges, dont accrobranche, tyrolienne, paintball, lasergame et minigolf. Le site propose aussi restauration, aires de pique-nique et organisation d’événements festifs." %}
+                        </p>
+                        <a href="https://nat-et-a.com/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/califourchon.png' %}" class="img-activities card-img-top" alt="{% trans "Califourchon" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Califourchon" %}</h4>
+                        <p class="card-text">
+                            {% trans "Califourchon, c’est une ferme vivante et pleine de bonne humeur à deux pas de Saint-Savin, où petits et grands peuvent câliner les animaux, faire des balades à poney ou en calèche et s’amuser avec plein de jeux en plein air. Tout au long de l’année, l’équipe organise aussi des journées à thème dans une ambiance conviviale et familiale." %}
+                        </p>
+                        <a href="https://www.facebook.com/Califourchon" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/castor-wakepark.jpg' %}" class="img-activities card-img-top" alt="{% trans "CastorWakePark" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "CastorWakePark" %}</h4>
+                        <p class="card-text">
+                            {% trans "Le Castor Wakepark, c’est le spot parfait pour s’amuser au bord de l’eau : wakeboard, ski nautique, wakeskate, bouées tractées ou encore paddle, pédalo et kayak sont au menu. Ensuite, on se pose sur la plage aménagée avec transats, regarde les glisseurs, sirote une boisson fraîche ou grignote une glace ou des tapas sur place." %}
+                        </p>
+                        <a href="https://castorwakepark.com/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <div class="activities-list-2">
+        <h3 class="title-activities-2">{% trans "Activités 20 minutes du camping" %}</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/citadelle-blaye.jpg' %}" class="img-activities card-img-top" alt="{% trans "La citadelle de Blaye" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "La citadelle de Blaye" %}</h4>
+                        <p class="card-text">
+                            {% trans "La citadelle de Blaye est un site historique classé au patrimoine mondial de l'UNESCO, offrant une vue imprenable sur l'estuaire de la Gironde. Les visiteurs peuvent explorer ses remparts, ses bastions et son musée, tout en profitant d'animations et d'événements tout au long de l'année." %}
+                        </p>
+                        <a href="https://www.bbte.fr/destination/blaye/la-citadelle-de-blaye/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/terres-oiseaux.jpg' %}" class="img-activities card-img-top" alt="{% trans "Terres d'oiseaux" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Terres d'oiseaux" %}</h4>
+                        <p class="card-text">
+                            {% trans "Terres d'oiseaux est un parc ornithologique offrant un cadre naturel préservé pour observer de nombreuses espèces d'oiseaux dans leur habitat. Les visiteurs peuvent profiter de sentiers de promenade, d'aires de pique-nique et d'activités pédagogiques tout au long de l'année." %}
+                        </p>
+                        <a href="https://www.terresdoiseaux.fr/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/grotte.jpg' %}" class="img-activities card-img-top" alt="{% trans "Grotte : Pair-non-Pair" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Grotte : Pair-non-Pair" %}</h4>
+                        <p class="card-text">
+                            {% trans "La grotte de Pair-non-Pair est un site préhistorique remarquable. Les visiteurs peuvent y découvrir des peintures rupestres anciennes et en apprendre davantage sur la vie des hommes préhistoriques grâce à des visites guidées et des ateliers." %}
+                        </p>
+                        <a href="https://www.pair-non-pair.fr/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/cro-magnon.png' %}" class="img-activities card-img-top" alt="{% trans "Au ptit Cro Magnon" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Au ptit Cro Magnon" %}</h4>
+                        <p class="card-text">
+                            {% trans "Au ptit Cro Magnon est un parc de loisirs offrant une variété d'activités pour toute la famille. Les visiteurs peuvent profiter de parcours accrobranche, de balades en poney et d'ateliers pédagogiques sur la préhistoire." %}
+                        </p>
+                        <a href="https://www.auptitcromagnon.fr/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            </div>
+    </div>
+
+    <div class="activities-list-3">
+        <h3 class="title-activities-2">{% trans "Activités à plus de 40 minutes du camping" %}</h3>
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/jonzac.jpg' %}" class="img-activities card-img-top" alt="{% trans "Les Antilles de Jonzac" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Les Antilles de Jonzac" %}</h4>
+                        <p class="card-text">
+                            {% trans "Les Antilles de Jonzac est un parc aquatique situé à Jonzac, offrant une variété d'attractions aquatiques pour toute la famille. Les visiteurs peuvent profiter de toboggans, de piscines à vagues et d'espaces de détente dans un cadre tropical." %}
+                        </p>
+                        <a href="https://www.lesantillesdejonzac.com/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/bordeaux.jpg' %}" class="img-activities card-img-top" alt="{% trans "Bordeaux" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Bordeaux" %}</h4>
+                        <p class="card-text">
+                            {% trans "Bordeaux est une ville dynamique et culturelle, célèbre pour son vin et son architecture. Les visiteurs peuvent explorer le centre historique, classé au patrimoine mondial de l'UNESCO, et déguster des vins dans les nombreuses caves et domaines viticoles de la région." %}
+                        </p>
+                        <a href="https://www.bordeaux-tourisme.com/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/st-emilion.jpg' %}" class="img-activities card-img-top" alt="{% trans "Saint-Émilion" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Saint-Émilion" %}</h4>
+                        <p class="card-text">
+                            {% trans "Saint-Émilion est une charmante ville médiévale, célèbre pour ses vins prestigieux. Les visiteurs peuvent explorer les ruelles pavées, visiter les vignobles environnants et déguster des grands crus dans les caves historiques." %}
+                        </p>
+                        <a href="https://www.saint-emilion-tourisme.com/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col d-flex">
+                <div class="card h-100 flex-fill d-flex flex-column">
+                    <img src="{% static 'pictures/arcachon.jpg' %}" class="img-activities card-img-top" alt="{% trans "Bassin d'Arcachon" %}">
+                    <div class="card-body d-flex flex-column">
+                        <h4 class="card-title">{% trans "Bassin d'Arcachon" %}</h4>
+                        <p class="card-text">
+                            {% trans "Le Bassin d'Arcachon est une destination prisée pour ses paysages côtiers, ses plages et ses activités nautiques. Les visiteurs peuvent déguster des huîtres, explorer les dunes du Pilat et profiter des charmants villages de pêcheurs." %}
+                        </p>
+                        <a href="https://www.bassin-arcachon.com/" target="_blank" class="card-link mt-auto">
+                            {% trans "En savoir +" %}
+                        </a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+
+</section>
 {% endblock %}
+
+
