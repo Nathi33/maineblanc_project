@@ -1,7 +1,11 @@
+.container {
+    padding-top: 40px;
+}
+
 .container-title {
     display: flex;
     justify-content: center;
-    padding-bottom: 20px;
+    padding-bottom: 30px;
 }
 
 .img-deco-left,
