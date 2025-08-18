@@ -1,5 +1,6 @@
 .about-card {
-  padding: 3rem 5rem;
+  padding: 3rem 5rem 0 5rem;
+  border: none;
 }
 
 .about-image {
