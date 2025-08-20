@@ -1,0 +1,113 @@
+{% extends "core/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Politique de Confidentialité | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/privacy.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+    <header class="container-title text-center mb-4">
+        <div class="container-title">
+            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
+            <h1 class="title-pp">{% trans "Politique de Confidentialité" %}</h1>
+            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+        </div>
+    </header>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Introduction" %}</h2>
+        <p class="text-pp">{% trans "La présente politique de confidentialité a pour objectif d’informer les utilisateurs du site <strong>Camping Le Maine Blanc</strong> sur la manière dont leurs données personnelles peuvent être collectées, traitées et protégées." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Données collectées" %}</h2>
+        <p class="text-pp">{% trans "Dans le cadre de l’utilisation du site, le <strong>Camping Le Maine Blanc</strong> peut être amené à collecter les informations suivantes :" %}</p>
+        <ul>
+            <li>{% trans "Nom, prénom" %}</li>
+            <li>{% trans "Adresse e-mail" %}</li>
+            <li>{% trans "Numéro de téléphone" %}</li>
+            <li>{% trans "Adresse postale (en cas de réservation)" %}</li>
+            <li>{% trans "Informations liées à votre réservation (dates de séjour, type d’hébergement, etc.)" %}</li>
+            <li>{% trans "Adresse IP et données de navigation (via les cookies)" %}</li>
+        </ul>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Finalité de la collecte" %}</h2>
+        <p class="text-pp">{% trans "Les données collectées ont pour objectifs :" %}</p>
+        <ul>
+            <li>{% trans "La gestion des demandes via le formulaire de contact" %}</li>
+            <li>{% trans "La gestion des réservations" %}</li>
+            <li>{% trans "L’amélioration de l’expérience utilisateur sur le site" %}</li>
+            <li>{% trans "Le respect des obligations légales et réglementaires" %}</li>
+        </ul>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Base légale du traitement" %}</h2>
+        <p class="text-pp">{% trans "Le traitement de vos données repose sur :" %}</p>
+        <ul>
+            <li>{% trans "Votre consentement (formulaire de contact, cookies)" %}</li>
+            <li>{% trans "L’exécution d’un contrat (réservation d’un séjour)" %}</li>
+            <li>{% trans "Le respect d’obligations légales (facturation, comptabilité)" %}</li>
+        </ul>
+        </p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Durée de conservation" %}</h2>
+        <p class="text-pp">{% trans "Vos données personnelles sont conservées uniquement le temps nécessaire aux finalités pour lesquelles elles ont été collectées :" %}</p>
+        <ul>
+            <li>{% trans "Données de réservation : conservées pendant la durée légale de conservation comptable (10 ans)" %}</li>
+            <li>{% trans "Données de contact : supprimées 3 ans après le dernier échange" %}</li>
+            <li>{% trans "Cookies : durée maximale de 13 mois" %}</li>
+        </ul>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Partage des données" %}</h2>
+        <p class="text-pp">{% trans "Les données collectées sont exclusivement destinées au" %} <strong>{% trans "Camping Le Maine Blanc" %}</strong>. {% trans "Elles ne sont en aucun cas vendues, échangées ou transmises à des tiers, sauf obligation légale." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Sécurité des données" %}</h2>
+        <p class="text-pp">{% trans "Le" %} <strong>{% trans "Camping Le Maine Blanc" %}</strong> {% trans "met en œuvre toutes les mesures techniques et organisationnelles nécessaires afin de protéger vos données personnelles contre toute perte, altération, accès non autorisé ou divulgation." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Vos droits (RGPD)" %}</h2>
+        <p class="text-pp">{% trans "Conformément au Règlement Général sur la Protection des Données (RGPD), vous disposez des droits suivants :" %}</p>
+        <ul>
+            <li>{% trans "Droit d’accès à vos données" %}</li>
+            <li>{% trans "Droit de rectification" %}</li>
+            <li>{% trans "Droit à l’effacement" %}</li>
+            <li>{% trans "Droit à la limitation du traitement" %}</li>
+            <li>{% trans "Droit à la portabilité des données" %}</li>
+            <li>{% trans "Droit d’opposition" %}</li>
+        </ul>
+        <p class="text-pp">{% trans "Pour exercer vos droits, vous pouvez contacter le Camping par email à :" %} <a href="mailto:camping@lesterresdumaineblanc.com" class="link-pp">camping@lesterresdumaineblanc.com</a>.</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Cookies" %}</h2>
+        <p class="text-pp">{% trans "Le site utilise des cookies afin d’améliorer la navigation et mesurer l’audience.Vous pouvez à tout moment gérer vos préférences via les paramètres de votre navigateur." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Modifications" %}</h2>
+        <p class="text-pp">{% trans "Le" %} <strong>{% trans "Camping Le Maine Blanc" %}</strong> {% trans "se réserve le droit de modifier la présente politique de confidentialité à tout moment. Toute modification sera publiée sur cette page." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-pp">{% trans "Contact" %}</h2>
+        <p class="text-pp">{% trans "Pour toute question relative à cette politique de confidentialité, vous pouvez nous écrire à :" %}</p>
+        <p class="text-pp"><strong>{% trans "Camping Le Maine Blanc" %}</strong></p>
+        <p class="text-pp">{% trans "Lieu-Dit Le Maine Blanc, 33920 Saint-Christoly-de-Blaye, France" %}</p>
+        <p class="text-pp">{% trans "Email :" %} camping@lesterresdumaineblanc.com</p>
+    </article>
+</section>
+{% endblock %}

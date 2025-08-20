@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-16 10:57+0200\n"
+"POT-Creation-Date: 2025-08-20 14:19+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,11 +21,11 @@ msgstr ""
 
 #: .\core\templates\core\about.html:5
 msgid "À propos | Camping Le Maine Blanc"
-msgstr "Acerca de | Camping Le Maine Blanc"
+msgstr "Acerca de | Cámping Le Maine Blanc"
 
 #: .\core\templates\core\about.html:16 .\core\templates\core\about.html:20
 msgid "Camping le Maine Blanc"
-msgstr "Camping Le Maine Blanc"
+msgstr "Cámping Le Maine Blanc"
 
 #: .\core\templates\core\about.html:20
 msgid "étoile"
@@ -87,12 +87,14 @@ msgstr ""
 
 #: .\core\templates\core\accommodations.html:5
 msgid "Hébergements | Camping Le Maine Blanc"
-msgstr "Alojamientos | Camping Le Maine Blanc"
+msgstr "Alojamientos | Cámping Le Maine Blanc"
 
 #: .\core\templates\core\accommodations.html:14
 #: .\core\templates\core\accommodations.html:16
 #: .\core\templates\core\activities.html:15
 #: .\core\templates\core\activities.html:17
+#: .\core\templates\core\privacy-policy.html:15
+#: .\core\templates\core\privacy-policy.html:17
 #: .\core\templates\core\services.html:14
 #: .\core\templates\core\services.html:16
 #: .\reservations\templates\reservations\reservation_request.html:14
@@ -169,7 +171,7 @@ msgstr "Contáctenos"
 
 #: .\core\templates\core\activities.html:5
 msgid "Aux alentours | Camping Le Maine Blanc"
-msgstr "Alrededores | Camping Le Maine Blanc"
+msgstr "Alrededores | Cámping Le Maine Blanc"
 
 #: .\core\templates\core\activities.html:16
 msgid "Activités aux alentours du camping"
@@ -177,7 +179,7 @@ msgstr "Actividades en los alrededores del camping"
 
 #: .\core\templates\core\activities.html:21
 msgid "Activités à 5 - 10 minutes du camping"
-msgstr "Actividades a 5 - 10 minutos del camping"
+msgstr "Actividades a 5 - 10 minutos del cámping"
 
 #: .\core\templates\core\activities.html:25
 #: .\core\templates\core\activities.html:27
@@ -225,8 +227,8 @@ msgid ""
 "lasergame et minigolf. Le site propose aussi restauration, aires de pique-"
 "nique et organisation d’événements festifs."
 msgstr ""
-"Natéa, en Saint-Savin, es un parque de ocio de 20 hectáreas que ofrece más de "
-"20 actividades para todas las edades, incluyendo tirolina, paintball, "
+"Natéa, en Saint-Savin, es un parque de ocio de 20 hectáreas que ofrece más "
+"de 20 actividades para todas las edades, incluyendo tirolina, paintball, "
 "lasergame y minigolf. El sitio también ofrece restauración, áreas de picnic "
 "y organización de eventos festivos."
 
@@ -243,12 +245,11 @@ msgid ""
 "Tout au long de l’année, l’équipe organise aussi des journées à thème dans "
 "une ambiance conviviale et familiale."
 msgstr ""
-"Califourchon es una granja viva y llena de buen humor a un paso de Saint-Savin, "
-"donde pequeños y grandes pueden acariciar a los animales, dar paseos en "
-"poni o en carruaje y divertirse con muchos juegos al aire libre. A lo largo "
-"del año, el equipo también organiza días temáticos en un ambiente acogedor "
-"y familiar."
-""
+"Califourchon es una granja viva y llena de buen humor a un paso de Saint-"
+"Savin, donde pequeños y grandes pueden acariciar a los animales, dar paseos "
+"en poni o en carruaje y divertirse con muchos juegos al aire libre. A lo "
+"largo del año, el equipo también organiza días temáticos en un ambiente "
+"acogedor y familiar."
 
 #: .\core\templates\core\activities.html:68
 #: .\core\templates\core\activities.html:70
@@ -264,20 +265,19 @@ msgid ""
 "glace ou des tapas sur place."
 msgstr ""
 "El Castor Wakepark es el lugar perfecto para divertirse junto al agua: "
-"wakeboard, esquí acuático, wakeskate, donuts o paddle, pedaló "
-"y kayak están en el menú. Luego, nos relajamos en la playa equipada con "
-"tumbonas, observamos a los que practican deportes acuáticos, saboreamos una "
-"bebida fresca o picamos un helado o tapas en el lugar."
+"wakeboard, esquí acuático, wakeskate, donuts o paddle, pedaló y kayak están "
+"en el menú. Luego, nos relajamos en la playa equipada con tumbonas, "
+"observamos a los que practican deportes acuáticos, saboreamos una bebida "
+"fresca o picamos un helado o tapas en el lugar."
 
 #: .\core\templates\core\activities.html:84
 msgid "Activités 20 minutes du camping"
-msgstr "Actividades a 20 minutos del camping"
+msgstr "Actividades a 20 minutos del cámping"
 
 #: .\core\templates\core\activities.html:88
 #: .\core\templates\core\activities.html:90
 msgid "La citadelle de Blaye"
 msgstr "La ciudadela de Blaye"
-
 
 #: .\core\templates\core\activities.html:92
 msgid ""
@@ -286,10 +286,10 @@ msgid ""
 "visiteurs peuvent explorer ses remparts, ses bastions et son musée, tout en "
 "profitant d'animations et d'événements tout au long de l'année."
 msgstr ""
-"La Ciudadela de Blaye es un sitio histórico declarado Patrimonio de la Humanidad por "
-"la UNESCO, que ofrece una vista impresionante del estuario de la Gironde. "
-"Los visitantes pueden explorar sus murallas, sus bastiones y su museo, mientras disfrutan "
-"de animaciones y eventos a lo largo del año."
+"La Ciudadela de Blaye es un sitio histórico declarado Patrimonio de la "
+"Humanidad por la UNESCO, que ofrece una vista impresionante del estuario de "
+"la Gironde. Los visitantes pueden explorar sus murallas, sus bastiones y su "
+"museo, mientras disfrutan de animaciones y eventos a lo largo del año."
 
 #: .\core\templates\core\activities.html:102
 #: .\core\templates\core\activities.html:104
@@ -304,9 +304,9 @@ msgid ""
 "nique et d'activités pédagogiques tout au long de l'année."
 msgstr ""
 "Tierras de Aves es un parque ornitológico que ofrece un entorno natural "
-"preservado para observar numerosas especies de aves en su hábitat. "
-"Los visitantes pueden disfrutar de senderos para pasear, áreas de picnic "
-"y actividades educativas durante todo el año."
+"preservado para observar numerosas especies de aves en su hábitat. Los "
+"visitantes pueden disfrutar de senderos para pasear, áreas de picnic y "
+"actividades educativas durante todo el año."
 
 #: .\core\templates\core\activities.html:117
 #: .\core\templates\core\activities.html:119
@@ -320,10 +320,9 @@ msgid ""
 "apprendre davantage sur la vie des hommes préhistoriques grâce à des visites "
 "guidées et des ateliers."
 msgstr ""
-"La cueva de Pair-non-Pair es un sitio prehistórico notable. Los "
-"visitantes pueden descubrir pinturas rupestres antiguas y aprender más "
-"sobre la vida de los hombres prehistóricos a través de visitas "
-"guiadas y talleres."
+"La cueva de Pair-non-Pair es un sitio prehistórico notable. Los visitantes "
+"pueden descubrir pinturas rupestres antiguas y aprender más sobre la vida de "
+"los hombres prehistóricos a través de visitas guiadas y talleres."
 
 #: .\core\templates\core\activities.html:131
 #: .\core\templates\core\activities.html:133
@@ -337,14 +336,14 @@ msgid ""
 "accrobranche, de balades en poney et d'ateliers pédagogiques sur la "
 "préhistoire."
 msgstr ""
-"En el pequeño Cro Magnon es un parque de ocio que ofrece una variedad de actividades "
-"para toda la familia. Los visitantes pueden disfrutar de recorridos de "
-"árboles, paseos en pony y talleres educativos sobre la "
+"En el pequeño Cro Magnon es un parque de ocio que ofrece una variedad de "
+"actividades para toda la familia. Los visitantes pueden disfrutar de "
+"recorridos de árboles, paseos en pony y talleres educativos sobre la "
 "prehistoria."
 
 #: .\core\templates\core\activities.html:147
 msgid "Activités à plus de 40 minutes du camping"
-msgstr "Actividades a más de 40 minutos del camping"
+msgstr "Actividades a más de 40 minutos del cámping"
 
 #: .\core\templates\core\activities.html:151
 #: .\core\templates\core\activities.html:153
@@ -358,10 +357,10 @@ msgid ""
 "peuvent profiter de toboggans, de piscines à vagues et d'espaces de détente "
 "dans un cadre tropical."
 msgstr ""
-"Las Antillas de Jonzac es un parque acuático situado en Jonzac, que ofrece una "
-"variedad de atracciones acuáticas para toda la familia. Los visitantes "
-"pueden disfrutar de toboganes, piscinas de olas y espacios de relajación "
-"en un entorno tropical."
+"Las Antillas de Jonzac es un parque acuático situado en Jonzac, que ofrece "
+"una variedad de atracciones acuáticas para toda la familia. Los visitantes "
+"pueden disfrutar de toboganes, piscinas de olas y espacios de relajación en "
+"un entorno tropical."
 
 #: .\core\templates\core\activities.html:166
 #: .\core\templates\core\activities.html:168
@@ -376,9 +375,9 @@ msgid ""
 "caves et domaines viticoles de la région."
 msgstr ""
 "Burdeos es una ciudad dinámica y cultural, famosa por su vino y su "
-"arquitectura. Los visitantes pueden explorar el centro histórico, "
-"catalogado como Patrimonio de la Humanidad por la UNESCO, y degustar "
-"vinos en las numerosas bodegas y viñedos de la región."
+"arquitectura. Los visitantes pueden explorar el centro histórico, catalogado "
+"como Patrimonio de la Humanidad por la UNESCO, y degustar vinos en las "
+"numerosas bodegas y viñedos de la región."
 
 #: .\core\templates\core\activities.html:180
 #: .\core\templates\core\activities.html:182
@@ -393,9 +392,8 @@ msgid ""
 "historiques."
 msgstr ""
 "Saint-Émilion es una encantadora ciudad medieval, famosa por sus vinos "
-"prestigiosos. Los visitantes pueden explorar las calles empedradas, visitar los "
-"viñedos circundantes y degustar grandes vinos en las bodegas "
-"históricas."
+"prestigiosos. Los visitantes pueden explorar las calles empedradas, visitar "
+"los viñedos circundantes y degustar grandes vinos en las bodegas históricas."
 
 #: .\core\templates\core\activities.html:195
 #: .\core\templates\core\activities.html:197
@@ -409,22 +407,22 @@ msgid ""
 "huîtres, explorer les dunes du Pilat et profiter des charmants villages de "
 "pêcheurs."
 msgstr ""
-"El Bajo de Arcachón es un destino popular por sus paisajes costeros, "
-"sus playas y sus actividades náuticas. Los visitantes pueden degustar "
-"ostras, explorar las dunas de Pilat y disfrutar de los encantadores "
-"pueblos de pescadores."
+"El Bajo de Arcachón es un destino popular por sus paisajes costeros, sus "
+"playas y sus actividades náuticas. Los visitantes pueden degustar ostras, "
+"explorar las dunas de Pilat y disfrutar de los encantadores pueblos de "
+"pescadores."
 
 #: .\core\templates\core\base.html:18 .\core\templates\core\home.html:5
 msgid "Accueil | Camping Le Maine Blanc"
-msgstr "Bienvenido | Camping Le Maine Blanc"
+msgstr "Bienvenido | Cámping Le Maine Blanc"
 
-#: .\core\templates\core\base.html:30
+#: .\core\templates\core\base.html:30 .\core\templates\core\base.html:152
 msgid ""
 "Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus "
 "du nom camping le Maine Blanc"
 msgstr ""
 "Logotipo que representa un abeto, una tienda de campaña, una fogata y un sol "
-"encima llamado así por el camping Maine Blanc."
+"encima llamado así por el cámping Maine Blanc."
 
 #: .\core\templates\core\base.html:44
 msgid "Accueil"
@@ -447,8 +445,69 @@ msgid "Aux alentours"
 msgstr "Alrededor"
 
 #: .\core\templates\core\base.html:59
+#: .\core\templates\core\privacy-policy.html:106
 msgid "Contact"
 msgstr "Contacto"
+
+#: .\core\templates\core\base.html:148 .\core\templates\core\legal.html:21
+#: .\core\templates\core\privacy-policy.html:73
+#: .\core\templates\core\privacy-policy.html:78
+#: .\core\templates\core\privacy-policy.html:102
+#: .\core\templates\core\privacy-policy.html:108
+msgid "Camping Le Maine Blanc"
+msgstr "Cámping Le Maine Blanc"
+
+#: .\core\templates\core\base.html:156
+msgid ""
+"Profitez d’un séjour nature en Gironde, dans une ambiance conviviale et "
+"familiale."
+msgstr ""
+"Disfruta de una estancia en la naturaleza en Gironda, en un ambiente "
+"amigable y familiar."
+
+#: .\core\templates\core\base.html:162
+msgid "Informations pratiques"
+msgstr "Información práctica"
+
+#: .\core\templates\core\base.html:163
+msgid "Logo Carte"
+msgstr "Logo Mapa"
+
+#: .\core\templates\core\base.html:163
+msgid "Lieu-Dit Le Maine Blanc"
+msgstr "Lieu-Dit Le Maine Blanc"
+
+#: .\core\templates\core\base.html:164
+msgid "Logo Téléphone"
+msgstr "Logo Teléfono"
+
+#: .\core\templates\core\base.html:165
+msgid "Logo Email"
+msgstr "Logo Email"
+
+#: .\core\templates\core\base.html:166
+msgid "Voir sur Google Maps"
+msgstr "Ver en Google Maps"
+
+#: .\core\templates\core\base.html:171
+msgid "Suivez-nous"
+msgstr "Síguenos"
+
+#: .\core\templates\core\base.html:172
+msgid "Logo Facebook"
+msgstr "Logo Facebook"
+
+#: .\core\templates\core\base.html:173
+msgid "Logo Instagram"
+msgstr "Logo Instagram"
+
+#: .\core\templates\core\base.html:180
+msgid "Mentions légales"
+msgstr "Avis legal"
+
+#: .\core\templates\core\base.html:180
+msgid "Politique de confidentialité"
+msgstr "Política de privacidad"
 
 #: .\core\templates\core\home.html:14
 msgid "Bienvenue au Camping Le Maine Blanc"
@@ -457,6 +516,455 @@ msgstr "Bienvenido al Camping Le Maine Blanc"
 #: .\core\templates\core\home.html:15
 msgid "Un coin de nature au cœur de la Gironde"
 msgstr "Un rincón de naturaleza en el corazón de la Gironda"
+
+#: .\core\templates\core\legal.html:5
+msgid "Mentions Légales | Camping Le Maine Blanc"
+msgstr "Avis Legal | Camping Le Maine Blanc"
+
+#: .\core\templates\core\legal.html:15
+msgid "Mentions Légales"
+msgstr "Avis legal"
+
+#: .\core\templates\core\legal.html:20
+msgid "Éditeur du site"
+msgstr "Editor del sitio"
+
+#: .\core\templates\core\legal.html:22
+msgid ""
+"Adresse : Lieu-Dit Le Maine Blanc 33920 Saint-Christoly-de-Blaye, Gironde, "
+"France"
+msgstr ""
+"Dirección : Lieu-Dit Le Maine Blanc 33920 Saint-Christoly-de-Blaye, Gironde, "
+"Francia"
+
+#: .\core\templates\core\legal.html:23
+msgid "Téléphone : 05 57 42 52 81"
+msgstr "Teléfono : 05 57 42 52 81"
+
+#: .\core\templates\core\legal.html:24
+msgid "Email : camping@lesterresdumaineblanc.com"
+msgstr "Email : camping@lesterresdumaineblanc.com"
+
+#: .\core\templates\core\legal.html:25
+msgid "SIRET : 89265659600012"
+msgstr "SIRET : 89265659600012"
+
+#: .\core\templates\core\legal.html:26
+msgid "TVA intracommunautaire : FR 08892656596"
+msgstr "TVA intracommunautaire : FR 08892656596"
+
+#: .\core\templates\core\legal.html:30
+msgid "Responsable de la publication"
+msgstr "Responsable de la publicación"
+
+#: .\core\templates\core\legal.html:31
+msgid ""
+"Le responsable de la publication est <strong>Monsieur Franck WALLERAND</"
+"strong>, en qualité de représentant légal du Camping Le Maine Blanc."
+msgstr ""
+"El responsable de la publicación es <strong>Señor Franck WALLERAND</strong>, "
+"en calidad de representante legal del Camping Le Maine Blanc."
+
+#: .\core\templates\core\legal.html:35
+msgid "Conception et réalisation"
+msgstr "Concepción y realización"
+
+#: .\core\templates\core\legal.html:36
+msgid ""
+"Site conçu et développé bénévolement par <strong>Nathalie Darnaudat</"
+"strong>, titulaire d'un certificat professionnel en développement web et "
+"mobile."
+msgstr ""
+"El sitio fue diseñado y desarrollado de forma voluntaria por "
+"<strong>Nathalie Darnaudat</strong>, titular de un certificado profesional "
+"en desarrollo web y móvil."
+
+#: .\core\templates\core\legal.html:40
+msgid "Hébergement du site"
+msgstr "Alojamiento del sitio"
+
+#: .\core\templates\core\legal.html:41
+msgid "Le site est hébergé par : <strong>[Nom de l’hébergeur choisi]</strong>"
+msgstr ""
+"El sitio está alojado por : <strong>[Nombre del proveedor de alojamiento "
+"elegido]</strong>"
+
+#: .\core\templates\core\legal.html:42
+msgid "[Adresse complète de l’hébergeur]"
+msgstr "[Dirección completa del proveedor de alojamiento]"
+
+#: .\core\templates\core\legal.html:43
+msgid "[Téléphone de l’hébergeur]"
+msgstr "[Teléfono del proveedor de alojamiento]"
+
+#: .\core\templates\core\legal.html:47
+msgid "Propriété intellectuelle"
+msgstr "Propiedad intelectual"
+
+#: .\core\templates\core\legal.html:48
+msgid ""
+"L’ensemble des contenus présents sur ce site (textes, images, logo, "
+"photographies, structure, design) sont la propriété exclusive de "
+"<strong>Camping Le Maine Blanc</strong>, sauf mention contraire. Toute "
+"reproduction, représentation, modification, publication, adaptation de tout "
+"ou partie des éléments du site est interdite, sauf autorisation écrite "
+"préalable."
+msgstr ""
+"El contenido presente en este sitio (textos, imágenes, logotipos, "
+"fotografías, estructura, diseño) es propiedad exclusiva de <strong>Camping "
+"Le Maine Blanc</strong>, a menos que se indique lo contrario. Queda "
+"prohibida cualquier reproducción, representación, modificación, publicación "
+"o adaptación de todo o parte de los elementos del sitio, salvo autorización "
+"escrita previa."
+
+#: .\core\templates\core\legal.html:52
+msgid "Données personnelles"
+msgstr "Datos personales"
+
+#: .\core\templates\core\legal.html:53
+msgid ""
+"Les informations collectées via le formulaire de contact ou de réservation "
+"sont exclusivement destinées au <strong>Camping Le Maine Blanc</strong> et "
+"ne sont pas transmises à des tiers."
+msgstr ""
+"Las informaciones recopiladas a través del formulario de contacto o de "
+"reserva están destinadas exclusivamente a <strong>Camping Le Maine Blanc</"
+"strong> y no se transmiten a terceros."
+
+#: .\core\templates\core\legal.html:54
+msgid ""
+"Conformément au Règlement Général sur la Protection des Données (RGPD) et à "
+"la loi Informatique et Libertés, vous disposez d'un droit d'accès, de "
+"rectification et de suppression de vos données personnelles."
+msgstr ""
+"Conforme al Reglamento General de Protección de Datos (RGPD) y a la ley de "
+"Informática y Libertades, usted tiene derecho a acceder, rectificar y "
+"suprimir sus datos personales."
+
+#: .\core\templates\core\legal.html:55
+msgid ""
+"Pour exercer ce droit, vous pouvez contacter le camping à l'adresse email : "
+"camping@lesterresdumaineblanc.com"
+msgstr ""
+"Para ejercer este derecho, puede contactar con el camping en la dirección de "
+"correo electrónico : camping@lesterresdumaineblanc.com"
+
+#: .\core\templates\core\legal.html:59
+msgid "Limitation de responsabilité"
+msgstr "Limitación de responsabilidad"
+
+#: .\core\templates\core\legal.html:60
+msgid ""
+"Le <strong>Camping Le Maine Blanc</strong> s'efforce de fournir sur ce site "
+"des informations précises et à jour. Toutefois, il ne pourra être tenu "
+"responsable des omissions, inexactitudes ou carences dans la mise à jour, "
+"qu'elles soient de son fait ou du fait des tiers partenaires qui lui "
+"fournissent ces informations."
+msgstr ""
+"El <strong>Camping Le Maine Blanc</strong> se esfuerza por proporcionar en "
+"este sitio información precisa y actualizada. Sin embargo, no podrá ser "
+"considerado responsable de omisiones, inexactitudes o deficiencias en la "
+"actualización, ya sea por su parte o por parte de terceros socios que le "
+"proporcionan esta información."
+
+#: .\core\templates\core\legal.html:64
+msgid "Liens hypertextes"
+msgstr "Enlaces hipermedia"
+
+#: .\core\templates\core\legal.html:65
+msgid ""
+"Le site peut contenir des liens hypertextes vers d'autres sites. Le "
+"<strong>Camping Le Maine Blanc</strong> décline toute responsabilité quant "
+"aux contenus ou aux pratiques de ces sites tiers."
+msgstr ""
+"El sitio puede contener enlaces hipermedia a otros sitios. El "
+"<strong>Camping Le Maine Blanc</strong> declina toda responsabilidad sobre "
+"los contenidos o las prácticas de estos sitios de terceros."
+
+#: .\core\templates\core\legal.html:69
+msgid "Droit applicable"
+msgstr "Derecho aplicable"
+
+#: .\core\templates\core\legal.html:70
+msgid "Le présent site et ses mentions légales sont soumis au droit français."
+msgstr ""
+"El presente sitio y sus menciones legales están sujetos al derecho francés."
+
+#: .\core\templates\core\legal.html:74
+#: .\core\templates\core\privacy-policy.html:96
+msgid "Cookies"
+msgstr "Cookies"
+
+#: .\core\templates\core\legal.html:75
+msgid ""
+"Le site peut utiliser des cookies afin d'améliorer l'expérience utilisateur. "
+"Ces cookies ne collectent aucune donnée personnelle sensible."
+msgstr ""
+"El sitio puede utilizar cookies para mejorar la experiencia del usuario. "
+"Estas cookies no recopilan ningún dato personal sensible."
+
+#: .\core\templates\core\legal.html:76
+msgid ""
+"Vous pouvez configurer votre navigateur pour accepter, refuser ou supprimer "
+"les cookies à tout moment."
+msgstr ""
+"Puede configurar su navegador para aceptar, rechazar o eliminar cookies en "
+"cualquier momento."
+
+#: .\core\templates\core\legal.html:77
+msgid ""
+"En poursuivant votre navigation sur le site, vous acceptez l'utilisation "
+"éventuelle de cookies."
+msgstr ""
+"Al continuar navegando por el sitio, acepta el uso potencial de cookies."
+
+#: .\core\templates\core\privacy-policy.html:5
+msgid "Politique de Confidentialité | Camping Le Maine Blanc"
+msgstr "Política de Privacidad | Camping Le Maine Blanc"
+
+#: .\core\templates\core\privacy-policy.html:16
+msgid "Politique de Confidentialité"
+msgstr "Política de privacidad"
+
+#: .\core\templates\core\privacy-policy.html:22
+msgid "Introduction"
+msgstr "Introducción"
+
+#: .\core\templates\core\privacy-policy.html:23
+msgid ""
+"La présente politique de confidentialité a pour objectif d’informer les "
+"utilisateurs du site <strong>Camping Le Maine Blanc</strong> sur la manière "
+"dont leurs données personnelles peuvent être collectées, traitées et "
+"protégées."
+msgstr ""
+"Esta política de privacidad tiene como objetivo informar a los usuarios del "
+"sitio <strong>Camping Le Maine Blanc</strong> sobre cómo se pueden "
+"recopilar, procesar y proteger sus datos personales."
+
+#: .\core\templates\core\privacy-policy.html:27
+msgid "Données collectées"
+msgstr "Datos recopilados"
+
+#: .\core\templates\core\privacy-policy.html:28
+msgid ""
+"Dans le cadre de l’utilisation du site, le <strong>Camping Le Maine Blanc</"
+"strong> peut être amené à collecter les informations suivantes :"
+msgstr ""
+"Como parte del uso del sitio, <strong>Camping Le Maine Blanc"
+"</strong> podrá recopilar la siguiente información:"
+
+#: .\core\templates\core\privacy-policy.html:30
+msgid "Nom, prénom"
+msgstr "Nombre, apellido"
+
+#: .\core\templates\core\privacy-policy.html:31
+msgid "Adresse e-mail"
+msgstr "Correo electrónico"
+
+#: .\core\templates\core\privacy-policy.html:32
+msgid "Numéro de téléphone"
+msgstr "Número de teléfono"
+
+#: .\core\templates\core\privacy-policy.html:33
+msgid "Adresse postale (en cas de réservation)"
+msgstr "Dirección postal (en caso de reserva)"
+
+#: .\core\templates\core\privacy-policy.html:34
+msgid ""
+"Informations liées à votre réservation (dates de séjour, type d’hébergement, "
+"etc.)"
+msgstr ""
+"Información relacionada con su reserva (fechas de estancia, tipo de "
+"alojamiento, etc.)"
+
+#: .\core\templates\core\privacy-policy.html:35
+msgid "Adresse IP et données de navigation (via les cookies)"
+msgstr "Dirección IP y datos de navegación (a través de cookies)"
+
+#: .\core\templates\core\privacy-policy.html:40
+msgid "Finalité de la collecte"
+msgstr "Finalidad de la recopilación"
+
+#: .\core\templates\core\privacy-policy.html:41
+msgid "Les données collectées ont pour objectifs :"
+msgstr "Los datos recopilados tienen como objetivos:"
+
+#: .\core\templates\core\privacy-policy.html:43
+msgid "La gestion des demandes via le formulaire de contact"
+msgstr "La gestión de las solicitudes a través del formulario de contacto"
+
+#: .\core\templates\core\privacy-policy.html:44
+msgid "La gestion des réservations"
+msgstr "La gestión de las reservas"
+
+#: .\core\templates\core\privacy-policy.html:45
+msgid "L’amélioration de l’expérience utilisateur sur le site"
+msgstr "La mejora de la experiencia del usuario en el sitio"
+
+#: .\core\templates\core\privacy-policy.html:46
+msgid "Le respect des obligations légales et réglementaires"
+msgstr "El respeto de las obligaciones legales y reglamentarias"
+
+#: .\core\templates\core\privacy-policy.html:51
+msgid "Base légale du traitement"
+msgstr "Base legal del tratamiento"
+
+#: .\core\templates\core\privacy-policy.html:52
+msgid "Le traitement de vos données repose sur :"
+msgstr "El tratamiento de sus datos se basa en:"
+
+#: .\core\templates\core\privacy-policy.html:54
+msgid "Votre consentement (formulaire de contact, cookies)"
+msgstr "Su consentimiento (formulario de contacto, cookies)"
+
+#: .\core\templates\core\privacy-policy.html:55
+msgid "L’exécution d’un contrat (réservation d’un séjour)"
+msgstr "La ejecución de un contrato (reserva de una estancia)"
+
+#: .\core\templates\core\privacy-policy.html:56
+msgid "Le respect d’obligations légales (facturation, comptabilité)"
+msgstr "El respeto de las obligaciones legales (facturación, contabilidad)"
+
+#: .\core\templates\core\privacy-policy.html:62
+msgid "Durée de conservation"
+msgstr "Duración de la conservación"
+
+#: .\core\templates\core\privacy-policy.html:63
+msgid ""
+"Vos données personnelles sont conservées uniquement le temps nécessaire aux "
+"finalités pour lesquelles elles ont été collectées :"
+msgstr ""
+"Sus datos personales se conservan únicamente el tiempo necesario para los "
+"fines para los que fueron recopilados:"
+
+#: .\core\templates\core\privacy-policy.html:65
+msgid ""
+"Données de réservation : conservées pendant la durée légale de conservation "
+"comptable (10 ans)"
+msgstr ""
+"Datos de reserva: se conservan durante el período legal de conservación "
+"contable (10 años)"
+
+#: .\core\templates\core\privacy-policy.html:66
+msgid "Données de contact : supprimées 3 ans après le dernier échange"
+msgstr "Datos de contacto: se eliminan 3 años después del último intercambio"
+
+#: .\core\templates\core\privacy-policy.html:67
+msgid "Cookies : durée maximale de 13 mois"
+msgstr "Cookies: duración máxima de 13 meses"
+
+#: .\core\templates\core\privacy-policy.html:72
+msgid "Partage des données"
+msgstr "Compartición de datos"
+
+#: .\core\templates\core\privacy-policy.html:73
+msgid "Les données collectées sont exclusivement destinées au"
+msgstr "Los datos recopilados están destinados exclusivamente a"
+
+#: .\core\templates\core\privacy-policy.html:73
+msgid ""
+"Elles ne sont en aucun cas vendues, échangées ou transmises à des tiers, "
+"sauf obligation légale."
+msgstr ""
+"No se venden, intercambian ni transfieren a terceros bajo ninguna circunstancia, "
+"salvo por obligación legal."
+
+#: .\core\templates\core\privacy-policy.html:77
+msgid "Sécurité des données"
+msgstr "Seguridad de los datos"
+
+#: .\core\templates\core\privacy-policy.html:78
+#: .\core\templates\core\privacy-policy.html:102
+msgid "Le"
+msgstr "El"
+
+#: .\core\templates\core\privacy-policy.html:78
+msgid ""
+"met en œuvre toutes les mesures techniques et organisationnelles nécessaires "
+"afin de protéger vos données personnelles contre toute perte, altération, "
+"accès non autorisé ou divulgation."
+msgstr ""
+"implementa todas las medidas técnicas y organizativas necesarias para proteger "
+"sus datos personales contra cualquier pérdida, alteración, acceso no autorizado "
+"o divulgación."
+
+#: .\core\templates\core\privacy-policy.html:82
+msgid "Vos droits (RGPD)"
+msgstr "Sus derechos (RGPD)"
+
+#: .\core\templates\core\privacy-policy.html:83
+msgid ""
+"Conformément au Règlement Général sur la Protection des Données (RGPD), vous "
+"disposez des droits suivants :"
+msgstr ""
+"Conforme al Reglamento General de Protección de Datos (RGPD), usted tiene los "
+"derechos siguientes:"
+
+#: .\core\templates\core\privacy-policy.html:85
+msgid "Droit d’accès à vos données"
+msgstr "Derecho de acceso a sus datos"
+
+#: .\core\templates\core\privacy-policy.html:86
+msgid "Droit de rectification"
+msgstr "Derecho de rectificación"
+
+#: .\core\templates\core\privacy-policy.html:87
+msgid "Droit à l’effacement"
+msgstr "Derecho a la supresión"
+
+#: .\core\templates\core\privacy-policy.html:88
+msgid "Droit à la limitation du traitement"
+msgstr "Derecho a la limitación del tratamiento"
+
+#: .\core\templates\core\privacy-policy.html:89
+msgid "Droit à la portabilité des données"
+msgstr "Derecho a la portabilidad de los datos"
+
+#: .\core\templates\core\privacy-policy.html:90
+msgid "Droit d’opposition"
+msgstr "Derecho de oposición"
+
+#: .\core\templates\core\privacy-policy.html:92
+msgid "Pour exercer vos droits, vous pouvez contacter le Camping par email à :"
+msgstr "Para ejercer sus derechos, puede contactar con el Camping por correo electrónico a :"
+
+#: .\core\templates\core\privacy-policy.html:97
+msgid ""
+"Le site utilise des cookies afin d’améliorer la navigation et mesurer "
+"l’audience.Vous pouvez à tout moment gérer vos préférences via les "
+"paramètres de votre navigateur."
+msgstr ""
+"El sitio utiliza cookies para mejorar la navegación y medir la audiencia. "
+"Puede gestionar sus preferencias en cualquier momento a través de la "
+"configuración de su navegador."
+
+#: .\core\templates\core\privacy-policy.html:101
+msgid "Modifications"
+msgstr "Modificaciones"
+
+#: .\core\templates\core\privacy-policy.html:102
+msgid ""
+"se réserve le droit de modifier la présente politique de confidentialité à "
+"tout moment. Toute modification sera publiée sur cette page."
+msgstr ""
+"se reserva el derecho de modificar la presente política de privacidad en "
+"cualquier momento. Cualquier modificación se publicará en esta página."
+
+#: .\core\templates\core\privacy-policy.html:107
+msgid ""
+"Pour toute question relative à cette politique de confidentialité, vous "
+"pouvez nous écrire à :"
+msgstr ""
+"Para cualquier pregunta relacionada con esta política de privacidad, puede "
+"escribirnos a :"
+
+#: .\core\templates\core\privacy-policy.html:109
+msgid "Lieu-Dit Le Maine Blanc, 33920 Saint-Christoly-de-Blaye, France"
+msgstr "Lieu-Dit Le Maine Blanc, 33920 Saint-Christoly-de-Blaye, Francia"
+
+#: .\core\templates\core\privacy-policy.html:110
+msgid "Email :"
+msgstr "Correo electrónico :"
 
 #: .\core\templates\core\services.html:5
 msgid "Services | Camping Le Maine Blanc"
