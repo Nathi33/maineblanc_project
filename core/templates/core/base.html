@@ -145,7 +145,7 @@
             <div class="row align-items-start">
             <!-- À propos -->
             <div class="col-md-4 mb-4">
-                <h4>Camping Le Maine Blanc</h4>
+                <h4>{% trans "Camping Le Maine Blanc" %}</h4>
                 <a class="navbar-brand" href="{% url 'home' %}">
                     <img
                     src="{% static 'pictures/logoMB.png' %}"
@@ -153,22 +153,22 @@
                     class="logo"
                     />
                 </a>
-                <p>Profitez d’un séjour nature en Gironde, dans une ambiance conviviale et familiale.</p>
+                <p>{% trans "Profitez d’un séjour nature en Gironde, dans une ambiance conviviale et familiale." %}</p>
             </div>
 
 
             <!-- Infos pratiques -->
             <div class="col-md-5 mb-4">
-                <h4>Informations pratiques</h4>
-                <p><img src="{% static 'pictures/carte.png' %}" alt="{% trans "Logo Carte" %}" class="logo-footer">Lieu-Dit Le Maine Blanc </br>33920 Saint Christoly de Blaye, Gironde</p>
+                <h4>{% trans "Informations pratiques" %}</h4>
+                <p><img src="{% static 'pictures/carte.png' %}" alt="{% trans "Logo Carte" %}" class="logo-footer">{% trans "Lieu-Dit Le Maine Blanc" %} </br>33920 Saint Christoly de Blaye, Gironde</p>
                 <p><a target="_blank" href="tel:+33557425281"><img src="{% static 'pictures/telephone.png' %}" alt="{% trans "Logo Téléphone" %}" class="logo-footer">05 57 42 52 81</a></p>
                 <p><a target="_blank" href="mailto:camping@lesterresdumaineblanc.com"><img src="{% static 'pictures/e-mail.png' %}" alt="{% trans "Logo Email" %}" class="logo-footer">camping@lesterresdumaineblanc.com</a></p>
-                <a href="https://www.google.com/maps/place/Camping+Le+Maine+Blanc/@45.1395843,-0.489334,585m/data=!3m2!1e3!4b1!4m9!3m8!1s0x48002e3f944d6d01:0xb22125c18d297349!5m2!4m1!1i2!8m2!3d45.1395805!4d-0.4867591!16s%2Fg%2F1tdyvqyd?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">Voir sur Google Maps</a>
+                <a href="https://www.google.com/maps/place/Camping+Le+Maine+Blanc/@45.1395843,-0.489334,585m/data=!3m2!1e3!4b1!4m9!3m8!1s0x48002e3f944d6d01:0xb22125c18d297349!5m2!4m1!1i2!8m2!3d45.1395805!4d-0.4867591!16s%2Fg%2F1tdyvqyd?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">{% trans "Voir sur Google Maps" %}</a>
             </div>
 
             <!-- Réseaux sociaux -->
             <div class="col-md-3 mb-4">
-                <h4>Suivez-nous</h4>
+                <h4>{% trans "Suivez-nous" %}</h4>
                 <a href="https://www.facebook.com/profile.php?id=100075675799356#" target="_blank"><img src="{% static 'pictures/facebook.png' %}" alt="{% trans "Logo Facebook" %}" class="logo-social"></a>
                 <a href="https://www.instagram.com/camping_le_maine_blanc/" target="_blank"><img src="{% static 'pictures/instagram.png' %}" alt="{% trans "Logo Instagram" %}" class="logo-social"></a>
             </div>
@@ -177,7 +177,7 @@
             <hr class="bg-light">
 
             <div class="text-center">
-            <small>&copy; 2025 Camping Le Maine Blanc | <a href="#" class="text-light text-decoration-none">Mentions légales</a> | <a href="#" class="text-light text-decoration-none">Politique de confidentialité</a></small>
+            <small>&copy; 2025 Camping Le Maine Blanc | <a href="{% url 'legal' %}" class="text-light text-decoration-none">{% trans "Mentions légales" %}</a> | <a href="{% url 'privacy-policy' %}" class="text-light text-decoration-none">{% trans "Politique de confidentialité" %}</a></small>
             </div>
         </div>
     </footer>

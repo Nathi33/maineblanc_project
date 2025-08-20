@@ -11,4 +11,5 @@ urlpatterns = [
     path('tarifs/', views.pricing_view, name='pricing'),
     path('reserver/', views.bookings_view, name='bookings'),
     path('mentions-legales/', views.legal_view, name='legal'),
+    path('politique-de-confidentialite/', views.privacy_view, name='privacy-policy'),
 ]
