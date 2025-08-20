@@ -30,5 +30,6 @@ def bookings_view(request):
 def legal_view(request):
     return render(request, 'core/legal.html')
 
-
+def privacy_view(request):
+    return render(request, 'core/privacy-policy.html')
 
