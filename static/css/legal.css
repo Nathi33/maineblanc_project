@@ -1,0 +1,38 @@
+.container-title {
+    display: flex;
+    justify-content: center;
+}
+
+.img-deco-left,
+.img-deco-right {
+    width: 25px;
+    height: 25px;  
+}
+
+.img-deco-left {
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+
+.img-deco-right {
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+.title-ml {
+    padding: 0 10px;
+    font-weight:900;
+    margin-bottom: 40px;
+}
+
+.under-title-ml {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
+
+.text-ml {
+    margin: 0;
+    padding: 0;
+}

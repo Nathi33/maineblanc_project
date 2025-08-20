@@ -1,8 +1,80 @@
 {% extends "core/base.html" %}
 
-{% block title %}Mentions Légales | Camping Le Maine Blanc{% endblock %}
+{% load static i18n %}
+
+{% block title %}{% trans "Mentions Légales | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/legal.css' %}" />
+{% endblock %}
 
 {% block content %}
-<h1>Mentions Légales du Camping Le Maine Blanc</h1>
-<p>C'est ici que débutera ton contenu sur les mentions légales.</p>
+<section class="container py-5">
+    <header class="container-title text-center mb-4">
+        <img src="{% static 'pictures/peindre.png' %}" alt="" class="img-deco-left" aria-hidden="true"/>
+        <h1 class="title-ml">{% trans "Mentions Légales" %}</h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" class="img-deco-right" aria-hidden="true"/>
+    </header>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Éditeur du site" %}</h2>
+        <p class="text-ml"><strong>{% trans "Camping Le Maine Blanc" %}</strong></p>
+        <p class="text-ml">{% trans "Adresse : Lieu-Dit Le Maine Blanc 33920 Saint-Christoly-de-Blaye, Gironde, France" %}</p>
+        <p class="text-ml">{% trans "Téléphone : 05 57 42 52 81" %}</p>
+        <p class="text-ml">{% trans "Email : camping@lesterresdumaineblanc.com" %}</p>
+        <p class="text-ml">{% trans "SIRET : 89265659600012" %}</p>
+        <p class="text-ml">{% trans "TVA intracommunautaire : FR 08892656596" %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Responsable de la publication" %}</h2>
+        <p class="text-ml">{% trans "Le responsable de la publication est <strong>Monsieur Franck WALLERAND</strong>, en qualité de représentant légal du Camping Le Maine Blanc." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Conception et réalisation" %}</h2>
+        <p class="text-ml">{% trans "Site conçu et développé bénévolement par <strong>Nathalie Darnaudat</strong>, titulaire d'un certificat professionnel en développement web et mobile." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Hébergement du site" %}</h2>
+        <p class="text-ml">{% trans "Le site est hébergé par : <strong>[Nom de l’hébergeur choisi]</strong>" %}</p>
+        <p class="text-ml">{% trans "[Adresse complète de l’hébergeur]" %}</p>
+        <p class="text-ml">{% trans "[Téléphone de l’hébergeur]" %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Propriété intellectuelle" %}</h2>
+        <p class="text-ml">{% trans "L’ensemble des contenus présents sur ce site (textes, images, logo, photographies, structure, design) sont la propriété exclusive de <strong>Camping Le Maine Blanc</strong>, sauf mention contraire. Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site est interdite, sauf autorisation écrite préalable." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Données personnelles" %}</h2>
+        <p class="text-ml">{% trans "Les informations collectées via le formulaire de contact ou de réservation sont exclusivement destinées au <strong>Camping Le Maine Blanc</strong> et ne sont pas transmises à des tiers." %}</p>
+        <p class="text-ml">{% trans "Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi Informatique et Libertés, vous disposez d'un droit d'accès, de rectification et de suppression de vos données personnelles." %}</p>
+        <p class="text-ml">{% trans "Pour exercer ce droit, vous pouvez contacter le camping à l'adresse email : camping@lesterresdumaineblanc.com" %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Limitation de responsabilité" %}</h2>
+        <p class="text-ml">{% trans "Le <strong>Camping Le Maine Blanc</strong> s'efforce de fournir sur ce site des informations précises et à jour. Toutefois, il ne pourra être tenu responsable des omissions, inexactitudes ou carences dans la mise à jour, qu'elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Liens hypertextes" %}</h2>
+        <p class="text-ml">{% trans "Le site peut contenir des liens hypertextes vers d'autres sites. Le <strong>Camping Le Maine Blanc</strong> décline toute responsabilité quant aux contenus ou aux pratiques de ces sites tiers." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Droit applicable" %}</h2>
+        <p class="text-ml">{% trans "Le présent site et ses mentions légales sont soumis au droit français." %}</p>
+    </article>
+
+    <article class="legal-section mb-4">
+        <h2 class="under-title-ml">{% trans "Cookies" %}</h2>
+        <p class="text-ml">{% trans "Le site peut utiliser des cookies afin d'améliorer l'expérience utilisateur. Ces cookies ne collectent aucune donnée personnelle sensible." %}</p>
+        <p class="text-ml">{% trans "Vous pouvez configurer votre navigateur pour accepter, refuser ou supprimer les cookies à tout moment." %}</p>
+        <p class="text-ml">{% trans "En poursuivant votre navigation sur le site, vous acceptez l'utilisation éventuelle de cookies." %}</p>
+    </article>
+</section>
 {% endblock %}
