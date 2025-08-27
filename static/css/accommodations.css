@@ -34,6 +34,12 @@
         object-fit: cover;
 }
 
+.card-body {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
 .btn {
   background-color: #483D8B;
   color: #fff;
@@ -41,6 +47,7 @@
   border-radius: 5px;
   padding: 10px 15px;
   font-size: 1rem;
+  align-self: flex-start;
   cursor: pointer;
   transition: background-color 0.3s ease;
 }

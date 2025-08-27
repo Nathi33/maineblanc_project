@@ -1,0 +1,418 @@
+{% extends "core/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Informations pratiques | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+  <link rel="stylesheet" href="{% static 'css/infos.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+
+    <div class="container-title">
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans 'Décoration' %}" class="img-deco-left" />
+        <h1 class="title-infos">{% trans "Informations pratiques" %}</h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="'Décoration" class="img-deco-right" />
+    </div>
+    <!-- Horaires -->
+    <div class="info-section mb-5">
+        <h2 class="under-title-infos">{% trans 'Horaires' %}</h2>
+        <ul>
+            <li class="mb-3">
+                <strong>{% trans 'Accueil :' %}</strong> 
+                {% trans "Isabelle et Franck vous accueillent chaque jour de 9h à 12h et de 14h à 19h pour répondre à vos questions et vous accompagner durant votre séjour." %}
+            </li>
+            <li class="mb-3">
+                <strong>{% trans 'Arrivées :' %}</strong> 
+                {% trans "Les arrivées se font entre 14h et 21h en haute saison, et jusqu’à 19h en basse saison, afin que chacun puisse s’installer confortablement." %}
+            </li>
+            <li class="mb-3">
+                <strong>{% trans 'Départs :' %}</strong> 
+                {% trans "Le jour de votre départ, merci de libérer votre emplacement avant 12h afin de permettre une bonne organisation pour les prochains arrivants." %}
+            </li>
+            <li class="mb-3">
+                <strong>{% trans "Portail de sécurité :" %}</strong> 
+                {% trans "Pour la tranquillité de tous, le portail est fermé de 22h à 6h. Merci d’anticiper vos déplacements en conséquence." %}
+            </li>
+        </ul>
+    </div>
+
+    <!-- Accessibilité -->
+    <div class="info-section mb-5">
+        <h2 class="under-title-infos">{% trans 'Accessibilité' %}</h2>
+        <p>{% trans "Parce que nous tenons à accueillir chacun dans les meilleures conditions, notre camping dispose d’aménagements adaptés aux personnes à mobilité réduite afin de leur garantir un séjour agréable et serein." %}</p>
+    </div>
+
+    <!-- Camping-car -->
+    <div class="info-section mb-5">
+        <h2 class="under-title-infos">{% trans "Camping-car" %}</h2>
+        <p>{% trans "Pour plus de confort, le camping met à disposition des camping-caristes une aire équipée pour : " %}</p>
+        <ul>
+            <li>{% trans "le remplissage / la vidange des eaux usées" %}</li>
+            <li>{% trans "la vidange des caissettes WC" %}</li>
+        </ul>
+    </div>
+
+    <!-- Paiement et conditions -->
+    <div class="info-section mb-5">
+        <h2 class="under-title-infos">{% trans "Conditions de séjour & Paiement" %}</h2>
+        <ul>
+            <li class="mb-3">
+                <strong>{% trans "Règlement du séjour :" %}</strong>
+                {% trans "Le paiement de la location, des taxes, des charges ou de la caution s’effectue dès l’inscription à l’accueil." %}
+            </li>
+            <li class="mb-3">
+                <strong>{% trans "Affichage des tarifs :" %}</strong>
+                {% trans "Les montants sont indiqués à l’entrée du camping, à l’accueil, et détaillés ci-dessous." %}
+            </li>
+            <li class="mb-3">
+                <strong>{% trans "Préparation du départ :" %}</strong>
+                {% trans "Les clients séjournant en mobil-home sont invités à prévenir l’accueil la veille de leur départ afin d’organiser l’état des lieux." %}
+            </li>
+            <li class="mb-3">
+                <strong>{% trans "Conditions de remboursement :" %}</strong>
+                {% trans "Aucun remboursement n’est possible en cas de mauvais temps, d’arrivée tardive ou de départ anticipé, sauf circonstances particulières justifiées (ex. : hospitalisation)." %}
+            </li>
+        </ul>
+    </div>
+
+    <!-- Tarifs -->
+    <div class="info-section mb-5">
+        <h2 class="under-title-infos">{% trans "Tarifs" %}</h2>
+        <p>{% trans "Taxe de séjour à compter du 01/01/2025 : 0,29€ par personne/nuit. Tous les prix sont TTC." %}</p>
+
+        <table class="table table-bordered align-middle">
+            <thead class="table-light text-center align-middle">
+                <tr>
+                    <th>{% trans "Type d’hébergement" %}</th>
+                    <th>{% trans "Basse Saison" %}<br>{% trans "du 27/09 au 26/04" %}</th>
+                    <th>{% trans "Moyenne Saison" %}<br>{% trans "du 26/04 au 05/07 et" %}<br>{% trans "du 30/08 au 27/09" %}</th>
+                    <th>{% trans "Haute Saison" %}<br>{% trans "du 05/07 au 30/08" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Camping-car -->
+                <tr class="text-center">
+                    <td>
+                        <span class="under-title">{% trans "Camping-car (1-2 pers.)" %}</span><br>
+                        <div>
+                            <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" class=" logo-infos">
+                            {% trans "Avec électricité" %}<br>
+                        </div>
+                        <div>
+                            <img src="{% static 'pictures/no-elec.png' %}" alt="{% trans "Pas d'électricité" %}" class="logo-infos">
+                            {% trans "Sans électricité" %}
+                        </div>
+                    </td>
+                    <td class="align-bottom">{% trans "19€" %}<br>{% trans "16€" %}</td>
+                    <td class="align-bottom">{% trans "21€" %}<br>{% trans "19€" %}</td>
+                    <td class="align-bottom">{% trans "23€" %}<br>{% trans "21€" %}</td>
+                </tr>
+
+                <!-- Caravane / Fourgon -->
+                <tr class="text-center">
+                    <td>
+                        <span class="under-title">{% trans "Caravane / Fourgon" %}</span><br>
+                        <div>
+                            <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" class=" logo-infos">
+                            {% trans "Avec électricité" %}<br>
+                        </div>
+                        <div>
+                            <img src="{% static 'pictures/no-elec.png' %}" alt="{% trans "Pas d'électricité" %}" class="logo-infos">
+                            {% trans "Sans électricité" %}
+                        </div>
+                    </td>
+                    <td class="p-0">
+                        <table class="w-100 text-center">
+                            <tr>
+                                <td>
+                                    <span class="number-people">{% trans "1 pers." %}</span>
+                                </td>
+                                <td><span class="number-people">{% trans "2 pers." %}</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {% trans "15,50€" %}<br>
+                                    {% trans "11,50€" %}
+                                </td>
+                                <td>
+                                    {% trans "18,90€" %}<br>
+                                    {% trans "15€" %}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <!-- Moyenne Saison -->
+                    <td class="p-0">
+                        <table class="w-100 text-center">
+                            <tr>
+                                <td><span class="number-people">{% trans "1 pers." %}</span></td>
+                                <td><span class="number-people">{% trans "2 pers." %}</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {% trans "17€" %}<br>
+                                    {% trans "13€" %}
+                                </td>
+                                <td>
+                                    {% trans "19,70€" %}<br>
+                                    {% trans "17€" %}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <!-- Haute Saison -->
+                    <td class="p-0">
+                        <table class="w-100 text-center">
+                            <tr>
+                                <td><span class="number-people">{% trans "1 pers." %}</span></td>
+                                <td><span class="number-people">{% trans "2 pers." %}</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {% trans "19€" %}<br>
+                                    {% trans "16€" %}
+                                </td>
+                                <td>
+                                    {% trans "23€" %}<br>
+                                    {% trans "19,70€" %}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+                    
+
+                <!-- Tente / Voiture -->
+                <tr class="text-center">
+                    <td>
+                        <span class="under-title">{% trans "Tente / Voiture" %}</span><br>
+                        <div>
+                            <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" class=" logo-infos">
+                            {% trans "Avec électricité" %}<br>
+                        </div>
+                        <div>
+                            <img src="{% static 'pictures/no-elec.png' %}" alt="{% trans "Pas d'électricité" %}" class="logo-infos">
+                            {% trans "Sans électricité" %}
+                        </div>
+                    </td>
+                    <td class="p-0">
+                        <table class="w-100 text-center">
+                            <tr>
+                                <td><span class="number-people">{% trans "1 pers." %}</span></td>
+                                <td><span class="number-people">{% trans "2 pers." %}</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {% trans "14€" %}<br>
+                                    {% trans "11€" %}
+                                </td>
+                                <td>
+                                    {% trans "16€" %}<br>
+                                    {% trans "14€" %}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <!-- Moyenne Saison -->
+                    <td class="p-0">
+                        <table class="w-100 text-center">
+                            <tr>
+                                <td><span class="number-people">{% trans "1 pers." %}</span></td>
+                                <td><span class="number-people">{% trans "2 pers." %}</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {% trans "15,50€" %}<br>
+                                    {% trans "12,50€" %}<br>
+                                </td>
+                                <td>
+                                    {% trans "17,50€" %}<br>
+                                    {% trans "15,90€" %}<br>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                    <!-- Haute Saison -->
+                    <td class="p-0">
+                        <table class="w-100 text-center">
+                            <tr>
+                                <td><span class="number-people">{% trans "1 pers." %}</span></td>
+                                <td><span class="number-people">{% trans "2 pers." %}</span></td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    {% trans "17,50€" %}<br>
+                                    {% trans "15,50€" %}<br>
+                                </td>
+                                <td>
+                                    {% trans "20,90€" %}<br>
+                                    {% trans "18,90€" %}
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+
+
+                <!-- Ouvriers -->
+                <tr>
+                    <td class="text-center">
+                        <span class="under-title">{% trans "Ouvriers" %}</span>
+                    </td>
+                    <td colspan="3" class="text-center">
+                        <div class="d-inline-block text-start">
+                            {% trans "Caravane : 14,50€ / jour" %} <br>
+                            {% trans "Tente : 13,50€ / jour" %} <br>
+                            {% trans "Week-end :" %}
+                            <ul class="list-board mb-0">
+                                <li>{% trans "3,50€ sans électricité" %}</li>
+                                <li>{% trans "8,50€ avec électricité" %}</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+
+                <!-- Suppléments -->
+                <tr >
+                    <td class="text-center">
+                        <span class="under-title">{% trans "Suppléments" %}</span>
+                    </td>
+                    <td colspan="3" class="text-center">
+                        <div class="d-inline-block text-start">
+                            {% trans "Adulte suppl. : 5€" %} <br>
+                            {% trans "Enfant -8 ans : 3,50€" %} <br>
+                            {% trans "Animal : 2€" %} <br>
+                            {% trans "Véhicule suppl. : 1,80€" %} <br>
+                            {% trans "Tente suppl. : 2€" %} <br>
+                            {% trans "Visiteur : " %}
+                            <ul class="list-board mb-0">
+                                <li>{% trans "2,50€ (sans piscine)" %}</li>
+                                <li>{% trans "4€ (avec piscine)" %}</li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Tarifs Mobil-homes -->
+    <div class="table-responsive">
+        <table class="table table-bordered align-top text-center">
+            <thead class="table-light">
+                <tr>
+                    <th scope="col">{% trans "Mobil-home" %}</th>
+                    <th scope="col">{% trans "À la nuitée" %}</th>
+                    <th scope="col">{% trans "Basse saison" %}</th>
+                    <th scope="col">{% trans "Moyenne saison" %}</th>
+                    <th scope="col">{% trans "Haute saison" %}</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Sabot de Vénus -->
+                <tr>
+                    <td>
+                        <strong>{% trans "Sabot de Vénus" %}</strong><br>
+                        <small>{% trans "2 chambres – 5 couchages – climatisé – terrasse" %}</small>
+                    </td>
+                    <td>{% trans "80 €" %}</td>
+                    <td>{% trans "290 €/semaine" %}</td>
+                    <td>{% trans "310 €/semaine" %}</td>
+                    <td>{% trans "460 €/semaine" %}</td>
+                </tr>
+
+                <!-- Belle Dame / Rose Trémière -->
+                <tr>
+                    <td>
+                        <strong>{% trans "Belle Dame / Rose Trémière" %}</strong><br>
+                        <small>{% trans "2 chambres – 4 couchages – climatisé – terrasse" %}</small>
+                    </td>
+                    <td>{% trans "80 €" %}</td>
+                    <td>{% trans "290 €/semaine" %}</td>
+                    <td>{% trans "310 €/semaine" %}</td>
+                    <td>{% trans "460 €/semaine" %}</td>
+                </tr>
+
+                <!-- Bleuet -->
+                <tr>
+                    <td>
+                        <strong>{% trans "Bleuet" %}</strong><br>
+                        <small>{% trans "3 chambres – 6 à 8 couchages – climatisé – terrasse" %}</small>
+                    </td>
+                    <td>
+                        {% trans "90 €" %} <small>({% trans "basse" %})</small><br>
+                        {% trans "110 €" %} <small>({% trans "moyenne" %})</small>
+                    </td>
+                    <td>{% trans "340 €/semaine" %}</td>
+                    <td>{% trans "410 €/semaine" %}</td>
+                    <td>{% trans "590 €/semaine" %}</td>
+                </tr>
+
+                <!-- Capucine -->
+                <tr>
+                    <td>
+                        <strong>{% trans "Capucine" %}</strong><br>
+                        <small>{% trans "1 chambre – 2 couchages (+ banquette enfant < 8 ans) – climatisé – terrasse" %}</small>
+                    </td>
+                    <td>{% trans "70 €" %}</td>
+                    <td>{% trans "225 €/semaine" %}</td>
+                    <td>{% trans "300 €/semaine" %}</td>
+                    <td>{% trans "410 €/semaine" %}</td>
+                </tr>
+
+                <!-- Graminé -->
+                <tr>
+                    <td>
+                        <strong>{% trans "Graminé" %}</strong><br>
+                        <small>{% trans "2 chambres – 4 couchages – sans climatisation – sans terrasse" %}</small><br>
+                        <small class="text-muted">{% trans "Réservé aux ouvriers" %}</small>
+                    </td>
+                    <td>{% trans "50 €" %}</td>
+                    <td colspan="3">
+                        {% trans "175 €/semaine (1 pers)" %}<br>
+                        {% trans "200 €/semaine (2 pers)" %}<br>
+                        {% trans "250 €/semaine (3 pers)" %}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!-- Notes globales -->
+        <div class="mt-3">
+            <p class="small text-muted">
+                {% trans "Oreillers et couettes fournis (taies d’oreillers, housses de couette et draps disponibles en location à partir de 15 €)." %}
+            </p>
+            <p class="small text-muted">
+                {% trans "Antennes TV fournies (téléviseur non inclus)." %}
+            </p>
+        </div>
+    </div>
+
+
+
+    <!-- Plan -->
+    <div class="info-section row align-items-center">
+        <div class="col-md-6">
+            <h2 class="under-title-infos">{% trans "Plan du camping" %}</h2>
+            <img src="{% static 'pictures/plan.jpg' %}" alt="{% trans "Plan du camping" %}" class="img-fluid rounded shadow">
+        </div>
+        <div class="container-plan-text col-md-6 d-flex">
+            <div class="contenair-text">
+                <p>{% trans "Notre camping propose 66 emplacements pour tous les goûts : ombragés, semi-ombragés ou ensoleillés, avec ou sans électricité, pour un séjour confortable et personnalisé." %}</p>
+                <p>{% trans "Des fontaines à eau sont réparties dans tout le camping pour vous faciliter la vie pendant votre séjour." %}</p>
+                <p>{% trans "Pour ceux qui préfèrent le confort d’un logement, nous disposons également de 9 mobil-homes entièrement équipés." %}</p>
+                <p>{% trans "Parcourez notre plan pour découvrir l’agencement des emplacements et des services, et préparer au mieux votre séjour." %}</p>
+            </div>
+        </div>
+    </div>
+  
+  
+</section>
+{% endblock %}
