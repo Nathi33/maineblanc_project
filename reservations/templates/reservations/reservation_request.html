@@ -16,6 +16,10 @@
         <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
     </div>
 
+    <p class="text-accommodation">
+       {% trans "Vous avez une question ou souhaitez réserver ? Appelez-nous au" %} <a href="tel:+33557425281" class="tel-accommodation">05 57 42 52 81</a> {% trans "ou complétez simplement le formulaire ci-dessous, nous vous répondrons rapidement !" %}
+    </p>
+
     <div class="row justify-content-center">
         <div class="col-12 col-lg-10">
 
@@ -119,6 +123,11 @@
                             
                         </div>
 
+                        <div class="mb-3 form-label-cached" id="vehicle-length-container">
+                            {{ form.vehicle_length.label_tag }} <span class="text-danger">*</span>
+                            {{ form.vehicle_length }}
+                        </div>
+
                         <div class="row mb-3">
                             <label class="form-label">{% trans "Nombre d'occupants" %} <span class="text-danger">*</span></label>
 
@@ -173,6 +182,11 @@
                             </div>
                         </div>
 
+                        <div class="mb-3" id="cable-length-container" style="display:none;">
+                            <label for="cable_length" class="form-label">{% trans "Longueur du câble électrique (m)" %} <span class="text-danger">*</span></label>
+                            <input type="number" class="form-control" id="cable_length" name="cable_length" min="1" step="0.1">
+                        </div>
+
                         <div class="mb-3">
                             <label class="form-label">{% trans "Localisation du camping" %}</label>
                             <div class="ratio ratio-4x3">
@@ -212,6 +226,38 @@
                     setTimeout(() => alert.remove(), 500);
                 });
             }, 5000);
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const accommodationSelect = document.getElementById("{{ form.accommodation_type.id_for_label }}");
+            const vehicleLengthContainer = document.getElementById("vehicle-length-container");
+
+            accommodationSelect.addEventListener("change", function () {
+                const selected = accommodationSelect.value;
+                if (selected === "camping_car" || selected === "caravane") {
+                    vehicleLengthContainer.style.display = "block";
+                } else {
+                    vehicleLengthContainer.style.display = "none";
+                    document.getElementById("vehicle_length").value = "";
+                }
+            });
+        });
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const electricityRadios = document.querySelectorAll("input[name='{{ form.electricity.html_name }}']");
+            const cableLengthContainer = document.getElementById("cable-length-container");
+
+            // Affiche longueur câble si "Avec électricité"
+            electricityRadios.forEach(radio => {
+                radio.addEventListener("change", function() {
+                    if (this.value === "yes") {
+                        cableLengthContainer.style.display = "block";
+                    } else {
+                        cableLengthContainer.style.display = "none";
+                        document.getElementById("cable_length").value = "";
+                    }
+                });
+            });
         });
     </script>
 

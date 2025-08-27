@@ -1,0 +1,58 @@
+.container {
+    padding-top: 40px;
+}
+
+.container-title {
+    display: flex;
+    justify-content: center;
+}
+
+.img-deco-left,
+.img-deco-right {
+    width: 25px;
+    height: 25px;  
+}
+
+.img-deco-left {
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+
+.img-deco-right {
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+.title-infos {
+    padding: 0 10px;
+    font-weight:900;
+}
+
+.under-title-infos {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.container-plan-text {
+    margin-top: 90px;
+}
+
+.list-board {
+    list-style-type: circle;
+}
+
+.logo-infos {
+    width: 20px;
+    height: 20px;
+}
+
+.under-title {
+    font-weight: 600;
+    font-style: italic;
+}
+
+.number-people {
+    font-style: italic;
+}

@@ -46,6 +46,9 @@
                         <li class="nav-item">
                             <a class="nav-link {% if request.resolver_match.url_name == 'about' %}active{% endif%}" href="{% url 'about' %}">{% trans "A propos" %}</a>
                         </li>
+                         <li class="nav-item">
+                            <a class="nav-link {% if request.resolver_match.url_name == 'infos' %}active{% endif%}" href="{% url 'infos' %}">{% trans "Infos Pratiques" %}</a>
+                        </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif%}" href="{% url 'services' %}">{% trans "Services" %}</a>
                         </li>
@@ -159,7 +162,7 @@
 
             <!-- Infos pratiques -->
             <div class="col-md-5 mb-4">
-                <h4>{% trans "Informations pratiques" %}</h4>
+                <h4>{% trans "Informations & Accès" %}</h4>
                 <p><img src="{% static 'pictures/carte.png' %}" alt="{% trans "Logo Carte" %}" class="logo-footer">{% trans "Lieu-Dit Le Maine Blanc" %} </br>33920 Saint Christoly de Blaye, Gironde</p>
                 <p><a target="_blank" href="tel:+33557425281"><img src="{% static 'pictures/telephone.png' %}" alt="{% trans "Logo Téléphone" %}" class="logo-footer">05 57 42 52 81</a></p>
                 <p><a target="_blank" href="mailto:camping@lesterresdumaineblanc.com"><img src="{% static 'pictures/e-mail.png' %}" alt="{% trans "Logo Email" %}" class="logo-footer">camping@lesterresdumaineblanc.com</a></p>

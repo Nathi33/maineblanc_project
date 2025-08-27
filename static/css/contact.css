@@ -29,12 +29,32 @@
     font-weight:900;
 }
 
+.text-accommodation {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.tel-accommodation {
+    text-decoration: none;
+    color: #483D8B;
+    font-weight: bold;
+}
+
+.tel-accommodation:hover {
+    font-style: italic;
+}
+
 .title-form {
     padding-bottom: 20px;
 }
 
 textarea.form-control {
     height: 180px;
+}
+
+.form-label-cached {
+    display: none;
 }
 
 .btn {
