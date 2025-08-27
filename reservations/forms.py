@@ -72,6 +72,15 @@ class ReservationRequestForm(forms.Form):
         widget=forms.Select(attrs={'class': 'form-select', 'id': 'accommodation_type', 'required': True})
     )
 
+    vehicle_length = forms.DecimalField(
+        label=_("Longueur du véhicule (m)"),
+        required=False,
+        min_value=1,
+        max_digits=5,
+        decimal_places=2,
+        widget=forms.NumberInput(attrs={'class': 'form-control', 'id': 'vehicle_length'})
+    )
+
     adults = forms.ChoiceField(
         label=_("Adultes"),
         choices=[(i, i) for i in range(1, 11)],
@@ -117,6 +126,15 @@ class ReservationRequestForm(forms.Form):
         label=_("Électricité"), 
         choices=ELECTRICITY_CHOICES, 
         widget=forms.RadioSelect(attrs={'class': 'form--check-input'})
+    )
+
+    cable_length = forms.DecimalField(
+        label=_("Longueur du câble électrique (m)"),
+        required=False,
+        min_value=1,
+        max_digits=5,
+        decimal_places=2,
+        widget=forms.NumberInput(attrs={'class': 'form-control', 'id': 'cable_length'})
     )
 
 

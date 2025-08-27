@@ -11,12 +11,14 @@ def home_view(request):
 def about_view(request):
     return render(request, 'core/about.html')
 
+def infos_view(request):
+    return render(request, 'core/infos.html')
+
 def services_view(request):
     return render(request, 'core/services.html')
 
 def accommodations_view(request):
     return render(request, 'core/accommodations.html')
-
 
 def activities_view(request):
     return render(request, 'core/activities.html')
