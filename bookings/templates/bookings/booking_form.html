@@ -1,0 +1,205 @@
+{% extends "core/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Réservations | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/booking_form.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+  <div class="container-title text-center">
+    <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
+    <h1 class="title-booking">{% trans "Réserver un emplacement" %} </h1>
+    <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+  </div>
+
+  {% if form.errors %}
+  <div class="alert alert-danger" role="alert" style="border-radius: 8px; padding: 12px 16px;">
+    <h3 class="mb-2"><img src="{% static 'pictures/attention.png' %}" alt="{% trans "Attention" %}" class="logo-form-info" style="width:25px; height:25px; margin-right:10px;"> {% trans "Veuillez corriger les erreurs suivantes :" %}</h3>
+    <ul class="mb-0">
+      {% for field in form %}
+        {% for error in field.errors %}
+          <li><strong>{{ field.label }} :</strong> {{ error }}</li>
+        {% endfor %}
+      {% endfor %}
+      {% for error in form.non_field_errors %}
+        <li>{{ error }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if messages %}
+    {% for message in messages %}
+      <div class="alert alert-success" role="alert">
+        {{ message }}
+      </div>
+    {% endfor %}
+  {% endif %}
+
+  <form method="post" novalidate>
+    {% csrf_token %}
+    
+    <!-- Groupe "Emplacements" -->
+    <fieldset class="group-booking border p-3 rounded">
+      <legend class="w-auto px-2">{% trans "Emplacements" %} <span class="text-danger">*</span></legend>
+      <div>
+        <div class="mb-3">
+          <span class="form-label mb-2 d-block">{{ form.booking_type.label }}</span>
+          {{ form.booking_type }}
+        </div>
+
+        <div id="vehicle_length-field" class="mb-3" style="display:none;">{{ form.vehicle_length.label_tag }} {{ form.vehicle_length }}</div>
+
+        <div id="tent-dimensions" style="display:none;">
+          <div class="mb-3">{{ form.tent_width.label_tag }} {{ form.tent_width }}</div>
+          <div class="mb-3">{{ form.tent_length.label_tag }} {{ form.tent_length }}</div>
+        </div>
+      </div>
+    </fieldset>
+
+      <!-- Groupe "Date" -->
+      <fieldset class="group-booking border p-3 rounded">
+        <legend class="w-auto px-2">{% trans "Dates du séjour" %} <span class="text-danger">*</span></legend>
+        <div>
+          <div class="mb-3">{{ form.start_date.label_tag }} {{ form.start_date }}</div>
+          <div class="mb-3">{{ form.end_date.label_tag }} {{ form.end_date }}</div>
+        </div>
+      </fieldset>
+
+    <!-- Groupe "Nombre d'occupants" -->
+    <fieldset class="group-booking border p-3 rounded">
+      <legend class="w-auto px-2">{% trans "Nombre d'occupants" %} <span class="text-danger">*</span></legend>
+      <div class="row">
+        <div class="col-md-3">{{ form.adults.label_tag }} {{ form.adults }}</div>
+        <div class="col-md-3">{{ form.children_over_8.label_tag }} {{ form.children_over_8 }}</div>
+        <div class="col-md-3">{{ form.children_under_8.label_tag }} {{ form.children_under_8 }}</div>
+        <div class="col-md-3">{{ form.pets.label_tag }} {{ form.pets }}</div>
+      </div>
+    </fieldset>
+
+    <!-- Groupe "Electricité" -->
+    <fieldset class="group-booking border p-3 rounded">
+      <legend class="w-auto px-2">{% trans "Electricité" %} <span class="text-danger">*</span></legend>
+      <div class="column">
+        <!-- Radios électricité -->
+        <div class="d-flex gap-3">
+          {% for radio in form.electricity %}
+            <div class="form-check form-check-inline">
+              {{ radio.tag }}
+              <label class="form-check-label" for="{{ radio.id_for_label }}">
+                {{ radio.choice_label }}
+              </label>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- Longueur câble -->
+        <div class="mb-3 mt-3" id="cable-length-field" style="display: none;">
+          {{ form.cable_length.label_tag }}
+          {{ form.cable_length }}
+          {% if form.cable_length.errors %}
+            <div class="invalid-feedback d-block">
+              {{ form.cable_length.errors }}
+            </div>
+          {% endif %}
+        </div>
+      </div>
+    </fieldset>
+
+    <button type="submit" class="btn">{% trans "Réserver" %}</button>
+
+    <p class="small text-muted mt-3">
+      <span class="text-danger">*</span> {% trans "Champs obligatoires" %}
+    </p>
+  </form>
+
+  <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const alerts = document.querySelectorAll(".alert");
+
+    setTimeout(() => {
+      alerts.forEach(alert => {
+        alert.style.transition = "opacity 0.5s ease";
+        alert.style.opacity = 0;
+
+        setTimeout(()=> alert.remove(), 500)
+      });
+    }, 5000)
+  })
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const bookingType = document.getElementById("id_booking_type");
+    const vehicleLength = document.getElementById("vehicle_length-field");
+    const tentDimensions = document.getElementById("tent-dimensions");
+
+    function toggleFields() {
+      const selected = bookingType.value;
+      // Par défaut, tout cacher
+      vehicleLength.style.display = "none";
+      tentDimensions.style.display = "none";
+
+      if (selected === "small_caravan" || selected === "big_caravan" || selected === "camping_car") {
+        vehicleLength.style.display = "block";
+      } else if (selected === "tent") {
+        tentDimensions.style.display = "block";
+      }
+    }
+    // Quand l'utilisateur change de type
+    bookingType.addEventListener("change", toggleFields);
+    // Vérifie si un type est déjà sélectionné
+    toggleFields();
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const electricityRadios = document.getElementsByName("electricity");
+    const cableLengthField = document.getElementById("cable-length-field");
+
+    // Afficher longueur de câble si "Avec électricité" est sélectionné
+    electricityRadios.forEach(radio => {
+      radio.addEventListener("change", function () {
+        if (this.value === "yes") {
+          cableLengthField.style.display = "block";
+        } else {
+          cableLengthField.style.display = "none";
+          document.getElementById("cable_length").value = "";
+        }
+      });
+    });
+  });
+
+  document.addEventListener("DOMContentLoaded", function () {
+    const startDateInput = document.getElementById("id_start_date");
+    const endDateInput = document.getElementById("id_end_date");
+
+    if (startDateInput && endDateInput) {
+      // Bloquer la date d'arrivée avant aujourd'hui
+      const today = new Date().toISOString().split("T")[0];
+      startDateInput.setAttribute("min", today);
+
+      // Mettre à jour la date min du départ dès qu'on a choisit une date d'arrivée
+      startDateInput.addEventListener("change", function () {
+        if (startDateInput.value) {
+          // min = jour d'arrivée +1
+          let arrival = new Date(startDateInput.value);
+          let nextDay = new Date(arrival);
+          nextDay.setDate(arrival.getDate() + 1);
+
+          let formatted = nextDay.toISOString().split("T")[0];
+          endDateInput.setAttribute("min", formatted);
+
+          // Si la date de départ est invalide, on la vide
+          if (endDateInput.value && endDateInput.value <= startDateInput.value) {
+            endDateInput.value = "";
+          }
+        }
+      });
+    }
+  });
+  </script>
+
+</section>
+{% endblock %}

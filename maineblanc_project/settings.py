@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'reservations',
     'core',
+    'bookings',
+    'users',
 ]
 
 # Middleware
@@ -58,13 +60,16 @@ ROOT_URLCONF = 'maineblanc_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'core/templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
+                'django.template.context_processors.media',
+                'django.template.context_processors.static',
+                'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
                 'django.template.context_processors.i18n',
             ],
@@ -137,3 +142,7 @@ EMAIL_HOST_PASSWORD = 'ivjfvdwirhplpydn'
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ADMIN_EMAIL = EMAIL_HOST_USER
+
+# Redirections après connexion/déconnexion
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'
