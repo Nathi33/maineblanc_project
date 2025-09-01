@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-08-27 17:52+0200\n"
+"POT-Creation-Date: 2025-09-01 08:34+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,6 +17,166 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\bookings\forms.py:9
+msgid "--- Choisissez ---"
+msgstr "--- Wählen Sie ---"
+
+#: .\bookings\forms.py:11
+msgid "Type d'emplacement"
+msgstr "Art des Standorts"
+
+#: .\bookings\forms.py:17 .\reservations\forms.py:42
+msgid "Date d'arrivée"
+msgstr "Anreisedatum"
+
+#: .\bookings\forms.py:23 .\reservations\forms.py:52
+msgid "Date de départ"
+msgstr "Abreisedatum"
+
+#: .\bookings\forms.py:29 .\reservations\forms.py:85
+#: .\reservations\templates\reservations\reservation_request.html:136
+msgid "Adultes"
+msgstr "Erwachsene"
+
+#: .\bookings\forms.py:34 .\core\templates\core\infos.html:102
+#: .\core\templates\core\infos.html:148 .\core\templates\core\infos.html:249
+#: .\reservations\forms.py:122
+msgid "Avec électricité"
+msgstr "Mit Strom"
+
+#: .\bookings\forms.py:35 .\core\templates\core\infos.html:106
+#: .\core\templates\core\infos.html:152 .\core\templates\core\infos.html:253
+#: .\reservations\forms.py:123
+msgid "Sans électricité"
+msgstr "Ohne Strom"
+
+#: .\bookings\forms.py:41 .\reservations\forms.py:126
+#: .\reservations\templates\reservations\reservation_request.html:173
+msgid "Électricité"
+msgstr "Strom"
+
+#: .\bookings\forms.py:53 .\reservations\forms.py:76
+msgid "Longueur du véhicule (m)"
+msgstr "Fahrzeuglänge (m)"
+
+#: .\bookings\forms.py:54
+msgid "Largeur de la tente (m)"
+msgstr "Zeltbreite (m)"
+
+#: .\bookings\forms.py:55
+msgid "Longueur de la tente (m)"
+msgstr "Zeltlänge (m)"
+
+#: .\bookings\forms.py:56
+msgid "Enfants +8 ans"
+msgstr "Kinder +8 Jahre"
+
+#: .\bookings\forms.py:57
+msgid "Enfants -8 ans"
+msgstr "Kinder -8 Jahre"
+
+#: .\bookings\forms.py:58 .\core\templates\core\services.html:111
+#: .\reservations\forms.py:112
+#: .\reservations\templates\reservations\reservation_request.html:163
+msgid "Animaux"
+msgstr "Tiere"
+
+#: .\bookings\forms.py:59 .\reservations\forms.py:132
+#: .\reservations\templates\reservations\reservation_request.html:186
+msgid "Longueur du câble électrique (m)"
+msgstr "Länge des Stromkabels (m)"
+
+#: .\bookings\forms.py:80 .\reservations\forms.py:151
+msgid "La date d'arrivée ne peut pas être antérieure à aujourd'hui."
+msgstr "Das Ankunftsdatum kann nicht vor heute liegen."
+
+#: .\bookings\forms.py:85 .\reservations\forms.py:155
+msgid "La date de départ doit être postérieure à la date d'arrivée."
+msgstr "Das Abreisedatum muss nach dem Ankunftsdatum liegen."
+
+#: .\bookings\templates\bookings\availability.html:5
+msgid "Echec de la réservation | Camping Le Maine Blanc"
+msgstr "Fehler bei der Buchung | Campingplatz Le Maine Blanc"
+
+#: .\bookings\templates\bookings\booking_form.html:5
+msgid "Réservations | Camping Le Maine Blanc"
+msgstr "Reservierungen | Campingplatz Le Maine Blanc"
+
+#: .\bookings\templates\bookings\booking_form.html:14
+#: .\bookings\templates\bookings\booking_form.html:16
+#: .\core\templates\core\accommodations.html:14
+#: .\core\templates\core\accommodations.html:16
+#: .\core\templates\core\activities.html:15
+#: .\core\templates\core\activities.html:17
+#: .\core\templates\core\infos.html:15
+#: .\core\templates\core\privacy-policy.html:15
+#: .\core\templates\core\privacy-policy.html:17
+#: .\core\templates\core\services.html:14
+#: .\core\templates\core\services.html:16
+#: .\core\templates\registration\login.html:14
+#: .\core\templates\registration\login.html:16
+#: .\core\templates\registration\register.html:14
+#: .\core\templates\registration\register.html:16
+#: .\reservations\templates\reservations\reservation_request.html:14
+#: .\reservations\templates\reservations\reservation_request.html:16
+msgid "Décoration"
+msgstr "Dekoration"
+
+#: .\bookings\templates\bookings\booking_form.html:15
+msgid "Réserver un emplacement"
+msgstr "Einen Platz reservieren"
+
+#: .\bookings\templates\bookings\booking_form.html:21
+#: .\core\templates\core\services.html:33
+#: .\core\templates\core\services.html:37
+#: .\core\templates\core\services.html:54
+#: .\core\templates\core\services.html:63
+#: .\core\templates\core\services.html:69
+#: .\core\templates\core\services.html:75
+#: .\core\templates\core\services.html:114
+#: .\core\templates\core\services.html:119
+#: .\reservations\templates\reservations\reservation_request.html:28
+msgid "Attention"
+msgstr "Achtung"
+
+#: .\bookings\templates\bookings\booking_form.html:21
+#: .\reservations\templates\reservations\reservation_request.html:28
+msgid "Veuillez corriger les erreurs suivantes :"
+msgstr "Bitte korrigieren Sie die folgenden Fehler:"
+
+#: .\bookings\templates\bookings\booking_form.html:48
+msgid "Emplacements"
+msgstr "Stellplätze"
+
+#: .\bookings\templates\bookings\booking_form.html:66
+msgid "Dates du séjour"
+msgstr "Reisedaten"
+
+#: .\bookings\templates\bookings\booking_form.html:75
+#: .\reservations\templates\reservations\reservation_request.html:132
+msgid "Nombre d'occupants"
+msgstr "Anzahl der Personen"
+
+#: .\bookings\templates\bookings\booking_form.html:86
+#: .\core\templates\core\infos.html:101 .\core\templates\core\infos.html:147
+#: .\core\templates\core\infos.html:248
+msgid "Electricité"
+msgstr "Strom"
+
+#: .\bookings\templates\bookings\booking_form.html:113
+msgid "Réserver"
+msgstr "Reservieren"
+
+#: .\bookings\templates\bookings\booking_form.html:116
+#: .\core\templates\registration\register.html:67
+#: .\reservations\templates\reservations\reservation_request.html:204
+msgid "Champs obligatoires"
+msgstr "Pflichtfelder"
+
+#: .\bookings\templates\bookings\booking_success.html:5
+msgid "Réservation réussie | Camping Le Maine Blanc"
+msgstr "Reservierung erfolgreich | Campingplatz Le Maine Blanc"
 
 #: .\core\templates\core\about.html:5
 msgid "À propos | Camping Le Maine Blanc"
@@ -102,20 +262,6 @@ msgstr ""
 #: .\core\templates\core\accommodations.html:5
 msgid "Hébergements | Camping Le Maine Blanc"
 msgstr "Unterkünfte | Campingplatz Le Maine Blanc"
-
-#: .\core\templates\core\accommodations.html:14
-#: .\core\templates\core\accommodations.html:16
-#: .\core\templates\core\activities.html:15
-#: .\core\templates\core\activities.html:17
-#: .\core\templates\core\infos.html:15
-#: .\core\templates\core\privacy-policy.html:15
-#: .\core\templates\core\privacy-policy.html:17
-#: .\core\templates\core\services.html:14
-#: .\core\templates\core\services.html:16
-#: .\reservations\templates\reservations\reservation_request.html:14
-#: .\reservations\templates\reservations\reservation_request.html:16
-msgid "Décoration"
-msgstr "Dekoration"
 
 #: .\core\templates\core\accommodations.html:15
 msgid "Nos hébergements"
@@ -519,6 +665,11 @@ msgstr "Lieu-Dit Le Maine Blanc"
 msgid "Logo Téléphone"
 msgstr "Logo Telefon"
 
+#: .\core\templates\core\base.html:167
+#: .\reservations\templates\reservations\reservation_request.html:20
+msgid "05 57 42 52 81"
+msgstr "+33 5 57 42 52 81"
+
 #: .\core\templates\core\base.html:168
 msgid "Logo Email"
 msgstr "Logo Email"
@@ -758,316 +909,206 @@ msgstr "vom 05.07. bis 30.08."
 msgid "Camping-car (1-2 pers.)"
 msgstr "Campingbus (1-2 Pers.)"
 
-#: .\core\templates\core\infos.html:101 .\core\templates\core\infos.html:119
-#: .\core\templates\core\infos.html:195
-msgid "Electricité"
-msgstr "Strom"
-
-#: .\core\templates\core\infos.html:102 .\core\templates\core\infos.html:120
-#: .\core\templates\core\infos.html:196 .\reservations\forms.py:122
-msgid "Avec électricité"
-msgstr "Mit Strom"
-
-#: .\core\templates\core\infos.html:105 .\core\templates\core\infos.html:123
-#: .\core\templates\core\infos.html:199
+#: .\core\templates\core\infos.html:105 .\core\templates\core\infos.html:151
+#: .\core\templates\core\infos.html:252
 msgid "Pas d'électricité"
 msgstr "Ohne Strom"
 
-#: .\core\templates\core\infos.html:106 .\core\templates\core\infos.html:124
-#: .\core\templates\core\infos.html:200 .\reservations\forms.py:123
-msgid "Sans électricité"
-msgstr "Ohne Strom"
-
-#: .\core\templates\core\infos.html:109 .\core\templates\core\infos.html:110
-#: .\core\templates\core\infos.html:177
-msgid "19€"
-msgstr "19€"
-
-#: .\core\templates\core\infos.html:109 .\core\templates\core\infos.html:178
-#: .\core\templates\core\infos.html:215
-msgid "16€"
-msgstr "16€"
-
-#: .\core\templates\core\infos.html:110 .\core\templates\core\infos.html:111
-msgid "21€"
-msgstr "21€"
-
-#: .\core\templates\core\infos.html:111 .\core\templates\core\infos.html:181
-msgid "23€"
-msgstr "23€"
-
-#: .\core\templates\core\infos.html:117
+#: .\core\templates\core\infos.html:145
 msgid "Caravane / Fourgon"
-msgstr "Caravan / Wohnmobil / Van"
+msgstr "Caravan / Wohnmobil"
 
-#: .\core\templates\core\infos.html:131 .\core\templates\core\infos.html:152
-#: .\core\templates\core\infos.html:172 .\core\templates\core\infos.html:206
-#: .\core\templates\core\infos.html:226 .\core\templates\core\infos.html:246
+#: .\core\templates\core\infos.html:159 .\core\templates\core\infos.html:189
+#: .\core\templates\core\infos.html:217 .\core\templates\core\infos.html:259
+#: .\core\templates\core\infos.html:287 .\core\templates\core\infos.html:315
 msgid "1 pers."
 msgstr "1 Pers."
 
-#: .\core\templates\core\infos.html:133 .\core\templates\core\infos.html:153
-#: .\core\templates\core\infos.html:173 .\core\templates\core\infos.html:207
-#: .\core\templates\core\infos.html:227 .\core\templates\core\infos.html:247
+#: .\core\templates\core\infos.html:161 .\core\templates\core\infos.html:190
+#: .\core\templates\core\infos.html:218 .\core\templates\core\infos.html:260
+#: .\core\templates\core\infos.html:288 .\core\templates\core\infos.html:316
 msgid "2 pers."
 msgstr "2 Pers."
 
-#: .\core\templates\core\infos.html:137 .\core\templates\core\infos.html:231
-#: .\core\templates\core\infos.html:252
-msgid "15,50€"
-msgstr "15,50€"
-
-#: .\core\templates\core\infos.html:138
-msgid "11,50€"
-msgstr "11,50€"
-
-#: .\core\templates\core\infos.html:141 .\core\templates\core\infos.html:256
-msgid "18,90€"
-msgstr "18,90€"
-
-#: .\core\templates\core\infos.html:142
-msgid "15€"
-msgstr "15€"
-
-#: .\core\templates\core\infos.html:157 .\core\templates\core\infos.html:162
-msgid "17€"
-msgstr "17€"
-
-#: .\core\templates\core\infos.html:158
-msgid "13€"
-msgstr "13€"
-
-#: .\core\templates\core\infos.html:161 .\core\templates\core\infos.html:182
-msgid "19,70€"
-msgstr "19,70€"
-
-#: .\core\templates\core\infos.html:193
+#: .\core\templates\core\infos.html:246
 msgid "Tente / Voiture"
 msgstr "Zelt / Autozelt"
 
-#: .\core\templates\core\infos.html:211 .\core\templates\core\infos.html:216
-msgid "14€"
-msgstr "14€"
-
-#: .\core\templates\core\infos.html:212
-msgid "11€"
-msgstr "11€"
-
-#: .\core\templates\core\infos.html:232
-msgid "12,50€"
-msgstr "12,50€"
-
-#: .\core\templates\core\infos.html:235 .\core\templates\core\infos.html:251
-msgid "17,50€"
-msgstr "17,50€"
-
-#: .\core\templates\core\infos.html:236
-msgid "15,90€"
-msgstr "15,90€"
-
-#: .\core\templates\core\infos.html:255
-msgid "20,90€"
-msgstr "20,90€"
-
-#: .\core\templates\core\infos.html:267
+#: .\core\templates\core\infos.html:344
 msgid "Ouvriers"
 msgstr "Arbeiter"
 
-#: .\core\templates\core\infos.html:271
-msgid "Caravane : 14,50€ / jour"
-msgstr "Wohnmobil : 14,50€ / Tag"
+#: .\core\templates\core\infos.html:350
+msgid "Caravane"
+msgstr "Caravan"
 
-#: .\core\templates\core\infos.html:272
-msgid "Tente : 13,50€ / jour"
-msgstr "Zelt : 13,50€ / Tag"
+#: .\core\templates\core\infos.html:350 .\core\templates\core\infos.html:352
+msgid "jour"
+msgstr "Tag"
 
-#: .\core\templates\core\infos.html:273
-msgid "Week-end :"
-msgstr "Wochenende :"
+#: .\core\templates\core\infos.html:352
+msgid "Tente"
+msgstr "Zelt"
 
-#: .\core\templates\core\infos.html:275
-msgid "3,50€ sans électricité"
-msgstr "3,50€ ohne Strom"
+#: .\core\templates\core\infos.html:356
+msgid "Emplacement pour le week-end"
+msgstr "Wochenendplatz"
 
-#: .\core\templates\core\infos.html:276
-msgid "8,50€ avec électricité"
-msgstr "8,50€ mit Strom"
+#: .\core\templates\core\infos.html:360
+msgid "sans électricité"
+msgstr "ohne Strom"
 
-#: .\core\templates\core\infos.html:285
-msgid "Suppléments"
-msgstr "Zusatzkosten"
+#: .\core\templates\core\infos.html:363
+msgid "avec électricité"
+msgstr "mit Strom"
 
-#: .\core\templates\core\infos.html:289
-msgid "Adulte suppl. : 5€"
-msgstr "Erwachsene zusätzlich : 5€"
+#: .\core\templates\core\infos.html:374
+msgid "Suppléments emplacements"
+msgstr "Zusatzkosten für Stellplätze"
 
-#: .\core\templates\core\infos.html:290
-msgid "Enfant -8 ans : 3,50€"
-msgstr "Kinder -8 Jahre : 3,50€"
-
-#: .\core\templates\core\infos.html:291
-msgid "Animal : 2€"
-msgstr "Tiere : 2€"
-
-#: .\core\templates\core\infos.html:292
-msgid "Véhicule suppl. : 1,80€"
-msgstr "Fahrzeug zusätzlich : 1,80€"
-
-#: .\core\templates\core\infos.html:293
-msgid "Tente suppl. : 2€"
-msgstr "Zelt zusätzlich : 2€"
-
-#: .\core\templates\core\infos.html:294
+#: .\core\templates\core\infos.html:382
 msgid "Visiteur : "
 msgstr "Besucher : "
 
-#: .\core\templates\core\infos.html:296
-msgid "2,50€ (sans piscine)"
-msgstr "2,50€ (ohne Schwimmbad)"
-
-#: .\core\templates\core\infos.html:297
-msgid "4€ (avec piscine)"
-msgstr "4€ (mit Schwimmbad)"
-
-#: .\core\templates\core\infos.html:311 .\reservations\forms.py:67
+#: .\core\templates\core\infos.html:401 .\reservations\forms.py:67
 msgid "Mobil-home"
 msgstr "Mobilheim"
 
-#: .\core\templates\core\infos.html:312
+#: .\core\templates\core\infos.html:402
 msgid "À la nuitée"
 msgstr "Nachts"
 
-#: .\core\templates\core\infos.html:313
+#: .\core\templates\core\infos.html:403
 msgid "Basse saison"
 msgstr "Nebensaison"
 
-#: .\core\templates\core\infos.html:314
+#: .\core\templates\core\infos.html:404
 msgid "Moyenne saison"
 msgstr "Mittel Saison"
 
-#: .\core\templates\core\infos.html:315
+#: .\core\templates\core\infos.html:405
 msgid "Haute saison"
 msgstr "Hoch Saison"
 
-#: .\core\templates\core\infos.html:322
+#: .\core\templates\core\infos.html:412
 msgid "Sabot de Vénus"
 msgstr "Venus-Schuhe"
 
-#: .\core\templates\core\infos.html:323
+#: .\core\templates\core\infos.html:413
 msgid "2 chambres – 5 couchages – climatisé – terrasse"
 msgstr "2 Schlafzimmer - 5 Betten - klimatisiert - Terrasse"
 
-#: .\core\templates\core\infos.html:325 .\core\templates\core\infos.html:337
+#: .\core\templates\core\infos.html:415 .\core\templates\core\infos.html:427
 msgid "80 €"
 msgstr "80 €"
 
-#: .\core\templates\core\infos.html:326 .\core\templates\core\infos.html:338
+#: .\core\templates\core\infos.html:416 .\core\templates\core\infos.html:428
 msgid "290 €/semaine"
 msgstr "290 €/Woche"
 
-#: .\core\templates\core\infos.html:327 .\core\templates\core\infos.html:339
+#: .\core\templates\core\infos.html:417 .\core\templates\core\infos.html:429
 msgid "310 €/semaine"
 msgstr "310 €/Woche"
 
-#: .\core\templates\core\infos.html:328 .\core\templates\core\infos.html:340
+#: .\core\templates\core\infos.html:418 .\core\templates\core\infos.html:430
 msgid "460 €/semaine"
 msgstr "460 €/Woche"
 
-#: .\core\templates\core\infos.html:334
+#: .\core\templates\core\infos.html:424
 msgid "Belle Dame / Rose Trémière"
 msgstr "Schöne Dame / Stockrose"
 
-#: .\core\templates\core\infos.html:335
+#: .\core\templates\core\infos.html:425
 msgid "2 chambres – 4 couchages – climatisé – terrasse"
 msgstr "2 Schlafzimmer - 4 Betten - klimatisiert - Terrasse"
 
-#: .\core\templates\core\infos.html:346
+#: .\core\templates\core\infos.html:436
 msgid "Bleuet"
 msgstr "Vergissmeinnicht"
 
-#: .\core\templates\core\infos.html:347
+#: .\core\templates\core\infos.html:437
 msgid "3 chambres – 6 à 8 couchages – climatisé – terrasse"
 msgstr "3 Schlafzimmer - 6 bis 8 Betten - klimatisiert - Terrasse"
 
-#: .\core\templates\core\infos.html:350
+#: .\core\templates\core\infos.html:440
 msgid "90 €"
 msgstr "90 €"
 
-#: .\core\templates\core\infos.html:350
+#: .\core\templates\core\infos.html:440
 msgid "basse"
 msgstr "Nebensaison"
 
-#: .\core\templates\core\infos.html:351
+#: .\core\templates\core\infos.html:441
 msgid "110 €"
 msgstr "110 €"
 
-#: .\core\templates\core\infos.html:351
+#: .\core\templates\core\infos.html:441
 msgid "moyenne"
 msgstr "Mittel Saison"
 
-#: .\core\templates\core\infos.html:353
+#: .\core\templates\core\infos.html:443
 msgid "340 €/semaine"
 msgstr "340 €/Woche"
 
-#: .\core\templates\core\infos.html:354 .\core\templates\core\infos.html:367
+#: .\core\templates\core\infos.html:444 .\core\templates\core\infos.html:457
 msgid "410 €/semaine"
 msgstr "410 €/Woche"
 
-#: .\core\templates\core\infos.html:355
+#: .\core\templates\core\infos.html:445
 msgid "590 €/semaine"
 msgstr "590 €/Woche"
 
-#: .\core\templates\core\infos.html:361
+#: .\core\templates\core\infos.html:451
 msgid "Capucine"
 msgstr "Kapuzinerkresse"
 
-#: .\core\templates\core\infos.html:362
+#: .\core\templates\core\infos.html:452
 msgid ""
 "1 chambre – 2 couchages (+ banquette enfant < 8 ans) – climatisé – terrasse"
 msgstr ""
 "1 Schlafzimmer - 2 Betten (+ Kinderbank < 8 Jahre) - klimatisiert - Terrasse"
 
-#: .\core\templates\core\infos.html:364
+#: .\core\templates\core\infos.html:454
 msgid "70 €"
 msgstr "70 €"
 
-#: .\core\templates\core\infos.html:365
+#: .\core\templates\core\infos.html:455
 msgid "225 €/semaine"
 msgstr "225 €/Woche"
 
-#: .\core\templates\core\infos.html:366
+#: .\core\templates\core\infos.html:456
 msgid "300 €/semaine"
 msgstr "300 €/Woche"
 
-#: .\core\templates\core\infos.html:373
+#: .\core\templates\core\infos.html:463
 msgid "Graminé"
 msgstr "Gräser"
 
-#: .\core\templates\core\infos.html:374
+#: .\core\templates\core\infos.html:464
 msgid "2 chambres – 4 couchages – sans climatisation – sans terrasse"
 msgstr "2 Schlafzimmer - 4 Betten - ohne Klimaanlage - ohne Terrasse"
 
-#: .\core\templates\core\infos.html:375
+#: .\core\templates\core\infos.html:465
 msgid "Réservé aux ouvriers"
 msgstr "Reserviert für Arbeiter"
 
-#: .\core\templates\core\infos.html:377
+#: .\core\templates\core\infos.html:467
 msgid "50 €"
 msgstr "50 €"
 
-#: .\core\templates\core\infos.html:379
+#: .\core\templates\core\infos.html:469
 msgid "175 €/semaine (1 pers)"
 msgstr "175 €/Woche (1 Pers.)"
 
-#: .\core\templates\core\infos.html:380
+#: .\core\templates\core\infos.html:470
 msgid "200 €/semaine (2 pers)"
 msgstr "200 €/Woche (2 Pers.)"
 
-#: .\core\templates\core\infos.html:381
+#: .\core\templates\core\infos.html:471
 msgid "250 €/semaine (3 pers)"
 msgstr "250 €/Woche (3 Pers.)"
 
-#: .\core\templates\core\infos.html:390
+#: .\core\templates\core\infos.html:480
 msgid ""
 "Oreillers et couettes fournis (taies d’oreillers, housses de couette et "
 "draps disponibles en location à partir de 15 €)."
@@ -1075,15 +1116,15 @@ msgstr ""
 "Die Kissen und Bettdecken werden gestellt (Kissenbezüge, Bettbezüge und "
 "Betttücher sind ab 15 € erhältlich)."
 
-#: .\core\templates\core\infos.html:393
+#: .\core\templates\core\infos.html:483
 msgid "Antennes TV fournies (téléviseur non inclus)."
 msgstr "TV-Antennen werden bereitgestellt (Fernseher nicht enthalten)."
 
-#: .\core\templates\core\infos.html:403 .\core\templates\core\infos.html:404
+#: .\core\templates\core\infos.html:493 .\core\templates\core\infos.html:494
 msgid "Plan du camping"
 msgstr "Standort des Campingplatzes"
 
-#: .\core\templates\core\infos.html:408
+#: .\core\templates\core\infos.html:498
 msgid ""
 "Notre camping propose 66 emplacements pour tous les goûts : ombragés, semi-"
 "ombragés ou ensoleillés, avec ou sans électricité, pour un séjour "
@@ -1093,7 +1134,7 @@ msgstr ""
 "schattig oder sonnig, mit oder ohne Strom, für einen Aufenthalt komfortabel "
 "und individuell."
 
-#: .\core\templates\core\infos.html:409
+#: .\core\templates\core\infos.html:499
 msgid ""
 "Des fontaines à eau sont réparties dans tout le camping pour vous faciliter "
 "la vie pendant votre séjour."
@@ -1101,7 +1142,7 @@ msgstr ""
 "Brunnen sind im gesamten Campingplatz verteilt, um Ihnen das Leben während "
 "Ihres Aufenthalts zu erleichtern."
 
-#: .\core\templates\core\infos.html:410
+#: .\core\templates\core\infos.html:500
 msgid ""
 "Pour ceux qui préfèrent le confort d’un logement, nous disposons également "
 "de 9 mobil-homes entièrement équipés."
@@ -1109,7 +1150,7 @@ msgstr ""
 "Für diejenigen, die den Komfort einer Unterkunft bevorzugen, verfügen wir "
 "auch über 9 voll ausgestattete Mobilheime."
 
-#: .\core\templates\core\infos.html:411
+#: .\core\templates\core\infos.html:501
 msgid ""
 "Parcourez notre plan pour découvrir l’agencement des emplacements et des "
 "services, et préparer au mieux votre séjour."
@@ -1139,7 +1180,7 @@ msgstr ""
 
 #: .\core\templates\core\legal.html:23
 msgid "Téléphone : 05 57 42 52 81"
-msgstr "Telefon : 05 57 42 52 81"
+msgstr "Telefon : +33 5 57 42 52 81"
 
 #: .\core\templates\core\legal.html:24
 msgid "Email : camping@lesterresdumaineblanc.com"
@@ -1601,18 +1642,6 @@ msgid ""
 msgstr ""
 "Nicht überdacht und unbeheizt – ideal zur Abkühlung an heißen Sommertagen."
 
-#: .\core\templates\core\services.html:33
-#: .\core\templates\core\services.html:37
-#: .\core\templates\core\services.html:54
-#: .\core\templates\core\services.html:63
-#: .\core\templates\core\services.html:69
-#: .\core\templates\core\services.html:75
-#: .\core\templates\core\services.html:114
-#: .\core\templates\core\services.html:119
-#: .\reservations\templates\reservations\reservation_request.html:28
-msgid "Attention"
-msgstr "Achtung"
-
 #: .\core\templates\core\services.html:34
 msgid "Attention : la baignade n'est pas surveillée."
 msgstr "Achtung: Das Schwimmen wird nicht überwacht."
@@ -1640,16 +1669,16 @@ msgid "Food trucks en soirée pour tous les goûts :"
 msgstr "Abends Foodtrucks für jeden Geschmack : "
 
 #: .\core\templates\core\services.html:58
-msgid "Burger : "
-msgstr "Burger "
+msgid "Burger"
+msgstr "Burger"
 
 #: .\core\templates\core\services.html:58
 msgid "tous les soirs sauf le jeudi, de 18h à 21h30"
 msgstr "jeden Abend außer Donnerstag, von 18 bis 21:30 Uhr"
 
 #: .\core\templates\core\services.html:59
-msgid "Pizza : "
-msgstr "Pizza "
+msgid "Pizza"
+msgstr "Pizza"
 
 #: .\core\templates\core\services.html:59
 msgid "uniquement le jeudi soir, même horaire"
@@ -1727,11 +1756,6 @@ msgstr ""
 #: .\core\templates\core\services.html:110
 msgid "Animaux bienvenus"
 msgstr "Haustiere willkommen"
-
-#: .\core\templates\core\services.html:111 .\reservations\forms.py:112
-#: .\reservations\templates\reservations\reservation_request.html:163
-msgid "Animaux"
-msgstr "Tiere"
 
 #: .\core\templates\core\services.html:113
 msgid "sauf catégories 1 & 2, désolés les toutous costauds"
@@ -1836,23 +1860,98 @@ msgid ""
 "Petit rappel : par mesure de sécurité, nous ne prenons plus les chèques."
 msgstr "Hinweis: Aus Sicherheitsgründen akzeptieren wir keine Schecks mehr."
 
-#: .\maineblanc_project\settings.py:105
+#: .\core\templates\registration\logged_out.html:5
+msgid "Déconnexion | Camping Le Maine Blanc"
+msgstr "Abmeldung | Campingplatz Le Maine Blanc"
+
+#: .\core\templates\registration\login.html:5
+msgid "Connexion | Camping Le Maine Blanc"
+msgstr "Anmeldung | Campingplatz Le Maine Blanc"
+
+#: .\core\templates\registration\login.html:15
+msgid "Connexion"
+msgstr "Anmeldung"
+
+#: .\core\templates\registration\login.html:21
+msgid ""
+"Vous devez vous connecter ou créer un compte pour finaliser votre "
+"réservation."
+msgstr ""
+"Sie müssen sich anmelden oder ein Konto erstellen, um Ihre "
+"Reservierung abzuschließen."
+
+#: .\core\templates\registration\login.html:34
+#: .\core\templates\registration\register.html:73
+msgid "Se connecter"
+msgstr "Anmelden"
+
+#: .\core\templates\registration\login.html:37
+msgid "Pas encore de compte ?"
+msgstr "Noch kein Konto?"
+
+#: .\core\templates\registration\login.html:38
+#: .\core\templates\registration\register.html:15
+#: .\core\templates\registration\register.html:64
+msgid "Créer un compte"
+msgstr "Ein Konto erstellen"
+
+#: .\core\templates\registration\register.html:5
+msgid "Création de compte | Camping Le Maine Blanc"
+msgstr "Konto erstellen | Campingplatz Le Maine Blanc"
+
+#: .\core\templates\registration\register.html:73
+msgid "Déjà un compte ?"
+msgstr "Bereits ein Konto?"
+
+#: .\core\views.py:40
+msgid "Adulte supplémentaire"
+msgstr "Zusätzlicher Erwachsener"
+
+#: .\core\views.py:41
+msgid "Enfant +8 ans"
+msgstr "Kinder +8 Jahre"
+
+#: .\core\views.py:42
+msgid "Enfant -8 ans"
+msgstr "Kinder -8 Jahre"
+
+#: .\core\views.py:43
+msgid "Animal"
+msgstr "Tier"
+
+#: .\core\views.py:44
+msgid "Véhicule supplémentaire"
+msgstr "Zusätzliches Fahrzeug"
+
+#: .\core\views.py:45
+msgid "Tente supplémentaire"
+msgstr "Zusätzliches Zelt"
+
+#: .\core\views.py:59
+msgid "(sans piscine)"
+msgstr "(ohne Schwimmbad)"
+
+#: .\core\views.py:64
+msgid "(avec piscine)"
+msgstr "(mit Schwimmbad)"
+
+#: .\maineblanc_project\settings.py:110
 msgid "French"
 msgstr "Französisch"
 
-#: .\maineblanc_project\settings.py:106
+#: .\maineblanc_project\settings.py:111
 msgid "English"
 msgstr "Englisch"
 
-#: .\maineblanc_project\settings.py:107
+#: .\maineblanc_project\settings.py:112
 msgid "Spanish"
 msgstr "Spanisch"
 
-#: .\maineblanc_project\settings.py:108
+#: .\maineblanc_project\settings.py:113
 msgid "German"
 msgstr "Deutsch"
 
-#: .\maineblanc_project\settings.py:109
+#: .\maineblanc_project\settings.py:114
 msgid "Nederlands"
 msgstr "Niederländisch"
 
@@ -1888,14 +1987,6 @@ msgstr "E-Mail-Adresse"
 msgid "Message"
 msgstr "Nachricht"
 
-#: .\reservations\forms.py:42
-msgid "Date d'arrivée"
-msgstr "Anreisedatum"
-
-#: .\reservations\forms.py:52
-msgid "Date de départ"
-msgstr "Abreisedatum"
-
 #: .\reservations\forms.py:63
 msgid "Choisissez un type"
 msgstr "Wählen Sie einen Typ"
@@ -1913,15 +2004,6 @@ msgstr "Caravan / Wohnmobil / Van"
 msgid "Type d'hébergement"
 msgstr "Art der Unterkunft"
 
-#: .\reservations\forms.py:76
-msgid "Longueur du véhicule (m)"
-msgstr "Fahrzeuglänge (m)"
-
-#: .\reservations\forms.py:85
-#: .\reservations\templates\reservations\reservation_request.html:136
-msgid "Adultes"
-msgstr "Erwachsene"
-
 #: .\reservations\forms.py:94
 #: .\reservations\templates\reservations\reservation_request.html:145
 msgid "+8 ans"
@@ -1931,24 +2013,6 @@ msgstr "+8 Jahre"
 #: .\reservations\templates\reservations\reservation_request.html:154
 msgid "-8 ans"
 msgstr "-8 Jahre"
-
-#: .\reservations\forms.py:126
-#: .\reservations\templates\reservations\reservation_request.html:173
-msgid "Électricité"
-msgstr "Strom"
-
-#: .\reservations\forms.py:132
-#: .\reservations\templates\reservations\reservation_request.html:186
-msgid "Longueur du câble électrique (m)"
-msgstr "Länge des Stromkabels (m)"
-
-#: .\reservations\forms.py:151
-msgid "La date d'arrivée ne peut pas être antérieure à aujourd'hui."
-msgstr "Das Ankunftsdatum kann nicht vor heute liegen."
-
-#: .\reservations\forms.py:155
-msgid "La date de départ doit être postérieure à la date d'arrivée."
-msgstr "Das Abreisedatum muss nach dem Ankunftsdatum liegen."
 
 #: .\reservations\templates\reservations\reservation_request.html:9
 msgid "Contact | Camping Le Maine Blanc"
@@ -1971,10 +2035,6 @@ msgstr ""
 "oder füllen Sie einfach das folgende Formular aus, wir werden uns rasch bei "
 "Ihnen melden!"
 
-#: .\reservations\templates\reservations\reservation_request.html:28
-msgid "Veuillez corriger les erreurs suivantes :"
-msgstr "Bitte korrigieren Sie die folgenden Fehler:"
-
 #: .\reservations\templates\reservations\reservation_request.html:57
 msgid "Vos coordonnées"
 msgstr "Ihre Kontaktdaten"
@@ -1983,17 +2043,9 @@ msgstr "Ihre Kontaktdaten"
 msgid "Détails de la réservation"
 msgstr "Reservierungsdetails"
 
-#: .\reservations\templates\reservations\reservation_request.html:132
-msgid "Nombre d'occupants"
-msgstr "Anzahl der Personen"
-
 #: .\reservations\templates\reservations\reservation_request.html:191
 msgid "Localisation du camping"
 msgstr "Standort des Campingplatzes"
-
-#: .\reservations\templates\reservations\reservation_request.html:204
-msgid "Champs obligatoires"
-msgstr "Pflichtfelder"
 
 #: .\reservations\templates\reservations\reservation_request.html:208
 msgid "Envoyer la demande"
@@ -2006,3 +2058,11 @@ msgid ""
 msgstr ""
 "Ihre Reservierungsanfrage wurde erfolgreich gesendet, wir werden uns sofort "
 "bei Ihnen melden."
+
+#: .\users\forms.py:9
+msgid "Nom d'utilisateur"
+msgstr "Benutzername"
+
+#: .\users\forms.py:14
+msgid "Mot de passe"
+msgstr "Passwort"
