@@ -106,10 +106,38 @@
                             {% trans "Sans électricité" %}
                         </div>
                     </td>
-                    <td class="align-bottom">{% trans "19€" %}<br>{% trans "16€" %}</td>
-                    <td class="align-bottom">{% trans "21€" %}<br>{% trans "19€" %}</td>
-                    <td class="align-bottom">{% trans "23€" %}<br>{% trans "21€" %}</td>
+                    
+                    {# --- Basse saison --- #}
+                    <td class="align-bottom">
+                        {% for p in grouped_prices.camping_car %}
+                            {% if p.season == "low" %}
+                                {{ p.price_2_persons_with_electricity }}€<br>
+                                {{ p.price_2_persons_without_electricity }}€
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+
+                    {# --- Moyenne saison --- #}
+                    <td class="align-bottom">
+                        {% for p in grouped_prices.camping_car %}
+                            {% if p.season == "mid" %}
+                                {{ p.price_2_persons_with_electricity }}€<br>
+                                {{ p.price_2_persons_without_electricity }}€
+                            {% endif %}
+                        {% endfor %}
+                    </td>
+
+                    {# --- Haute saison --- #}
+                    <td class="align-bottom">
+                        {% for p in grouped_prices.camping_car %}
+                            {% if p.season == "high" %}
+                                {{ p.price_2_persons_with_electricity }}€<br>
+                                {{ p.price_2_persons_without_electricity }}€
+                            {% endif %}
+                        {% endfor %}
+                    </td>
                 </tr>
+
 
                 <!-- Caravane / Fourgon -->
                 <tr class="text-center">
@@ -133,13 +161,22 @@
                                 <td><span class="number-people">{% trans "2 pers." %}</span></td>
                             </tr>
                             <tr>
-                                <td>
-                                    {% trans "15,50€" %}<br>
-                                    {% trans "11,50€" %}
+                                {# --- Basse saison --- #}
+                                <td class="align-bottom">
+                                    {% for p in grouped_prices.caravan %}
+                                        {% if p.season == "low" %}
+                                            {{ p.price_1_person_with_electricity }}€<br>
+                                            {{ p.price_1_person_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td>
-                                    {% trans "18,90€" %}<br>
-                                    {% trans "15€" %}
+                                    {% for p in grouped_prices.caravan %}
+                                        {% if p.season == "low" %}
+                                            {{ p.price_2_persons_with_electricity }}€<br>
+                                            {{ p.price_2_persons_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                         </table>
@@ -154,12 +191,20 @@
                             </tr>
                             <tr>
                                 <td>
-                                    {% trans "17€" %}<br>
-                                    {% trans "13€" %}
+                                    {% for p in grouped_prices.caravan %}
+                                        {% if p.season == "mid" %}
+                                            {{ p.price_1_person_with_electricity }}€<br>
+                                            {{ p.price_1_person_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td>
-                                    {% trans "19,70€" %}<br>
-                                    {% trans "17€" %}
+                                    {% for p in grouped_prices.caravan %}
+                                        {% if p.season == "mid" %}
+                                            {{ p.price_2_persons_with_electricity }}€<br>
+                                            {{ p.price_2_persons_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                         </table>
@@ -174,12 +219,20 @@
                             </tr>
                             <tr>
                                 <td>
-                                    {% trans "19€" %}<br>
-                                    {% trans "16€" %}
+                                    {% for p in grouped_prices.caravan %}
+                                        {% if p.season == "high" %}
+                                            {{ p.price_1_person_with_electricity }}€<br>
+                                            {{ p.price_1_person_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td>
-                                    {% trans "23€" %}<br>
-                                    {% trans "19,70€" %}
+                                    {% for p in grouped_prices.caravan %}
+                                        {% if p.season == "high" %}
+                                            {{ p.price_2_persons_with_electricity }}€<br>
+                                            {{ p.price_2_persons_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                         </table>
@@ -208,12 +261,20 @@
                             </tr>
                             <tr>
                                 <td>
-                                    {% trans "14€" %}<br>
-                                    {% trans "11€" %}
+                                    {% for p in grouped_prices.tent %}
+                                        {% if p.season == "low" %}
+                                            {{ p.price_1_person_with_electricity }}€<br>
+                                            {{ p.price_1_person_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td>
-                                    {% trans "16€" %}<br>
-                                    {% trans "14€" %}
+                                    {% for p in grouped_prices.tent %}
+                                        {% if p.season == "low" %}
+                                            {{ p.price_2_persons_with_electricity }}€<br>
+                                            {{ p.price_2_persons_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                         </table>
@@ -228,12 +289,20 @@
                             </tr>
                             <tr>
                                 <td>
-                                    {% trans "15,50€" %}<br>
-                                    {% trans "12,50€" %}<br>
+                                    {% for p in grouped_prices.tent %}
+                                        {% if p.season == "mid" %}
+                                            {{ p.price_1_person_with_electricity }}€<br>
+                                            {{ p.price_1_person_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td>
-                                    {% trans "17,50€" %}<br>
-                                    {% trans "15,90€" %}<br>
+                                    {% for p in grouped_prices.tent %}
+                                        {% if p.season == "mid" %}
+                                            {{ p.price_2_persons_with_electricity }}€<br>
+                                            {{ p.price_2_persons_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                         </table>
@@ -248,12 +317,20 @@
                             </tr>
                             <tr>
                                 <td>
-                                    {% trans "17,50€" %}<br>
-                                    {% trans "15,50€" %}<br>
+                                    {% for p in grouped_prices.tent %}
+                                        {% if p.season == "high" %}
+                                            {{ p.price_1_person_with_electricity }}€<br>
+                                            {{ p.price_1_person_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                                 <td>
-                                    {% trans "20,90€" %}<br>
-                                    {% trans "18,90€" %}
+                                    {% for p in grouped_prices.tent %}
+                                        {% if p.season == "high" %}
+                                            {{ p.price_2_persons_with_electricity }}€<br>
+                                            {{ p.price_2_persons_without_electricity }}€
+                                        {% endif %}
+                                    {% endfor %}
                                 </td>
                             </tr>
                         </table>
@@ -268,12 +345,24 @@
                     </td>
                     <td colspan="3" class="text-center">
                         <div class="d-inline-block text-start">
-                            {% trans "Caravane : 14,50€ / jour" %} <br>
-                            {% trans "Tente : 13,50€ / jour" %} <br>
-                            {% trans "Week-end :" %}
+                            {% for wp in worker_prices %}
+                                {% if wp.booking_type == "caravan" %}
+                                    {% trans "Caravane" %} : {{ wp.worker_week_price }}€ / {% trans "jour" %} <br>
+                                {% elif wp.booking_type == "tent" %}
+                                    {% trans "Tente" %} : {{ wp.worker_week_price }}€ / {% trans "jour" %} <br>
+                                {% endif %}
+                            {% endfor %}
+
+                            {% trans "Emplacement pour le week-end" %} : 
                             <ul class="list-board mb-0">
-                                <li>{% trans "3,50€ sans électricité" %}</li>
-                                <li>{% trans "8,50€ avec électricité" %}</li>
+                                {% for wp in worker_prices %}
+                                    {% if wp.weekend_price_without_electricity %}
+                                        <li>{{ wp.weekend_price_without_electricity }}€ ({% trans "sans électricité" %})</li>
+                                    {% endif %}
+                                    {% if wp.weekend_price_with_electricity %}
+                                        <li>{{ wp.weekend_price_with_electricity }}€ ({% trans "avec électricité" %})</li>
+                                    {% endif %}
+                                {% endfor %}
                             </ul>
                         </div>
                     </td>
@@ -282,20 +371,21 @@
                 <!-- Suppléments -->
                 <tr >
                     <td class="text-center">
-                        <span class="under-title">{% trans "Suppléments" %}</span>
+                        <span class="under-title">{% trans "Suppléments emplacements" %}</span>
                     </td>
                     <td colspan="3" class="text-center">
                         <div class="d-inline-block text-start">
-                            {% trans "Adulte suppl. : 5€" %} <br>
-                            {% trans "Enfant -8 ans : 3,50€" %} <br>
-                            {% trans "Animal : 2€" %} <br>
-                            {% trans "Véhicule suppl. : 1,80€" %} <br>
-                            {% trans "Tente suppl. : 2€" %} <br>
-                            {% trans "Visiteur : " %}
-                            <ul class="list-board mb-0">
-                                <li>{% trans "2,50€ (sans piscine)" %}</li>
-                                <li>{% trans "4€ (avec piscine)" %}</li>
-                            </ul>
+                            {% for item in supplements %}
+                                {{ item.label }} : {{ item.price }}€<br>
+                            {% endfor %}
+                            {% if visitor_prices %}
+                                <span>{% trans "Visiteur : " %}</span>  
+                                <ul class="list-board mb-0">
+                                    {% for visitor in visitor_prices %}
+                                        <li>{{ visitor.price }}€ : {{ visitor.label }}</li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
                         </div>
                     </td>
                 </tr>
