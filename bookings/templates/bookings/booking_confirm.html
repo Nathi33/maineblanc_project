@@ -1,0 +1,115 @@
+{% extends "core/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Réservation réussie | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/booking_confirm.css' %}" />
+{% endblock %}
+
+{% block content %}
+<div class="container my-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-8">
+
+            <!-- Section confirmation -->
+            <div class="text-center mb-4">
+                <div class="container-title text-center">
+                    <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
+                    <h1 class="title-booking text-center mb-4">{% trans "Vos coordonnées" %} </h1>
+                    <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+                </div>
+                <p class="lead">
+                    {% trans "Merci pour votre réservation. Votre demande d'emplacement a bien été enregistré." %}
+                </p>
+            </div>
+
+            <!-- Bande Dates -->
+            <div class="dates-bar shadow">
+                <div class="dates-content">
+                    <img src="{% static 'pictures/date-limite.png' %}" alt="{% trans "Calendrier" %}" class="logo-dates img-fluid">
+                    <span class="dates-text">{% trans "Dates" %} : <br> {{ booking.start_date|date:"d/m/Y" }} → {{ booking.end_date|date:"d/m/Y" }}</span>
+                </div>
+            </div>
+
+            <!-- Carte 1 : Coordonnées client -->
+            <div class="card shadow card-section">
+                <div class="card-header card-header-custom">
+                    {% trans "Vos coordonnées" %}
+                </div>
+                <div class="card-body">
+                    <div class="info-item"><span><strong>{% trans "Nom" %} :</strong></span><span>{{ booking.last_name }}</span></div>
+                    <div class="info-item"><span><strong>{% trans "Prénom" %} :</strong></span><span>{{ booking.first_name }}</span></div>
+                    <div class="info-item"><span><strong>{% trans "Adresse mail" %} :</strong></span><span>{{ booking.email }}</span></div>
+                    <div class="info-item"><span><strong>{% trans "Téléphone" %} :</strong></span><span>{{ booking.phone }}</span></div>
+                </div>
+            </div>
+
+            <!-- Carte 2 : Nombre de personnes -->
+            <div class="card shadow card-section">
+                <div class="card-header card-header-custom">
+                    {% trans "Nombre de personnes" %}
+                </div>
+                <div class="card-body">
+                    <div class="info-item"><span><strong>{% trans "Adultes" %} :</strong></span><span>{{ booking.adults }}</span></div>
+                    <div class="info-item"><span><strong>{% trans "Enfants > 8 ans" %} :</strong></span><span>{{ booking.children_over_8 }}</span></div>
+                    <div class="info-item"><span><strong>{% trans "Enfants < 8 ans" %} :</strong></span><span>{{ booking.children_under_8 }}</span></div>
+                    <div class="info-item"><span><strong>{% trans "Animaux" %} :</strong></span><span>{{ booking.pets }}</span></div>
+                </div>
+            </div>
+
+            <!-- Carte 3 : Emplacement / véhicule -->
+            <div class="card shadow card-section">
+                <div class="card-header card-header-custom">
+                    {% trans "Emplacement / Véhicule" %}
+                </div>
+                <div class="card-body">
+                    <div class="info-item">
+                        <span><strong>{% trans "Type d’emplacement" %} :</strong></span><span>{{ booking.booking_subtype_display }}</span>
+                    </div>
+
+                    {% if booking.is_tent and booking.tent_length and booking.tent_width %}
+                    <div class="info-item">
+                        <span class="info-item-label"><strong>{% trans "Dimensions de la tente" %} :</strong></span>
+                        <span> {{ booking.tent_length }} x {{ booking.tent_width }} m</span>
+                    </div>
+                    {% endif %}
+
+                    {% if booking.is_vehicle and booking.vehicle_length %}
+                    <div class="info-item">
+                        <span class="info-item-label"><strong>{% trans "Longueur du véhicule" %} :</strong></span>
+                        <span>{{ booking.vehicle_length }} m</span>
+                    </div>
+                    {% endif %}
+
+                    <div class="info-item">
+                        <span><strong>{% trans "Électricité" %} :</strong></span><span>{{ booking.electricity_display }}</span>
+                    </div>
+
+                    {% if booking.electricity_display == "Avec électricité" and booking.cable_length %}
+                    <div class="info-item">
+                        <span class="info-item-label"><strong>{% trans "Câble électrique" %} :</strong></span>
+                        <span>{{ booking.cable_length }} m</span>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+
+            <!-- Bande Prix -->
+            <div class="price-bar shadow">
+                <div class="text-price">
+                    {% trans "Total payé" %} : {{ total_price }} €
+                </div>
+            </div>
+
+
+            <!-- Bouton nouvelle réservation -->
+            <div class="btn-container text-center mt-4">
+                <a href="{% url 'booking_form' %}" class="btn">{% trans "Faire une nouvelle réservation" %}</a>
+            </div>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

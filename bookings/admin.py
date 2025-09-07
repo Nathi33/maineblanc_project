@@ -1,6 +1,29 @@
 from django.contrib import admin
-from .models import Booking, Price, SupplementPrice
+from django import forms
+from .models import Booking, Price, SupplementPrice, Capacity
 
+
+# -----------------------------
+# Admin pour les capacités
+# -----------------------------
+@admin.register(Capacity)
+class CapacityAdmin(admin.ModelAdmin):
+    list_display = (
+        'booking_type',
+        'max_places',
+    )
+    list_filter = ('booking_type',)
+    search_fields = ('booking_type',)
+
+    fieldsets = (
+        ('Nombre d\'emplacements', {
+            'fields': (
+                'booking_type',
+                'max_places',
+            ),
+            'description': "Nombre maximum d'emplacements disponibles pour chaque type de réservation."
+        }),
+    )
 
 # -----------------------------
 # Admin pour les suppléments
@@ -16,6 +39,7 @@ class SupplementPriceAdmin(admin.ModelAdmin):
         'extra_tent_price',
         'visitor_price_without_swimming_pool',
         'visitor_price_with_swimming_pool',
+        'deposit',
     )
     search_fields = ()
     
@@ -30,16 +54,39 @@ class SupplementPriceAdmin(admin.ModelAdmin):
                 'extra_tent_price',
                 'visitor_price_without_swimming_pool',
                 'visitor_price_with_swimming_pool',
+                'deposit',
             ),
             'description': "Tarifs des suppléments quelque soit la saison et le type d'hébergement."
         }),
     )
 
 # -----------------------------
+# Formulaire admin personnalisé pour Price
+# -----------------------------
+class PriceAdminForm(forms.ModelForm):
+    class Meta:
+        model = Price
+        fields = '__all__'
+
+    def clean(self):
+        cleaned_data = super().clean()
+        booking_type = cleaned_data.get("booking_type")
+
+        # Masquer les champs 1 personne si camping-car
+        if booking_type == "camping_car":
+            if cleaned_data.get("price_1_person_with_electricity") or cleaned_data.get("price_1_person_without_electricity"):
+                raise forms.ValidationError(
+                    "Pour les camping-cars, ne renseignez pas le champ '1 personne'."
+                    "Le tarif est identique pour 1 ou 2 personnes : utilisez uniquement le champ 2 personnes."
+                )
+        return cleaned_data
+
+# -----------------------------
 # Admin pour les tarifs d'emplacements
 # -----------------------------
 @admin.register(Price)
 class PriceAdmin(admin.ModelAdmin):
+    form = PriceAdminForm
     list_display = (
         'booking_type', 
         'season', 
@@ -73,15 +120,21 @@ class PriceAdmin(admin.ModelAdmin):
                 "Pour les camping-cars, le tarif est identique pour 1 ou 2 personnes."
                 "Merci de renseigner uniquement la ligne <strong>2 personnes</strong> et laisser l'autre vide."
             )
-
         }),
-        ('Tarifs ouvriers', {
+        ('Tarifs ouvriers semaine', {
             'fields': (
                 'is_worker',
                 'worker_week_price',
+            ),
+            'description': "Prix spéciaux pour les ouvriers, électricité incluse."
+        }),
+        ('Tarifs ouvriers weekend', {
+            'fields': (
                 'weekend_price_without_electricity',
                 'weekend_price_with_electricity',
             ),
-            'description': "Prix spéciaux pour les ouvriers, avec des tarifs réduits le week-end."
+            'description': "Tarifs réduits le week-end quelque soit le type d'hébergement."
         }),
     ) 
+
+
