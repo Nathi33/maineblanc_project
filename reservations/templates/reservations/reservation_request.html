@@ -120,7 +120,13 @@
                                 {% trans "Type d'hébergement" %} <span class="text-danger">*</span>
                             </label>
                             {{ form.accommodation_type }}
-                            
+                        </div>
+
+                        <div class="mb-3 form-label-cached" id="tent-dimensions">
+                            {{ form.tent_length.label_tag }} <span class="text-danger">*</span>
+                            {{ form.tent_length }}
+                            {{ form.tent_width.label_tag }} <span class="text-danger">*</span>
+                            {{ form.tent_width }}
                         </div>
 
                         <div class="mb-3 form-label-cached" id="vehicle-length-container">
@@ -230,17 +236,30 @@
 
         document.addEventListener("DOMContentLoaded", function () {
             const accommodationSelect = document.getElementById("{{ form.accommodation_type.id_for_label }}");
+            const tentDimensions = document.getElementById("tent-dimensions");
             const vehicleLengthContainer = document.getElementById("vehicle-length-container");
 
-            accommodationSelect.addEventListener("change", function () {
+            function toggleFields() {
                 const selected = accommodationSelect.value;
-                if (selected === "camping_car" || selected === "caravane") {
+
+                if (["tent", "car_tent"].includes(selected)) {
+                    tentDimensions.style.display = "block";
+                } else {
+                    tentDimensions.style.display = "none";
+                    document.getElementById("tent_length").value = "";
+                    document.getElementById("tent_width").value = "";
+                }
+
+                if (["caravan", "fourgon", "van", "camping_car"].includes(selected)) {
                     vehicleLengthContainer.style.display = "block";
                 } else {
                     vehicleLengthContainer.style.display = "none";
                     document.getElementById("vehicle_length").value = "";
                 }
-            });
+            }
+
+            accommodationSelect.addEventListener("change", toggleFields);
+            toggleFields(); 
         });
 
         document.addEventListener("DOMContentLoaded", function () {

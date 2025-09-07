@@ -13,6 +13,7 @@ class SupplementPrice(models.Model):
     extra_tent_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     visitor_price_without_swimming_pool = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     visitor_price_with_swimming_pool = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    deposit = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
 
     def __str__(self):
         return "Suppléments"
@@ -26,8 +27,9 @@ class Price(models.Model):
 
     TYPE_CHOICES = [
         ('tent', 'Tente / Voiture Tente'),
-        ('caravan', 'Caravane / Fourgon'),
+        ('caravan', 'Caravane / Fourgon / Van'),
         ('camping_car', 'Camping-car'),
+        ('other', 'Emplacement ouvrier weekend')
     ]
 
     booking_type = models.CharField(max_length=20, choices=TYPE_CHOICES)
@@ -54,11 +56,20 @@ class Price(models.Model):
     supplements = models.ForeignKey(SupplementPrice, on_delete=models.SET_NULL, related_name="prices", null=True, blank=True)
 
     def save(self, *args, **kwargs):
-        # Automatise le nombre de personnes incluses selon le type d'hébergement.
+        """
+        Automatise le nombre de personnes incluses :
+        - Camping-car → toujours 2
+        - Autres types → déduit des champs de prix renseignés
+        - Fallback → 1
+        """
         if self.booking_type == "camping_car":
             self.included_people = 2
-        else:
+        elif self.price_2_persons_with_electricity or self.price_2_persons_without_electricity:
+            self.included_people = 2
+        elif self.price_1_person_with_electricity or self.price_1_person_without_electricity:
             self.included_people = 1
+        else:
+            self.included_people = 1 # Fallback par défaut
         
         # Associe automatiquement un SupplementPrice s'il n'y en a pas
         if not self.supplements:
@@ -68,12 +79,18 @@ class Price(models.Model):
 
     def clean(self):
         """ Validation spécifique selon le type d'emplacement."""
+        errors = {}
+
+        # Camping-cars -> uniquement tarif 2 personnes
         if self.booking_type == "camping_car":
             if self.price_1_person_without_electricity or self.price_1_person_with_electricity:
-                raise ValidationError(
-                    "Pour les camping-cars, ne enseignez pas les champs '1 personne'."
-                    "Le tarif est identique pour 1 ou 2 personnes : utilisez uniquement la colonne 2 personnes."
+                errors["booking_type"] = ValidationError(
+                    "Pour les camping-cars, ne renseignez pas les champs '1 personne'."
+                    "Le tarif est identique pour 1 ou 2 personnes : utilisez uniquement les champs '2 personnes'."
                 )
+        
+        if errors:
+            raise ValidationError(errors)
 
     def __str__(self):
         label =  f"{self.get_booking_type_display()}"
@@ -83,6 +100,12 @@ class Price(models.Model):
             label += f" - {self.get_season_display()}"
         return label
 
+class Capacity(models.Model):
+    booking_type = models.CharField(max_length=20, choices=Price.TYPE_CHOICES, unique=True)
+    max_places = models.PositiveIntegerField(default=1)
+
+    def __str__(self):
+        return f"{self.get_booking_type_display()} - {self.max_places} emplacements"
 
 class Booking(models.Model):
     TYPE_CHOICES = Price.TYPE_CHOICES
@@ -92,9 +115,8 @@ class Booking(models.Model):
         ('no', 'Sans électricité'),
     ]
 
-    user = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     booking_type = models.CharField(max_length=20, choices=TYPE_CHOICES)
-    is_worker = models.BooleanField(default=False, help_text="Tarif spécial ouvrier")
+    booking_subtype = models.CharField(max_length=20, null=True, blank=True)
     vehicle_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     tent_width = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
     tent_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
@@ -108,6 +130,10 @@ class Booking(models.Model):
     extra_tent = models.PositiveIntegerField(default=0)
     start_date = models.DateField()
     end_date = models.DateField()
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField()
+    phone = models.CharField(max_length=20)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -125,33 +151,27 @@ class Booking(models.Model):
             return 'mid'
 
     # Calcul du prix total
-    def calculate_total_price(self):
+    def calculate_total_price(self, supplement=None):
         nights = max((self.end_date - self.start_date).days, 1)
 
-        # --- TARIF OUVRIERS ---
-        if self.is_worker:
-            try:
-                price = Price.objects.get(booking_type=self.booking_type, is_worker=True)
-            except Price.DoesNotExist:
-                return 0
-            
-            total = 0
+        # Mapping du sous-type vers les types principaux
+        subtype_to_type_map = {
+            'tent': 'tent',
+            'car_tent': 'tent',
+            'caravan': 'caravan',
+            'fourgon': 'caravan',
+            'van': 'caravan',
+            'camping_car': 'camping_car',
+        }
 
-            for d in self._get_date_range():
-                if d.weekday() >= 5:  # Week-end
-                    if self.electricity == 'yes':
-                        total += price.weekend_price_with_electricity or 0
-                    else:
-                        total += price.weekend_price_without_electricity or 0
-                else:  # Semaine
-                    total += price.worker_week_price or 0  # L'électricité est incluse
-            return round(total, 2)
-        
-        # --- TARIF CLIENT NORMAL ---
+        # On déduit le type de prix à utiliser
+        booking_type_for_price = subtype_to_type_map.get(self.booking_subtype, self.booking_type)
+
+        # Récupération du tarif classique
         season = self.get_season()
         try:
             price = Price.objects.get(
-                booking_type=self.booking_type, 
+                booking_type=booking_type_for_price,
                 is_worker=False,
                 season=season
             )
@@ -159,30 +179,58 @@ class Booking(models.Model):
             return 0
 
         # On récupère les suppléments
-        supplement = SupplementPrice.objects.first()
+        if supplement is None:
+            supplement = Price.objects.first().supplements if Price.objects.exists() else None
 
-        # Tarif de base avec ou sans électricité
-        if self.electricity == 'yes':
-            total = price.price_with_electricity * nights
+        # Gestion de l'électricité
+        electricity_yes = self.electricity == 'yes'
+
+        #Nombre de personnes incluses
+        included_people = price.included_people if price else 1
+
+        # Prix de base
+        if booking_type_for_price == 'camping_car':
+            base_price = price.price_2_persons_with_electricity if electricity_yes else price.price_2_persons_without_electricity
+            included_people = 2
         else:
-            total = price.price_without_electricity * nights
+            included_people = 2 if self.adults >= 2 else 1
+            if self.adults >= 2:
+                base_price = price.price_2_persons_with_electricity if electricity_yes else price.price_2_persons_without_electricity
+            else:
+                base_price = price.price_1_person_with_electricity if electricity_yes else price.price_1_person_without_electricity
 
-        # Nombre de personnes incluses dans le prix de base 
-        included = price.included_people
-        if self.adults > included:
-            total += (self.adults - included) * (supplement.extra_adult_price if supplement else 0) * nights
-        total += self.children_over_8 * (supplement.child_over_8_price if supplement else 0) * nights
-        total += self.children_under_8 * (supplement.child_under_8_price if supplement else 0) * nights
-        total += self.pets * (supplement.pet_price if supplement else 0) * nights
+        total = (base_price or 0) * nights
 
-        # Autres suppléments
-        total += self.extra_vehicle * (supplement.extra_vehicle_price if supplement else 0) * nights
-        total += self.extra_tent * (supplement.extra_tent_price if supplement else 0) * nights
+        # Suppléments
+        extra_adults = max(self.adults - included_people, 0)
+        if supplement:
+            total += extra_adults * (supplement.extra_adult_price or 0) * nights
+            total += self.children_over_8 * (supplement.child_over_8_price or 0) * nights
+            total += self.children_under_8 * (supplement.child_under_8_price or 0) * nights
+            total += self.pets * (supplement.pet_price or 0) * nights
+            total += self.extra_vehicle * (supplement.extra_vehicle_price or 0) * nights
+            total += self.extra_tent * (supplement.extra_tent_price or 0) * nights
 
         return round(total, 2)
 
-    def _get_date_range(self):
-        return [self.start_date + timedelta(days=i) for i in range((self.end_date - self.start_date).days + 1)]
-    
+    def save(self, *args, **kwargs):
+        """
+        Automatise le nombre de personnes incluses selon le type d'hébergement
+        et associe un SupplementPrice par défaut si nécessaire.
+        """
+        # Nombre de personnes incluses
+        if self.booking_type == 'camping_car':
+            self.included_people = 2
+        elif self.booking_type in ['tent', 'caravan']:
+            self.included_people = 1 
+        else:
+            self.included_people = 1 
+        
+        # Associe automatiquement un SupplementPrice s'il n'y en a pas
+        if not hasattr(self, 'supplements') or self.supplements is None:
+            self.supplements = SupplementPrice.objects.first()
+
+        super().save(*args, **kwargs)
+
     def __str__(self):
-        return f"{self.user.email} - {self.get_booking_type_display()} ({self.start_date} to {self.end_date})"
+        return f"{self.get_booking_type_display()} ({self.start_date} to {self.end_date})"

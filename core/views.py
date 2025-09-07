@@ -43,6 +43,7 @@ def infos_view(request):
             "pet_price": _("Animal"),
             "extra_vehicle_price": _("Véhicule supplémentaire"),
             "extra_tent_price": _("Tente supplémentaire"),
+            "deposit": _("Caution - Prêt de matériel (adaptateur, fer à repasser, sèche-cheveux...)"),
         }
 
         for field, label in mapping.items():
