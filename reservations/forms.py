@@ -61,15 +61,36 @@ class ReservationRequestForm(forms.Form):
 
     ACCOMMODATION_CHOICES = [
         ('', _("Choisissez un type")),
-        ('tente', _("Tente / Voiture tente")),
-        ('caravane', _("Caravane / Fourgon aménagé / Van")),
+        ('tent', _("Tente")),
+        ('car_tent', _("Voiture tente")),
+        ('caravan', _("Caravane")),
+        ('fourgon', _("Fourgon aménagé")),
+        ('van', _("Van")),
         ('camping_car', _("Camping-car")),
-        ('mobil_home', _("Mobil-home"))
+        ('mobil-home', _("Mobil-home"))
     ]
     accommodation_type = forms.ChoiceField(
         label=_("Type d'hébergement"),
         choices=ACCOMMODATION_CHOICES,
         widget=forms.Select(attrs={'class': 'form-select', 'id': 'accommodation_type', 'required': True})
+    )
+
+    tent_length = forms.DecimalField(
+        label=_("Longueur de la tente (m)"),
+        required=False,
+        min_value=1,
+        max_digits=5,
+        decimal_places=2,
+        widget=forms.NumberInput(attrs={'class': 'form-control', 'id': 'tent_length'})
+    )
+
+    tent_width = forms.DecimalField(
+        label=_("Largeur de la tente (m)"),
+        required=False,
+        min_value=1,
+        max_digits=5,
+        decimal_places=2,
+        widget=forms.NumberInput(attrs={'class': 'form-control', 'id': 'tent_width'})
     )
 
     vehicle_length = forms.DecimalField(
@@ -144,16 +165,37 @@ class ReservationRequestForm(forms.Form):
         end_date = cleaned_data.get("end_date")
         today = timezone.localdate()
 
+        accommodation_type = cleaned_data.get("accommodation_type")
+        tent_length = cleaned_data.get("tent_length")
+        tent_width = cleaned_data.get("tent_width")
+        vehicle_length = cleaned_data.get("vehicle_length")
+
+        electricity = cleaned_data.get("electricity")
+        cable_length = cleaned_data.get("cable_length")
+
         errors = []
 
-        # Vérifie que la date d'arrivée ne soit pas passée
+        # Vérification des dates
         if start_date and start_date < today:
             errors.append(_("La date d'arrivée ne peut pas être antérieure à aujourd'hui."))
 
-        # Vérifie que la date de départ ne soit pas antérieure à la date d'arrivée
         if start_date and end_date and end_date <= start_date:
             errors.append(_("La date de départ doit être postérieure à la date d'arrivée."))
 
+        # Validation des champs conditionnels en fonction du type d'hébergement
+        if accommodation_type in ['tent', 'car_tent']:
+            if not tent_length or not tent_width:
+                errors.append(_("La longueur et la largeur de la tente sont obligatoires pour le type d'hébergement sélectionné."))
+        
+        if accommodation_type in ['caravan', 'fourgon', 'van', 'camping_car']:
+            if not vehicle_length:
+                errors.append(_("La longueur du véhicule est obligatoire pour le type d'hébergement sélectionné."))
+
+        # Validation du champ conditionnel en fonction de l'électricité
+            if electricity == 'yes' and not cable_length:
+                errors.append(_("La longueur du câble électrique est obligatoire si l'électricité est demandée."))
+
+        # Lever des erreurs si nécessaire
         if errors:
             raise forms.ValidationError(errors)
         
