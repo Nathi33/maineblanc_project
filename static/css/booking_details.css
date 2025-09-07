@@ -29,16 +29,6 @@
     font-weight:900;
 }
 
-.link-worker {
-    color: #483D8B;
-    text-decoration: none;
-}
-
-.group-booking {
-    background-color: #F5F5F5;
-    margin-bottom: 30px;
-}
-
 .btn {
   background-color: #483D8B;
   color: #fff;
@@ -57,4 +47,3 @@
   color: #483D8B;
   border: 1px solid #483D8B;
 }
-

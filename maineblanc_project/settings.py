@@ -119,6 +119,9 @@ USE_I18N = True
 USE_L10N = True
 USE_TZ = True
 
+# Translation
+DEEPL_API_KEY = "6b98b30e-1c3f-4bcf-b174-d0236ef6de02:fx"
+
 
 # Static files
 STATIC_URL = '/static/'

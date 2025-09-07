@@ -1,0 +1,102 @@
+{% extends "core/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Détails de la réservation | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/booking_details.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="row justify-content-center">
+        <div class="col-lg-6">
+        <div class="container-title text-center">
+            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
+            <h1 class="title-booking text-center mb-4">{% trans "Vos coordonnées" %} </h1>
+            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+        </div>
+
+        {% if form.errors %}
+        <div class="alert alert-danger" role="alert" style="border-radius: 8px; padding: 12px 16px;">
+            <h3 class="mb-2"><img src="{% static 'pictures/attention.png' %}" alt="{% trans "Attention" %}" class="logo-form-info" style="width:25px; height:25px; margin-right:10px;"> {% trans "Veuillez corriger les erreurs suivantes :" %}</h3>
+            <ul class="mb-0">
+            {% for field in form %}
+                {% for error in field.errors %}
+                <li><strong>{{ field.label }} :</strong> {{ error }}</li>
+                {% endfor %}
+            {% endfor %}
+            {% for error in form.non_field_errors %}
+                <li>{{ error }}</li>
+            {% endfor %}
+            </ul>
+        </div>
+        {% endif %}
+
+        {% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-success" role="alert">
+                {{ message }}
+            </div>
+            {% endfor %}
+        {% endif %}
+
+            <div class="card shadow-lg border-0 rounded-3">
+                <div class="card-body">
+                    <form method="post" novalidate>
+                        {% csrf_token %}
+
+                        <div class="mb-3">
+                            <label for="{{ form.last_name.id_for_label }}" class="form-label">{{ form.last_name.label }} <span class="text-danger">*</span></label>
+                            {{ form.last_name }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.first_name.id_for_label }}" class="form-label">{{ form.first_name.label }} <span class="text-danger">*</span></label>
+                            {{ form.first_name }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.email.id_for_label }}" class="form-label">{{ form.email.label }} <span class="text-danger">*</span></label>
+                            {{ form.email }}
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="{{ form.phone.id_for_label }}" class="form-label">{{ form.phone.label }} <span class="text-danger">*</span></label>
+                            {{ form.phone }}
+                        </div>
+
+                        <div class="d-grid mt-4">
+                            <button type="submit" class="btn">
+                                {% trans "Confirmer la réservation" %}
+                            </button>
+                        </div>
+
+                        <p class="small text-muted mt-3">
+                            <span class="text-danger">*</span> {% trans "Champs obligatoires" %}
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const alerts = document.querySelectorAll(".alert");
+
+    setTimeout(() => {
+      alerts.forEach(alert => {
+        alert.style.transition = "opacity 0.5s ease";
+        alert.style.opacity = 0;
+
+        setTimeout(()=> alert.remove(), 500)
+      });
+    }, 5000)
+  })
+</script>
+
+{% endblock %}

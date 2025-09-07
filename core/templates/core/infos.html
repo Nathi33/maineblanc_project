@@ -81,7 +81,8 @@
     <!-- Tarifs -->
     <div class="info-section mb-5">
         <h2 class="under-title-infos">{% trans "Tarifs" %}</h2>
-        <p>{% trans "Taxe de séjour à compter du 01/01/2025 : 0,29€ par personne/nuit. Tous les prix sont TTC." %}</p>
+        <p class="small text-muted mb-0">{% trans "Taxe de séjour à compter du 01/01/2025 : 0,29€ par personne/nuit (incluse dans le prix)" %}</p>
+        <p class="small text-muted">{% trans "Tous les prix sont TTC." %}</p>
 
         <table class="table table-bordered align-middle">
             <thead class="table-light text-center align-middle">
@@ -142,7 +143,7 @@
                 <!-- Caravane / Fourgon -->
                 <tr class="text-center">
                     <td>
-                        <span class="under-title">{% trans "Caravane / Fourgon" %}</span><br>
+                        <span class="under-title">{% trans "Caravane / Fourgon / Van" %}</span><br>
                         <div>
                             <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" class=" logo-infos">
                             {% trans "Avec électricité" %}<br>
@@ -243,7 +244,7 @@
                 <!-- Tente / Voiture -->
                 <tr class="text-center">
                     <td>
-                        <span class="under-title">{% trans "Tente / Voiture" %}</span><br>
+                        <span class="under-title">{% trans "Tente / Voiture Tente" %}</span><br>
                         <div>
                             <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" class=" logo-infos">
                             {% trans "Avec électricité" %}<br>
@@ -341,7 +342,8 @@
                 <!-- Ouvriers -->
                 <tr>
                     <td class="text-center">
-                        <span class="under-title">{% trans "Ouvriers" %}</span>
+                        <span class="under-title">{% trans "Ouvriers" %}</span><br>
+                        <span class="small">({% trans "Tarifs comprenant l'électricité" %})</span>
                     </td>
                     <td colspan="3" class="text-center">
                         <div class="d-inline-block text-start">
@@ -353,16 +355,19 @@
                                 {% endif %}
                             {% endfor %}
 
-                            {% trans "Emplacement pour le week-end" %} : 
-                            <ul class="list-board mb-0">
-                                {% for wp in worker_prices %}
-                                    {% if wp.weekend_price_without_electricity %}
-                                        <li>{{ wp.weekend_price_without_electricity }}€ ({% trans "sans électricité" %})</li>
+                            {% for wp in worker_prices %}
+                                {% if wp.booking_type == "other" %}
+                                    {% trans "Emplacement pour le week-end (si non libéré)" %} : 
+                                    <ul class="list-board mb-0">
+                                        {% if wp.weekend_price_without_electricity %}
+                                            <li>{{ wp.weekend_price_without_electricity }}€ ({% trans "sans électricité" %})</li>
                                     {% endif %}
                                     {% if wp.weekend_price_with_electricity %}
                                         <li>{{ wp.weekend_price_with_electricity }}€ ({% trans "avec électricité" %})</li>
                                     {% endif %}
-                                {% endfor %}
+                                    </ul>
+                                {% endif %}
+                            {% endfor %}
                             </ul>
                         </div>
                     </td>
@@ -395,14 +400,17 @@
 
     <!-- Tarifs Mobil-homes -->
     <div class="table-responsive">
-        <table class="table table-bordered align-top text-center">
+        <table class="table table-bordered align-middle text-center">
             <thead class="table-light">
                 <tr>
-                    <th scope="col">{% trans "Mobil-home" %}</th>
-                    <th scope="col">{% trans "À la nuitée" %}</th>
-                    <th scope="col">{% trans "Basse saison" %}</th>
-                    <th scope="col">{% trans "Moyenne saison" %}</th>
-                    <th scope="col">{% trans "Haute saison" %}</th>
+                    <th scope="col" class="align-middle text-center">{% trans "Mobil-home" %}</th>
+                    <th scope="col" class="align-middle text-center">{% trans "À la nuitée" %}
+                        <br>
+                        <small>{% trans "(Uniquement en basse et moyenne saison)" %}</small>
+                    </th>
+                    <th scope="col" class="align-middle text-center">{% trans "Basse saison" %}</th>
+                    <th scope="col" class="align-middle text-center">{% trans "Moyenne saison" %}</th>
+                    <th scope="col" class="align-middle text-center">{% trans "Haute saison" %}</th>
                 </tr>
             </thead>
             <tbody>
@@ -410,7 +418,7 @@
                 <tr>
                     <td>
                         <strong>{% trans "Sabot de Vénus" %}</strong><br>
-                        <small>{% trans "2 chambres – 5 couchages – climatisé – terrasse" %}</small>
+                        <small>{% trans "2 chambres – 5 à 6 couchages – climatisé – terrasse" %}</small>
                     </td>
                     <td>{% trans "80 €" %}</td>
                     <td>{% trans "290 €/semaine" %}</td>
@@ -449,7 +457,7 @@
                 <tr>
                     <td>
                         <strong>{% trans "Capucine" %}</strong><br>
-                        <small>{% trans "1 chambre – 2 couchages (+ banquette enfant < 8 ans) – climatisé – terrasse" %}</small>
+                        <small>{% trans "1 chambre – 2 couchages – climatisé – terrasse" %}</small>
                     </td>
                     <td>{% trans "70 €" %}</td>
                     <td>{% trans "225 €/semaine" %}</td>
@@ -461,7 +469,7 @@
                 <tr>
                     <td>
                         <strong>{% trans "Graminé" %}</strong><br>
-                        <small>{% trans "2 chambres – 4 couchages – sans climatisation – sans terrasse" %}</small><br>
+                        <small>{% trans "2 chambres – 4 couchages – non climatisé – sans terrasse" %}</small><br>
                         <small class="text-muted">{% trans "Réservé aux ouvriers" %}</small>
                     </td>
                     <td>{% trans "50 €" %}</td>
@@ -476,6 +484,13 @@
 
         <!-- Notes globales -->
         <div class="mt-3">
+            <p class="small text-muted mb-0">
+                {% trans "Caution à prévoir : " %}
+                <ul class="small text-muted">
+                    <li>{% trans "Mobil-home : 350 €" %}</li>
+                    <li>{% trans "Ménage : 70 €" %}</li>
+                </ul>
+            </p>
             <p class="small text-muted">
                 {% trans "Oreillers et couettes fournis (taies d’oreillers, housses de couette et draps disponibles en location à partir de 15 €)." %}
             </p>

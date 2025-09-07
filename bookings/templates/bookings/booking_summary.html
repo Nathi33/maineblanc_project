@@ -1,0 +1,56 @@
+{% extends "core/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Infos de la réservation | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/booking_summary.css' %}" />
+{% endblock %}
+
+{% block content %}
+<section class="container py-5">
+    <div class="container-title text-center">
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
+        <h1 class="title-booking text-center mb-4">{% trans "Résumé de votre réservation" %} </h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+    </div>
+
+    <div class="card p-4 mb-4">
+        <p><strong>{% trans "Type d'emplacement" %}:</strong> 
+            {{ booking.booking_subtype_display }}
+
+            {% if booking.is_tent %}
+                <span>({% trans "dimensions de la tente" %} : {{ booking.tent_length }} m x {{ booking.tent_width }} m)</span>
+            {% elif booking.is_vehicle %}
+                <span>({% trans "longueur du véhicule" %} : {{ booking.vehicle_length }} m)</span>
+            {% endif %}
+        </p>
+
+        <p><strong>{% trans "Dates" %}:</strong> {{ booking.start_date }} → {{ booking.end_date }}</p>
+        <p><strong>{% trans "Adultes" %}:</strong> {{ booking.adults }}</p>
+        <p><strong>{% trans "Enfants > 8 ans" %}:</strong> {{ booking.children_over_8 }}</p>
+        <p><strong>{% trans "Enfants < 8 ans" %}:</strong> {{ booking.children_under_8 }}</p>
+        <p><strong>{% trans "Animaux" %}:</strong> {{ booking.pets }}</p>
+
+        {# Électricité et longueur de câble #}
+        <p><strong>{% trans "Électricité" %} :</strong>
+            {% if booking.electricity == "yes" %}
+                {% trans "Avec électricité" %}
+                {% if booking.cable_length %}
+                    (<span class="cable-length">{% trans "longueur du câble" %} : {{ booking.cable_length }} m</span>)
+                {% endif %}
+            {% else %}
+                {% trans "Sans électricité" %}
+            {% endif %}
+        </p>
+
+        <p><strong>{% trans "Prix total" %}:</strong> {{ total_price }} €</p>
+    </div>
+
+    <div class="container-btns">
+        <a href="{% url 'booking_form' %}" class="btn-bis">{% trans "Modifier ma réservation" %}</a>
+        <a href="{% url 'booking_details' %}" class="btn">{% trans "Confirmer la réservation" %}</a>
+    </div>
+</section>
+{% endblock %}
