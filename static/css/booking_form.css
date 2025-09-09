@@ -34,6 +34,10 @@
     text-decoration: none;
 }
 
+.link-worker:hover {
+    font-weight: bold;
+}
+
 .group-booking {
     background-color: #F5F5F5;
     margin-bottom: 30px;
