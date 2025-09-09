@@ -88,3 +88,6 @@ def legal_view(request):
 def privacy_view(request):
     return render(request, 'core/privacy-policy.html')
 
+def not_found_view(request, exception=None):
+    return render(request, 'core/not_found.html', status=404)
+

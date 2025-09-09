@@ -1,6 +1,6 @@
 from django.urls import path
 from . import views
-
+from django.conf.urls import handler404
 
 urlpatterns = [
     path('', views.home_view, name='home'),
@@ -11,4 +11,7 @@ urlpatterns = [
     path('activites/', views.activities_view, name='activities'),
     path('mentions-legales/', views.legal_view, name='legal'),
     path('politique-de-confidentialite/', views.privacy_view, name='privacy-policy'),
+    path('notfound-test/', views.not_found_view, name='not_found'),  # Optional: direct access to 404 page for testing
 ]
+
+handler404 = views.not_found_view

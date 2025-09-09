@@ -1,0 +1,28 @@
+{% extends "core/base.html" %}
+
+{% load static i18n %}
+
+{% block title %}{% trans "Erreur 404 | Camping Le Maine Blanc" %}{% endblock %}
+
+{% block styles %}
+    <link rel="stylesheet" href="{% static 'css/notfound.css' %}" />
+{% endblock %}
+
+{% block content %}
+  <section class="container py-5">
+    <div class="container-notfound-image text-center mb-4">
+        <img src="{% static 'pictures/oops.png' %}" alt="{% trans "Erreur 404" %}" class="notfound-image" />
+    </div>
+    <div class="container-title text-center">
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
+        <h1 class="title-notfound">{% trans "Erreur 404 - Page non trouvée" %}</h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+    </div>
+
+    <div class="text-center mt-4">
+        <p class="under-title-notfound">{% trans "Désolé, la page que vous recherchez n'existe pas." %}</p>
+        <a href="{% url 'home' %}" class="link-home">{% trans "Retour à l'accueil" %}</a>
+    </div>
+  </section>
+
+{% endblock %}
