@@ -168,12 +168,28 @@ class BookingDetailsForm(forms.Form):
         label=_("Prénom"),
         widget=forms.TextInput(attrs={'class': 'form-control'})
     )
-    email = forms.EmailField(
-        label=_("Adresse mail"),
-        widget=forms.EmailInput(attrs={'class': 'form-control'})
+    address = forms.CharField(
+        max_length=255,
+        label=_("Adresse"),
+        widget=forms.TextInput(attrs={'class': 'form-control'})
+    )
+    postal_code = forms.CharField(
+        max_length=20,
+        label=_("Code postal"),
+        widget=forms.TextInput(attrs={'class': 'form-control'})
+    )
+    city = forms.CharField(
+        max_length=100,
+        label=_("Ville"),
+        widget=forms.TextInput(attrs={'class': 'form-control'})
     )
     phone = forms.CharField(
         max_length=20,
         label=_("Téléphone"),
         widget=forms.TextInput(attrs={'class': 'form-control'})
+    )
+    email = forms.EmailField(
+        max_length=255,
+        label=_("Adresse mail"),
+        widget=forms.EmailInput(attrs={'class': 'form-control'})
     )

@@ -2,6 +2,7 @@ from django.db import models
 from django.conf import settings
 from datetime import timedelta
 from django.core.exceptions import ValidationError
+from decimal import Decimal
     
 
 class SupplementPrice(models.Model):
@@ -134,6 +135,7 @@ class Booking(models.Model):
     last_name = models.CharField(max_length=100)
     email = models.EmailField()
     phone = models.CharField(max_length=20)
+    deposit_paid = models.BooleanField(default=False)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -212,6 +214,13 @@ class Booking(models.Model):
             total += self.extra_tent * (supplement.extra_tent_price or 0) * nights
 
         return round(total, 2)
+    
+    
+    def calculate_deposit(self):
+        """ Calcule l'acompte non remboursable de 15% """
+        total_price = self.calculate_total_price()
+        return round(total_price * Decimal('0.15'), 2)
+
 
     def save(self, *args, **kwargs):
         """
