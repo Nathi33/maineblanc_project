@@ -9,6 +9,10 @@ from django.conf import settings
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> feature/payment
 # --- Étape 1 : Formulaire réservation ---
 def booking_form(request):
     # Récupère les données existantes dans la session pour pré-remplir
@@ -186,12 +190,20 @@ def booking_details(request):
 
             # Redirige l'utilisateur vers Stripe
             return redirect(checkout_session.url, code=303)
+<<<<<<< HEAD
+=======
+            
+>>>>>>> feature/payment
     else:
         form = BookingDetailsForm(initial=booking_data)
 
     return render(request, 'bookings/booking_details.html', {
         'form': form,
+<<<<<<< HEAD
         'STRIPE_PUBLISHABLE_KEY': settings.STRIPE_PUBLISHABLE_KEY
+=======
+        'STRIPE_PUBLIC_KEY': settings.STRIPE_PUBLIC_KEY
+>>>>>>> feature/payment
     })
 
 # --- Étape 4 : Confirmation et enregistrement ---
@@ -240,7 +252,11 @@ def booking_confirm(request):
     booking.is_tent = booking.booking_subtype in ['tent', 'car_tent']
     booking.is_vehicle = booking.booking_subtype in ['caravan', 'fourgon', 'van', 'camping_car']
 
+<<<<<<< HEAD
     # Calcul du prix total et de l'acompte
+=======
+      # Calcul du prix total et de l'acompte
+>>>>>>> feature/payment
     supplement = SupplementPrice.objects.first()
     total_price = booking.calculate_total_price(supplement=supplement)
     deposit = booking.calculate_deposit()
