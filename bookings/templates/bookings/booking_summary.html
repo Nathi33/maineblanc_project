@@ -46,6 +46,10 @@
         </p>
 
         <p><strong>{% trans "Prix total" %}:</strong> {{ total_price }} €</p>
+        <p class="mb-0"><strong>{% trans "Acompte de 15% à verser" %}:</strong> {{ deposit }} €</p>
+        <p class="small text-muted">({% trans "Non remboursable" %})</p>
+        <p><strong>{% trans "Solde restant à payer à l'accueil lors de l'arrivée" %}:</strong> {{ remaining_balance }} €</p>
+    </div>
     </div>
 
     <div class="container-btns">

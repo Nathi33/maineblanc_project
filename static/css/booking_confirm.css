@@ -86,11 +86,17 @@
 
 .price-bar {
     background: #f0f4ff;
-    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
     color: #483D8B;
 }
 
-.text-price {
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: #483D8B;
 }
 

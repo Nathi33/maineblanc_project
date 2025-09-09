@@ -1,10 +1,13 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from .forms import BookingFormClassic,BookingDetailsForm
 from .models import Booking, Capacity, SupplementPrice
 from decimal import Decimal
 from datetime import date
 from django.utils.translation import gettext_lazy as _
+import stripe
+from django.conf import settings
 
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 # --- Étape 1 : Formulaire réservation ---
@@ -122,13 +125,17 @@ def booking_summary(request):
     }
     booking.booking_type = subtype_to_main.get(booking_subtype, booking_subtype)
 
-    # Calcul du prix total 
+    # Calcul du prix total et de l'acompte
     supplement = SupplementPrice.objects.first()
     total_price = booking.calculate_total_price(supplement=supplement)
+    deposit = booking.calculate_deposit()
+    remaining_balance = round(total_price - deposit, 2)
 
     return render(request, 'bookings/booking_summary.html', {
         'booking': booking, 
-        'total_price': total_price
+        'total_price': total_price,
+        'deposit': deposit,
+        'remaining_balance': remaining_balance
     })
 
 # --- Étape 3 : Coordonnées du client ---
@@ -142,11 +149,52 @@ def booking_details(request):
             # Ajoute les infos client à la session
             booking_data.update(form.cleaned_data)
             request.session['booking_data'] = booking_data
-            return redirect('booking_confirm')
+
+            # Filtrer les champs du modèle Booking
+            model_fields = [f.name for f in Booking._meta.get_fields()]
+            booking_data = {k: v for k, v in booking_data.items() if k in model_fields}
+
+            # Convertir les dates si elles sont en string
+            if isinstance(booking_data.get('start_date'), str):
+                booking_data['start_date'] = date.fromisoformat(booking_data['start_date'])
+            if isinstance(booking_data.get('end_date'), str):
+                booking_data['end_date'] = date.fromisoformat(booking_data['end_date'])
+
+            # Reconstruire l'objet Booking
+            booking = Booking(**booking_data)
+
+            # Calcul de l'acompte
+            deposit = booking.calculate_deposit()
+
+            # --- Créer la session de paiement Stripe ---
+            checkout_session = stripe.checkout.Session.create(
+                payment_method_types=['card'],
+                line_items=[{
+                    'price_data': {
+                        'currency': 'eur',
+                        'product_data': {
+                            'name': f"Acompte réservation camping ({booking.start_date} - {booking.end_date})",
+                        },
+                        'unit_amount': int(deposit * 100),  # Montant en centimes
+                    },
+                    'quantity': 1,
+                }],
+                mode='payment',
+                success_url=request.build_absolute_uri(reverse('booking_confirm')),
+                cancel_url=request.build_absolute_uri(reverse('booking_details')),
+                customer_email=booking_data.get('email'),
+            )
+
+            # Redirige l'utilisateur vers Stripe
+            return redirect(checkout_session.url, code=303)
+            
     else:
         form = BookingDetailsForm(initial=booking_data)
 
-    return render(request, 'bookings/booking_details.html', {'form': form})
+    return render(request, 'bookings/booking_details.html', {
+        'form': form,
+        'STRIPE_PUBLIC_KEY': settings.STRIPE_PUBLIC_KEY
+    })
 
 # --- Étape 4 : Confirmation et enregistrement ---
 def booking_confirm(request):
@@ -155,7 +203,7 @@ def booking_confirm(request):
         return redirect('booking_form')
     
     # Vérifie que les coordonnées sont présentes
-    required_fields = ['first_name', 'last_name', 'email', 'phone']
+    required_fields = ['first_name', 'last_name', 'address', 'postal_code', 'city', 'email', 'phone']
     if not all(field in booking_data for field in required_fields):
         return redirect('booking_details')
 
@@ -194,9 +242,13 @@ def booking_confirm(request):
     booking.is_tent = booking.booking_subtype in ['tent', 'car_tent']
     booking.is_vehicle = booking.booking_subtype in ['caravan', 'fourgon', 'van', 'camping_car']
 
-    # Calcul du prix total
+      # Calcul du prix total et de l'acompte
     supplement = SupplementPrice.objects.first()
     total_price = booking.calculate_total_price(supplement=supplement)
+    deposit = booking.calculate_deposit()
+
+    # Marquer l'acompte comme payé
+    booking.deposit_paid = True
 
     # Sauvegarde de la réservation en base
     booking.save()
@@ -207,6 +259,8 @@ def booking_confirm(request):
     # Affichage de la page de confirmation
     return render(request, 'bookings/booking_confirm.html', {
         'booking': booking,
-        'total_price': total_price
+        'total_price': total_price,
+        'deposit': deposit,
+        'remaining_balance': round(total_price - deposit, 2)
     })
 

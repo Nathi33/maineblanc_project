@@ -17,7 +17,7 @@
             <div class="text-center mb-4">
                 <div class="container-title text-center">
                     <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
-                    <h1 class="title-booking text-center mb-4">{% trans "Vos coordonnées" %} </h1>
+                    <h1 class="title-booking text-center mb-4">{% trans "Réservation confirmée" %} </h1>
                     <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
                 </div>
                 <p class="lead">
@@ -98,8 +98,18 @@
 
             <!-- Bande Prix -->
             <div class="price-bar shadow">
-                <div class="text-price">
-                    {% trans "Total payé" %} : {{ total_price }} €
+                <div class="price-row">
+                    <span>{% trans "Total à payer" %} :</span>
+                    <span>{{ total_price }} €</span>
+                </div>
+                <div class="price-row">
+                    <span>{% trans "Acompte versé" %} :</span>
+                    <span>{{ deposit }} €</span>
+                </div>
+                <div class="price-row">
+                    <span>{% trans "Solde restant à payer le jour de votre arrivée" %} :</span>
+                    <span>{{ remaining_balance }} €</span>
+                </div>
                 </div>
             </div>
 
