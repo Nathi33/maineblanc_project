@@ -215,19 +215,13 @@ class Booking(models.Model):
 
         return round(total, 2)
     
-<<<<<<< HEAD
-    
-=======
->>>>>>> feature/payment
+
     def calculate_deposit(self):
         """ Calcule l'acompte non remboursable de 15% """
         total_price = self.calculate_total_price()
         return round(total_price * Decimal('0.15'), 2)
 
-<<<<<<< HEAD
 
-=======
->>>>>>> feature/payment
     def save(self, *args, **kwargs):
         """
         Automatise le nombre de personnes incluses selon le type d'hébergement

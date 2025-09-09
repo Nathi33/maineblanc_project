@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-07 10:34+0200\n"
+"POT-Creation-Date: 2025-09-09 13:56+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,30 +19,30 @@ msgstr ""
 "Plural-Forms: nplurals=3; plural=n == 1 ? 0 : n != 0 && n % 1000000 == 0 ? "
 "1 : 2;\n"
 
-#: .\bookings\forms.py:12 .\bookings\views.py:98 .\bookings\views.py:184
+#: .\bookings\forms.py:12 .\bookings\views.py:101 .\bookings\views.py:233
 #: .\core\templates\core\infos.html:354 .\reservations\forms.py:64
 msgid "Tente"
 msgstr "Tienda"
 
-#: .\bookings\forms.py:13 .\bookings\views.py:99 .\bookings\views.py:185
+#: .\bookings\forms.py:13 .\bookings\views.py:102 .\bookings\views.py:234
 msgid "Voiture Tente"
 msgstr "Coche tienda"
 
-#: .\bookings\forms.py:14 .\bookings\views.py:100 .\bookings\views.py:186
+#: .\bookings\forms.py:14 .\bookings\views.py:103 .\bookings\views.py:235
 #: .\core\templates\core\infos.html:352 .\reservations\forms.py:66
 msgid "Caravane"
 msgstr "Caravana"
 
-#: .\bookings\forms.py:15 .\bookings\views.py:101 .\bookings\views.py:187
+#: .\bookings\forms.py:15 .\bookings\views.py:104 .\bookings\views.py:236
 msgid "Fourgon"
 msgstr "Furgón"
 
-#: .\bookings\forms.py:16 .\bookings\views.py:102 .\bookings\views.py:188
+#: .\bookings\forms.py:16 .\bookings\views.py:105 .\bookings\views.py:237
 #: .\reservations\forms.py:68
 msgid "Van"
 msgstr "Furgoneta"
 
-#: .\bookings\forms.py:17 .\bookings\views.py:103 .\bookings\views.py:189
+#: .\bookings\forms.py:17 .\bookings\views.py:106 .\bookings\views.py:238
 #: .\core\templates\core\infos.html:50 .\reservations\forms.py:69
 msgid "Camping-car"
 msgstr "Autocaravana"
@@ -144,7 +144,8 @@ msgid ""
 "Le champ 'Longueur du véhicule' est obligatoire pour les caravanes et "
 "camping-cars."
 msgstr ""
-"El campo 'Longitud del vehículo' es obligatorio para caravanas y autocaravanas."
+"El campo 'Longitud del vehículo' es obligatorio para caravanas y "
+"autocaravanas."
 
 #: .\bookings\forms.py:144
 msgid "Le champ 'Largeur de la tente' est obligatoire pour les tentes."
@@ -172,16 +173,28 @@ msgstr "Nombre"
 msgid "Prénom"
 msgstr "Apellido"
 
-#: .\bookings\forms.py:172
-#: .\bookings\templates\bookings\booking_confirm.html:44
-msgid "Adresse mail"
-msgstr "Correo electrónico"
+#: .\bookings\forms.py:173 .\reservations\forms.py:15
+msgid "Adresse"
+msgstr "Dirección"
 
-#: .\bookings\forms.py:177
+#: .\bookings\forms.py:178 .\reservations\forms.py:19
+msgid "Code postal"
+msgstr "Código postal"
+
+#: .\bookings\forms.py:183 .\reservations\forms.py:23
+msgid "Ville"
+msgstr "Ciudad"
+
+#: .\bookings\forms.py:188
 #: .\bookings\templates\bookings\booking_confirm.html:45
 #: .\reservations\forms.py:27
 msgid "Téléphone"
 msgstr "Teléfono"
+
+#: .\bookings\forms.py:193
+#: .\bookings\templates\bookings\booking_confirm.html:44
+msgid "Adresse mail"
+msgstr "Correo electrónico"
 
 #: .\bookings\templates\bookings\availability.html:5
 msgid "Echec de la réservation | Camping Le Maine Blanc"
@@ -218,11 +231,8 @@ msgid "Décoration"
 msgstr "Decoración"
 
 #: .\bookings\templates\bookings\booking_confirm.html:20
-#: .\bookings\templates\bookings\booking_confirm.html:39
-#: .\bookings\templates\bookings\booking_details.html:17
-#: .\reservations\templates\reservations\reservation_request.html:57
-msgid "Vos coordonnées"
-msgstr "Su información de contacto"
+msgid "Réservation confirmée"
+msgstr "Reserva confirmada"
 
 #: .\bookings\templates\bookings\booking_confirm.html:24
 msgid ""
@@ -239,6 +249,12 @@ msgstr "Calendario"
 #: .\bookings\templates\bookings\booking_summary.html:30
 msgid "Dates"
 msgstr "Fechas"
+
+#: .\bookings\templates\bookings\booking_confirm.html:39
+#: .\bookings\templates\bookings\booking_details.html:17
+#: .\reservations\templates\reservations\reservation_request.html:57
+msgid "Vos coordonnées"
+msgstr "Su información de contacto"
 
 #: .\bookings\templates\bookings\booking_confirm.html:52
 msgid "Nombre de personnes"
@@ -275,10 +291,18 @@ msgid "Câble électrique"
 msgstr "Cable eléctrico"
 
 #: .\bookings\templates\bookings\booking_confirm.html:102
-msgid "Total payé"
-msgstr "Total pagado"
+msgid "Total à payer"
+msgstr "Total a pagar"
 
-#: .\bookings\templates\bookings\booking_confirm.html:109
+#: .\bookings\templates\bookings\booking_confirm.html:106
+msgid "Acompte versé"
+msgstr "Depósito pagado"
+
+#: .\bookings\templates\bookings\booking_confirm.html:110
+msgid "Solde restant à payer le jour de votre arrivée"
+msgstr "Saldo restante a pagar el día de su llegada"
+
+#: .\bookings\templates\bookings\booking_confirm.html:123
 msgid "Faire une nouvelle réservation"
 msgstr "Hacer una nueva reserva"
 
@@ -306,12 +330,12 @@ msgstr "Atención"
 msgid "Veuillez corriger les erreurs suivantes :"
 msgstr "Por favor corrija los siguientes errores :"
 
-#: .\bookings\templates\bookings\booking_details.html:72
-#: .\bookings\templates\bookings\booking_summary.html:53
+#: .\bookings\templates\bookings\booking_details.html:87
+#: .\bookings\templates\bookings\booking_summary.html:60
 msgid "Confirmer la réservation"
 msgstr "Confirmar la reserva"
 
-#: .\bookings\templates\bookings\booking_details.html:77
+#: .\bookings\templates\bookings\booking_details.html:92
 #: .\bookings\templates\bookings\booking_form.html:118
 #: .\core\templates\registration\register.html:67
 #: .\reservations\templates\reservations\reservation_request.html:210
@@ -330,7 +354,8 @@ msgstr "Reservar un emplazamiento"
 msgid ""
 "Pour les réservations ouvriers, merci de contacter directement le camping au "
 msgstr ""
-"Para reservas de trabajadores, por favor contacte directamente con el cámping al "
+"Para reservas de trabajadores, por favor contacte directamente con el "
+"cámping al "
 
 #: .\bookings\templates\bookings\booking_form.html:22
 msgid "ou via notre"
@@ -340,7 +365,7 @@ msgstr "o a través de nuestro"
 msgid "Emplacements"
 msgstr "Parcelas"
 
-#: .\bookings\templates\bookings\booking_form.html:73"
+#: .\bookings\templates\bookings\booking_form.html:73
 msgid "Dates du séjour"
 msgstr "Fechas de la estancia"
 
@@ -383,7 +408,20 @@ msgstr "Longitud del cable"
 msgid "Prix total"
 msgstr "Precio total"
 
-#: .\bookings\templates\bookings\booking_summary.html:52
+#: .\bookings\templates\bookings\booking_summary.html:49
+#, python-format
+msgid "Acompte de 15%% à verser"
+msgstr "Anticipo del 15%% a pagar"
+
+#: .\bookings\templates\bookings\booking_summary.html:50
+msgid "Non remboursable"
+msgstr "No reembolsable"
+
+#: .\bookings\templates\bookings\booking_summary.html:51
+msgid "Solde restant à payer à l'accueil lors de l'arrivée"
+msgstr "Saldo restante a pagar en la recepción a la llegada"
+
+#: .\bookings\templates\bookings\booking_summary.html:59
 msgid "Modifier ma réservation"
 msgstr "Modificar mi reserva"
 
@@ -1069,8 +1107,8 @@ msgid ""
 "Taxe de séjour à compter du 01/01/2025 : 0,29€ par personne/nuit (incluse "
 "dans le prix)"
 msgstr ""
-"Impuesto turístico a partir del 01/01/2025: 0,29€ por persona/noche (incluido "
-"en el precio)"
+"Impuesto turístico a partir del 01/01/2025: 0,29€ por persona/noche "
+"(incluido en el precio)"
 
 #: .\core\templates\core\infos.html:85
 msgid "Tous les prix sont TTC."
@@ -2157,37 +2195,25 @@ msgstr "(sin piscina)"
 msgid "(avec piscine)"
 msgstr "(con piscina)"
 
-#: .\maineblanc_project\settings.py:110
+#: .\maineblanc_project\settings.py:109
 msgid "French"
 msgstr "Francés"
 
-#: .\maineblanc_project\settings.py:111
+#: .\maineblanc_project\settings.py:110
 msgid "English"
 msgstr "Inglés"
 
-#: .\maineblanc_project\settings.py:112
+#: .\maineblanc_project\settings.py:111
 msgid "Spanish"
 msgstr "Español"
 
-#: .\maineblanc_project\settings.py:113
+#: .\maineblanc_project\settings.py:112
 msgid "German"
 msgstr "Alemán"
 
-#: .\maineblanc_project\settings.py:114
+#: .\maineblanc_project\settings.py:113
 msgid "Nederlands"
 msgstr "Neerlandés"
-
-#: .\reservations\forms.py:15
-msgid "Adresse"
-msgstr "Dirección"
-
-#: .\reservations\forms.py:19
-msgid "Code postal"
-msgstr "Código postal"
-
-#: .\reservations\forms.py:23
-msgid "Ville"
-msgstr "Ciudad"
 
 #: .\reservations\forms.py:31
 msgid "Adresse email"
@@ -2229,14 +2255,16 @@ msgid ""
 "La longueur et la largeur de la tente sont obligatoires pour le type "
 "d'hébergement sélectionné."
 msgstr ""
-"La longitud y la anchura de la tienda son obligatorias para el tipo de alojamiento seleccionado."
+"La longitud y la anchura de la tienda son obligatorias para el tipo de "
+"alojamiento seleccionado."
 
 #: .\reservations\forms.py:192
 msgid ""
 "La longueur du véhicule est obligatoire pour le type d'hébergement "
 "sélectionné."
 msgstr ""
-"La longitud del vehículo es obligatoria para el tipo de alojamiento seleccionado."
+"La longitud del vehículo es obligatoria para el tipo de alojamiento "
+"seleccionado."
 
 #: .\reservations\forms.py:196
 msgid ""
@@ -2277,7 +2305,7 @@ msgstr "Localización del camping"
 msgid "Envoyer la demande"
 msgstr "Enviar la solicitud"
 
-#: .\reservations\views.py:104
+#: .\reservations\views.py:120
 msgid ""
 "Votre demande de réservation a bien été envoyée, nous reviendrons vers vous "
 "très rapidement."

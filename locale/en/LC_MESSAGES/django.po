@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-07 11:37+0200\n"
+"POT-Creation-Date: 2025-09-09 14:13+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\bookings\forms.py:12 .\bookings\views.py:98 .\bookings\views.py:184
+#: .\bookings\forms.py:12 .\bookings\views.py:101 .\bookings\views.py:233
 #: .\core\templates\core\infos.html:354 .\reservations\forms.py:64
 msgid "Tente"
 msgstr "Tent"
 
-#: .\bookings\forms.py:13 .\bookings\views.py:99 .\bookings\views.py:185
+#: .\bookings\forms.py:13 .\bookings\views.py:102 .\bookings\views.py:234
 msgid "Voiture Tente"
 msgstr "Car Tent"
 
-#: .\bookings\forms.py:14 .\bookings\views.py:100 .\bookings\views.py:186
+#: .\bookings\forms.py:14 .\bookings\views.py:103 .\bookings\views.py:235
 #: .\core\templates\core\infos.html:352 .\reservations\forms.py:66
 msgid "Caravane"
 msgstr "Caravan"
 
-#: .\bookings\forms.py:15 .\bookings\views.py:101 .\bookings\views.py:187
+#: .\bookings\forms.py:15 .\bookings\views.py:104 .\bookings\views.py:236
 msgid "Fourgon"
 msgstr "Converted Van"
 
-#: .\bookings\forms.py:16 .\bookings\views.py:102 .\bookings\views.py:188
+#: .\bookings\forms.py:16 .\bookings\views.py:105 .\bookings\views.py:237
 #: .\reservations\forms.py:68
 msgid "Van"
-msgstr "Converted Van"
+msgstr "Van"
 
-#: .\bookings\forms.py:17 .\bookings\views.py:103 .\bookings\views.py:189
+#: .\bookings\forms.py:17 .\bookings\views.py:106 .\bookings\views.py:238
 #: .\core\templates\core\infos.html:50 .\reservations\forms.py:69
 msgid "Camping-car"
 msgstr "Motorhome"
@@ -169,16 +169,28 @@ msgstr "Name"
 msgid "Prénom"
 msgstr "First Name"
 
-#: .\bookings\forms.py:172
-#: .\bookings\templates\bookings\booking_confirm.html:44
-msgid "Adresse mail"
-msgstr "Email Address"
+#: .\bookings\forms.py:173 .\reservations\forms.py:15
+msgid "Adresse"
+msgstr "Address"
 
-#: .\bookings\forms.py:177
+#: .\bookings\forms.py:178 .\reservations\forms.py:19
+msgid "Code postal"
+msgstr "Postal Code"
+
+#: .\bookings\forms.py:183 .\reservations\forms.py:23
+msgid "Ville"
+msgstr "City"
+
+#: .\bookings\forms.py:188
 #: .\bookings\templates\bookings\booking_confirm.html:45
 #: .\reservations\forms.py:27
 msgid "Téléphone"
 msgstr "Phone"
+
+#: .\bookings\forms.py:193
+#: .\bookings\templates\bookings\booking_confirm.html:44
+msgid "Adresse mail"
+msgstr "Email Address"
 
 #: .\bookings\templates\bookings\availability.html:5
 msgid "Echec de la réservation | Camping Le Maine Blanc"
@@ -215,11 +227,8 @@ msgid "Décoration"
 msgstr "Decoration"
 
 #: .\bookings\templates\bookings\booking_confirm.html:20
-#: .\bookings\templates\bookings\booking_confirm.html:39
-#: .\bookings\templates\bookings\booking_details.html:17
-#: .\reservations\templates\reservations\reservation_request.html:57
-msgid "Vos coordonnées"
-msgstr "Your Contact Information"
+msgid "Réservation confirmée"
+msgstr "Confirmed Reservation"
 
 #: .\bookings\templates\bookings\booking_confirm.html:24
 msgid ""
@@ -236,6 +245,12 @@ msgstr "Calendar"
 #: .\bookings\templates\bookings\booking_summary.html:30
 msgid "Dates"
 msgstr "Dates"
+
+#: .\bookings\templates\bookings\booking_confirm.html:39
+#: .\bookings\templates\bookings\booking_details.html:17
+#: .\reservations\templates\reservations\reservation_request.html:57
+msgid "Vos coordonnées"
+msgstr "Your Contact Information"
 
 #: .\bookings\templates\bookings\booking_confirm.html:52
 msgid "Nombre de personnes"
@@ -272,10 +287,18 @@ msgid "Câble électrique"
 msgstr "Length of electrical cable"
 
 #: .\bookings\templates\bookings\booking_confirm.html:102
-msgid "Total payé"
-msgstr "Total Paid"
+msgid "Total à payer"
+msgstr "Total to pay"
 
-#: .\bookings\templates\bookings\booking_confirm.html:109
+#: .\bookings\templates\bookings\booking_confirm.html:106
+msgid "Acompte versé"
+msgstr "Deposit Paid"
+
+#: .\bookings\templates\bookings\booking_confirm.html:110
+msgid "Solde restant à payer le jour de votre arrivée"
+msgstr "Remaining balance to be paid on the day of your arrival"
+
+#: .\bookings\templates\bookings\booking_confirm.html:123
 msgid "Faire une nouvelle réservation"
 msgstr "Make a new reservation"
 
@@ -303,12 +326,12 @@ msgstr "Attention"
 msgid "Veuillez corriger les erreurs suivantes :"
 msgstr "Please correct the following errors :"
 
-#: .\bookings\templates\bookings\booking_details.html:72
-#: .\bookings\templates\bookings\booking_summary.html:53
+#: .\bookings\templates\bookings\booking_details.html:87
+#: .\bookings\templates\bookings\booking_summary.html:56
 msgid "Confirmer la réservation"
 msgstr "Confirm Reservation"
 
-#: .\bookings\templates\bookings\booking_details.html:77
+#: .\bookings\templates\bookings\booking_details.html:92
 #: .\bookings\templates\bookings\booking_form.html:118
 #: .\core\templates\registration\register.html:67
 #: .\reservations\templates\reservations\reservation_request.html:210
@@ -379,7 +402,20 @@ msgstr "Length of electrical cable"
 msgid "Prix total"
 msgstr "Total Price"
 
-#: .\bookings\templates\bookings\booking_summary.html:52
+#: .\bookings\templates\bookings\booking_summary.html:49
+#, python-format
+msgid "Acompte de 15%% à verser"
+msgstr "Deposit of 15%% to be paid"
+
+#: .\bookings\templates\bookings\booking_summary.html:50
+msgid "Non remboursable"
+msgstr "Non-refundable"
+
+#: .\bookings\templates\bookings\booking_summary.html:51
+msgid "Solde restant à payer à l'accueil lors de l'arrivée"
+msgstr "Remaining balance to be paid at the reception upon arrival"
+
+#: .\bookings\templates\bookings\booking_summary.html:55
 msgid "Modifier ma réservation"
 msgstr "Modify my reservation"
 
@@ -2121,37 +2157,25 @@ msgstr "(without pool)"
 msgid "(avec piscine)"
 msgstr "(with pool)"
 
-#: .\maineblanc_project\settings.py:110
+#: .\maineblanc_project\settings.py:109
 msgid "French"
 msgstr "French"
 
-#: .\maineblanc_project\settings.py:111
+#: .\maineblanc_project\settings.py:110
 msgid "English"
 msgstr "English"
 
-#: .\maineblanc_project\settings.py:112
+#: .\maineblanc_project\settings.py:111
 msgid "Spanish"
 msgstr "Spanish"
 
-#: .\maineblanc_project\settings.py:113
+#: .\maineblanc_project\settings.py:112
 msgid "German"
 msgstr "German"
 
-#: .\maineblanc_project\settings.py:114
+#: .\maineblanc_project\settings.py:113
 msgid "Nederlands"
 msgstr "Dutch"
-
-#: .\reservations\forms.py:15
-msgid "Adresse"
-msgstr "Address"
-
-#: .\reservations\forms.py:19
-msgid "Code postal"
-msgstr "Postal Code"
-
-#: .\reservations\forms.py:23
-msgid "Ville"
-msgstr "City"
 
 #: .\reservations\forms.py:31
 msgid "Adresse email"
