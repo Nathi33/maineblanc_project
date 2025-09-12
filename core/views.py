@@ -90,4 +90,3 @@ def privacy_view(request):
 
 def not_found_view(request, exception=None):
     return render(request, 'core/not_found.html', status=404)
-

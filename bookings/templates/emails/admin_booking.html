@@ -1,0 +1,142 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>{% trans "Nouvelle réservation" %}</title>
+  <link rel="stylesheet" href="{{ site_url }}/static/css/email.css" />
+  <style>
+    /* ====== Base ====== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #483D8B;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 6px 0;
+    }
+
+    /* ====== Card ====== */
+    .card {
+      background: #f0f0f5;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    /* ====== Totals Section ====== */
+    .totals {
+      background: #483D8B;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .totals p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    /* ====== Footer ====== */
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #483D8B;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-container">
+    <h1>📩 {% trans "Nouvelle réservation" %}</h1>
+    <p>{% trans "Une nouvelle réservation a été effectuée par" %} <strong>{{ booking.last_name }} {{ booking.first_name }} </strong>.</p>
+
+    <!-- Informations client -->
+    <div class="card">
+      <h2>👤 {% trans "Informations du client" %}</h2>
+      <p><strong>{% trans "Nom" %} :</strong> {{ booking.last_name }} {{ booking.first_name }}</p>
+      <p><strong>{% trans "Adresse" %} :</strong> {{ address }}, {{ postal_code }} {{ city }}</p>
+      <p><strong>{% trans "Téléphone" %} :</strong> {{ booking.phone }}</p>
+      <p><strong>{% trans "Email" %} :</strong> {{ booking.email }}</p>
+    </div>
+
+    <!-- Dates -->
+    <div class="card">
+      <h2>📅 {% trans "Dates" %}</h2>
+      <p>{% trans "Du" %} <strong>{{ booking.start_date|date:"d/m/Y" }}</strong> {% trans "au" %} <strong>{{ booking.end_date|date:"d/m/Y" }}</strong></p>
+    </div>
+
+    <!-- Hébergement -->
+    <div class="card">
+      <h2>🏕 {% trans "Type d’hébergement" %}</h2>
+      <p><strong>{{ booking.booking_subtype_display }}</strong></p>
+      {% if extra_info_1 %}
+        <p>{{ extra_info_1 }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Électricité -->
+    <div class="card">
+      <h2>🔌 {% trans "Électricité" %}</h2>
+      <p>{{ booking.electricity_display }}</p>
+      {% if extra_info_2 %}
+        <p>{{ extra_info_2 }}</p>
+      {% endif %}
+    </div>
+
+    <!-- Nombre de personnes -->
+    <div class="card">
+      <h2>👥 {% trans "Nombre de personnes" %}</h2>
+      <p>{% trans "Adultes" %} : <strong>{{ booking.adults }}</strong></p>
+      <p>{% trans "Enfants (+8ans)" %} : <strong>{{ booking.children_over_8 }}</strong></p>
+      <p>{% trans "Enfants (-8ans)" %} : <strong>{{ booking.children_under_8 }}</strong></p>
+      <p>{% trans "Animaux" %} : <strong>{{ booking.pets }}</strong></p>
+    </div>
+
+    <!-- Montants -->
+    <div class="totals">
+      <p><strong>💰 {% trans "Total à payer" %} : {{ total_price }} €</strong></p>
+      <p>💳 {% trans "Acompte versé" %} : {{ deposit }} €</p>
+      <p>📌 {% trans "Solde restant" %} : {{ remaining_balance }} €</p>
+    </div>
+
+    <!-- Lien vers le site -->
+    <div class="footer">
+      <p>🔗 {% trans "Consulter la réservation sur le site :" %}</p>
+      <p><a href="{{ site_url }}">{{ site_url }}</a></p>
+    </div>
+  </div>
+</body>
+</html>

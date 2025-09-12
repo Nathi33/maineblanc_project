@@ -1,0 +1,137 @@
+{% load i18n %}
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>{% trans "Nouvelle demande de réservation" %}</title>
+  <style>
+    /* ====== Base ====== */
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 20px;
+      color: #333;
+    }
+
+    .email-container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #483D8B;
+      margin-bottom: 10px;
+    }
+
+    p {
+      margin: 6px 0;
+    }
+
+    /* ====== Card ====== */
+    .card {
+      background: #f0f0f5;
+      border-radius: 8px;
+      padding: 15px;
+      margin-bottom: 15px;
+      border: 1px solid #ddd;
+    }
+
+    .card h2 {
+      font-size: 18px;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    /* ====== Totals Section ====== */
+    .totals {
+      background: #483D8B;
+      color: white;
+      text-align: center;
+      padding: 15px;
+      border-radius: 8px;
+    }
+
+    .totals p {
+      font-size: 16px;
+      margin: 5px 0;
+    }
+
+    /* ====== Footer ====== */
+    .footer {
+      text-align: center;
+      font-size: 12px;
+      color: #777;
+      margin-top: 20px;
+    }
+
+    a {
+      color: #483D8B;
+      text-decoration: none;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="email-container">
+    <h1>📩 {% trans "Nouvelle demande de réservation" %}</h1>
+    <p>{% trans "Une nouvelle demande de réservation a été effectuée le" %} <strong>{{ today|date:"d/m/Y" }}</strong>.</p>
+
+    <!-- Informations client -->
+    <div class="card">
+      <h2>👤 {% trans "Informations du client" %}</h2>
+      <p><strong>{% trans "Nom" %} :</strong> {{ name }} {{ first_name }}</p>
+      <p><strong>{% trans "Adresse" %} :</strong> {{ address }}, {{ postal_code }} {{ city }}</p>
+      <p><strong>{% trans "Téléphone" %} :</strong> {{ phone }}</p>
+      <p><strong>{% trans "Email" %} :</strong> {{ email }}</p>
+    </div>
+
+    <!-- Dates -->
+    <div class="card">
+      <h2>📅 {% trans "Dates" %}</h2>
+      <p>{% trans "Du" %} <strong>{{ start_date|date:"d/m/Y" }}</strong> {% trans "au" %} <strong>{{ end_date|date:"d/m/Y" }}</strong></p>
+    </div>
+
+    <!-- Hébergement -->
+    <div class="card">
+      <h2>🏕 {% trans "Type d’hébergement" %}</h2>
+      <p><strong>{{ accommodation_label }}</strong></p>
+      {% if accommodation_value in "tent car_tent" %}
+        <p>{% trans "Dimensions de la tente" %} : {{ tent_length }}m x {{ tent_width }}m</p>
+      {% elif accommodation_value in "caravan fourgon van camping_car" %}
+        <p>{% trans "Dimensions du véhicule" %} : {{ vehicle_length }}m</p>
+      {% endif %}
+    </div>
+
+    <!-- Électricité -->
+    <div class="card">
+      <h2>🔌 {% trans "Électricité" %}</h2>
+      <p>{% if electricity == "yes" %}<strong>{% trans "Avec électricité" %}</strong>{% else %}<strong>{% trans "Sans électricité" %}</strong>{% endif %}</p>
+      {% if electricity == "yes" and cable_length %}
+        <p>{% trans "Longueur du câble électrique" %} : {{ cable_length }}m</p>
+      {% endif %}
+    </div>
+
+    <!-- Nombre de personnes -->
+    <div class="card">
+      <h2>👥 {% trans "Nombre de personnes" %}</h2>
+      <p>{% trans "Adultes" %} : <strong>{{ adults }}</strong></p>
+      <p>{% trans "Enfants (+8ans)" %} : <strong>{{ children_over_8 }}</strong></p>
+      <p>{% trans "Enfants (-8ans)" %} : <strong>{{ children_under_8 }}</strong></p>
+      <p>{% trans "Animaux" %} : <strong>{{ pets }}</strong></p>
+    </div>
+
+    <!-- Message -->
+    <div class="card">
+      <h2>💬 {% trans "Message du client" %}</h2>
+      <p>{{ translated_message|linebreaks }}</p>
+    </div>
+
+  </div>
+</body>
+</html>

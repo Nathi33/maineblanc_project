@@ -1,19 +1,27 @@
 from django.shortcuts import render, redirect, reverse
 from .forms import BookingFormClassic,BookingDetailsForm
 from .models import Booking, Capacity, SupplementPrice
+from django.core.mail import EmailMessage
+from django.conf import settings
+from django.template.loader import render_to_string
+from django.contrib import messages
+from django.utils.translation import gettext_lazy as _
+from django.contrib.sites.shortcuts import get_current_site
 from decimal import Decimal
 from datetime import date
-from django.utils.translation import gettext_lazy as _
+from django.utils import translation
+from django.core.exceptions import ValidationError
+import deepl
 import stripe
-from django.conf import settings
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
+site_url = settings.SITE_URL
 
 
 # --- Étape 1 : Formulaire réservation ---
 def booking_form(request):
     # Récupère les données existantes dans la session pour pré-remplir
-    initial_data = request.session.get('booking_data')
+    initial_data = request.session.get('booking_data', {})
     booking_session_data = {}
 
     if request.method == 'POST':
@@ -21,25 +29,22 @@ def booking_form(request):
         if form.is_valid():
             booking_data = form.cleaned_data
             booking_subtype = booking_data.get('booking_subtype')
-            booking_type = booking_data.get('booking_type')
+            # booking_type = booking_data.get('booking_type')
             start_date = booking_data.get('start_date')
             end_date = booking_data.get('end_date')
 
-            # Vérification de la disponibilité
+            # Reconstituer un objet Booking pour validation
+            temp_booking = Booking(
+                booking_type=booking_subtype,
+                start_date=start_date,
+                end_date=end_date,
+            )
+
+            # Vérification de la disponibilité via full_clean()
             try:
-                capacity = Capacity.objects.get(booking_type=booking_type)
-            except Capacity.DoesNotExist:
-                form.add_error('booking_type', "Aucune disponibilité trouvée.")
-                return render(request, 'bookings/booking_form.html', {'form': form})
-
-            overlapping = Booking.objects.filter(
-                booking_type=booking_type,
-                start_date__lt=end_date,
-                end_date__gt=start_date
-            ).count()
-
-            if overlapping >= capacity.max_places:
-                form.add_error(None, "Désolé, il n'y a plus de disponibilité pour ce type de réservation aux dates choisies.")
+                temp_booking.check_capacity()
+            except ValidationError as e:
+                form.add_error(None, e.messages[0])
                 return render(request, 'bookings/booking_form.html', {'form': form})
             
             # Stockage temporaire dans la session
@@ -66,13 +71,11 @@ def booking_form(request):
             return redirect('booking_summary')
     else:
         # Pré-remplissage correct avec le sous-type exact
+        initial_dict = initial_data.copy()
         if initial_data:
-            initial_dict = initial_data.copy()
             initial_dict['booking_type'] = initial_data.get('booking_subtype', initial_data.get('booking_type'))
-            form = BookingFormClassic(initial=initial_dict)
-        else:
-            form = BookingFormClassic()
-
+        form = BookingFormClassic(initial=initial_dict)
+        
     return render(request, 'bookings/booking_form.html', {'form': form})
 
 # --- Étape 2 : Résumé réservation ---
@@ -201,16 +204,23 @@ def booking_details(request):
 def booking_confirm(request):
     booking_data = request.session.get('booking_data')
     if not booking_data:
+        messages.error(request, _("Aucune donnée de réservation trouvée. Veuillez recommencer le processus de réservation."))
         return redirect('booking_form')
     
     # Vérifie que les coordonnées sont présentes
     required_fields = ['first_name', 'last_name', 'address', 'postal_code', 'city', 'email', 'phone']
     if not all(field in booking_data for field in required_fields):
+        messages.error(request, _("Les informations de contact sont incomplètes. Veuillez compléter vos coordonnées."))
         return redirect('booking_details')
 
     # Reconstitue les dates
     booking_data['start_date'] = date.fromisoformat(booking_data['start_date'])
     booking_data['end_date'] = date.fromisoformat(booking_data['end_date'])
+
+    # Garde une copie des coordonnées client pour l'email
+    client_address = booking_data.get('address')
+    client_postal_code = booking_data.get('postal_code')
+    client_city = booking_data.get('city')
 
     # Reconstruire l'objet Booking avec les champs du modèle
     model_fields = [f.name for f in Booking._meta.get_fields()]
@@ -226,9 +236,9 @@ def booking_confirm(request):
     # Gérer l'affichage du choix électricité
     electricity_choice = booking_data.get('electricity', 'yes')
     booking.electricity = electricity_choice
-    booking.electricity_display = "Avec électricité" if electricity_choice == 'yes' else "Sans électricité"
+    booking.electricity_display = _("Avec électricité") if electricity_choice == 'yes' else _("Sans électricité")
 
-    # Sous-type exact choisi par l'utilisateur
+    # Affichage exact du type d'hébergement
     subtype_display_map = {
         'tent': _("Tente"),
         'car_tent': _("Voiture Tente"),
@@ -254,8 +264,95 @@ def booking_confirm(request):
     # Sauvegarde de la réservation en base
     booking.save()
 
+    site_url = getattr(settings, "SITE_URL", "http://localhost:8000")
+
+    # --- Infos supplémentaires pour l'email ---
+    with translation.override('fr'):
+        extra_info_1 = ""
+        extra_info_2 = ""
+
+        if booking.is_tent:
+            extra_info_1 = _("Dimensions tente : {length} m x {width} m").format(
+                length=booking.tent_length, width=booking.tent_width
+            )
+        elif booking.is_vehicle:
+            extra_info_1 = _("Longueur véhicule : {length} m").format(
+                length=booking.vehicle_length
+            )
+        if booking.electricity == 'yes':
+            extra_info_2 = _("Longueur câble : {length} m").format(
+                length=booking.cable_length
+            )
+    
+        admin_subject = _("Nouvelle réservation de {booking.first_name} {booking.last_name}").format(booking=booking)
+        admin_message_final = render_to_string('emails/admin_booking.html', {
+            'booking': booking,
+            'total_price': total_price,
+            'deposit': deposit,
+            'extra_info_1': extra_info_1,
+            'extra_info_2': extra_info_2,
+            'site_url': site_url,
+            'address': client_address,
+            'postal_code': client_postal_code,
+            'city': client_city,
+            'remaining_balance': round(total_price - deposit, 2)
+        })
+
+    email_admin = EmailMessage(
+        subject=admin_subject,
+        body=admin_message_final,
+        from_email=settings.DEFAULT_FROM_EMAIL,
+        to=[settings.ADMIN_EMAIL],
+    )
+    email_admin.content_subtype = "html"
+    email_admin.send(fail_silently=False)
+
+    # --- Email client (dans la langue choisie) ---
+    with translation.override(request.LANGUAGE_CODE):
+        extra_info_1 = ""
+        extra_info_2 = ""
+        if booking.is_tent:
+            extra_info_1 = _("Dimensions tente : {length} m x {width} m").format(
+                length=booking.tent_length, width=booking.tent_width
+            )
+        elif booking.is_vehicle:
+            extra_info_1 = _("Longueur véhicule : {length} m").format(
+                length=booking.vehicle_length
+            )
+        if booking.electricity == 'yes':
+            extra_info_2 = _("Longueur câble : {length} m").format(
+                length=booking.cable_length
+            )
+            
+        client_subject = _("Confirmation de votre réservation - Camping Le Maine Blanc")
+        # Traduire automatiquement toutes les informations en français
+        client_message = render_to_string('emails/client_booking.html', {
+            'booking': booking,
+            'total_price': total_price,
+            'deposit': deposit,
+            'extra_info_1': extra_info_1,
+            'extra_info_2': extra_info_2,
+            'site_url': site_url,
+            'remaining_balance': round(total_price - deposit, 2)
+        })
+    
+    email_client = EmailMessage(
+        subject=client_subject,
+        body=client_message,
+        from_email=settings.DEFAULT_FROM_EMAIL,
+        to=[booking.email],
+    )
+    email_client.content_subtype = "html"
+    email_client.send(fail_silently=False)
+
     # Nettoyage de la session
-    del request.session['booking_data']
+    if 'booking_data' in request.session:
+        del request.session['booking_data']
+    
+    # Message de succès
+    messages.success(
+        request, 
+        _("Merci ! Votre réservation a été confirmée. Un email de confirmation vous a été envoyé."))
 
     # Affichage de la page de confirmation
     return render(request, 'bookings/booking_confirm.html', {

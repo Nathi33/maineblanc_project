@@ -83,6 +83,7 @@ footer a {
 footer a:hover {
   text-decoration: none;
   font-style: italic;
+  font-weight: bold;
 }
 
 .logo-footer {
@@ -99,4 +100,33 @@ footer a:hover {
 
 .logo-social:hover {
   transform: scale(1.2);
+}
+
+/******** Responsive ********/
+
+@media (max-width: 991px) {
+  .flag-menu.show {            
+    display: flex !important;   
+    justify-content: center;   
+    gap: 10px;             
+    padding: 0.5rem;            
+    flex-wrap: wrap;            
+  }
+
+  .flag-menu.show li {
+    display: inline-block;      
+    margin: 0;                  
+  }
+
+  .flag-menu.show .dropdown-item {
+    padding: 0;                 
+    background: none;           
+    border: none;              
+  }
+
+  .flag-menu.show .flag {
+    width: 30px;               
+    height: auto;
+    display: block;
+  }
 }

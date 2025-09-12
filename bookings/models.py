@@ -3,6 +3,7 @@ from django.conf import settings
 from datetime import timedelta
 from django.core.exceptions import ValidationError
 from decimal import Decimal
+from django.utils.translation import gettext_lazy as _
     
 
 class SupplementPrice(models.Model):
@@ -14,7 +15,6 @@ class SupplementPrice(models.Model):
     extra_tent_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     visitor_price_without_swimming_pool = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
     visitor_price_with_swimming_pool = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    deposit = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
 
     def __str__(self):
         return "Suppléments"
@@ -112,30 +112,44 @@ class Booking(models.Model):
     TYPE_CHOICES = Price.TYPE_CHOICES
 
     ELECTRICITY_CHOICES = [
-        ('yes', 'Avec électricité'),
-        ('no', 'Sans électricité'),
+        ('yes', _('Avec électricité')),
+        ('no', _('Sans électricité')),
     ]
 
+    # Informations client
+    last_name = models.CharField(max_length=100)
+    first_name = models.CharField(max_length=100)
+    address = models.CharField(max_length=255)
+    postal_code = models.CharField(max_length=10)
+    city = models.CharField(max_length=100)
+    phone = models.CharField(max_length=20)
+    email = models.EmailField()
+
+    # Informations réservation
+    start_date = models.DateField()
+    end_date = models.DateField()
     booking_type = models.CharField(max_length=20, choices=TYPE_CHOICES)
     booking_subtype = models.CharField(max_length=20, null=True, blank=True)
-    vehicle_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
-    tent_width = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    electricity = models.CharField(max_length=3, choices=ELECTRICITY_CHOICES)
+    deposit_paid = models.BooleanField(default=False)
+
+    # Champs spécifiques
     tent_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    tent_width = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    vehicle_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    cable_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+    
+    # Nombre de personnes
     adults = models.PositiveIntegerField(default=1)
     children_over_8 = models.PositiveIntegerField(default=0)
     children_under_8 = models.PositiveIntegerField(default=0)
     pets = models.PositiveIntegerField(default=0)
-    electricity = models.CharField(max_length=3, choices=ELECTRICITY_CHOICES)
-    cable_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
+
+    # Véhicule et tente supplémentaire
     extra_vehicle = models.PositiveIntegerField(default=0)
     extra_tent = models.PositiveIntegerField(default=0)
-    start_date = models.DateField()
-    end_date = models.DateField()
-    first_name = models.CharField(max_length=100)
-    last_name = models.CharField(max_length=100)
-    email = models.EmailField()
-    phone = models.CharField(max_length=20)
-    deposit_paid = models.BooleanField(default=False)
+    
+    # Suivi interne
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
     
@@ -240,6 +254,69 @@ class Booking(models.Model):
             self.supplements = SupplementPrice.objects.first()
 
         super().save(*args, **kwargs)
+
+    def check_capacity(self):
+        """
+        Vérifie si le type d'emplacement est disponible pour les dates choisies.
+        Utilisable avant création de la réservation.
+        """
+
+        # Mapping des sous-types vers les types principaux
+        MAIN_TYPE_MAP = {
+            'tent': 'tent',
+            'car_tent': 'tent',
+            'caravan': 'caravan',
+            'fourgon': 'caravan',
+            'van': 'caravan',
+            'camping_car': 'camping_car',
+        }
+
+        # Détermination du type principal
+        main_type = MAIN_TYPE_MAP.get(self.booking_type, self.booking_type)
+
+        try:
+            capacity = Capacity.objects.get(booking_type=main_type).max_places
+        except Capacity.DoesNotExist:
+            raise ValidationError(_("La capacité pour %(type)s n'est pas définie.") % {'type': main_type})
+    
+        # Comptabilise le nombre de réservations existantes qui se  chevauchent
+        overlapping = Booking.objects.filter(
+            booking_type__in=[key for key, value in MAIN_TYPE_MAP.items() if value == main_type],
+            start_date__lt=self.end_date,
+            end_date__gt=self.start_date
+        ).exclude(pk=self.pk)  # Exclut la réservation actuelle en cas de modification
+
+        # Vérifie si la nouvelle réservation dépasse la capacité
+        if overlapping.count() >= capacity:
+            raise ValidationError(
+                _("Plus de places disponibles pour ces dates. "
+                "Veuillez choisir d'autres dates ou contacter le camping.")
+            )
+
+    def clean(self):
+        """
+        Validation complète de l'objet avant sauvegarde.
+        Vérifie la capacité et d'autres contraintes métier.
+        """
+        super().clean()
+
+        # Vérification de la capacité
+        self.check_capacity()
+
+        # Vérifications spécifiques selon le type d'emplacement
+        errors = {}
+
+        # Camping-car -> uniquement tarif 2 personnes
+        if hasattr(self, 'price_1_person_with_electricity') or hasattr(self, 'price_1_person_without_electricity'):
+            if getattr(self, 'booking_type', '') == "camping_car":
+                if getattr(self, 'price_1_person_with_electricity', None) or getattr(self, 'price_1_person_without_electricity', None):
+                    errors["booking_type"] = ValidationError(
+                        _("Pour les camping-cars, ne renseignez pas les champs '1 personne'."
+                        "Le tarif est identique pour 1 ou 2 personnes : utilisez uniquement les champs '2 personnes'.")
+                    )
+
+        if errors:
+            raise ValidationError(errors)
 
     def __str__(self):
         return f"{self.get_booking_type_display()} ({self.start_date} to {self.end_date})"
