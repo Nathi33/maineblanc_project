@@ -180,7 +180,12 @@
             <hr class="bg-light">
 
             <div class="text-center">
-            <small>&copy; 2025 Camping Le Maine Blanc | <a href="{% url 'legal' %}" class="text-light text-decoration-none">{% trans "Mentions légales" %}</a> | <a href="{% url 'privacy-policy' %}" class="text-light text-decoration-none">{% trans "Politique de confidentialité" %}</a></small>
+            <small>
+                &copy; 2025 Camping Le Maine Blanc | 
+                <a href="{% url 'legal' %}" class="text-light text-decoration-none">{% trans "Mentions légales" %}</a> | 
+                <a href="{% url 'privacy-policy' %}" class="text-light text-decoration-none">{% trans "Politique de confidentialité" %}</a> | 
+                <a href="{% static 'docs/reglement-camping.pdf' %}" download class="text-light text-decoration-none">{% trans "Règlement intérieur" %}</a>
+            </small>
             </div>
         </div>
     </footer>

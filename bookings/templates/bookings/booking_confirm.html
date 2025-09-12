@@ -84,10 +84,17 @@
                     {% endif %}
 
                     <div class="info-item">
-                        <span><strong>{% trans "Électricité" %} :</strong></span><span>{{ booking.electricity_display }}</span>
+                        <span><strong>{% trans "Électricité" %} :</strong></span>
+                        <span> 
+                            {% if booking.electricity == "yes" %}
+                                {% trans "Avec électricité" %}
+                            {% else %}
+                                {% trans "Sans électricité" %}
+                            {% endif %}
+                        </span>
                     </div>
 
-                    {% if booking.electricity_display == "Avec électricité" and booking.cable_length %}
+                    {% if booking.electricity == "yes" and booking.cable_length %}
                     <div class="info-item">
                         <span class="info-item-label"><strong>{% trans "Câble électrique" %} :</strong></span>
                         <span>{{ booking.cable_length }} m</span>
@@ -107,7 +114,7 @@
                     <span>{{ deposit }} €</span>
                 </div>
                 <div class="price-row">
-                    <span>{% trans "Solde restant à payer le jour de votre arrivée" %} :</span>
+                    <span>{% trans "Solde restant à payer le jour de l'arrivée" %} :</span>
                     <span>{{ remaining_balance }} €</span>
                 </div>
                 </div>

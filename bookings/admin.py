@@ -39,7 +39,6 @@ class SupplementPriceAdmin(admin.ModelAdmin):
         'extra_tent_price',
         'visitor_price_without_swimming_pool',
         'visitor_price_with_swimming_pool',
-        'deposit',
     )
     search_fields = ()
     
@@ -54,7 +53,6 @@ class SupplementPriceAdmin(admin.ModelAdmin):
                 'extra_tent_price',
                 'visitor_price_without_swimming_pool',
                 'visitor_price_with_swimming_pool',
-                'deposit',
             ),
             'description': "Tarifs des suppléments quelque soit la saison et le type d'hébergement."
         }),
@@ -137,4 +135,69 @@ class PriceAdmin(admin.ModelAdmin):
         }),
     ) 
 
+# -----------------------------
+# Admin pour les réservations
+# -----------------------------
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    list_display = (
+        'last_name',
+        'first_name',
+        'start_date',
+        'end_date',
+        'booking_subtype',
+        'electricity',
+        'deposit_paid',
+        'created_at',
+    )
+    list_editable = ('deposit_paid',)
+    list_filter = ('booking_subtype', 'electricity', 'deposit_paid', 'start_date', 'end_date')
+    search_fields = ('last_name', 'first_name', 'email', 'phone')
+    ordering = ('-created_at',)
+    readonly_fields = ('created_at', 'updated_at')
 
+    fieldsets = (
+        ('Informations client', {
+            'fields': (
+                'last_name',
+                'first_name',
+                'address',
+                'postal_code',
+                'city',
+                'phone',
+                'email',
+            )
+        }),
+        ('Détails de la réservation', {
+            'fields': (
+                'start_date',
+                'end_date',
+                'booking_type',
+                'booking_subtype',
+                'electricity',
+                'deposit_paid',
+            )
+        }),
+        ('Capacités et options', {
+            'fields': (
+                'adults',
+                'children_over_8',
+                'children_under_8',
+                'pets',
+                'extra_vehicle',
+                'extra_tent',
+            )
+        }),
+        ('Détails supplémentaires', {
+            'fields': (
+                'tent_length',
+                'tent_width',
+                'vehicle_length',
+                'cable_length'
+            ),
+            'description': "Ces champs apparaissent uniquement pour certains types d'hébergements."
+        }),
+        ('Dates de création et de mise à jour', {
+            'fields': ('created_at', 'updated_at')
+        }),
+    )

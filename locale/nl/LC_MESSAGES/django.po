@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-09 14:05+0200\n"
+"POT-Creation-Date: 2025-09-12 11:09+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,30 +18,30 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\bookings\forms.py:12 .\bookings\views.py:101 .\bookings\views.py:233
-#: .\core\templates\core\infos.html:354 .\reservations\forms.py:64
+#: .\bookings\forms.py:12 .\bookings\views.py:104 .\bookings\views.py:243
+#: .\core\templates\core\infos.html:372 .\reservations\forms.py:64
 msgid "Tente"
 msgstr "Tent"
 
-#: .\bookings\forms.py:13 .\bookings\views.py:102 .\bookings\views.py:234
+#: .\bookings\forms.py:13 .\bookings\views.py:105 .\bookings\views.py:244
 msgid "Voiture Tente"
 msgstr "Auto tent"
 
-#: .\bookings\forms.py:14 .\bookings\views.py:103 .\bookings\views.py:235
-#: .\core\templates\core\infos.html:352 .\reservations\forms.py:66
+#: .\bookings\forms.py:14 .\bookings\views.py:106 .\bookings\views.py:245
+#: .\core\templates\core\infos.html:370 .\reservations\forms.py:66
 msgid "Caravane"
 msgstr "Caravan"
 
-#: .\bookings\forms.py:15 .\bookings\views.py:104 .\bookings\views.py:236
+#: .\bookings\forms.py:15 .\bookings\views.py:107 .\bookings\views.py:246
 msgid "Fourgon"
 msgstr "Furgon"
 
-#: .\bookings\forms.py:16 .\bookings\views.py:105 .\bookings\views.py:237
+#: .\bookings\forms.py:16 .\bookings\views.py:108 .\bookings\views.py:247
 #: .\reservations\forms.py:68
 msgid "Van"
 msgstr "Van"
 
-#: .\bookings\forms.py:17 .\bookings\views.py:106 .\bookings\views.py:238
+#: .\bookings\forms.py:17 .\bookings\views.py:109 .\bookings\views.py:248
 #: .\core\templates\core\infos.html:50 .\reservations\forms.py:69
 msgid "Camping-car"
 msgstr "Camper"
@@ -66,29 +66,41 @@ msgstr "Vertrekdatum"
 #: .\bookings\forms.py:49
 #: .\bookings\templates\bookings\booking_confirm.html:55
 #: .\bookings\templates\bookings\booking_summary.html:31
+#: .\bookings\templates\emails\admin_booking.html:122
+#: .\bookings\templates\emails\client_booking.html:115
 #: .\reservations\forms.py:106
+#: .\reservations\templates\reservations\email_admin.html:123
 #: .\reservations\templates\reservations\reservation_request.html:142
 msgid "Adultes"
 msgstr "Volwassenen"
 
-#: .\bookings\forms.py:54
+#: .\bookings\forms.py:54 .\bookings\models.py:115
+#: .\bookings\templates\bookings\booking_confirm.html:90
 #: .\bookings\templates\bookings\booking_summary.html:39
-#: .\core\templates\core\infos.html:103 .\core\templates\core\infos.html:149
-#: .\core\templates\core\infos.html:250 .\reservations\forms.py:143
+#: .\bookings\views.py:239 .\core\templates\core\infos.html:104
+#: .\core\templates\core\infos.html:154 .\core\templates\core\infos.html:265
+#: .\reservations\forms.py:143
+#: .\reservations\templates\reservations\email_admin.html:114
 msgid "Avec électricité"
 msgstr "Met elektriciteit"
 
-#: .\bookings\forms.py:55
+#: .\bookings\forms.py:55 .\bookings\models.py:116
+#: .\bookings\templates\bookings\booking_confirm.html:92
 #: .\bookings\templates\bookings\booking_summary.html:44
-#: .\core\templates\core\infos.html:107 .\core\templates\core\infos.html:153
-#: .\core\templates\core\infos.html:254 .\reservations\forms.py:144
+#: .\bookings\views.py:239 .\core\templates\core\infos.html:110
+#: .\core\templates\core\infos.html:160 .\core\templates\core\infos.html:271
+#: .\reservations\forms.py:144
+#: .\reservations\templates\reservations\email_admin.html:114
 msgid "Sans électricité"
 msgstr "Zonder elektriciteit"
 
 #: .\bookings\forms.py:61
 #: .\bookings\templates\bookings\booking_confirm.html:87
 #: .\bookings\templates\bookings\booking_summary.html:37
+#: .\bookings\templates\emails\admin_booking.html:112
+#: .\bookings\templates\emails\client_booking.html:105
 #: .\reservations\forms.py:147
+#: .\reservations\templates\reservations\email_admin.html:113
 #: .\reservations\templates\reservations\reservation_request.html:179
 msgid "Électricité"
 msgstr "Elektriciteit"
@@ -116,7 +128,10 @@ msgstr "Kind -8 jaar"
 #: .\bookings\forms.py:79
 #: .\bookings\templates\bookings\booking_confirm.html:58
 #: .\bookings\templates\bookings\booking_summary.html:34
+#: .\bookings\templates\emails\admin_booking.html:125
+#: .\bookings\templates\emails\client_booking.html:118
 #: .\core\templates\core\services.html:111 .\reservations\forms.py:133
+#: .\reservations\templates\reservations\email_admin.html:126
 #: .\reservations\templates\reservations\reservation_request.html:169
 msgid "Animaux"
 msgstr "Huisdieren"
@@ -159,7 +174,8 @@ msgstr "Het veld 'Kabellengte' is verplicht als elektriciteit is inbegrepen."
 
 #: .\bookings\forms.py:163
 #: .\bookings\templates\bookings\booking_confirm.html:42
-#: .\reservations\forms.py:7
+#: .\bookings\templates\emails\admin_booking.html:89 .\reservations\forms.py:7
+#: .\reservations\templates\reservations\email_admin.html:88
 msgid "Nom"
 msgstr "Naam"
 
@@ -169,7 +185,9 @@ msgstr "Naam"
 msgid "Prénom"
 msgstr "Voornaam"
 
-#: .\bookings\forms.py:173 .\reservations\forms.py:15
+#: .\bookings\forms.py:173 .\bookings\templates\emails\admin_booking.html:90
+#: .\reservations\forms.py:15
+#: .\reservations\templates\reservations\email_admin.html:89
 msgid "Adresse"
 msgstr "Adres"
 
@@ -183,7 +201,9 @@ msgstr "Stad"
 
 #: .\bookings\forms.py:188
 #: .\bookings\templates\bookings\booking_confirm.html:45
+#: .\bookings\templates\emails\admin_booking.html:91
 #: .\reservations\forms.py:27
+#: .\reservations\templates\reservations\email_admin.html:90
 msgid "Téléphone"
 msgstr "Telefoon"
 
@@ -192,9 +212,27 @@ msgstr "Telefoon"
 msgid "Adresse mail"
 msgstr "E-mailadres"
 
-#: .\bookings\templates\bookings\availability.html:5
-msgid "Echec de la réservation | Camping Le Maine Blanc"
-msgstr "Mislukte reservering | Camping Le Maine Blanc"
+#: .\bookings\models.py:280
+#, python-format
+msgid "La capacité pour %(type)s n'est pas définie."
+msgstr "De capaciteit voor %(type)s is niet gedefinieerd."
+
+#: .\bookings\models.py:292
+msgid ""
+"Plus de places disponibles pour ces dates. Veuillez choisir d'autres dates "
+"ou contacter le camping."
+msgstr ""
+"Geen beschikbare plaatsen voor deze data. Kies andere data of neem contact "
+"op met de camping."
+
+#: .\bookings\models.py:314
+msgid ""
+"Pour les camping-cars, ne renseignez pas les champs '1 personne'.Le tarif "
+"est identique pour 1 ou 2 personnes : utilisez uniquement les champs '2 "
+"personnes'."
+msgstr ""
+"Voor campers, vul de velden '1 persoon' niet in. Het tarief is identiek "
+"voor 1 of 2 personen: gebruik alleen de velden '2 personen'."
 
 #: .\bookings\templates\bookings\booking_confirm.html:5
 msgid "Réservation réussie | Camping Le Maine Blanc"
@@ -213,14 +251,12 @@ msgstr "Reservering geslaagd | Camping Le Maine Blanc"
 #: .\core\templates\core\activities.html:15
 #: .\core\templates\core\activities.html:17
 #: .\core\templates\core\infos.html:15
+#: .\core\templates\core\not_found.html:17
+#: .\core\templates\core\not_found.html:19
 #: .\core\templates\core\privacy-policy.html:15
 #: .\core\templates\core\privacy-policy.html:17
 #: .\core\templates\core\services.html:14
 #: .\core\templates\core\services.html:16
-#: .\core\templates\registration\login.html:14
-#: .\core\templates\registration\login.html:16
-#: .\core\templates\registration\register.html:14
-#: .\core\templates\registration\register.html:16
 #: .\reservations\templates\reservations\reservation_request.html:14
 #: .\reservations\templates\reservations\reservation_request.html:16
 msgid "Décoration"
@@ -244,6 +280,9 @@ msgstr "Kalender"
 
 #: .\bookings\templates\bookings\booking_confirm.html:32
 #: .\bookings\templates\bookings\booking_summary.html:30
+#: .\bookings\templates\emails\admin_booking.html:97
+#: .\bookings\templates\emails\client_booking.html:90
+#: .\reservations\templates\reservations\email_admin.html:96
 msgid "Dates"
 msgstr "Data"
 
@@ -254,6 +293,9 @@ msgid "Vos coordonnées"
 msgstr "Uw gegevens"
 
 #: .\bookings\templates\bookings\booking_confirm.html:52
+#: .\bookings\templates\emails\admin_booking.html:121
+#: .\bookings\templates\emails\client_booking.html:114
+#: .\reservations\templates\reservations\email_admin.html:122
 msgid "Nombre de personnes"
 msgstr "Aantal personen"
 
@@ -276,6 +318,7 @@ msgid "Type d’emplacement"
 msgstr "Type locatie"
 
 #: .\bookings\templates\bookings\booking_confirm.html:74
+#: .\reservations\templates\reservations\email_admin.html:105
 msgid "Dimensions de la tente"
 msgstr "Tentafmetingen"
 
@@ -283,23 +326,27 @@ msgstr "Tentafmetingen"
 msgid "Longueur du véhicule"
 msgstr "Voertuiglengte"
 
-#: .\bookings\templates\bookings\booking_confirm.html:92
+#: .\bookings\templates\bookings\booking_confirm.html:99
 msgid "Câble électrique"
 msgstr "Elektriciteitskabel"
 
-#: .\bookings\templates\bookings\booking_confirm.html:102
+#: .\bookings\templates\bookings\booking_confirm.html:109
+#: .\bookings\templates\emails\admin_booking.html:130
+#: .\bookings\templates\emails\client_booking.html:123
 msgid "Total à payer"
 msgstr "Totaal te betalen"
 
-#: .\bookings\templates\bookings\booking_confirm.html:106
+#: .\bookings\templates\bookings\booking_confirm.html:113
+#: .\bookings\templates\emails\admin_booking.html:131
+#: .\bookings\templates\emails\client_booking.html:124
 msgid "Acompte versé"
 msgstr "Betaalde aanbetaling"
 
-#: .\bookings\templates\bookings\booking_confirm.html:110
-msgid "Solde restant à payer le jour de votre arrivée"
-msgstr "Restant te betalen op de dag van uw aankomst"
+#: .\bookings\templates\bookings\booking_confirm.html:117
+msgid "Solde restant à payer le jour de l'arrivée"
+msgstr "Restant te betalen op de dag van aankomst"
 
-#: .\bookings\templates\bookings\booking_confirm.html:123
+#: .\bookings\templates\bookings\booking_confirm.html:125
 msgid "Faire une nouvelle réservation"
 msgstr "Een nieuwe reservering maken"
 
@@ -328,14 +375,13 @@ msgid "Veuillez corriger les erreurs suivantes :"
 msgstr "Corrigeer de volgende fouten :"
 
 #: .\bookings\templates\bookings\booking_details.html:87
-#: .\bookings\templates\bookings\booking_summary.html:60
+#: .\bookings\templates\bookings\booking_summary.html:56
 msgid "Confirmer la réservation"
 msgstr "Bevestig de reservering"
 
 #: .\bookings\templates\bookings\booking_details.html:92
 #: .\bookings\templates\bookings\booking_form.html:118
-#: .\core\templates\registration\register.html:67
-#: .\reservations\templates\reservations\reservation_request.html:210
+#: .\reservations\templates\reservations\reservation_request.html:217
 msgid "Champs obligatoires"
 msgstr "Verplichte velden"
 
@@ -371,8 +417,8 @@ msgid "Nombre d'occupants"
 msgstr "Aantal inzittenden"
 
 #: .\bookings\templates\bookings\booking_form.html:93
-#: .\core\templates\core\infos.html:102 .\core\templates\core\infos.html:148
-#: .\core\templates\core\infos.html:249
+#: .\core\templates\core\infos.html:103 .\core\templates\core\infos.html:153
+#: .\core\templates\core\infos.html:264
 msgid "Electricité"
 msgstr "Elektriciteit"
 
@@ -417,9 +463,149 @@ msgstr "Niet-restitueerbaar"
 msgid "Solde restant à payer à l'accueil lors de l'arrivée"
 msgstr "Restant te betalen op de dag van uw aankomst"
 
-#: .\bookings\templates\bookings\booking_summary.html:59
+#: .\bookings\templates\bookings\booking_summary.html:55
 msgid "Modifier ma réservation"
 msgstr "Wijzig mijn reservering"
+
+#: .\bookings\templates\emails\admin_booking.html:6
+#: .\bookings\templates\emails\admin_booking.html:83
+msgid "Nouvelle réservation"
+msgstr "Nieuwe reservering"
+
+#: .\bookings\templates\emails\admin_booking.html:84
+msgid "Une nouvelle réservation a été effectuée par"
+msgstr "Een nieuwe reservering is gemaakt door"
+
+#: .\bookings\templates\emails\admin_booking.html:88
+#: .\reservations\templates\reservations\email_admin.html:87
+msgid "Informations du client"
+msgstr "Informatie van de klant"
+
+#: .\bookings\templates\emails\admin_booking.html:92
+#: .\reservations\templates\reservations\email_admin.html:91
+msgid "Email"
+msgstr "E-mail"
+
+#: .\bookings\templates\emails\admin_booking.html:98
+#: .\bookings\templates\emails\client_booking.html:91
+#: .\reservations\templates\reservations\email_admin.html:97
+msgid "Du"
+msgstr "Van"
+
+#: .\bookings\templates\emails\admin_booking.html:98
+#: .\bookings\templates\emails\client_booking.html:91
+#: .\reservations\templates\reservations\email_admin.html:97
+msgid "au"
+msgstr "aan"
+
+#: .\bookings\templates\emails\admin_booking.html:103
+#: .\bookings\templates\emails\client_booking.html:96
+#: .\core\templates\core\infos.html:91
+#: .\reservations\templates\reservations\email_admin.html:102
+msgid "Type d’hébergement"
+msgstr "Type accommodatie"
+
+#: .\bookings\templates\emails\admin_booking.html:123
+#: .\bookings\templates\emails\client_booking.html:116
+#: .\reservations\templates\reservations\email_admin.html:124
+msgid "Enfants (+8ans)"
+msgstr "Kind (+8 jaar)"
+
+#: .\bookings\templates\emails\admin_booking.html:124
+#: .\bookings\templates\emails\client_booking.html:117
+#: .\reservations\templates\reservations\email_admin.html:125
+msgid "Enfants (-8ans)"
+msgstr "Kind (-8 jaar)"
+
+#: .\bookings\templates\emails\admin_booking.html:132
+#: .\bookings\templates\emails\client_booking.html:125
+msgid "Solde restant"
+msgstr "Restant te betalen"
+
+#: .\bookings\templates\emails\admin_booking.html:137
+msgid "Consulter la réservation sur le site :"
+msgstr "Bekijk de reservering op de site:"
+
+#: .\bookings\templates\emails\client_booking.html:6
+msgid "Confirmation de réservation"
+msgstr "Bevestiging van de reservering"
+
+#: .\bookings\templates\emails\client_booking.html:83
+msgid "Confirmation de votre réservation"
+msgstr "Bevestiging van uw reservering"
+
+#: .\bookings\templates\emails\client_booking.html:85
+msgid "Bonjour"
+msgstr "Hallo"
+
+#: .\bookings\templates\emails\client_booking.html:86
+msgid ""
+"Merci pour votre réservation au Camping Le Maine Blanc ! Voici le "
+"récapitulatif :"
+msgstr ""
+"Bedankt voor uw reservering op Camping Le Maine Blanc! Hier is de "
+"samenvatting:"
+
+#: .\bookings\templates\emails\client_booking.html:129
+msgid "Nous avons hâte de vous accueillir !"
+msgstr "We kunnen niet wachten om u te verwelkomen!"
+
+#: .\bookings\templates\emails\client_booking.html:130
+#: .\core\templates\core\base.html:151 .\core\templates\core\legal.html:21
+#: .\core\templates\core\privacy-policy.html:73
+#: .\core\templates\core\privacy-policy.html:78
+#: .\core\templates\core\privacy-policy.html:102
+#: .\core\templates\core\privacy-policy.html:108
+msgid "Camping Le Maine Blanc"
+msgstr "Camping Le Maine Blanc"
+
+#: .\bookings\templates\emails\client_booking.html:133
+msgid "Consulter la réservation sur le site : "
+msgstr "Bekijk de reservering op de site: "
+
+#: .\bookings\views.py:207
+msgid ""
+"Aucune donnée de réservation trouvée. Veuillez recommencer le processus de "
+"réservation."
+msgstr "Geen boekingsgegevens gevonden. Begin het boekingsproces opnieuw."
+
+#: .\bookings\views.py:213
+msgid ""
+"Les informations de contact sont incomplètes. Veuillez compléter vos "
+"coordonnées."
+msgstr "De contactgegevens zijn onvolledig. Vul uw gegevens aan."
+
+#: .\bookings\views.py:275 .\bookings\views.py:315
+#, python-brace-format
+msgid "Dimensions tente : {length} m x {width} m"
+msgstr "Afmetingen tent : {length} m x {width} m"
+
+#: .\bookings\views.py:279 .\bookings\views.py:319
+#, python-brace-format
+msgid "Longueur véhicule : {length} m"
+msgstr "Lengte voertuig : {length} m"
+
+#: .\bookings\views.py:283 .\bookings\views.py:323
+#, python-brace-format
+msgid "Longueur câble : {length} m"
+msgstr "Lengte kabel : {length} m"
+
+#: .\bookings\views.py:287
+#, python-brace-format
+msgid "Nouvelle réservation de {booking.first_name} {booking.last_name}"
+msgstr "Nieuwe reservering van {booking.first_name} {booking.last_name}"
+
+#: .\bookings\views.py:327
+msgid "Confirmation de votre réservation - Camping Le Maine Blanc"
+msgstr "Bevestiging van uw reservering - Camping Le Maine Blanc"
+
+#: .\bookings\views.py:355
+msgid ""
+"Merci ! Votre réservation a été confirmée. Un email de confirmation vous a "
+"été envoyé."
+msgstr ""
+"Bedankt! Uw reservering is bevestigd. Er is een bevestigingsmail naar u "
+"verzonden."
 
 #: .\core\templates\core\about.html:5
 msgid "À propos | Camping Le Maine Blanc"
@@ -873,14 +1059,6 @@ msgstr "In de omgeving"
 msgid "Contact"
 msgstr "Contact"
 
-#: .\core\templates\core\base.html:151 .\core\templates\core\legal.html:21
-#: .\core\templates\core\privacy-policy.html:73
-#: .\core\templates\core\privacy-policy.html:78
-#: .\core\templates\core\privacy-policy.html:102
-#: .\core\templates\core\privacy-policy.html:108
-msgid "Camping Le Maine Blanc"
-msgstr "Camping Le Maine Blanc"
-
 #: .\core\templates\core\base.html:159
 msgid ""
 "Profitez d’un séjour nature en Gironde, dans une ambiance conviviale et "
@@ -930,13 +1108,17 @@ msgstr "Logo Facebook"
 msgid "Logo Instagram"
 msgstr "Logo Instagram"
 
-#: .\core\templates\core\base.html:183
+#: .\core\templates\core\base.html:185
 msgid "Mentions légales"
 msgstr "Impressum"
 
-#: .\core\templates\core\base.html:183
+#: .\core\templates\core\base.html:186
 msgid "Politique de confidentialité"
 msgstr "Privacybeleid"
+
+#: .\core\templates\core\base.html:187
+msgid "Règlement intérieur"
+msgstr "Huisregels"
 
 #: .\core\templates\core\home.html:14
 msgid "Bienvenue au Camping Le Maine Blanc"
@@ -1112,252 +1294,258 @@ msgstr ""
 msgid "Tous les prix sont TTC."
 msgstr "Alle prijzen zijn incl. BTW."
 
-#: .\core\templates\core\infos.html:90
-msgid "Type d’hébergement"
-msgstr "Type accommodatie"
-
-#: .\core\templates\core\infos.html:91
+#: .\core\templates\core\infos.html:92
 msgid "Basse Saison"
 msgstr "Laagseizoen"
 
-#: .\core\templates\core\infos.html:91
+#: .\core\templates\core\infos.html:92
 msgid "du 27/09 au 26/04"
 msgstr "van 27/09 tot 26/04"
 
-#: .\core\templates\core\infos.html:92
+#: .\core\templates\core\infos.html:93
 msgid "Moyenne Saison"
 msgstr "Middenseizoen"
 
-#: .\core\templates\core\infos.html:92
+#: .\core\templates\core\infos.html:93
 msgid "du 26/04 au 05/07 et"
 msgstr "van 26/04 tot 05/07 en"
 
-#: .\core\templates\core\infos.html:92
+#: .\core\templates\core\infos.html:93
 msgid "du 30/08 au 27/09"
 msgstr "van 30/08 tot 27/09"
 
-#: .\core\templates\core\infos.html:93
+#: .\core\templates\core\infos.html:94
 msgid "Haute Saison"
 msgstr "Hoogseizoen"
 
-#: .\core\templates\core\infos.html:93
+#: .\core\templates\core\infos.html:94
 msgid "du 05/07 au 30/08"
 msgstr "van 05/07 tot 30/08"
 
-#: .\core\templates\core\infos.html:100
+#: .\core\templates\core\infos.html:101
 msgid "Camping-car (1-2 pers.)"
 msgstr "Camper (1-2 pers.)"
 
-#: .\core\templates\core\infos.html:106 .\core\templates\core\infos.html:152
-#: .\core\templates\core\infos.html:253
+#: .\core\templates\core\infos.html:105 .\core\templates\core\infos.html:155
+#: .\core\templates\core\infos.html:266
+msgid "Avec élec."
+msgstr "Met elek."
+
+#: .\core\templates\core\infos.html:109 .\core\templates\core\infos.html:159
+#: .\core\templates\core\infos.html:270
 msgid "Pas d'électricité"
 msgstr "Zonder elektriciteit"
 
-#: .\core\templates\core\infos.html:146
+#: .\core\templates\core\infos.html:111 .\core\templates\core\infos.html:161
+#: .\core\templates\core\infos.html:272
+msgid "Sans élec."
+msgstr "Zonder elek."
+
+#: .\core\templates\core\infos.html:150
 msgid "Caravane / Fourgon / Van"
 msgstr "Caravan / Camper / Van"
 
-#: .\core\templates\core\infos.html:160 .\core\templates\core\infos.html:190
-#: .\core\templates\core\infos.html:218 .\core\templates\core\infos.html:260
-#: .\core\templates\core\infos.html:288 .\core\templates\core\infos.html:316
+#: .\core\templates\core\infos.html:170 .\core\templates\core\infos.html:205
+#: .\core\templates\core\infos.html:233 .\core\templates\core\infos.html:278
+#: .\core\templates\core\infos.html:306 .\core\templates\core\infos.html:334
 msgid "1 pers."
 msgstr "1 pers."
 
-#: .\core\templates\core\infos.html:162 .\core\templates\core\infos.html:191
-#: .\core\templates\core\infos.html:219 .\core\templates\core\infos.html:261
-#: .\core\templates\core\infos.html:289 .\core\templates\core\infos.html:317
+#: .\core\templates\core\infos.html:175 .\core\templates\core\infos.html:206
+#: .\core\templates\core\infos.html:234 .\core\templates\core\infos.html:279
+#: .\core\templates\core\infos.html:307 .\core\templates\core\infos.html:335
 msgid "2 pers."
 msgstr "2 pers."
 
-#: .\core\templates\core\infos.html:247
+#: .\core\templates\core\infos.html:262
 msgid "Tente / Voiture Tente"
 msgstr "Tent / Auto tent"
 
-#: .\core\templates\core\infos.html:345
+#: .\core\templates\core\infos.html:363
 msgid "Ouvriers"
 msgstr "Werknemers"
 
-#: .\core\templates\core\infos.html:346
+#: .\core\templates\core\infos.html:364
 msgid "Tarifs comprenant l'électricité"
 msgstr "Tarieven inclusief elektriciteit"
 
-#: .\core\templates\core\infos.html:352 .\core\templates\core\infos.html:354
+#: .\core\templates\core\infos.html:370 .\core\templates\core\infos.html:372
 msgid "jour"
 msgstr "dag"
 
-#: .\core\templates\core\infos.html:360
+#: .\core\templates\core\infos.html:378
 msgid "Emplacement pour le week-end (si non libéré)"
 msgstr "Plaats voor het weekend (indien niet vrijgegeven)"
 
-#: .\core\templates\core\infos.html:363
+#: .\core\templates\core\infos.html:381
 msgid "sans électricité"
 msgstr "zonder elektriciteit"
 
-#: .\core\templates\core\infos.html:366
+#: .\core\templates\core\infos.html:384
 msgid "avec électricité"
 msgstr "met elektriciteit"
 
-#: .\core\templates\core\infos.html:379
+#: .\core\templates\core\infos.html:397
 msgid "Suppléments emplacements"
 msgstr "Toeslagen voor plaatsen"
 
-#: .\core\templates\core\infos.html:387
+#: .\core\templates\core\infos.html:405
 msgid "Visiteur : "
 msgstr "Bezoeker : "
 
-#: .\core\templates\core\infos.html:406 .\reservations\forms.py:70
+#: .\core\templates\core\infos.html:426 .\reservations\forms.py:70
 msgid "Mobil-home"
 msgstr "Mobil-home"
 
-#: .\core\templates\core\infos.html:407
+#: .\core\templates\core\infos.html:427
 msgid "À la nuitée"
 msgstr "Per nacht"
 
-#: .\core\templates\core\infos.html:409
+#: .\core\templates\core\infos.html:429
 msgid "(Uniquement en basse et moyenne saison)"
 msgstr "(Alleen in het laag- en middenseizoen)"
 
-#: .\core\templates\core\infos.html:411
+#: .\core\templates\core\infos.html:431
 msgid "Basse saison"
 msgstr "Laagseizoen"
 
-#: .\core\templates\core\infos.html:412
+#: .\core\templates\core\infos.html:432
 msgid "Moyenne saison"
 msgstr "Middenseizoen"
 
-#: .\core\templates\core\infos.html:413
+#: .\core\templates\core\infos.html:433
 msgid "Haute saison"
 msgstr "Hoogseizoen"
 
-#: .\core\templates\core\infos.html:420
+#: .\core\templates\core\infos.html:440
 msgid "Sabot de Vénus"
 msgstr "Vénus' sabot"
 
-#: .\core\templates\core\infos.html:421
+#: .\core\templates\core\infos.html:441
 msgid "2 chambres – 5 à 6 couchages – climatisé – terrasse"
 msgstr "2 slaapkamers - 5 tot 6 slaapplaatsen - airconditioning - terras"
 
-#: .\core\templates\core\infos.html:423 .\core\templates\core\infos.html:435
+#: .\core\templates\core\infos.html:443 .\core\templates\core\infos.html:455
 msgid "80 €"
 msgstr "80 €"
 
-#: .\core\templates\core\infos.html:424 .\core\templates\core\infos.html:436
+#: .\core\templates\core\infos.html:444 .\core\templates\core\infos.html:456
 msgid "290 €/semaine"
 msgstr "290 €/week"
 
-#: .\core\templates\core\infos.html:425 .\core\templates\core\infos.html:437
+#: .\core\templates\core\infos.html:445 .\core\templates\core\infos.html:457
 msgid "310 €/semaine"
 msgstr "310 €/week"
 
-#: .\core\templates\core\infos.html:426 .\core\templates\core\infos.html:438
+#: .\core\templates\core\infos.html:446 .\core\templates\core\infos.html:458
 msgid "460 €/semaine"
 msgstr "460 €/week"
 
-#: .\core\templates\core\infos.html:432
+#: .\core\templates\core\infos.html:452
 msgid "Belle Dame / Rose Trémière"
 msgstr "Belle Dame / Rose Trémière"
 
-#: .\core\templates\core\infos.html:433
+#: .\core\templates\core\infos.html:453
 msgid "2 chambres – 4 couchages – climatisé – terrasse"
 msgstr "2 slaapkamers - 4 slaapplaatsen - airconditioning - terras"
 
-#: .\core\templates\core\infos.html:444
+#: .\core\templates\core\infos.html:464
 msgid "Bleuet"
 msgstr "Bleuet"
 
-#: .\core\templates\core\infos.html:445
+#: .\core\templates\core\infos.html:465
 msgid "3 chambres – 6 à 8 couchages – climatisé – terrasse"
 msgstr "3 slaapkamers - 6 tot 8 slaapplaatsen - airconditioning - terras"
 
-#: .\core\templates\core\infos.html:448
+#: .\core\templates\core\infos.html:468
 msgid "90 €"
 msgstr "90 €"
 
-#: .\core\templates\core\infos.html:448
+#: .\core\templates\core\infos.html:468
 msgid "basse"
 msgstr "laag"
 
-#: .\core\templates\core\infos.html:449
+#: .\core\templates\core\infos.html:469
 msgid "110 €"
 msgstr "110 €"
 
-#: .\core\templates\core\infos.html:449
+#: .\core\templates\core\infos.html:469
 msgid "moyenne"
 msgstr "gemiddeld"
 
-#: .\core\templates\core\infos.html:451
+#: .\core\templates\core\infos.html:471
 msgid "340 €/semaine"
 msgstr "340 €/week"
 
-#: .\core\templates\core\infos.html:452 .\core\templates\core\infos.html:465
+#: .\core\templates\core\infos.html:472 .\core\templates\core\infos.html:485
 msgid "410 €/semaine"
 msgstr "410 €/week"
 
-#: .\core\templates\core\infos.html:453
+#: .\core\templates\core\infos.html:473
 msgid "590 €/semaine"
 msgstr "590 €/week"
 
-#: .\core\templates\core\infos.html:459
+#: .\core\templates\core\infos.html:479
 msgid "Capucine"
 msgstr "Capucine"
 
-#: .\core\templates\core\infos.html:460
+#: .\core\templates\core\infos.html:480
 msgid "1 chambre – 2 couchages – climatisé – terrasse"
 msgstr "1 slaapkamer - 2 slaapplaatsen - airconditioning - terras"
 
-#: .\core\templates\core\infos.html:462
+#: .\core\templates\core\infos.html:482
 msgid "70 €"
 msgstr "70 €"
 
-#: .\core\templates\core\infos.html:463
+#: .\core\templates\core\infos.html:483
 msgid "225 €/semaine"
 msgstr "225 €/week"
 
-#: .\core\templates\core\infos.html:464
+#: .\core\templates\core\infos.html:484
 msgid "300 €/semaine"
 msgstr "300 €/week"
 
-#: .\core\templates\core\infos.html:471
+#: .\core\templates\core\infos.html:491
 msgid "Graminé"
 msgstr "Graminé"
 
-#: .\core\templates\core\infos.html:472
+#: .\core\templates\core\infos.html:492
 msgid "2 chambres – 4 couchages – non climatisé – sans terrasse"
 msgstr "2 slaapkamers - 4 slaapplaatsen - niet-geconditioneerd - zonder terras"
 
-#: .\core\templates\core\infos.html:473
+#: .\core\templates\core\infos.html:493
 msgid "Réservé aux ouvriers"
 msgstr "is gereserveerd voor arbeiders!"
 
-#: .\core\templates\core\infos.html:475
+#: .\core\templates\core\infos.html:495
 msgid "50 €"
 msgstr "50 €"
 
-#: .\core\templates\core\infos.html:477
+#: .\core\templates\core\infos.html:497
 msgid "175 €/semaine (1 pers)"
 msgstr "175 €/week (1 pers)"
 
-#: .\core\templates\core\infos.html:478
+#: .\core\templates\core\infos.html:498
 msgid "200 €/semaine (2 pers)"
 msgstr "200 €/week (2 pers)"
 
-#: .\core\templates\core\infos.html:479
+#: .\core\templates\core\infos.html:499
 msgid "250 €/semaine (3 pers)"
 msgstr "250 €/week (3 pers)"
 
-#: .\core\templates\core\infos.html:488
+#: .\core\templates\core\infos.html:508
 msgid "Caution à prévoir : "
 msgstr "Waarborg te voorzien : "
 
-#: .\core\templates\core\infos.html:490
+#: .\core\templates\core\infos.html:510
 msgid "Mobil-home : 350 €"
 msgstr "Mobil-home : 350 €"
 
-#: .\core\templates\core\infos.html:491
+#: .\core\templates\core\infos.html:511
 msgid "Ménage : 70 €"
 msgstr "Eindschoonmaak : 70 €"
 
-#: .\core\templates\core\infos.html:495
+#: .\core\templates\core\infos.html:515
 msgid ""
 "Oreillers et couettes fournis (taies d’oreillers, housses de couette et "
 "draps disponibles en location à partir de 15 €)."
@@ -1365,15 +1553,15 @@ msgstr ""
 "Hoofdkussens en dekbedden zijn inbegrepen (kussenslopen, dekbedovertrekken "
 "en lakens zijn te huur vanaf 15 €)."
 
-#: .\core\templates\core\infos.html:498
+#: .\core\templates\core\infos.html:518
 msgid "Antennes TV fournies (téléviseur non inclus)."
 msgstr "TV-antennes zijn inbegrepen (televisie niet inbegrepen)."
 
-#: .\core\templates\core\infos.html:508 .\core\templates\core\infos.html:509
+#: .\core\templates\core\infos.html:528 .\core\templates\core\infos.html:529
 msgid "Plan du camping"
 msgstr "Plattegrond van de camping"
 
-#: .\core\templates\core\infos.html:513
+#: .\core\templates\core\infos.html:533
 msgid ""
 "Notre camping propose 66 emplacements pour tous les goûts : ombragés, semi-"
 "ombragés ou ensoleillés, avec ou sans électricité, pour un séjour "
@@ -1383,7 +1571,7 @@ msgstr ""
 "schaduwrijke of zonnige plaatsen, met of zonder elektriciteit, voor een "
 "comfortabel en gepersonaliseerd verblijf."
 
-#: .\core\templates\core\infos.html:514
+#: .\core\templates\core\infos.html:534
 msgid ""
 "Des fontaines à eau sont réparties dans tout le camping pour vous faciliter "
 "la vie pendant votre séjour."
@@ -1391,7 +1579,7 @@ msgstr ""
 "Waterfonteinen zijn verspreid over de camping om uw verblijf te "
 "vergemakkelijken."
 
-#: .\core\templates\core\infos.html:515
+#: .\core\templates\core\infos.html:535
 msgid ""
 "Pour ceux qui préfèrent le confort d’un logement, nous disposons également "
 "de 9 mobil-homes entièrement équipés."
@@ -1399,7 +1587,7 @@ msgstr ""
 "Voor wie de voorkeur geeft aan het comfort van een accommodatie, hebben we "
 "ook 9 volledig uitgeruste stacaravans."
 
-#: .\core\templates\core\infos.html:516
+#: .\core\templates\core\infos.html:536
 msgid ""
 "Parcourez notre plan pour découvrir l’agencement des emplacements et des "
 "services, et préparer au mieux votre séjour."
@@ -1604,6 +1792,48 @@ msgid ""
 "éventuelle de cookies."
 msgstr ""
 "Door verder te surfen op de site, accepteert u het gebruik van cookies."
+
+#: .\core\templates\core\legal.html:81
+msgid "Traductions automatiques"
+msgstr "Automatische vertalingen"
+
+#: .\core\templates\core\legal.html:82
+msgid ""
+"Les traductions présentes sur ce site sont fournies à titre indicatif et "
+"générées automatiquement. Nous déclinons toute responsabilité quant à "
+"l'exactitude ou la précision des informations traduites."
+msgstr ""
+"De vertalingen op deze site worden ter informatie verstrekt en automatisch "
+"gegenereerd. Wij wijzen alle verantwoordelijkheid af voor de juistheid of "
+"nauwkeurigheid van de vertaalde informatie."
+
+#: .\core\templates\core\legal.html:83
+msgid ""
+"Pour obtenir des informations officielles et exactes, nous vous invitons à "
+"consulter le contenu original en français."
+msgstr ""
+"Voor officiële en nauwkeurige informatie nodigen wij u uit om de originele "
+"inhoud in het Frans te raadplegen."
+
+#: .\core\templates\core\not_found.html:5
+msgid "Erreur 404 | Camping Le Maine Blanc"
+msgstr "Fout 404 | Camping Le Maine Blanc"
+
+#: .\core\templates\core\not_found.html:14
+msgid "Erreur 404"
+msgstr "Fout 404"
+
+#: .\core\templates\core\not_found.html:18
+msgid "Erreur 404 - Page non trouvée"
+msgstr "Fout 404 - Pagina niet gevonden"
+
+#: .\core\templates\core\not_found.html:23
+msgid "Désolé, la page que vous recherchez n'existe pas."
+msgstr "Sorry, de pagina die u zoekt bestaat niet."
+
+#: .\core\templates\core\not_found.html:24
+msgid "Retour à l'accueil"
+msgstr "Terug naar de homepage"
 
 #: .\core\templates\core\privacy-policy.html:5
 msgid "Politique de Confidentialité | Camping Le Maine Blanc"
@@ -1932,8 +2162,8 @@ msgid "uniquement le jeudi soir, même horaire"
 msgstr "alleen op donderdagavond, dezelfde tijd"
 
 #: .\core\templates\core\services.html:64
-msgid "Pain frais et viennoiseries chaque matin : "
-msgstr "Vers brood en gebak elke ochtend : "
+msgid "Pain frais et viennoiseries chaque matin entre 8h15 et 9h30 : "
+msgstr "Vers brood en gebak elke ochtend tussen 8.15 en 9.30 uur : "
 
 #: .\core\templates\core\services.html:66
 msgid "Pensez à réserver la veille avant 19h à l'accueil, auprès d'Isabelle."
@@ -2111,48 +2341,6 @@ msgstr ""
 "Een kleine herinnering: uit veiligheidsredenen accepteren we geen cheques "
 "meer."
 
-#: .\core\templates\registration\logged_out.html:5
-msgid "Déconnexion | Camping Le Maine Blanc"
-msgstr "Afmelden | Camping Le Maine Blanc"
-
-#: .\core\templates\registration\login.html:5
-msgid "Connexion | Camping Le Maine Blanc"
-msgstr "Inloggen | Camping Le Maine Blanc"
-
-#: .\core\templates\registration\login.html:15
-msgid "Connexion"
-msgstr "Inloggen"
-
-#: .\core\templates\registration\login.html:21
-msgid ""
-"Vous devez vous connecter ou créer un compte pour finaliser votre "
-"réservation."
-msgstr ""
-"U moet inloggen of een account aanmaken om uw reservering te voltooien."
-
-#: .\core\templates\registration\login.html:34
-#: .\core\templates\registration\register.html:73
-msgid "Se connecter"
-msgstr "Inloggen"
-
-#: .\core\templates\registration\login.html:37
-msgid "Pas encore de compte ?"
-msgstr "Nog geen account?"
-
-#: .\core\templates\registration\login.html:38
-#: .\core\templates\registration\register.html:15
-#: .\core\templates\registration\register.html:64
-msgid "Créer un compte"
-msgstr "Een account aanmaken"
-
-#: .\core\templates\registration\register.html:5
-msgid "Création de compte | Camping Le Maine Blanc"
-msgstr "Aanmaken van een account | Camping Le Maine Blanc"
-
-#: .\core\templates\registration\register.html:73
-msgid "Déjà un compte ?"
-msgstr "Al een account?"
-
 #: .\core\views.py:40
 msgid "Adulte supplémentaire"
 msgstr "Volwassenen extra"
@@ -2190,23 +2378,23 @@ msgstr "(zonder zwembad)"
 msgid "(avec piscine)"
 msgstr "(met zwembad)"
 
-#: .\maineblanc_project\settings.py:109
+#: .\maineblanc_project\settings.py:108
 msgid "French"
 msgstr "Frans"
 
-#: .\maineblanc_project\settings.py:110
+#: .\maineblanc_project\settings.py:109
 msgid "English"
 msgstr "Engels"
 
-#: .\maineblanc_project\settings.py:111
+#: .\maineblanc_project\settings.py:110
 msgid "Spanish"
 msgstr "Spaans"
 
-#: .\maineblanc_project\settings.py:112
+#: .\maineblanc_project\settings.py:111
 msgid "German"
 msgstr "Duits"
 
-#: .\maineblanc_project\settings.py:113
+#: .\maineblanc_project\settings.py:112
 msgid "Nederlands"
 msgstr "Nederlands"
 
@@ -2269,6 +2457,28 @@ msgstr ""
 "De lengte van de elektrische kabel is verplicht als elektriciteit wordt "
 "gevraagd."
 
+#: .\reservations\templates\reservations\email_admin.html:6
+#: .\reservations\templates\reservations\email_admin.html:82
+#: .\reservations\views.py:65
+msgid "Nouvelle demande de réservation"
+msgstr "Nieuwe reserveringsaanvraag"
+
+#: .\reservations\templates\reservations\email_admin.html:83
+msgid "Une nouvelle demande de réservation a été effectuée le"
+msgstr "Een nieuwe reserveringsaanvraag is gemaakt op"
+
+#: .\reservations\templates\reservations\email_admin.html:107
+msgid "Dimensions du véhicule"
+msgstr "Voertuigafmetingen"
+
+#: .\reservations\templates\reservations\email_admin.html:116
+msgid "Longueur du câble électrique"
+msgstr "Lengte van de elektriciteitskabel"
+
+#: .\reservations\templates\reservations\email_admin.html:131
+msgid "Message du client"
+msgstr "Bericht van de klant"
+
 #: .\reservations\templates\reservations\reservation_request.html:9
 msgid "Contact | Camping Le Maine Blanc"
 msgstr "Contact | Camping Le Maine Blanc"
@@ -2292,24 +2502,18 @@ msgstr ""
 msgid "Détails de la réservation"
 msgstr "Details van de reservering"
 
-#: .\reservations\templates\reservations\reservation_request.html:197
+#: .\reservations\templates\reservations\reservation_request.html:204
 msgid "Localisation du camping"
 msgstr "Locatie van de camping"
 
-#: .\reservations\templates\reservations\reservation_request.html:214
+#: .\reservations\templates\reservations\reservation_request.html:221
 msgid "Envoyer la demande"
 msgstr "Verzend de aanvraag"
 
-#: .\reservations\views.py:120
+#: .\reservations\views.py:80
 msgid ""
-"Votre demande de réservation a bien été envoyée, nous reviendrons vers vous "
-"très rapidement."
-msgstr "Uw reserveringsaanvraag is verzonden, wij nemen snel contact met u op."
-
-#: .\users\forms.py:9
-msgid "Nom d'utilisateur"
-msgstr "Gebruikersnaam"
-
-#: .\users\forms.py:14
-msgid "Mot de passe"
-msgstr "Wachtwoord"
+"Votre demande de réservation a été envoyée avec succès. Nous reviendrons "
+"vers vous très rapidement."
+msgstr ""
+"Uw reserveringsaanvraag is succesvol verzonden. We nemen snel contact met u "
+"op."

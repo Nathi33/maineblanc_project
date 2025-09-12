@@ -139,36 +139,36 @@
 
                             <div class="col-md-6 col-lg-3">
                                 <select class="form-select" id="{{ form.adults.id_for_label }}" name="{{ form.adults.html_name }}" required>
-                                    <option value="" disabled selected>{% trans "Adultes" %}</option>
+                                    <option value="" disabled>{% trans "Adultes" %}</option>
                                     {% for val, label in form.adults.field.choices %}
-                                        <option value="{{ val }}">{{ label }}</option>
+                                        <option value="{{ val }}" {% if form.adults.value == val|stringformat:"s" %}selected{% endif %}>{{ label }}</option>
                                     {% endfor %}
                                 </select> 
                             
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <select class="form-select" id="{{ form.children_over_8.id_for_label }}" name="{{ form.children_over_8.html_name }}" required>
-                                    <option value="" disabled selected>{% trans "+8 ans" %}</option>
+                                    <option value="" disabled>{% trans "+8 ans" %}</option>
                                     {% for val, label in form.children_over_8.field.choices %}
-                                        <option value="{{ val }}">{{ label }}</option>
+                                        <option value="{{ val }}" {% if form.children_over_8.value == val|stringformat:"s" %}selected{% endif %}>{{ label }}</option>
                                     {% endfor %}
                                 </select>
                                 
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <select class="form-select" id="{{ form.children_under_8.id_for_label }}" name="{{ form.children_under_8.html_name }}" required>
-                                    <option value="" disabled selected>{% trans "-8 ans" %}</option>
+                                    <option value="" disabled>{% trans "-8 ans" %}</option>
                                     {% for val, label in form.children_under_8.field.choices %}
-                                        <option value="{{ val }}">{{ label }}</option>
+                                        <option value="{{ val }}" {% if form.children_under_8.value == val|stringformat:"s" %}selected{% endif %}>{{ label }}</option>
                                     {% endfor %}
                                 </select>
                     
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <select class="form-select" id="{{ form.pets.id_for_label }}" name="{{ form.pets.html_name }}" required>
-                                    <option value="" disabled selected>{% trans "Animaux" %}</option>
+                                    <option value="" disabled>{% trans "Animaux" %}</option>
                                     {% for val, label in form.pets.field.choices %}
-                                        <option value="{{ val }}">{{ label }}</option>
+                                        <option value="{{ val }}" {% if form.pets.value == val|stringformat:"s" %}selected{% endif %}>{{ label }}</option>
                                     {% endfor %}
                                 </select>
                             
@@ -190,7 +190,14 @@
 
                         <div class="mb-3" id="cable-length-container" style="display:none;">
                             <label for="cable_length" class="form-label">{% trans "Longueur du câble électrique (m)" %} <span class="text-danger">*</span></label>
-                            <input type="number" class="form-control" id="cable_length" name="cable_length" min="1" step="0.1">
+                            <input 
+                                type="number" 
+                                class="form-control" 
+                                id="cable_length" 
+                                name="cable_length" 
+                                min="1" 
+                                step="0.1"
+                                value="{{ form.cable_length.value|default_if_none:'' }}">
                         </div>
 
                         <div class="mb-3">
@@ -219,29 +226,23 @@
 
     <script>
         document.addEventListener("DOMContentLoaded", function () {
-            // Sélectionne tous les messages (erreurs et succès)
+            // --- Alerts ---
             const alerts = document.querySelectorAll(".alert");
-
-            // Après 5 secondes, on les fait disparaître
             setTimeout(() => {
                 alerts.forEach(alert => {
                     alert.style.transition = "opacity 0.5s ease";
                     alert.style.opacity = "0";
-
-                    // On supprime l'élément après la transition
                     setTimeout(() => alert.remove(), 500);
                 });
             }, 5000);
-        });
 
-        document.addEventListener("DOMContentLoaded", function () {
+            // --- Hébergement ---
             const accommodationSelect = document.getElementById("{{ form.accommodation_type.id_for_label }}");
             const tentDimensions = document.getElementById("tent-dimensions");
             const vehicleLengthContainer = document.getElementById("vehicle-length-container");
 
             function toggleFields() {
                 const selected = accommodationSelect.value;
-
                 if (["tent", "car_tent"].includes(selected)) {
                     tentDimensions.style.display = "block";
                 } else {
@@ -259,27 +260,60 @@
             }
 
             accommodationSelect.addEventListener("change", toggleFields);
-            toggleFields(); 
-        });
+            toggleFields();
 
-        document.addEventListener("DOMContentLoaded", function () {
+            // --- Électricité ---
             const electricityRadios = document.querySelectorAll("input[name='{{ form.electricity.html_name }}']");
             const cableLengthContainer = document.getElementById("cable-length-container");
 
-            // Affiche longueur câble si "Avec électricité"
-            electricityRadios.forEach(radio => {
-                radio.addEventListener("change", function() {
-                    if (this.value === "yes") {
-                        cableLengthContainer.style.display = "block";
-                    } else {
-                        cableLengthContainer.style.display = "none";
-                        document.getElementById("cable_length").value = "";
+            function toggleCableLength() {
+                const selected = document.querySelector("input[name='{{ form.electricity.html_name }}']:checked");
+                if (selected && selected.value === "yes") {
+                    cableLengthContainer.style.display = "block";
+                } else {
+                    cableLengthContainer.style.display = "none";
+                    const cableInput = document.getElementById("cable_length");
+                    if (cableInput && cableInput.value && selected && selected.value !== "yes") {
+                        cableInput.value = "";
                     }
-                });
+                }
+            }
+
+            toggleCableLength();
+            electricityRadios.forEach(radio => {
+                radio.addEventListener("change", toggleCableLength);
             });
+
+            // --- Dates ---
+            const startDateInput = document.getElementById("id_start_date");
+            const endDateInput = document.getElementById("id_end_date");
+
+            if (startDateInput && endDateInput) {
+                const today = new Date().toISOString().split("T")[0];
+                startDateInput.setAttribute("min", today);
+
+                function updateEndDate() {
+                    let arrival = startDateInput.value ? new Date(startDateInput.value) : new Date();
+                    let nextDay = new Date(arrival);
+                    nextDay.setDate(arrival.getDate() + 1);
+
+                    const formatted = nextDay.toISOString().split("T")[0];
+                    endDateInput.setAttribute("min", formatted);
+
+                    // Si la date de départ est invalide, on la vide
+                    if (endDateInput.value && endDateInput.value <= startDateInput.value) {
+                        endDateInput.value = "";
+                    }
+                }
+
+                updateEndDate(); // initialisation au chargement
+                startDateInput.addEventListener("change", updateEndDate);
+            }
         });
+
     </script>
 
 </section>
 
 {% endblock %}
+

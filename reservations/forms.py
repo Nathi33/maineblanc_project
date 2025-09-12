@@ -42,7 +42,7 @@ class ReservationRequestForm(forms.Form):
         label=_("Date d'arrivée"),
         widget=forms.DateInput(attrs={
             'class': 'form-control', 
-            'id': 'start_date', 
+            'id': 'id_start_date', 
             'type': 'date', 
             'required': True,
             'min': timezone.localdate().strftime('%Y-%m-%d')
@@ -52,7 +52,7 @@ class ReservationRequestForm(forms.Form):
         label=_("Date de départ"),
         widget=forms.DateInput(attrs={
             'class': 'form-control',
-            'id': 'end_date',
+            'id': 'id_end_date',
             'type': 'date',
             'required': True,
             'min': timezone.localdate().strftime('%Y-%m-%d')

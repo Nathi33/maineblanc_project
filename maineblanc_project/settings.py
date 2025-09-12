@@ -38,7 +38,6 @@ INSTALLED_APPS = [
     'reservations',
     'core',
     'bookings',
-    'users',
 ]
 
 # ============================================
@@ -159,3 +158,8 @@ LOGOUT_REDIRECT_URL = '/'
 # ============================================
 STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
 STRIPE_PUBLIC_KEY = config('STRIPE_PUBLIC_KEY')
+
+# ============================================
+# SITE URL
+# ============================================
+SITE_URL = config('SITE_URL', default='http://localhost:8000')
