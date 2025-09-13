@@ -339,7 +339,7 @@ def booking_confirm(request):
     email_client = EmailMessage(
         subject=client_subject,
         body=client_message,
-        from_email=settings.DEFAULT_FROM_EMAIL,
+        from_email=settings.EMAIL_FROM_CLIENT,
         to=[booking.email],
     )
     email_client.content_subtype = "html"
