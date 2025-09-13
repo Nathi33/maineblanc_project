@@ -1,6 +1,6 @@
 {% extends "core/base.html" %}
 
-{% load static i18n %}
+{% load static i18n custom_filters %}
 
 {% block title %}{% trans "Informations pratiques | Camping Le Maine Blanc" %}{% endblock %}
 
@@ -22,19 +22,19 @@
         <ul>
             <li class="mb-3">
                 <strong>{% trans 'Accueil :' %}</strong> 
-                {% trans "Isabelle et Franck vous accueillent chaque jour de 9h à 12h et de 14h à 19h pour répondre à vos questions et vous accompagner durant votre séjour." %}
+                {% trans "Isabelle et Franck vous accueillent chaque jour de" %} {{ camping_info.welcome_start|format_time_by_locale }} {% trans "à" %} {{ camping_info.welcome_end|format_time_by_locale }} {% trans "et de" %} {{ camping_info.welcome_afternoon_start|format_time_by_locale }} {% trans "à" %} {{ camping_info.welcome_afternoon_end|format_time_by_locale }} {% trans "pour répondre à vos questions et vous accompagner durant votre séjour." %}
             </li>
             <li class="mb-3">
                 <strong>{% trans 'Arrivées :' %}</strong> 
-                {% trans "Les arrivées se font entre 14h et 21h en haute saison, et jusqu’à 19h en basse saison, afin que chacun puisse s’installer confortablement." %}
+                {% trans "Les arrivées se font entre" %} {{ camping_info.arrivals_start_high|format_time_by_locale }} {% trans "et" %} {{ camping_info.arrivals_end_high|format_time_by_locale }} {% trans "en haute saison, et jusqu’à" %} {{ camping_info.arrivals_end_low|format_time_by_locale }} {% trans "en basse saison, afin que chacun puisse s’installer confortablement." %}
             </li>
             <li class="mb-3">
                 <strong>{% trans 'Départs :' %}</strong> 
-                {% trans "Le jour de votre départ, merci de libérer votre emplacement avant 12h afin de permettre une bonne organisation pour les prochains arrivants." %}
+                {% trans "Le jour de votre départ, merci de libérer votre emplacement avant" %} {{ camping_info.departure_end|format_time_by_locale }} {% trans "afin de permettre une bonne organisation pour les prochains arrivants." %}
             </li>
             <li class="mb-3">
                 <strong>{% trans "Portail de sécurité :" %}</strong> 
-                {% trans "Pour la tranquillité de tous, le portail est fermé de 22h à 6h. Merci d’anticiper vos déplacements en conséquence." %}
+                {% trans "Pour la tranquillité de tous, le portail est fermé de" %} {{ camping_info.portal_start|format_time_by_locale }} {% trans "à" %} {{ camping_info.portal_end|format_time_by_locale }}. {% trans "Merci d’anticiper vos déplacements en conséquence." %}
             </li>
         </ul>
     </div>
@@ -80,8 +80,8 @@
 
     <!-- Tarifs -->
     <div class="info-section mb-5">
-        <h2 class="under-title-infos">{% trans "Tarifs" %}</h2>
-        <p class="small text-muted mb-0">{% trans "Taxe de séjour à compter du 01/01/2025 : 0,29€ par personne/nuit (incluse dans le prix)" %}</p>
+        <h2 class="under-title-infos">{% trans "Tarifs pour l'année" %} {{ other_prices.current_year }}</h2>
+        <p class="small text-muted mb-0">{% trans "Taxe de séjour à compter du" %} {{ other_prices.tourist_tax_date|format_date_by_locale }} : {{ other_prices.price_tourist_tax }}€ {% trans "par personne/nuit (incluse dans le prix)" %}</p>
         <p class="small text-muted">{% trans "Tous les prix sont TTC." %}</p>
 
         <div class="table-wrapper">
@@ -89,9 +89,9 @@
                 <thead class="table-light text-center align-middle">
                     <tr>
                         <th>{% trans "Type d’hébergement" %}</th>
-                        <th>{% trans "Basse Saison" %}<br>{% trans "du 27/09 au 26/04" %}</th>
-                        <th>{% trans "Moyenne Saison" %}<br>{% trans "du 26/04 au 05/07 et" %}<br>{% trans "du 30/08 au 27/09" %}</th>
-                        <th>{% trans "Haute Saison" %}<br>{% trans "du 05/07 au 30/08" %}</th>
+                        <th>{% trans "Basse Saison" %}<br>{% trans "du" %} {{ season_info.low_season_start|format_date_by_locale }} {% trans "au" %} {{ season_info.low_season_end|format_date_by_locale }} </th>
+                        <th>{% trans "Moyenne Saison" %}<br>{% trans "du" %} {{ season_info.mid_season_start_1|format_date_by_locale }} {% trans "au" %} {{ season_info.mid_season_end_1|format_date_by_locale }} <br>{% trans "et du" %} {{ season_info.mid_season_start_2|format_date_by_locale }} {% trans "au" %} {{ season_info.mid_season_end_2|format_date_by_locale }} </th>
+                        <th>{% trans "Haute Saison" %}<br>{% trans "du" %} {{ season_info.high_season_start|format_date_by_locale }} {% trans "au" %} {{ season_info.high_season_end|format_date_by_locale }} </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -421,84 +421,57 @@
     <!-- Tarifs Mobil-homes -->
     <div class="table-wrapper">
         <table class="table table-bordered align-middle text-center">
-            <thead class="table-light">
+            <thead>
                 <tr>
                     <th scope="col" class="align-middle text-center">{% trans "Mobil-home" %}</th>
-                    <th scope="col" class="align-middle text-center">{% trans "À la nuitée" %}
+                    <th scope="col" class="align-middle text-center">{% trans "A la nuitée" %}
                         <br>
                         <small>{% trans "(Uniquement en basse et moyenne saison)" %}</small>
                     </th>
-                    <th scope="col" class="align-middle text-center">{% trans "Basse saison" %}</th>
-                    <th scope="col" class="align-middle text-center">{% trans "Moyenne saison" %}</th>
-                    <th scope="col" class="align-middle text-center">{% trans "Haute saison" %}</th>
+                    <th scope="col" class="align-middle text-center">{% trans "Basse Saison" %}<br>{% trans "du" %} {{ season_info.low_season_start|format_date_by_locale }} {% trans "au" %} {{ season_info.low_season_end|format_date_by_locale }}</th>
+                    <th scope="col" class="align-middle text-center">{% trans "Moyenne saison" %}<br>{% trans "du" %} {{ season_info.mid_season_start_1|format_date_by_locale }} {% trans "au" %} {{ season_info.mid_season_end_1|format_date_by_locale }} <br>{% trans "et du" %} {{ season_info.mid_season_start_2|format_date_by_locale }} {% trans "au" %} {{ season_info.mid_season_end_2|format_date_by_locale }} </th>
+                    <th scope="col" class="align-middle text-center">{% trans "Haute saison" %}<br>{% trans "du" %} {{ season_info.high_season_start|format_date_by_locale }} {% trans "au" %} {{ season_info.high_season_end|format_date_by_locale }} </th>
                 </tr>
             </thead>
             <tbody>
-                <!-- Sabot de Vénus -->
+                {% for home in mobilhomes %}
                 <tr>
+                    <!-- Nom et description -->
                     <td>
-                        <strong>{% trans "Sabot de Vénus" %}</strong><br>
-                        <small>{% trans "2 chambres – 5 à 6 couchages – climatisé – terrasse" %}</small>
-                    </td>
-                    <td>{% trans "80 €" %}</td>
-                    <td>{% trans "290 €/semaine" %}</td>
-                    <td>{% trans "310 €/semaine" %}</td>
-                    <td>{% trans "460 €/semaine" %}</td>
-                </tr>
+                        <strong>{{ home.name }}</strong><br>
+                        <small>{{ home.description_text }}</small>
 
-                <!-- Belle Dame / Rose Trémière -->
-                <tr>
-                    <td>
-                        <strong>{% trans "Belle Dame / Rose Trémière" %}</strong><br>
-                        <small>{% trans "2 chambres – 4 couchages – climatisé – terrasse" %}</small>
+                        {% if home.is_worker_home %}
+                            <br>
+                            <small class="text-muted"><em>{% trans "Réservé aux ouvriers" %}</em></small>
+                        {% endif %}
                     </td>
-                    <td>{% trans "80 €" %}</td>
-                    <td>{% trans "290 €/semaine" %}</td>
-                    <td>{% trans "310 €/semaine" %}</td>
-                    <td>{% trans "460 €/semaine" %}</td>
-                </tr>
 
-                <!-- Bleuet -->
-                <tr>
+                    <!-- Prix à la nuitée -->
                     <td>
-                        <strong>{% trans "Bleuet" %}</strong><br>
-                        <small>{% trans "3 chambres – 6 à 8 couchages – climatisé – terrasse" %}</small>
+                        {% if home.night_price_mid %}
+                            {{ home.night_price}} € ({% trans "basse saison" %})<br>
+                            {{ home.night_price_mid}} € ({% trans "moyenne saison" %})
+                        {% else %}
+                            {{ home.night_price }} €
+                        {% endif %}
                     </td>
-                    <td>
-                        {% trans "90 €" %} <small>({% trans "basse" %})</small><br>
-                        {% trans "110 €" %} <small>({% trans "moyenne" %})</small>
-                    </td>
-                    <td>{% trans "340 €/semaine" %}</td>
-                    <td>{% trans "410 €/semaine" %}</td>
-                    <td>{% trans "590 €/semaine" %}</td>
-                </tr>
 
-                <!-- Capucine -->
-                <tr>
-                    <td>
-                        <strong>{% trans "Capucine" %}</strong><br>
-                        <small>{% trans "1 chambre – 2 couchages – climatisé – terrasse" %}</small>
-                    </td>
-                    <td>{% trans "70 €" %}</td>
-                    <td>{% trans "225 €/semaine" %}</td>
-                    <td>{% trans "300 €/semaine" %}</td>
-                    <td>{% trans "410 €/semaine" %}</td>
+                    {% if home.is_worker_home %}
+                        <!-- Cas spécial mobil-home ouvrier : fusionne les 3 colonnes -->
+                        <td colspan="3">
+                            {{ home.worker_price_1p }} {% trans "€/semaine (1 pers)" %}<br>
+                            {{ home.worker_price_2p }} {% trans "€/semaine (2 pers)" %}<br>
+                            {{ home.worker_price_3p }} {% trans "€/semaine (3 pers)" %}
+                        </td>
+                    {% else %}
+                        <!-- Prix à la semaine -->
+                        <td>{% if home.week_low %}{{ home.week_low }} {% trans "€/semaine" %}{% else %}-{% endif %}</td>
+                        <td>{% if home.week_mid %}{{ home.week_mid }} {% trans "€/semaine" %}{% else %}-{% endif %}</td>
+                        <td>{% if home.week_high %}{{ home.week_high }} {% trans "€/semaine" %}{% else %}-{% endif %}</td>
+                    {% endif %}
                 </tr>
-
-                <!-- Graminé -->
-                <tr>
-                    <td>
-                        <strong>{% trans "Graminé" %}</strong><br>
-                        <small>{% trans "2 chambres – 4 couchages – non climatisé – sans terrasse" %}</small><br>
-                        <small class="text-muted">{% trans "Réservé aux ouvriers" %}</small>
-                    </td>
-                    <td>{% trans "50 €" %}</td>
-                    <td colspan="3">
-                        {% trans "175 €/semaine (1 pers)" %}<br>
-                        {% trans "200 €/semaine (2 pers)" %}<br>
-                        {% trans "250 €/semaine (3 pers)" %}
-                    </td>
-                </tr>
+                {% endfor %}
             </tbody>
         </table>
 
@@ -507,12 +480,12 @@
             <p class="small text-muted mb-0">
                 {% trans "Caution à prévoir : " %}
                 <ul class="small text-muted">
-                    <li>{% trans "Mobil-home : 350 €" %}</li>
-                    <li>{% trans "Ménage : 70 €" %}</li>
+                    <li>{% trans "Mobil-home" %} : {{ mobilhome_supplements.mobile_home_deposit }} €</li>
+                    <li>{% trans "Ménage" %} : {{ mobilhome_supplements.cleaning_deposit }} €</li>
                 </ul>
             </p>
             <p class="small text-muted">
-                {% trans "Oreillers et couettes fournis (taies d’oreillers, housses de couette et draps disponibles en location à partir de 15 €)." %}
+                {% trans "Oreillers et couettes fournis (taies d’oreillers, housses de couette et draps disponibles en location à partir de" %} {{ mobilhome_supplements.bed_linen_rental }} €).
             </p>
             <p class="small text-muted">
                 {% trans "Antennes TV fournies (téléviseur non inclus)." %}
@@ -530,9 +503,9 @@
         </div>
         <div class="container-plan-text col-md-6 d-flex">
             <div class="contenair-text">
-                <p>{% trans "Notre camping propose 66 emplacements pour tous les goûts : ombragés, semi-ombragés ou ensoleillés, avec ou sans électricité, pour un séjour confortable et personnalisé." %}</p>
+                <p>{% trans "Notre camping propose" %} {{ capacity_info.number_locations }} {% trans "emplacements pour tous les goûts : ombragés, semi-ombragés ou ensoleillés, avec ou sans électricité, pour un séjour confortable et personnalisé." %}</p>
                 <p>{% trans "Des fontaines à eau sont réparties dans tout le camping pour vous faciliter la vie pendant votre séjour." %}</p>
-                <p>{% trans "Pour ceux qui préfèrent le confort d’un logement, nous disposons également de 9 mobil-homes entièrement équipés." %}</p>
+                <p>{% trans "Pour ceux qui préfèrent le confort d’un logement, nous disposons également de" %} {{ capacity_info.number_mobile_homes }} {% trans "mobil-homes entièrement équipés." %}</p>
                 <p>{% trans "Parcourez notre plan pour découvrir l’agencement des emplacements et des services, et préparer au mieux votre séjour." %}</p>
             </div>
         </div>

@@ -36,8 +36,9 @@ INSTALLED_APPS = [
 
     # Project apps
     'reservations',
-    'core',
-    'bookings',
+    'core.apps.CoreConfig',
+    'bookings.apps.BookingsConfig',
+    'parler',
 ]
 
 # ============================================
@@ -112,7 +113,7 @@ LANGUAGES = [
     ('nl', _('Nederlands')),
 ]
 LANGUAGE_CODE = 'fr'
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Paris'
 USE_I18N = True
 USE_L10N = True
 USE_TZ = True
@@ -146,6 +147,7 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ADMIN_EMAIL = EMAIL_HOST_USER
+EMAIL_FROM_CLIENT = config('EMAIL_FROM_CLIENT')
 
 # ============================================
 # LOGIN / LOGOUT

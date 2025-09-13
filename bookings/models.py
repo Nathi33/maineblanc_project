@@ -4,20 +4,28 @@ from datetime import timedelta
 from django.core.exceptions import ValidationError
 from decimal import Decimal
 from django.utils.translation import gettext_lazy as _
+from django.utils import timezone
+from django.utils import formats
+from parler.models import TranslatableModel, TranslatedFields
+import datetime
     
 
 class SupplementPrice(models.Model):
-    extra_adult_price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
-    child_over_8_price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
-    child_under_8_price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
-    pet_price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00)
-    extra_vehicle_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    extra_tent_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    visitor_price_without_swimming_pool = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    visitor_price_with_swimming_pool = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    extra_adult_price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00, verbose_name="Prix/Adulte supplémentaire")
+    child_over_8_price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00, verbose_name="Prix/Enfant +8 ans")
+    child_under_8_price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00, verbose_name="Prix/Enfant -8 ans")
+    pet_price = models.DecimalField(max_digits=6, decimal_places=2, default=0.00, verbose_name="Prix/Animal de compagnie")
+    extra_vehicle_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix/Véhicule supplémentaire")
+    extra_tent_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix/Tente supplémentaire")
+    visitor_price_without_swimming_pool = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix/Visiteur sans piscine")
+    visitor_price_with_swimming_pool = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix/Visiteur avec piscine")
+
+    class Meta:
+        verbose_name = "Prix des Suppléments"
+        verbose_name_plural = "Prix des Suppléments"
 
     def __str__(self):
-        return "Suppléments"
+        return "Prix des Suppléments"
 
 class Price(models.Model):
     SEASON_CHOICES = [
@@ -33,28 +41,32 @@ class Price(models.Model):
         ('other', 'Emplacement ouvrier weekend')
     ]
 
-    booking_type = models.CharField(max_length=20, choices=TYPE_CHOICES)
-    season = models.CharField(max_length=10, choices=SEASON_CHOICES, null=True, blank=True,
+    booking_type = models.CharField(max_length=20, choices=TYPE_CHOICES, verbose_name="Type d'emplacement")
+    season = models.CharField(max_length=10, choices=SEASON_CHOICES, null=True, blank=True, verbose_name="Saison",
                               help_text="Laisser vide pour les tarifs ouvriers")
-    is_worker = models.BooleanField(default=False)
+    is_worker = models.BooleanField(default=False, verbose_name="Tarif Ouvrier",)
 
     # --- Prix clients normaux de base, avec/sans électricité, 1 ou 2 pers ---
-    price_1_person_with_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    price_2_persons_with_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    price_1_person_with_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix 1 personne avec électricité")
+    price_2_persons_with_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix 2 personnes avec électricité")
 
-    price_1_person_without_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    price_2_persons_without_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    price_1_person_without_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix 1 personne sans électricité")
+    price_2_persons_without_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix 2 personnes sans électricité")
 
     # Nombre de personnes incluses dans le tarif de base
     included_people = models.PositiveIntegerField(editable=False) 
     
     # --- Prix ouvriers ---
-    worker_week_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, help_text="Prix par nuit en semaine, électricité incluse")
-    weekend_price_without_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
-    weekend_price_with_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True)
+    worker_week_price = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix ouvrier semaine", help_text="Prix par nuit en semaine, électricité incluse")
+    weekend_price_without_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix ouvrier week-end sans électricité")
+    weekend_price_with_electricity = models.DecimalField(max_digits=6, decimal_places=2, null=True, blank=True, verbose_name="Prix ouvrier week-end avec électricité")
 
     # --- Suppléments ---
     supplements = models.ForeignKey(SupplementPrice, on_delete=models.SET_NULL, related_name="prices", null=True, blank=True)
+
+    class Meta:
+        verbose_name = "Tarif"
+        verbose_name_plural = "Tarifs"
 
     def save(self, *args, **kwargs):
         """
@@ -100,16 +112,62 @@ class Price(models.Model):
         elif self.season:
             label += f" - {self.get_season_display()}"
         return label
+    
+class OtherPrice(TranslatableModel):
+    translations = TranslatedFields(
+        current_year = models.PositiveIntegerField(
+            default=datetime.datetime.now().year,
+            verbose_name="Année"
+        ),
+        tourist_tax_date = models.DateField(
+            default=datetime.date(2025, 1, 1), 
+            verbose_name="Date taxe de séjour"
+        ),
+        price_tourist_tax = models.DecimalField( 
+            max_digits=5, decimal_places=2, default=0.29, 
+            verbose_name="Prix taxe de séjour par nuit/personne"
+        ),
+    )
+
+    def __str__(self):
+        return "Tarifs divers"
+
+    class Meta:
+        verbose_name = "Tarifs et infos divers"
+        verbose_name_plural = "Tarifs et infos divers"
 
 class Capacity(models.Model):
-    booking_type = models.CharField(max_length=20, choices=Price.TYPE_CHOICES, unique=True)
-    max_places = models.PositiveIntegerField(default=1)
+    booking_type = models.CharField(max_length=20, choices=Price.TYPE_CHOICES, unique=True, verbose_name="Type d'emplacement")
+    max_places = models.PositiveIntegerField(default=1, verbose_name="Nombre maximum d'emplacements")
+    number_locations = models.PositiveIntegerField(
+        default=66, 
+        verbose_name="Nombre d'emplacements"
+    )
+    number_mobile_homes = models.PositiveIntegerField(
+        default=5, 
+        verbose_name="Nombre de mobil-homes"
+    )
+
+    class Meta:
+        verbose_name = "Capacité d'emplacements"
+        verbose_name_plural = "Capacités d'emplacements"
 
     def __str__(self):
         return f"{self.get_booking_type_display()} - {self.max_places} emplacements"
 
 class Booking(models.Model):
+    # Types principaux
     TYPE_CHOICES = Price.TYPE_CHOICES
+
+    # Sous-types
+    SUBTYPE_CHOICES = [
+        ('tent', _('Tente')),
+        ('car_tent', _('Voiture Tente')),
+        ('caravan', _('Caravane')),
+        ('fourgon', _('Fourgon')),
+        ('van', _('Van')),
+        ('camping_car', _('Camping-car')),
+    ]
 
     ELECTRICITY_CHOICES = [
         ('yes', _('Avec électricité')),
@@ -117,42 +175,71 @@ class Booking(models.Model):
     ]
 
     # Informations client
-    last_name = models.CharField(max_length=100)
-    first_name = models.CharField(max_length=100)
-    address = models.CharField(max_length=255)
-    postal_code = models.CharField(max_length=10)
-    city = models.CharField(max_length=100)
-    phone = models.CharField(max_length=20)
+    last_name = models.CharField(max_length=100, verbose_name="Nom")
+    first_name = models.CharField(max_length=100, verbose_name="Prénom")
+    address = models.CharField(max_length=255, verbose_name="Adresse")
+    postal_code = models.CharField(max_length=10, verbose_name="Code postal")
+    city = models.CharField(max_length=100, verbose_name="Ville")
+    phone = models.CharField(max_length=20, verbose_name="Téléphone")
     email = models.EmailField()
 
     # Informations réservation
-    start_date = models.DateField()
-    end_date = models.DateField()
-    booking_type = models.CharField(max_length=20, choices=TYPE_CHOICES)
-    booking_subtype = models.CharField(max_length=20, null=True, blank=True)
-    electricity = models.CharField(max_length=3, choices=ELECTRICITY_CHOICES)
-    deposit_paid = models.BooleanField(default=False)
+    start_date = models.DateField(verbose_name="Date d'arrivée")
+    end_date = models.DateField(verbose_name="Date de départ")
+    booking_type = models.CharField(max_length=20, choices=TYPE_CHOICES, verbose_name="Type d'emplacement")
+    booking_subtype = models.CharField(max_length=20, choices=SUBTYPE_CHOICES, null=True, blank=True, verbose_name="Sous-type d'emplacement")
+    electricity = models.CharField(max_length=3, choices=ELECTRICITY_CHOICES, verbose_name="Électricité")
+    deposit_paid = models.BooleanField(default=False, verbose_name="Acompte payé")
 
     # Champs spécifiques
-    tent_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
-    tent_width = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
-    vehicle_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
-    cable_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True)
-    
+    tent_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True, verbose_name="Longueur de la tente")
+    tent_width = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True, verbose_name="Largeur de la tente")
+    vehicle_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True, verbose_name="Longueur du véhicule")
+    cable_length = models.DecimalField(max_digits=5, decimal_places=2, null=True, blank=True, verbose_name="Longueur du câble")
+
     # Nombre de personnes
-    adults = models.PositiveIntegerField(default=1)
-    children_over_8 = models.PositiveIntegerField(default=0)
-    children_under_8 = models.PositiveIntegerField(default=0)
-    pets = models.PositiveIntegerField(default=0)
+    adults = models.PositiveIntegerField(default=1, verbose_name="Adultes")
+    children_over_8 = models.PositiveIntegerField(default=0, verbose_name="Enfants +8 ans")
+    children_under_8 = models.PositiveIntegerField(default=0, verbose_name="Enfants -8 ans")
+    pets = models.PositiveIntegerField(default=0, verbose_name="Animaux de compagnie")
 
     # Véhicule et tente supplémentaire
-    extra_vehicle = models.PositiveIntegerField(default=0)
-    extra_tent = models.PositiveIntegerField(default=0)
-    
+    extra_vehicle = models.PositiveIntegerField(default=0, verbose_name="Véhicule supplémentaire")
+    extra_tent = models.PositiveIntegerField(default=0, verbose_name="Tente supplémentaire")
+
     # Suivi interne
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="Créé le")
+    updated_at = models.DateTimeField(auto_now=True, verbose_name="Mis à jour le")
+
+    # Map des sous-types vers type principal
+    MAIN_TYPE_MAP = {
+        'tent': 'tent',
+        'car_tent': 'tent',
+        'caravan': 'caravan',
+        'fourgon': 'caravan',
+        'van': 'caravan',
+        'camping_car': 'camping_car',
+    }
+
+    class Meta:
+        verbose_name = "Réservation"
+        verbose_name_plural = "Réservations"
+        ordering = ['-created_at']
+
+    def created_at_display(self):
+        if not self.created_at:
+            return ""
+        local_dt = timezone.localtime(self.created_at)
+        return formats.date_format(local_dt, format='d F Y à H:i', use_l10n=True)
+    created_at_display.short_description = _("Créé le")
+
+    def updated_at_display(self):
+        if not self.updated_at:
+            return ""
+        local_dt = timezone.localtime(self.updated_at)
+        return formats.date_format(local_dt, format='d F Y à H:i', use_l10n=True)
+    updated_at_display.short_description = _("Mis à jour le")
+
     # Détermination de la saison
     def get_season(self):
         month, day = self.start_date.month, self.start_date.day
@@ -238,14 +325,27 @@ class Booking(models.Model):
 
     def save(self, *args, **kwargs):
         """
-        Automatise le nombre de personnes incluses selon le type d'hébergement
-        et associe un SupplementPrice par défaut si nécessaire.
+        Automatise : 
+        - Le type principal à partir du sous-type
+        - Le nombre de personnes incluses selon le type
+        - L'association d'un SupplementPrice s'il n'y en a pas
         """
+        # Définition automatique du type principal
+        MAIN_TYPE_MAP = {
+            'tent': 'tent',
+            'car_tent': 'tent',
+            'caravan': 'caravan',
+            'fourgon': 'caravan',
+            'van': 'caravan',
+            'camping_car': 'camping_car',
+        }
+
+        if self.booking_subtype:
+            self.booking_type = MAIN_TYPE_MAP.get(self.booking_subtype, self.booking_subtype)
+        
         # Nombre de personnes incluses
         if self.booking_type == 'camping_car':
             self.included_people = 2
-        elif self.booking_type in ['tent', 'caravan']:
-            self.included_people = 1 
         else:
             self.included_people = 1 
         
@@ -320,3 +420,105 @@ class Booking(models.Model):
 
     def __str__(self):
         return f"{self.get_booking_type_display()} ({self.start_date} to {self.end_date})"
+    
+class MobileHome(models.Model):
+    name = models.CharField(max_length=100, verbose_name=_("Nom du mobil-home"))
+    description_text = models.TextField(blank=True, verbose_name=_("Description"))
+
+    # Prix à la nuitée
+    night_price = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/nuitée (basse et moyenne saison)"))
+    night_price_mid = models.DecimalField(
+        max_digits=6, decimal_places=0, null=True, blank=True,
+        verbose_name=_("Prix/nuitée (moyenne saison)")
+    )
+
+    # Prix par semaine selon la saison
+    week_low = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine (basse saison)"))
+    week_mid = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine (moyenne saison)"))
+    week_high = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine (haute saison)"))
+
+    # Prix spécial ouvriers (même tarif pour toutes les saisons)
+    is_worker_home = models.BooleanField(default=False, verbose_name=_("Réservé aux ouvriers"))
+    worker_price_1p = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine 1 personne (ouvrier)"))
+    worker_price_2p = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine 2 personnes (ouvrier)"))
+    worker_price_3p = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine 3 personnes (ouvrier)"))
+
+    class Meta:
+        verbose_name = _("Mobil-home")
+        verbose_name_plural = _("Mobil-homes")
+
+    def __str__(self):
+        return self.name
+    
+class SupplementMobileHome(TranslatableModel):
+    translations = TranslatedFields(
+        mobile_home_deposit = models.DecimalField(
+            max_digits=4,
+            decimal_places=0, 
+            default=350,
+            verbose_name="Montant caution mobil-home"
+        ),
+        cleaning_deposit = models.DecimalField(
+            max_digits=4, 
+            decimal_places=0, 
+            default=70,
+            verbose_name="Montant caution ménage"
+        ),
+        bed_linen_rental = models.DecimalField(
+            max_digits=4, 
+            decimal_places=0, 
+            default=15,
+            verbose_name="Prix location linge de lit"
+        ),
+    )
+
+    def __str__(self):
+        return "Suppléments mobil-home"
+
+    class Meta:
+        verbose_name = "Suppléments mobil-home"
+        verbose_name_plural = "Suppléments mobil-home"
+
+    
+class SeasonInfo(TranslatableModel):
+    translations = TranslatedFields(
+        low_season_start = models.DateField( 
+            default=datetime.date(2024, 9, 27), 
+            verbose_name="Début basse saison"
+        ),
+        low_season_end = models.DateField(
+            default=datetime.date(2024, 4, 26), 
+            verbose_name="Fin basse saison"
+        ),
+        mid_season_start_1 = models.DateField(
+            default=datetime.date(2024, 4, 27), 
+            verbose_name="Début moyenne saison 1"
+        ),
+        mid_season_end_1 = models.DateField(
+            default=datetime.date(2024, 7, 5), 
+            verbose_name="Fin moyenne saison 1"
+        ),
+        mid_season_start_2 = models.DateField( 
+            default=datetime.date(2024, 8, 30), 
+            verbose_name="Début moyenne saison 2"
+        ),
+        mid_season_end_2 = models.DateField(
+            default=datetime.date(2024, 9, 26), 
+            verbose_name="Fin moyenne saison 2"
+        ),
+        high_season_start = models.DateField(
+            default=datetime.date(2024, 7, 6), 
+            verbose_name="Début haute saison"
+        ),
+        high_season_end = models.DateField(
+            default=datetime.date(2024, 8, 29), 
+            verbose_name="Fin haute saison"
+        ),
+    )
+
+    def __str__(self):
+        return "Dates des saisons"
+
+    class Meta:
+        verbose_name = "Dates des saisons"
+        verbose_name_plural = "Dates des saisons"

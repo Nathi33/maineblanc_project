@@ -1,6 +1,6 @@
 {% extends "core/base.html" %}
 
-{% load static i18n %}
+{% load static i18n custom_filters %}
 
 {% block title %}{% trans "Services | Camping Le Maine Blanc" %}{% endblock %}
 
@@ -27,7 +27,7 @@
             <h2 class="card-title">{% trans "Piscine" %}</h2>
             <img src="{% static 'pictures/piscine.png' %}" alt="{% trans "Piscine" %}" class=" logo-services img-fluid mb-3">
           </div>
-          <p class="card-text">{% trans "Ouverte en haute saison, de mi-juin à mi-septembre, notre piscine extérieure vous accueille tous les jours de 10h à 21h pour un moment de fraîcheur et de détente." %}</p>
+          <p class="card-text">{% trans "Ouverte en haute saison, de mi-juin à mi-septembre, notre piscine extérieure vous accueille tous les jours de" %} {{ swimming_info.pool_opening_start|format_time_by_locale }} {% trans "à" %} {{ swimming_info.pool_opening_end|format_time_by_locale }} {% trans "pour un moment de fraîcheur et de détente." %}</p>
           <p class="card-text">{% trans "Non couverte et non chauffée, elle est idéale pour se rafraîchir durant les belles journées d'été." %}</p>
           <div class="info">
             <img src="{% static 'pictures/attention.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
@@ -55,15 +55,15 @@
             <p class="card-text-title">{% trans "Food trucks en soirée pour tous les goûts :"%}</p>
           </div>
           <ul class="list-unstyled">
-            <li><span class="list-title">{% trans "Burger" %}</span> : {% trans "tous les soirs sauf le jeudi, de 18h à 21h30" %}</li>
-            <li><span class="list-title">{% trans "Pizza" %}</span> : {% trans "uniquement le jeudi soir, même horaire" %}</li>
+            <li><span class="list-title">{% trans "Burger" %}</span> : {% trans "tous les soirs sauf le" %} {{ food_info.burger_food_days }}, {% trans "de" %} {{ food_info.burger_food_hours_start|format_time_by_locale }} {% trans "à" %} {{ food_info.burger_food_hours_end|format_time_by_locale }} </li>
+            <li><span class="list-title">{% trans "Pizza" %}</span> : {% trans "uniquement le" %} {{ food_info.pizza_food_days }} {% trans "soir" %}, {% trans "mêmes horaires." %} </li>
           </ul>
           
           <div class="info">
             <img src="{% static 'pictures/croissant.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
-            <p class="card-text-title">{% trans "Pain frais et viennoiseries chaque matin entre 8h15 et 9h30 : " %}</p>
+            <p class="card-text-title">{% trans "Pain frais et viennoiseries chaque matin entre" %} {{ food_info.bread_hours_start|format_time_by_locale }} {% trans "et" %} {{ food_info.bread_hours_end|format_time_by_locale }} {% trans ":" %}</p>
           </div>
-          <p class="card-text">{% trans "Pensez à réserver la veille avant 19h à l'accueil, auprès d'Isabelle." %}</p>
+          <p class="card-text">{% trans "Pensez à réserver la veille avant" %} {{ food_info.bread_hours_reservations|format_time_by_locale }} {% trans "à l'accueil, auprès d'Isabelle." %}</p>
 
           <div class="info">
             <img src="{% static 'pictures/caddie.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
@@ -73,7 +73,7 @@
 
           <div class="info">
             <img src="{% static 'pictures/bar.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
-            <p class="card-text-title">{% trans "Bar ouvert tous les jours de 18h à 21h : " %}</p>
+            <p class="card-text-title">{% trans "Bar ouvert tous les jours de" %} {{ food_info.bar_hours_start|format_time_by_locale }} {% trans "à" %} {{ food_info.bar_hours_end|format_time_by_locale }} {% trans ":" %}</p>
           </div>
           <p class="card-text">{% trans "Un lieu idéal pour boire un verre, savourer une glace et profiter de l’ambiance du camping." %}</p>
 
@@ -92,8 +92,8 @@
           <p class="card-text-title pb-2">{% trans "Du linge à faire ?" %}</p>
           <p class="card-text">{% trans "Pas de panique, même en vacances, on a pensé à tout :" %}</p>
           <ul>
-            <li>{% trans "Une machine à laver pour 4€" %}</li>
-            <li>{% trans "Un sèche-linge pour 2€ les 20 minutes" %}</li>
+            <li>{% trans "Une machine à laver pour" %} {{ laundry_info.washing_machine_price }}€</li>
+            <li>{% trans "Un sèche-linge pour" %} {{ laundry_info.dryer_price }}€ {% trans "les 20 minutes" %}</li>
             <li>{% trans "Des lavabos pour les adeptes du lavage à la main (ou pour les chaussettes en mission spéciale)" %}</li>
           </ul>
           <p class="card-text"><strong>{% trans "Les jetons sont en vente à l'accueil." %}</strong>.</p>
