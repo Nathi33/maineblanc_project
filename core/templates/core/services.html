@@ -61,9 +61,9 @@
           
           <div class="info">
             <img src="{% static 'pictures/croissant.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
-            <p class="card-text-title">{% trans "Pain frais et viennoiseries chaque matin entre" %} {{ food_info.bread_hours_start|format_time_by_locale }} {% trans "et" %} {{ food_info.bread_hours_end|format_time_by_locale }} {% trans ":" %}</p>
+            <p class="card-text-title">{% trans "Pain frais et viennoiseries chaque matin entre" %} {{ food_info.bread_hours_start|format_time_by_locale }} {% trans "et" %} {{ food_info.bread_hours_end|format_time_by_locale }} : </p>
           </div>
-          <p class="card-text">{% trans "Pensez à réserver la veille avant" %} {{ food_info.bread_hours_reservations|format_time_by_locale }} {% trans "à l'accueil, auprès d'Isabelle." %}</p>
+          <p class="card-text">{% trans "Pensez à commander la veille avant" %} {{ food_info.bread_hours_reservations|format_time_by_locale }} {% trans "à l'accueil, auprès d'Isabelle." %}</p>
 
           <div class="info">
             <img src="{% static 'pictures/caddie.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
@@ -73,7 +73,7 @@
 
           <div class="info">
             <img src="{% static 'pictures/bar.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
-            <p class="card-text-title">{% trans "Bar ouvert tous les jours de" %} {{ food_info.bar_hours_start|format_time_by_locale }} {% trans "à" %} {{ food_info.bar_hours_end|format_time_by_locale }} {% trans ":" %}</p>
+            <p class="card-text-title">{% trans "Bar ouvert tous les jours de" %} {{ food_info.bar_hours_start|format_time_by_locale }} {% trans "à" %} {{ food_info.bar_hours_end|format_time_by_locale }} : </p>
           </div>
           <p class="card-text">{% trans "Un lieu idéal pour boire un verre, savourer une glace et profiter de l’ambiance du camping." %}</p>
 

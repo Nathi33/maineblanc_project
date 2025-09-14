@@ -1,9 +1,8 @@
-from django.conf import settings
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext as _, get_language
 from django.shortcuts import render
 from bookings.models import Price, SupplementPrice, SeasonInfo, Capacity, MobileHome, SupplementMobileHome, OtherPrice
 from .models import CampingInfo, SwimmingPoolInfo, FoodInfo, LaundryInfo
-from django.utils import translation
+
 
 
 def home_view(request):
@@ -71,8 +70,26 @@ def infos_view(request):
     # --- Dates des saisons ---
     season_info = SeasonInfo.objects.first()
 
-    # --- Tarifs Mobil-homes ---
+    # --- Tarifs et traductions descriptions Mobil-homes ---
+    lang = get_language()
     mobilhomes = MobileHome.objects.all()
+
+    for home in mobilhomes:
+        if lang == "en":
+            home.description_display = home.description_en
+            home.name_display = home.name_en
+        elif lang == "es":
+            home.description_display = home.description_es
+            home.name_display = home.name_es
+        elif lang == "de":
+            home.description_display = home.description_de
+            home.name_display = home.name_de
+        elif lang == "nl":
+            home.description_display = home.description_nl
+            home.name_display = home.name_nl
+        else:
+            home.description_display = home.description_text
+            home.name_display = home.name
 
     # --- Supplements Mobil-homes ---
     mobilhome_supplements = SupplementMobileHome.objects.first()
@@ -95,7 +112,9 @@ def infos_view(request):
 
 def services_view(request):
     swimming_info = SwimmingPoolInfo.objects.first()
+
     food_info = FoodInfo.objects.first()
+
     laundry_info = LaundryInfo.objects.first()  
 
     return render(request, 'core/services.html', {
