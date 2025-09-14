@@ -20,7 +20,7 @@ class CampingInfoAdmin(TranslatableAdmin):
     ]
 
     fieldsets = (
-        (_("Accueil"), {
+        ("Accueil", {
             'fields': (
                 'welcome_start', 
                 'welcome_end', 
@@ -28,19 +28,19 @@ class CampingInfoAdmin(TranslatableAdmin):
                 'welcome_afternoon_end',
             )
         }),
-        (_("Arrivées"), {
+        ("Arrivées", {
             'fields': (
                 'arrivals_start_high', 
                 'arrivals_end_high', 
                 'arrivals_end_low',
             )
         }),
-        (_("Départs"), {
+        ("Départs", {
             'fields': (
                 'departure_end',
             )
         }),
-        (_("Portail de sécurité"), {
+        ("Portail de sécurité", {
             'fields': (
                 'portal_start', 
                 'portal_end',
@@ -56,7 +56,7 @@ class SwimmingPoolInfoAdmin(TranslatableAdmin):
     ]
 
     fieldsets = (
-        (_("Piscine"), {
+        ("Piscine", {
             'fields': (
                 'pool_opening_start',
                 'pool_opening_end',
@@ -78,7 +78,7 @@ class FoodInfoAdmin(TranslatableAdmin):
         'bar_hours_end',
     ]
     fieldsets = (
-        (_("Restauration"), {
+        ("Restauration", {
             'fields': (
                 'burger_food_days',
                 'burger_food_hours_start',
@@ -100,7 +100,7 @@ class LaundryInfoAdmin(TranslatableAdmin):
         'dryer_price',
     ]
     fieldsets = (
-        (_("Laverie"), {
+        ("Laverie", {
             'fields': (
                 'washing_machine_price',
                 'dryer_price',

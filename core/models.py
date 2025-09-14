@@ -1,6 +1,8 @@
 from django.db import models
 from parler.models import TranslatableModel, TranslatedFields
 from django.utils.translation import gettext_lazy as _
+from django.conf import settings
+import deepl
 import datetime
 
 class CampingInfo(TranslatableModel):
@@ -121,6 +123,33 @@ class FoodInfo(TranslatableModel):
             verbose_name="Horaires fermeture bar"
         ),
     )
+
+    def save(self, *args, **kwargs):
+
+        super().save(*args, **kwargs)
+
+        if not getattr(settings, "DEEPL_API_KEY", None):
+            return
+
+        translator = deepl.Translator(settings.DEEPL_API_KEY)
+        target_languages = ["en", "es", "de", "nl"]
+
+        for lang in target_languages:
+            translation, _ = self.translations.get_or_create(language_code=lang)
+
+            # On force la traduction même si le champ existe déjà
+            translation.burger_food_days = translator.translate_text(
+                self.burger_food_days,
+                target_lang=lang.upper() if lang != "en" else "EN-GB"
+            ).text
+
+            translation.pizza_food_days = translator.translate_text(
+                self.pizza_food_days,
+                target_lang=lang.upper() if lang != "en" else "EN-GB"
+            ).text
+
+            translation.save()
+
 
     def __str__(self):
         return "Informations diverses sur la restauration"

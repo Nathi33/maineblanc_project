@@ -8,6 +8,7 @@ from django.utils import timezone
 from django.utils import formats
 from parler.models import TranslatableModel, TranslatedFields
 import datetime
+import deepl
     
 
 class SupplementPrice(models.Model):
@@ -231,14 +232,14 @@ class Booking(models.Model):
             return ""
         local_dt = timezone.localtime(self.created_at)
         return formats.date_format(local_dt, format='d F Y à H:i', use_l10n=True)
-    created_at_display.short_description = _("Créé le")
+    created_at_display.short_description = "Créé le"
 
     def updated_at_display(self):
         if not self.updated_at:
             return ""
         local_dt = timezone.localtime(self.updated_at)
         return formats.date_format(local_dt, format='d F Y à H:i', use_l10n=True)
-    updated_at_display.short_description = _("Mis à jour le")
+    updated_at_display.short_description = "Mis à jour le"
 
     # Détermination de la saison
     def get_season(self):
@@ -422,33 +423,81 @@ class Booking(models.Model):
         return f"{self.get_booking_type_display()} ({self.start_date} to {self.end_date})"
     
 class MobileHome(models.Model):
-    name = models.CharField(max_length=100, verbose_name=_("Nom du mobil-home"))
-    description_text = models.TextField(blank=True, verbose_name=_("Description"))
+    # Nom traduit automatiquement
+    name = models.CharField(max_length=100, verbose_name= "Nom du mobil-home")
+    name_en = models.CharField(max_length=100, blank=True, verbose_name= "Nom du mobil-home (EN)")
+    name_es = models.CharField(max_length=100, blank=True, verbose_name= "Nom du mobil-home (ES)")
+    name_de = models.CharField(max_length=100, blank=True, verbose_name= "Nom du mobil-home (DE)")
+    name_nl = models.CharField(max_length=100, blank=True, verbose_name= "Nom du mobil-home (NL)")
+
+    # Description traduite automatiquement
+    description_text = models.TextField(blank=True, verbose_name= "Description FR")   
+    description_en = models.TextField(blank=True, verbose_name= "Description EN")
+    description_es = models.TextField(blank=True, verbose_name= "Description ES")
+    description_de = models.TextField(blank=True, verbose_name= "Description DE")
+    description_nl = models.TextField(blank=True, verbose_name= "Description NL")
 
     # Prix à la nuitée
-    night_price = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/nuitée (basse et moyenne saison)"))
+    night_price = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name= "Prix/nuitée (basse et moyenne saison)")
     night_price_mid = models.DecimalField(
         max_digits=6, decimal_places=0, null=True, blank=True,
-        verbose_name=_("Prix/nuitée (moyenne saison)")
+        verbose_name= "Prix/nuitée (moyenne saison)"
     )
 
     # Prix par semaine selon la saison
-    week_low = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine (basse saison)"))
-    week_mid = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine (moyenne saison)"))
-    week_high = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine (haute saison)"))
+    week_low = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name= "Prix/semaine (basse saison)")
+    week_mid = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name= "Prix/semaine (moyenne saison)")
+    week_high = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name= "Prix/semaine (haute saison)")
 
     # Prix spécial ouvriers (même tarif pour toutes les saisons)
-    is_worker_home = models.BooleanField(default=False, verbose_name=_("Réservé aux ouvriers"))
-    worker_price_1p = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine 1 personne (ouvrier)"))
-    worker_price_2p = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine 2 personnes (ouvrier)"))
-    worker_price_3p = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name=_("Prix/semaine 3 personnes (ouvrier)"))
+    is_worker_home = models.BooleanField(default=False, verbose_name= "Réservé aux ouvriers")
+    worker_price_1p = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name= "Prix/semaine 1 personne (ouvrier)")
+    worker_price_2p = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name= "Prix/semaine 2 personnes (ouvrier)")
+    worker_price_3p = models.DecimalField(max_digits=6, decimal_places=0, null=True, blank=True, verbose_name= "Prix/semaine 3 personnes (ouvrier)")
 
     class Meta:
-        verbose_name = _("Mobil-home")
-        verbose_name_plural = _("Mobil-homes")
+        verbose_name = "Mobil-home"
+        verbose_name_plural = "Mobil-homes"
 
     def __str__(self):
         return self.name
+    
+    def save(self, *args, **kwargs):
+        """
+        Traduction automatique du nom et de la description en plusieurs langues via DeepL API.
+        """
+        if settings.DEEPL_API_KEY and self.description_text:
+            translator = deepl.Translator(settings.DEEPL_API_KEY)
+            # Traduction du nom
+            if self.name:
+                if not self.name_en or 'update_fields' in kwargs:
+                    self.name_en = translator.translate_text(self.name, target_lang="EN-GB").text
+                if not self.name_es or 'update_fields' in kwargs:
+                    self.name_es = translator.translate_text(self.name, target_lang="ES").text
+                if not self.name_de or 'update_fields' in kwargs:
+                    self.name_de = translator.translate_text(self.name, target_lang="DE").text
+                if not self.name_nl or 'update_fields' in kwargs:
+                    self.name_nl = translator.translate_text(self.name, target_lang="NL").text
+
+        # Traduction de la description
+        if self.description_text:
+            if not self.description_en or 'update_fields' in kwargs:
+                result = translator.translate_text(self.description_text, target_lang="EN-GB")
+                self.description_en = result.text
+            if not self.description_es or 'update_fields' in kwargs:
+                result = translator.translate_text(self.description_text, target_lang="ES")
+                self.description_es = result.text
+            if not self.description_es or 'update_fields' in kwargs:
+                result = translator.translate_text(self.description_text, target_lang="ES")
+                self.description_es = result.text
+            if not self.description_de or 'update_fields' in kwargs:
+                result = translator.translate_text(self.description_text, target_lang="DE")
+                self.description_de = result.text
+            if not self.description_nl or 'update_fields' in kwargs:
+                result = translator.translate_text(self.description_text, target_lang="NL")
+                self.description_nl = result.text
+
+        super().save(*args, **kwargs)
     
 class SupplementMobileHome(TranslatableModel):
     translations = TranslatedFields(

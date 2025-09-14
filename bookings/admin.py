@@ -3,7 +3,8 @@ from django import forms
 from .models import Booking, Price, SupplementPrice, Capacity, MobileHome, SeasonInfo, SupplementMobileHome, OtherPrice
 from django.utils.translation import gettext_lazy as _
 from parler.admin import TranslatableAdmin
-
+from django.conf import settings
+import deepl
 
 # -----------------------------
 # Admin pour les capacités
@@ -27,7 +28,7 @@ class CapacityAdmin(admin.ModelAdmin):
             ),
             'description': "Nombre maximum d'emplacements disponibles pour chaque type de réservation."
         }),
-        (_("Capacités total du camping"), {
+        ("Capacités totales du camping", {
             'fields': (
                 'number_locations',
                 'number_mobile_homes',
@@ -157,12 +158,12 @@ class OtherPriceAdmin(TranslatableAdmin):
     )
 
     fieldsets = (
-        (_("Année en cours"), {
+        ("Année en cours", {
             'fields': (
                 'current_year',
             )
         }),
-        (_("Taxe de séjour"), {
+        ("Taxe de séjour", {
             'fields': (
                 'tourist_tax_date',
                 'price_tourist_tax',
@@ -300,7 +301,7 @@ class SupplementMobileHomeAdmin(TranslatableAdmin):
     )
     
     fieldsets = (
-        (_("Cautions et location de linge"), {
+        ("Cautions et location de linge", {
             'fields': (
                 'mobile_home_deposit',
                 'cleaning_deposit',
@@ -327,7 +328,7 @@ class SeasonInfoAdmin(TranslatableAdmin):
 
 
     fieldsets = (
-        (_("Saisons"), {
+        ("Saisons", {
             'fields': (
                 'low_season_start',
                 'low_season_end',

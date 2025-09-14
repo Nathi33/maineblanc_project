@@ -1,17 +1,15 @@
 from django.shortcuts import render, redirect, reverse
 from .forms import BookingFormClassic,BookingDetailsForm
-from .models import Booking, Capacity, SupplementPrice
+from .models import Booking, SupplementPrice
 from django.core.mail import EmailMessage
 from django.conf import settings
 from django.template.loader import render_to_string
 from django.contrib import messages
 from django.utils.translation import gettext_lazy as _
-from django.contrib.sites.shortcuts import get_current_site
 from decimal import Decimal
 from datetime import date
 from django.utils import translation
 from django.core.exceptions import ValidationError
-import deepl
 import stripe
 
 stripe.api_key = settings.STRIPE_SECRET_KEY
