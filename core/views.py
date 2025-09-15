@@ -4,15 +4,42 @@ from bookings.models import Price, SupplementPrice, SeasonInfo, Capacity, Mobile
 from .models import CampingInfo, SwimmingPoolInfo, FoodInfo, LaundryInfo
 
 
-
 def home_view(request):
+    """
+    Render the homepage.
+
+    Security:
+        - No user input processed; safe from XSS or injection.
+    """
     return render(request, 'core/home.html')
 
+
 def about_view(request):
+    """
+    Render the about page.
+
+    Security:
+        - No user input processed.
+    """
     return render(request, 'core/about.html')
 
+
 def infos_view(request):
-    # --- Tarifs classiques et ouvriers ---
+    """
+    Render the information page with pricing, supplements, seasons, mobile homes,
+    camping info, capacity, and other prices.
+
+    Features:
+        - Groups normal and worker prices
+        - Handles supplements and visitor prices
+        - Dynamically sets mobile home descriptions based on current language
+
+    Security:
+        - Only retrieves data from the database
+        - No user input is processed
+        - Safe against XSS and injection
+    """
+    # --- Retrieve all standard and worker prices ---
     prices = Price.objects.all()
 
     grouped_prices = {}
@@ -26,12 +53,13 @@ def infos_view(request):
 
     worker_prices = prices.filter(is_worker=True)
 
-    # --- Suppléments ---
+    # --- Supplements prices ---
     supplements_obj = SupplementPrice.objects.first()
     supplements = []
     visitor_prices = []
 
     if supplements_obj:
+        # Map field names to user-friendly labels with translations
         mapping = {
             "extra_adult_price": _("Adulte supplémentaire"),
             "child_over_8_price": _("Enfant +8 ans"),
@@ -50,6 +78,7 @@ def infos_view(request):
                     "price": value
                 })
         
+        # Visitor price with/without swimming pool
         if supplements_obj.visitor_price_without_swimming_pool:
             visitor_prices.append({
                 "label": _("(sans piscine)"),
@@ -61,41 +90,21 @@ def infos_view(request):
                 "price": supplements_obj.visitor_price_with_swimming_pool
             })
 
-    # --- Modalités du camping ---
+    # --- Camping general information ---
     camping_info = CampingInfo.objects.first()
-
-    # --- Année et tarifs divers ---
     other_prices = OtherPrice.objects.first()
-
-    # --- Dates des saisons ---
     season_info = SeasonInfo.objects.first()
+    capacity_info = Capacity.objects.first()
 
-    # --- Tarifs et traductions descriptions Mobil-homes ---
+    # --- Mobile homes pricing and translated descriptions ---
     lang = get_language()
     mobilhomes = MobileHome.objects.all()
-
     for home in mobilhomes:
-        if lang == "en":
-            home.description_display = home.description_en
-            home.name_display = home.name_en
-        elif lang == "es":
-            home.description_display = home.description_es
-            home.name_display = home.name_es
-        elif lang == "de":
-            home.description_display = home.description_de
-            home.name_display = home.name_de
-        elif lang == "nl":
-            home.description_display = home.description_nl
-            home.name_display = home.name_nl
-        else:
-            home.description_display = home.description_text
-            home.name_display = home.name
+        # Dynamically choose name and description based on language
+        home.name_display = getattr(home, f"name_{lang}", home.name)
+        home.description_display = getattr(home, f"description_{lang}", home.description_text)
 
-    # --- Supplements Mobil-homes ---
     mobilhome_supplements = SupplementMobileHome.objects.first()
-
-    # --- Capacité du camping ---
-    capacity_info = Capacity.objects.first()
 
     return render(request, 'core/infos.html', {
         "grouped_prices": grouped_prices,
@@ -111,10 +120,16 @@ def infos_view(request):
     })
 
 def services_view(request):
+    """
+    Render the Services page including swimming pool, food, and laundry info.
+
+    Security:
+        - Only reads database objects
+        - No user input processed
+    """
+
     swimming_info = SwimmingPoolInfo.objects.first()
-
     food_info = FoodInfo.objects.first()
-
     laundry_info = LaundryInfo.objects.first()  
 
     return render(request, 'core/services.html', {
@@ -123,17 +138,53 @@ def services_view(request):
         "laundry_info": laundry_info
     })
 
+
 def accommodations_view(request):
+    """
+    Render the Accommodations page.
+
+    Security:
+        - No user input processed
+    """
     return render(request, 'core/accommodations.html')
 
+
 def activities_view(request):
+    """
+    Render the Activities page.
+
+    Security:
+        - No user input processed
+    """
     return render(request, 'core/activities.html')
 
+
 def legal_view(request):
+    """
+    Render the Legal page.
+
+    Security:
+        - Static content, safe
+    """
     return render(request, 'core/legal.html')
 
+
 def privacy_view(request):
+    """
+    Render the Privacy Policy page.
+
+    Security:
+        - Static content, safe
+    """
     return render(request, 'core/privacy-policy.html')
 
+
 def not_found_view(request, exception=None):
+    """
+    Render the 404 Not Found page.
+
+    Security:
+        - Static content
+        - Exception handling passed safely
+    """
     return render(request, 'core/not_found.html', status=404)
