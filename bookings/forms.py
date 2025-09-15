@@ -4,10 +4,23 @@ from django.utils.translation import gettext_lazy as _
 from django.utils import timezone
 
 
-# ----------------------------
-# Formulaire réservation : Clients
-# ----------------------------
 class BookingFormClassic(forms.ModelForm):
+    """
+    Client booking form.
+
+    Main fields:
+        - booking_type: campsite type (tent, caravan, camper, etc.)
+        - start_date / end_date: arrival and departure dates
+        - adults, children_over_8, children_under_8, pets: number of people and pets
+        - electricity: whether electricity is required
+        - cable_length: required if electricity is selected
+        - tent_width / tent_length, vehicle_length: specific dimensions depending on type
+
+    Security:
+        - Dates cannot be in the past.
+        - Conditional fields are validated based on campsite type.
+        - All data is cleaned via clean() method.
+    """
     BOOKING_TYPE_CHOICES_FOR_FORM = [
         ('tent', _('Tente')),
         ('car_tent', _('Voiture Tente')),
@@ -25,6 +38,12 @@ class BookingFormClassic(forms.ModelForm):
         'van': 'caravan',
         'camping_car': 'camping_car',
     }
+
+    ELECTRICITY_CHOICES = [
+        ('yes', _("Avec électricité")),
+        ('no', _("Sans électricité"))
+    ]
+
     booking_type = forms.ChoiceField(
         choices=[('', _('--- Choisissez ---'))] + BOOKING_TYPE_CHOICES_FOR_FORM,
         widget=forms.Select(attrs={'class': 'form-select'}),
@@ -49,11 +68,6 @@ class BookingFormClassic(forms.ModelForm):
         label=_("Adultes"),
         required=True
     )
-
-    ELECTRICITY_CHOICES = [
-        ('yes', _("Avec électricité")),
-        ('no', _("Sans électricité"))
-    ]
     
     electricity = forms.ChoiceField(
         choices=ELECTRICITY_CHOICES,
@@ -80,40 +94,38 @@ class BookingFormClassic(forms.ModelForm):
             'cable_length': _("Longueur du câble électrique (m)"),
         }
         widgets = {
-            'vehicle_length': forms.NumberInput(attrs={'class': 'form-control'}),
-            'tent_width': forms.NumberInput(attrs={'class': 'form-control'}),
-            'tent_length': forms.NumberInput(attrs={'class': 'form-control'}),
+            'vehicle_length': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),
+            'tent_width': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),
+            'tent_length': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),
             'children_over_8': forms.Select(choices=[(i, i) for i in range(0, 11)], attrs={'class': 'form-select'}),
             'children_under_8': forms.Select(choices=[(i, i) for i in range(0, 11)], attrs={'class': 'form-select'}),
             'pets': forms.Select(choices=[(i, i) for i in range(0, 3)], attrs={'class': 'form-select'}),
-            'cable_length': forms.NumberInput(attrs={'class': 'form-control'}),
+            'cable_length': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),
         }
 
 
     def clean(self):
         """
-        Validation personnalisée :
-        - La date d'arrivée ne peut pas être antérieure à aujourd'hui.
-        - La date de départ doit être postérieure à la date d'arrivée.
-        - Champs conditionnels obligatoires selon type d'emplacement et électricité
+        Custom validation:
+            - Arrival date cannot be in the past.
+            - Departure date must be after arrival.
+            - Conditional fields are required depending on campsite type and electricity.
         """
         cleaned_data = super().clean()
 
-        # Validation des dates
         start_date = cleaned_data.get("start_date")
         end_date = cleaned_data.get("end_date")
         today = timezone.localdate()
 
+        # Date validation
         if start_date and start_date < today:
             self.add_error("start_date", _("La date d'arrivée ne peut pas être antérieure à aujourd'hui."))
         if start_date and end_date and start_date > end_date:
             self.add_error("end_date", _("La date de départ doit être postérieure à la date d'arrivée."))
 
-        # Gestion du type d'emplacement et sous-types
+        # Type and subtype validation
         booking_subtype = cleaned_data.get("booking_type")
         electricity = cleaned_data.get("electricity")
-
-        # Mapping des sous-types vers les types principaux
         subtype_to_main = {
             'tent': 'tent',
             'car_tent': 'tent',
@@ -124,18 +136,15 @@ class BookingFormClassic(forms.ModelForm):
         }
 
         if booking_subtype:
-            # Conversion vers le type principal
             main_type = subtype_to_main.get(booking_subtype, booking_subtype)
             cleaned_data["booking_type"] = main_type
-            # On garde le choix précis dans un champ "booking_subtype"
             cleaned_data["booking_subtype"] = booking_subtype
-            # Ajout d'une version lisible pour le template
             cleaned_data["booking_subtype_display"] = booking_subtype.replace("_", " ").capitalize()
         else:
             self.add_error("booking_type", _("Le champ 'Type d'emplacement' est obligatoire."))
 
-        # Champs conditionnels obligatoires selon le type principal
-        if booking_subtype in ["caravan", "fourgon", "van", "motorhome"]:
+        # Conditional required fields
+        if booking_subtype in ["caravan", "fourgon", "van", "camping_car"]:
             if not cleaned_data.get("vehicle_length"):
                 self.add_error("vehicle_length", _("Le champ 'Longueur du véhicule' est obligatoire pour les caravanes et camping-cars."))
 
@@ -145,7 +154,6 @@ class BookingFormClassic(forms.ModelForm):
             if not cleaned_data.get("tent_length"):
                 self.add_error("tent_length", _("Le champ 'Longueur de la tente' est obligatoire pour les tentes."))
         
-        # Longueur du câble si électricité
         if electricity == "yes":
             cable_length = cleaned_data.get("cable_length")
             if not cable_length:
@@ -154,10 +162,15 @@ class BookingFormClassic(forms.ModelForm):
         return cleaned_data
 
 
-# ----------------------------
-# Formulaire pour les coordonnées du client
-# ----------------------------
 class BookingDetailsForm(forms.Form):
+    """
+    Client personal details form.
+
+    Security:
+        - Email field validated automatically.
+        - Maximum length for all text fields to prevent injection.
+        - All data cleaned via cleaned_data.
+    """
     last_name = forms.CharField(
         max_length=100,
         label=_("Nom"),
@@ -193,3 +206,35 @@ class BookingDetailsForm(forms.Form):
         label=_("Adresse mail"),
         widget=forms.EmailInput(attrs={'class': 'form-control'})
     )
+
+    def clean(self):
+        """
+        Centralized cleaning and validation:
+        - Strips leading/trailing spaces for all text fields.
+        - Normalizes email to lowercase.
+        - Validates phone number contains only digits, spaces, +, -, ().
+        """
+        cleaned_data = super().clean()
+
+        # Normalize text fields
+        for field in ["first_name", "last_name", "address", "postal_code", "city"]:
+            value = cleaned_data.get(field)
+            if value:
+                cleaned_data[field] = value.strip()
+
+        # Normalize and validate email
+        email = cleaned_data.get("email")
+        if email:
+            cleaned_data["email"] = email.strip().lower()
+
+        # Validate phone
+        phone = cleaned_data.get("phone")
+        if phone:
+            phone = phone.strip()
+            import re
+            if not re.match(r'^[\d+\-\s()]+$', phone):
+                self.add_error("phone", _("Enter a valid phone number."))
+            else:
+                cleaned_data["phone"] = phone
+
+        return cleaned_data

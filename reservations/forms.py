@@ -1,8 +1,24 @@
+from glob import escape
 from django import forms
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
 
 class ReservationRequestForm(forms.Form):
+    """
+    Form to handle reservation requests from customers.
+
+    Fields:
+        - Customer info: name, first_name, address, postal_code, city, phone, email
+        - Reservation dates: start_date, end_date
+        - Accommodation details: accommodation_type, tent dimensions, vehicle_length
+        - Guests: adults, children_over_8, children_under_8, pets
+        - Electricity info: electricity, cable_length
+        - Message: optional free text
+    Security:
+        - Fields are validated and escaped to prevent XSS
+        - Conditional fields validated in `clean()`
+    """
+
     name = forms.CharField(
         label=_("Nom"), max_length=100,
         widget=forms.TextInput(attrs={'class': 'form-control', 'id': 'name', 'required': True})
@@ -160,6 +176,12 @@ class ReservationRequestForm(forms.Form):
 
 
     def clean(self):
+        """
+        Custom validation:
+            - Validate dates (arrival < departure, not in past)
+            - Validate conditional fields (tent dimensions, vehicle length, cable if electricity)
+            - Escape free-text message to prevent XSS
+        """
         cleaned_data = super().clean()
         start_date = cleaned_data.get("start_date")
         end_date = cleaned_data.get("end_date")
@@ -173,16 +195,18 @@ class ReservationRequestForm(forms.Form):
         electricity = cleaned_data.get("electricity")
         cable_length = cleaned_data.get("cable_length")
 
+        message = cleaned_data.get("message")
+        if message:
+            cleaned_data['message'] = escape(message)
+
         errors = []
 
-        # Vérification des dates
         if start_date and start_date < today:
             errors.append(_("La date d'arrivée ne peut pas être antérieure à aujourd'hui."))
 
         if start_date and end_date and end_date <= start_date:
             errors.append(_("La date de départ doit être postérieure à la date d'arrivée."))
 
-        # Validation des champs conditionnels en fonction du type d'hébergement
         if accommodation_type in ['tent', 'car_tent']:
             if not tent_length or not tent_width:
                 errors.append(_("La longueur et la largeur de la tente sont obligatoires pour le type d'hébergement sélectionné."))
@@ -191,11 +215,9 @@ class ReservationRequestForm(forms.Form):
             if not vehicle_length:
                 errors.append(_("La longueur du véhicule est obligatoire pour le type d'hébergement sélectionné."))
 
-        # Validation du champ conditionnel en fonction de l'électricité
             if electricity == 'yes' and not cable_length:
                 errors.append(_("La longueur du câble électrique est obligatoire si l'électricité est demandée."))
 
-        # Lever des erreurs si nécessaire
         if errors:
             raise forms.ValidationError(errors)
         

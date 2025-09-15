@@ -80,7 +80,7 @@
 <body>
   <div class="email-container">
     <h1>📩 {% trans "Nouvelle demande de réservation" %}</h1>
-    <p>{% trans "Une nouvelle demande de réservation a été effectuée le" %} <strong>{{ today|date:"d/m/Y" }}</strong>.</p>
+    <p>{% trans "Une nouvelle demande de réservation a été effectuée le" %} <strong>{{ submission_datetime|date:"d/m/Y" }} à {{ submission_datetime|time:"H:i" }}</strong>.</p>
 
     <!-- Informations client -->
     <div class="card">

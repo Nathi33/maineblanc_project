@@ -6,11 +6,10 @@ from parler.admin import TranslatableAdmin
 from django.conf import settings
 import deepl
 
-# -----------------------------
-# Admin pour les capacités
-# -----------------------------
+
 @admin.register(Capacity)
 class CapacityAdmin(admin.ModelAdmin):
+    """Admin for the Capacity model: displays booking types and maximum capacity."""
     list_display = (
         'booking_type',
         'max_places',
@@ -36,11 +35,10 @@ class CapacityAdmin(admin.ModelAdmin):
         }),
     )
 
-# -----------------------------
-# Admin pour les suppléments
-# -----------------------------
+
 @admin.register(SupplementPrice)
 class SupplementPriceAdmin(admin.ModelAdmin):
+    """Admin for the SupplementPrice model: display and manage extra pricing."""
     list_display = (
         'extra_adult_price',
         'child_over_8_price',
@@ -69,10 +67,8 @@ class SupplementPriceAdmin(admin.ModelAdmin):
         }),
     )
 
-# -----------------------------
-# Formulaire admin personnalisé pour Price
-# -----------------------------
 class PriceAdminForm(forms.ModelForm):
+    """Custom form for PriceAdmin to add validation logic."""
     class Meta:
         model = Price
         fields = '__all__'
@@ -81,7 +77,6 @@ class PriceAdminForm(forms.ModelForm):
         cleaned_data = super().clean()
         booking_type = cleaned_data.get("booking_type")
 
-        # Masquer les champs 1 personne si camping-car
         if booking_type == "camping_car":
             if cleaned_data.get("price_1_person_with_electricity") or cleaned_data.get("price_1_person_without_electricity"):
                 raise forms.ValidationError(
@@ -90,11 +85,17 @@ class PriceAdminForm(forms.ModelForm):
                 )
         return cleaned_data
 
-# -----------------------------
-# Admin pour les tarifs d'emplacements
-# -----------------------------
+
 @admin.register(Price)
 class PriceAdmin(admin.ModelAdmin):
+    """
+    Admin interface for Price model.
+
+    - Uses custom form PriceAdminForm to validate fields
+    - Displays pricing info for different booking types, seasons, and workers
+    - Organizes form fields into sections with descriptions
+    - List view shows both 1-person and 2-person prices, weekend and worker prices
+    """
     form = PriceAdminForm
     list_display = (
         'booking_type', 
@@ -113,7 +114,6 @@ class PriceAdmin(admin.ModelAdmin):
     ordering = ('booking_type', 'season', 'is_worker')
     exclude = ('included_people',)
 
-    # Organisation du formulaire
     fieldsets = (
         ('Tarifs classiques', {
             'fields': (
@@ -146,11 +146,10 @@ class PriceAdmin(admin.ModelAdmin):
         }),
     ) 
 
-# -----------------------------
-# Admin pour divers tarifs
-# -----------------------------
+
 @admin.register(OtherPrice)
 class OtherPriceAdmin(TranslatableAdmin):
+    """Admin for the OtherPrice model: manage current year and tourist tax."""
     list_display = (
         'current_year',
         'tourist_tax_date',
@@ -171,11 +170,17 @@ class OtherPriceAdmin(TranslatableAdmin):
         }),
     )
 
-# -----------------------------
-# Admin pour les réservations
-# -----------------------------
+
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
+    """
+    Admin interface for Booking model.
+
+    - Displays client info, booking details, capacities, and extra options
+    - Allows editing of deposit status directly from list view
+    - Provides filters by type, electricity, deposit, and dates
+    - Readonly fields: created_at_display, updated_at_display
+    """
     list_display = (
         'last_name',
         'first_name',
@@ -240,11 +245,10 @@ class BookingAdmin(admin.ModelAdmin):
         }),
     )
 
-# -----------------------------
-# Admin pour les tarifs des Mobil-homes
-# -----------------------------
+
 @admin.register(MobileHome)
 class MobileHomeAdmin(admin.ModelAdmin):
+    """Admin for the MobileHome model: display pricing, information, and options."""
     list_display = (
         'name',
         'night_price',
@@ -289,11 +293,10 @@ class MobileHomeAdmin(admin.ModelAdmin):
         }),
     )
 
-# -----------------------------
-# Admin pour les suppléments des Mobil-homes
-# -----------------------------
+
 @admin.register(SupplementMobileHome)
 class SupplementMobileHomeAdmin(TranslatableAdmin):
+    """Admin for the SupplementMobileHome model: manage deposits and linen rental."""
     list_display = (
         'mobile_home_deposit',
         'cleaning_deposit',
@@ -310,11 +313,10 @@ class SupplementMobileHomeAdmin(TranslatableAdmin):
         }),
     )
 
-# -----------------------------
-# Admin pour les saisons
-# -----------------------------
+
 @admin.register(SeasonInfo)
 class SeasonInfoAdmin(TranslatableAdmin):
+    """Admin for the SeasonInfo model: manage low, mid, and high season dates."""
     list_display = [
         'low_season_start',
         'low_season_end',

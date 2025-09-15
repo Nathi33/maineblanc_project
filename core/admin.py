@@ -6,6 +6,13 @@ from django.utils.translation import gettext_lazy as _
 
 @admin.register(CampingInfo)
 class CampingInfoAdmin(TranslatableAdmin):
+    """
+    Admin interface for CampingInfo model.
+
+    - Organizes fields in sections: Accueil, Arrivées, Départs, Portail de sécurité
+    - Displays all relevant times in list view
+    - Supports translations via TranslatableAdmin
+    """
     list_display = [
         'welcome_start', 
         'welcome_end', 
@@ -50,6 +57,13 @@ class CampingInfoAdmin(TranslatableAdmin):
 
 @admin.register(SwimmingPoolInfo)
 class SwimmingPoolInfoAdmin(TranslatableAdmin):
+    """
+    Admin interface for SwimmingPoolInfo model.
+
+    - Displays pool opening hours in list view
+    - Fields grouped under 'Piscine'
+    - Supports translations
+    """
     list_display = [
         'pool_opening_start',
         'pool_opening_end',
@@ -66,6 +80,13 @@ class SwimmingPoolInfoAdmin(TranslatableAdmin):
 
 @admin.register(FoodInfo)
 class FoodInfoAdmin(TranslatableAdmin):
+    """
+    Admin interface for FoodInfo model.
+
+    - Displays opening hours for burger, pizza, bread, bar services
+    - All fields grouped under 'Restauration'
+    - Supports translations
+    """
     list_display = [
         'burger_food_days',
         'burger_food_hours_start',
@@ -95,6 +116,13 @@ class FoodInfoAdmin(TranslatableAdmin):
 
 @admin.register(LaundryInfo)
 class LaundryInfoAdmin(TranslatableAdmin):
+    """
+    Admin interface for LaundryInfo model.
+
+    - Displays washing machine and dryer prices
+    - Fields grouped under 'Laverie'
+    - Supports translations
+    """
     list_display = [
         'washing_machine_price',
         'dryer_price',
