@@ -29,7 +29,7 @@ extensions = [
 templates_path = ['_templates']
 exclude_patterns = []
 
-language = 'fr'
+language = 'en'
 
 # -- Options for HTML  --------------------------------------------
 html_theme = 'sphinx_rtd_theme'
