@@ -1,508 +1,521 @@
 \indexentry{module@\spxentry{module}!core.models@\spxentry{core.models}|hyperpage}{3}
 \indexentry{core.models@\spxentry{core.models}!module@\spxentry{module}|hyperpage}{3}
-\indexentry{CampingInfo (classe dans core.models)@\spxentry{CampingInfo}\spxextra{classe dans core.models}|hyperpage}{3}
-\indexentry{translations (attribut core.models.CampingInfo)@\spxentry{translations}\spxextra{attribut core.models.CampingInfo}|hyperpage}{3}
+\indexentry{CampingInfo (class in core.models)@\spxentry{CampingInfo}\spxextra{class in core.models}|hyperpage}{3}
+\indexentry{translations (core.models.CampingInfo attribute)@\spxentry{translations}\spxextra{core.models.CampingInfo attribute}|hyperpage}{3}
 \indexentry{CampingInfo.DoesNotExist@\spxentry{CampingInfo.DoesNotExist}|hyperpage}{3}
 \indexentry{CampingInfo.MultipleObjectsReturned@\spxentry{CampingInfo.MultipleObjectsReturned}|hyperpage}{3}
-\indexentry{arrivals\_end\_high (attribut core.models.CampingInfo)@\spxentry{arrivals\_end\_high}\spxextra{attribut core.models.CampingInfo}|hyperpage}{3}
-\indexentry{arrivals\_end\_low (attribut core.models.CampingInfo)@\spxentry{arrivals\_end\_low}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{arrivals\_start\_high (attribut core.models.CampingInfo)@\spxentry{arrivals\_start\_high}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{departure\_end (attribut core.models.CampingInfo)@\spxentry{departure\_end}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{id (attribut core.models.CampingInfo)@\spxentry{id}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{portal\_end (attribut core.models.CampingInfo)@\spxentry{portal\_end}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{portal\_start (attribut core.models.CampingInfo)@\spxentry{portal\_start}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{welcome\_afternoon\_end (attribut core.models.CampingInfo)@\spxentry{welcome\_afternoon\_end}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{welcome\_afternoon\_start (attribut core.models.CampingInfo)@\spxentry{welcome\_afternoon\_start}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{welcome\_end (attribut core.models.CampingInfo)@\spxentry{welcome\_end}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{welcome\_start (attribut core.models.CampingInfo)@\spxentry{welcome\_start}\spxextra{attribut core.models.CampingInfo}|hyperpage}{4}
-\indexentry{SwimmingPoolInfo (classe dans core.models)@\spxentry{SwimmingPoolInfo}\spxextra{classe dans core.models}|hyperpage}{4}
-\indexentry{translations (attribut core.models.SwimmingPoolInfo)@\spxentry{translations}\spxextra{attribut core.models.SwimmingPoolInfo}|hyperpage}{4}
+\indexentry{arrivals\_end\_high (core.models.CampingInfo attribute)@\spxentry{arrivals\_end\_high}\spxextra{core.models.CampingInfo attribute}|hyperpage}{3}
+\indexentry{arrivals\_end\_low (core.models.CampingInfo attribute)@\spxentry{arrivals\_end\_low}\spxextra{core.models.CampingInfo attribute}|hyperpage}{3}
+\indexentry{arrivals\_start\_high (core.models.CampingInfo attribute)@\spxentry{arrivals\_start\_high}\spxextra{core.models.CampingInfo attribute}|hyperpage}{3}
+\indexentry{departure\_end (core.models.CampingInfo attribute)@\spxentry{departure\_end}\spxextra{core.models.CampingInfo attribute}|hyperpage}{4}
+\indexentry{id (core.models.CampingInfo attribute)@\spxentry{id}\spxextra{core.models.CampingInfo attribute}|hyperpage}{4}
+\indexentry{portal\_end (core.models.CampingInfo attribute)@\spxentry{portal\_end}\spxextra{core.models.CampingInfo attribute}|hyperpage}{4}
+\indexentry{portal\_start (core.models.CampingInfo attribute)@\spxentry{portal\_start}\spxextra{core.models.CampingInfo attribute}|hyperpage}{4}
+\indexentry{welcome\_afternoon\_end (core.models.CampingInfo attribute)@\spxentry{welcome\_afternoon\_end}\spxextra{core.models.CampingInfo attribute}|hyperpage}{4}
+\indexentry{welcome\_afternoon\_start (core.models.CampingInfo attribute)@\spxentry{welcome\_afternoon\_start}\spxextra{core.models.CampingInfo attribute}|hyperpage}{4}
+\indexentry{welcome\_end (core.models.CampingInfo attribute)@\spxentry{welcome\_end}\spxextra{core.models.CampingInfo attribute}|hyperpage}{4}
+\indexentry{welcome\_start (core.models.CampingInfo attribute)@\spxentry{welcome\_start}\spxextra{core.models.CampingInfo attribute}|hyperpage}{4}
+\indexentry{SwimmingPoolInfo (class in core.models)@\spxentry{SwimmingPoolInfo}\spxextra{class in core.models}|hyperpage}{4}
+\indexentry{translations (core.models.SwimmingPoolInfo attribute)@\spxentry{translations}\spxextra{core.models.SwimmingPoolInfo attribute}|hyperpage}{4}
 \indexentry{SwimmingPoolInfo.DoesNotExist@\spxentry{SwimmingPoolInfo.DoesNotExist}|hyperpage}{5}
 \indexentry{SwimmingPoolInfo.MultipleObjectsReturned@\spxentry{SwimmingPoolInfo.MultipleObjectsReturned}|hyperpage}{5}
-\indexentry{id (attribut core.models.SwimmingPoolInfo)@\spxentry{id}\spxextra{attribut core.models.SwimmingPoolInfo}|hyperpage}{5}
-\indexentry{pool\_opening\_end (attribut core.models.SwimmingPoolInfo)@\spxentry{pool\_opening\_end}\spxextra{attribut core.models.SwimmingPoolInfo}|hyperpage}{5}
-\indexentry{pool\_opening\_start (attribut core.models.SwimmingPoolInfo)@\spxentry{pool\_opening\_start}\spxextra{attribut core.models.SwimmingPoolInfo}|hyperpage}{5}
-\indexentry{FoodInfo (classe dans core.models)@\spxentry{FoodInfo}\spxextra{classe dans core.models}|hyperpage}{5}
-\indexentry{translations (attribut core.models.FoodInfo)@\spxentry{translations}\spxextra{attribut core.models.FoodInfo}|hyperpage}{5}
-\indexentry{save() (méthode core.models.FoodInfo)@\spxentry{save()}\spxextra{méthode core.models.FoodInfo}|hyperpage}{5}
+\indexentry{id (core.models.SwimmingPoolInfo attribute)@\spxentry{id}\spxextra{core.models.SwimmingPoolInfo attribute}|hyperpage}{5}
+\indexentry{pool\_opening\_end (core.models.SwimmingPoolInfo attribute)@\spxentry{pool\_opening\_end}\spxextra{core.models.SwimmingPoolInfo attribute}|hyperpage}{5}
+\indexentry{pool\_opening\_start (core.models.SwimmingPoolInfo attribute)@\spxentry{pool\_opening\_start}\spxextra{core.models.SwimmingPoolInfo attribute}|hyperpage}{5}
+\indexentry{FoodInfo (class in core.models)@\spxentry{FoodInfo}\spxextra{class in core.models}|hyperpage}{5}
+\indexentry{translations (core.models.FoodInfo attribute)@\spxentry{translations}\spxextra{core.models.FoodInfo attribute}|hyperpage}{5}
+\indexentry{save() (core.models.FoodInfo method)@\spxentry{save()}\spxextra{core.models.FoodInfo method}|hyperpage}{5}
 \indexentry{FoodInfo.DoesNotExist@\spxentry{FoodInfo.DoesNotExist}|hyperpage}{5}
 \indexentry{FoodInfo.MultipleObjectsReturned@\spxentry{FoodInfo.MultipleObjectsReturned}|hyperpage}{6}
-\indexentry{bar\_hours\_end (attribut core.models.FoodInfo)@\spxentry{bar\_hours\_end}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{bar\_hours\_start (attribut core.models.FoodInfo)@\spxentry{bar\_hours\_start}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{bread\_hours\_end (attribut core.models.FoodInfo)@\spxentry{bread\_hours\_end}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{bread\_hours\_reservations (attribut core.models.FoodInfo)@\spxentry{bread\_hours\_reservations}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{bread\_hours\_start (attribut core.models.FoodInfo)@\spxentry{bread\_hours\_start}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{burger\_food\_days (attribut core.models.FoodInfo)@\spxentry{burger\_food\_days}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{burger\_food\_hours\_end (attribut core.models.FoodInfo)@\spxentry{burger\_food\_hours\_end}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{burger\_food\_hours\_start (attribut core.models.FoodInfo)@\spxentry{burger\_food\_hours\_start}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{id (attribut core.models.FoodInfo)@\spxentry{id}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{pizza\_food\_days (attribut core.models.FoodInfo)@\spxentry{pizza\_food\_days}\spxextra{attribut core.models.FoodInfo}|hyperpage}{6}
-\indexentry{LaundryInfo (classe dans core.models)@\spxentry{LaundryInfo}\spxextra{classe dans core.models}|hyperpage}{6}
-\indexentry{translations (attribut core.models.LaundryInfo)@\spxentry{translations}\spxextra{attribut core.models.LaundryInfo}|hyperpage}{6}
+\indexentry{bar\_hours\_end (core.models.FoodInfo attribute)@\spxentry{bar\_hours\_end}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{bar\_hours\_start (core.models.FoodInfo attribute)@\spxentry{bar\_hours\_start}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{bread\_hours\_end (core.models.FoodInfo attribute)@\spxentry{bread\_hours\_end}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{bread\_hours\_reservations (core.models.FoodInfo attribute)@\spxentry{bread\_hours\_reservations}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{bread\_hours\_start (core.models.FoodInfo attribute)@\spxentry{bread\_hours\_start}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{burger\_food\_days (core.models.FoodInfo attribute)@\spxentry{burger\_food\_days}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{burger\_food\_hours\_end (core.models.FoodInfo attribute)@\spxentry{burger\_food\_hours\_end}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{burger\_food\_hours\_start (core.models.FoodInfo attribute)@\spxentry{burger\_food\_hours\_start}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{id (core.models.FoodInfo attribute)@\spxentry{id}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{pizza\_food\_days (core.models.FoodInfo attribute)@\spxentry{pizza\_food\_days}\spxextra{core.models.FoodInfo attribute}|hyperpage}{6}
+\indexentry{LaundryInfo (class in core.models)@\spxentry{LaundryInfo}\spxextra{class in core.models}|hyperpage}{6}
+\indexentry{translations (core.models.LaundryInfo attribute)@\spxentry{translations}\spxextra{core.models.LaundryInfo attribute}|hyperpage}{6}
 \indexentry{LaundryInfo.DoesNotExist@\spxentry{LaundryInfo.DoesNotExist}|hyperpage}{7}
 \indexentry{LaundryInfo.MultipleObjectsReturned@\spxentry{LaundryInfo.MultipleObjectsReturned}|hyperpage}{7}
-\indexentry{dryer\_price (attribut core.models.LaundryInfo)@\spxentry{dryer\_price}\spxextra{attribut core.models.LaundryInfo}|hyperpage}{7}
-\indexentry{id (attribut core.models.LaundryInfo)@\spxentry{id}\spxextra{attribut core.models.LaundryInfo}|hyperpage}{7}
-\indexentry{washing\_machine\_price (attribut core.models.LaundryInfo)@\spxentry{washing\_machine\_price}\spxextra{attribut core.models.LaundryInfo}|hyperpage}{7}
-\indexentry{CampingInfoTranslation (classe dans core.models)@\spxentry{CampingInfoTranslation}\spxextra{classe dans core.models}|hyperpage}{7}
+\indexentry{dryer\_price (core.models.LaundryInfo attribute)@\spxentry{dryer\_price}\spxextra{core.models.LaundryInfo attribute}|hyperpage}{7}
+\indexentry{id (core.models.LaundryInfo attribute)@\spxentry{id}\spxextra{core.models.LaundryInfo attribute}|hyperpage}{7}
+\indexentry{washing\_machine\_price (core.models.LaundryInfo attribute)@\spxentry{washing\_machine\_price}\spxextra{core.models.LaundryInfo attribute}|hyperpage}{7}
+\indexentry{CampingInfoTranslation (class in core.models)@\spxentry{CampingInfoTranslation}\spxextra{class in core.models}|hyperpage}{7}
 \indexentry{CampingInfoTranslation.DoesNotExist@\spxentry{CampingInfoTranslation.DoesNotExist}|hyperpage}{7}
 \indexentry{CampingInfoTranslation.MultipleObjectsReturned@\spxentry{CampingInfoTranslation.MultipleObjectsReturned}|hyperpage}{7}
-\indexentry{arrivals\_end\_high (attribut core.models.CampingInfoTranslation)@\spxentry{arrivals\_end\_high}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{7}
-\indexentry{arrivals\_end\_low (attribut core.models.CampingInfoTranslation)@\spxentry{arrivals\_end\_low}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{7}
-\indexentry{arrivals\_start\_high (attribut core.models.CampingInfoTranslation)@\spxentry{arrivals\_start\_high}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{7}
-\indexentry{departure\_end (attribut core.models.CampingInfoTranslation)@\spxentry{departure\_end}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{7}
-\indexentry{get\_language\_code\_display() (méthode core.models.CampingInfoTranslation)@\spxentry{get\_language\_code\_display()}\spxextra{méthode core.models.CampingInfoTranslation}|hyperpage}{7}
-\indexentry{id (attribut core.models.CampingInfoTranslation)@\spxentry{id}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{language\_code (attribut core.models.CampingInfoTranslation)@\spxentry{language\_code}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{master (attribut core.models.CampingInfoTranslation)@\spxentry{master}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{master\_id (attribut core.models.CampingInfoTranslation)@\spxentry{master\_id}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{objects (attribut core.models.CampingInfoTranslation)@\spxentry{objects}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{portal\_end (attribut core.models.CampingInfoTranslation)@\spxentry{portal\_end}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{portal\_start (attribut core.models.CampingInfoTranslation)@\spxentry{portal\_start}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{welcome\_afternoon\_end (attribut core.models.CampingInfoTranslation)@\spxentry{welcome\_afternoon\_end}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{welcome\_afternoon\_start (attribut core.models.CampingInfoTranslation)@\spxentry{welcome\_afternoon\_start}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{welcome\_end (attribut core.models.CampingInfoTranslation)@\spxentry{welcome\_end}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{welcome\_start (attribut core.models.CampingInfoTranslation)@\spxentry{welcome\_start}\spxextra{attribut core.models.CampingInfoTranslation}|hyperpage}{8}
-\indexentry{FoodInfoTranslation (classe dans core.models)@\spxentry{FoodInfoTranslation}\spxextra{classe dans core.models}|hyperpage}{8}
+\indexentry{arrivals\_end\_high (core.models.CampingInfoTranslation attribute)@\spxentry{arrivals\_end\_high}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{7}
+\indexentry{arrivals\_end\_low (core.models.CampingInfoTranslation attribute)@\spxentry{arrivals\_end\_low}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{7}
+\indexentry{arrivals\_start\_high (core.models.CampingInfoTranslation attribute)@\spxentry{arrivals\_start\_high}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{7}
+\indexentry{departure\_end (core.models.CampingInfoTranslation attribute)@\spxentry{departure\_end}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{7}
+\indexentry{get\_language\_code\_display() (core.models.CampingInfoTranslation method)@\spxentry{get\_language\_code\_display()}\spxextra{core.models.CampingInfoTranslation method}|hyperpage}{8}
+\indexentry{id (core.models.CampingInfoTranslation attribute)@\spxentry{id}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{language\_code (core.models.CampingInfoTranslation attribute)@\spxentry{language\_code}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{master (core.models.CampingInfoTranslation attribute)@\spxentry{master}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{master\_id (core.models.CampingInfoTranslation attribute)@\spxentry{master\_id}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{objects (core.models.CampingInfoTranslation attribute)@\spxentry{objects}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{portal\_end (core.models.CampingInfoTranslation attribute)@\spxentry{portal\_end}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{portal\_start (core.models.CampingInfoTranslation attribute)@\spxentry{portal\_start}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{welcome\_afternoon\_end (core.models.CampingInfoTranslation attribute)@\spxentry{welcome\_afternoon\_end}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{welcome\_afternoon\_start (core.models.CampingInfoTranslation attribute)@\spxentry{welcome\_afternoon\_start}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{welcome\_end (core.models.CampingInfoTranslation attribute)@\spxentry{welcome\_end}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{welcome\_start (core.models.CampingInfoTranslation attribute)@\spxentry{welcome\_start}\spxextra{core.models.CampingInfoTranslation attribute}|hyperpage}{8}
+\indexentry{FoodInfoTranslation (class in core.models)@\spxentry{FoodInfoTranslation}\spxextra{class in core.models}|hyperpage}{8}
 \indexentry{FoodInfoTranslation.DoesNotExist@\spxentry{FoodInfoTranslation.DoesNotExist}|hyperpage}{8}
 \indexentry{FoodInfoTranslation.MultipleObjectsReturned@\spxentry{FoodInfoTranslation.MultipleObjectsReturned}|hyperpage}{8}
-\indexentry{bar\_hours\_end (attribut core.models.FoodInfoTranslation)@\spxentry{bar\_hours\_end}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{8}
-\indexentry{bar\_hours\_start (attribut core.models.FoodInfoTranslation)@\spxentry{bar\_hours\_start}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{8}
-\indexentry{bread\_hours\_end (attribut core.models.FoodInfoTranslation)@\spxentry{bread\_hours\_end}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{bread\_hours\_reservations (attribut core.models.FoodInfoTranslation)@\spxentry{bread\_hours\_reservations}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{bread\_hours\_start (attribut core.models.FoodInfoTranslation)@\spxentry{bread\_hours\_start}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{burger\_food\_days (attribut core.models.FoodInfoTranslation)@\spxentry{burger\_food\_days}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{burger\_food\_hours\_end (attribut core.models.FoodInfoTranslation)@\spxentry{burger\_food\_hours\_end}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{burger\_food\_hours\_start (attribut core.models.FoodInfoTranslation)@\spxentry{burger\_food\_hours\_start}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{get\_language\_code\_display() (méthode core.models.FoodInfoTranslation)@\spxentry{get\_language\_code\_display()}\spxextra{méthode core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{id (attribut core.models.FoodInfoTranslation)@\spxentry{id}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{language\_code (attribut core.models.FoodInfoTranslation)@\spxentry{language\_code}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{master (attribut core.models.FoodInfoTranslation)@\spxentry{master}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{master\_id (attribut core.models.FoodInfoTranslation)@\spxentry{master\_id}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{objects (attribut core.models.FoodInfoTranslation)@\spxentry{objects}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{pizza\_food\_days (attribut core.models.FoodInfoTranslation)@\spxentry{pizza\_food\_days}\spxextra{attribut core.models.FoodInfoTranslation}|hyperpage}{9}
-\indexentry{LaundryInfoTranslation (classe dans core.models)@\spxentry{LaundryInfoTranslation}\spxextra{classe dans core.models}|hyperpage}{9}
+\indexentry{bar\_hours\_end (core.models.FoodInfoTranslation attribute)@\spxentry{bar\_hours\_end}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{8}
+\indexentry{bar\_hours\_start (core.models.FoodInfoTranslation attribute)@\spxentry{bar\_hours\_start}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{bread\_hours\_end (core.models.FoodInfoTranslation attribute)@\spxentry{bread\_hours\_end}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{bread\_hours\_reservations (core.models.FoodInfoTranslation attribute)@\spxentry{bread\_hours\_reservations}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{bread\_hours\_start (core.models.FoodInfoTranslation attribute)@\spxentry{bread\_hours\_start}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{burger\_food\_days (core.models.FoodInfoTranslation attribute)@\spxentry{burger\_food\_days}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{burger\_food\_hours\_end (core.models.FoodInfoTranslation attribute)@\spxentry{burger\_food\_hours\_end}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{burger\_food\_hours\_start (core.models.FoodInfoTranslation attribute)@\spxentry{burger\_food\_hours\_start}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{get\_language\_code\_display() (core.models.FoodInfoTranslation method)@\spxentry{get\_language\_code\_display()}\spxextra{core.models.FoodInfoTranslation method}|hyperpage}{9}
+\indexentry{id (core.models.FoodInfoTranslation attribute)@\spxentry{id}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{language\_code (core.models.FoodInfoTranslation attribute)@\spxentry{language\_code}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{master (core.models.FoodInfoTranslation attribute)@\spxentry{master}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{master\_id (core.models.FoodInfoTranslation attribute)@\spxentry{master\_id}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{objects (core.models.FoodInfoTranslation attribute)@\spxentry{objects}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{pizza\_food\_days (core.models.FoodInfoTranslation attribute)@\spxentry{pizza\_food\_days}\spxextra{core.models.FoodInfoTranslation attribute}|hyperpage}{9}
+\indexentry{LaundryInfoTranslation (class in core.models)@\spxentry{LaundryInfoTranslation}\spxextra{class in core.models}|hyperpage}{9}
 \indexentry{LaundryInfoTranslation.DoesNotExist@\spxentry{LaundryInfoTranslation.DoesNotExist}|hyperpage}{9}
-\indexentry{LaundryInfoTranslation.MultipleObjectsReturned@\spxentry{LaundryInfoTranslation.MultipleObjectsReturned}|hyperpage}{9}
-\indexentry{dryer\_price (attribut core.models.LaundryInfoTranslation)@\spxentry{dryer\_price}\spxextra{attribut core.models.LaundryInfoTranslation}|hyperpage}{9}
-\indexentry{get\_language\_code\_display() (méthode core.models.LaundryInfoTranslation)@\spxentry{get\_language\_code\_display()}\spxextra{méthode core.models.LaundryInfoTranslation}|hyperpage}{10}
-\indexentry{id (attribut core.models.LaundryInfoTranslation)@\spxentry{id}\spxextra{attribut core.models.LaundryInfoTranslation}|hyperpage}{10}
-\indexentry{language\_code (attribut core.models.LaundryInfoTranslation)@\spxentry{language\_code}\spxextra{attribut core.models.LaundryInfoTranslation}|hyperpage}{10}
-\indexentry{master (attribut core.models.LaundryInfoTranslation)@\spxentry{master}\spxextra{attribut core.models.LaundryInfoTranslation}|hyperpage}{10}
-\indexentry{master\_id (attribut core.models.LaundryInfoTranslation)@\spxentry{master\_id}\spxextra{attribut core.models.LaundryInfoTranslation}|hyperpage}{10}
-\indexentry{objects (attribut core.models.LaundryInfoTranslation)@\spxentry{objects}\spxextra{attribut core.models.LaundryInfoTranslation}|hyperpage}{10}
-\indexentry{washing\_machine\_price (attribut core.models.LaundryInfoTranslation)@\spxentry{washing\_machine\_price}\spxextra{attribut core.models.LaundryInfoTranslation}|hyperpage}{10}
-\indexentry{SwimmingPoolInfoTranslation (classe dans core.models)@\spxentry{SwimmingPoolInfoTranslation}\spxextra{classe dans core.models}|hyperpage}{10}
+\indexentry{LaundryInfoTranslation.MultipleObjectsReturned@\spxentry{LaundryInfoTranslation.MultipleObjectsReturned}|hyperpage}{10}
+\indexentry{dryer\_price (core.models.LaundryInfoTranslation attribute)@\spxentry{dryer\_price}\spxextra{core.models.LaundryInfoTranslation attribute}|hyperpage}{10}
+\indexentry{get\_language\_code\_display() (core.models.LaundryInfoTranslation method)@\spxentry{get\_language\_code\_display()}\spxextra{core.models.LaundryInfoTranslation method}|hyperpage}{10}
+\indexentry{id (core.models.LaundryInfoTranslation attribute)@\spxentry{id}\spxextra{core.models.LaundryInfoTranslation attribute}|hyperpage}{10}
+\indexentry{language\_code (core.models.LaundryInfoTranslation attribute)@\spxentry{language\_code}\spxextra{core.models.LaundryInfoTranslation attribute}|hyperpage}{10}
+\indexentry{master (core.models.LaundryInfoTranslation attribute)@\spxentry{master}\spxextra{core.models.LaundryInfoTranslation attribute}|hyperpage}{10}
+\indexentry{master\_id (core.models.LaundryInfoTranslation attribute)@\spxentry{master\_id}\spxextra{core.models.LaundryInfoTranslation attribute}|hyperpage}{10}
+\indexentry{objects (core.models.LaundryInfoTranslation attribute)@\spxentry{objects}\spxextra{core.models.LaundryInfoTranslation attribute}|hyperpage}{10}
+\indexentry{washing\_machine\_price (core.models.LaundryInfoTranslation attribute)@\spxentry{washing\_machine\_price}\spxextra{core.models.LaundryInfoTranslation attribute}|hyperpage}{10}
+\indexentry{SwimmingPoolInfoTranslation (class in core.models)@\spxentry{SwimmingPoolInfoTranslation}\spxextra{class in core.models}|hyperpage}{10}
 \indexentry{SwimmingPoolInfoTranslation.DoesNotExist@\spxentry{SwimmingPoolInfoTranslation.DoesNotExist}|hyperpage}{10}
 \indexentry{SwimmingPoolInfoTranslation.MultipleObjectsReturned@\spxentry{SwimmingPoolInfoTranslation.MultipleObjectsReturned}|hyperpage}{10}
-\indexentry{get\_language\_code\_display() (méthode core.models.SwimmingPoolInfoTranslation)@\spxentry{get\_language\_code\_display()}\spxextra{méthode core.models.SwimmingPoolInfoTranslation}|hyperpage}{10}
-\indexentry{id (attribut core.models.SwimmingPoolInfoTranslation)@\spxentry{id}\spxextra{attribut core.models.SwimmingPoolInfoTranslation}|hyperpage}{10}
-\indexentry{language\_code (attribut core.models.SwimmingPoolInfoTranslation)@\spxentry{language\_code}\spxextra{attribut core.models.SwimmingPoolInfoTranslation}|hyperpage}{10}
-\indexentry{master (attribut core.models.SwimmingPoolInfoTranslation)@\spxentry{master}\spxextra{attribut core.models.SwimmingPoolInfoTranslation}|hyperpage}{10}
-\indexentry{master\_id (attribut core.models.SwimmingPoolInfoTranslation)@\spxentry{master\_id}\spxextra{attribut core.models.SwimmingPoolInfoTranslation}|hyperpage}{10}
-\indexentry{objects (attribut core.models.SwimmingPoolInfoTranslation)@\spxentry{objects}\spxextra{attribut core.models.SwimmingPoolInfoTranslation}|hyperpage}{10}
-\indexentry{pool\_opening\_end (attribut core.models.SwimmingPoolInfoTranslation)@\spxentry{pool\_opening\_end}\spxextra{attribut core.models.SwimmingPoolInfoTranslation}|hyperpage}{10}
-\indexentry{pool\_opening\_start (attribut core.models.SwimmingPoolInfoTranslation)@\spxentry{pool\_opening\_start}\spxextra{attribut core.models.SwimmingPoolInfoTranslation}|hyperpage}{10}
+\indexentry{get\_language\_code\_display() (core.models.SwimmingPoolInfoTranslation method)@\spxentry{get\_language\_code\_display()}\spxextra{core.models.SwimmingPoolInfoTranslation method}|hyperpage}{10}
+\indexentry{id (core.models.SwimmingPoolInfoTranslation attribute)@\spxentry{id}\spxextra{core.models.SwimmingPoolInfoTranslation attribute}|hyperpage}{10}
+\indexentry{language\_code (core.models.SwimmingPoolInfoTranslation attribute)@\spxentry{language\_code}\spxextra{core.models.SwimmingPoolInfoTranslation attribute}|hyperpage}{10}
+\indexentry{master (core.models.SwimmingPoolInfoTranslation attribute)@\spxentry{master}\spxextra{core.models.SwimmingPoolInfoTranslation attribute}|hyperpage}{10}
+\indexentry{master\_id (core.models.SwimmingPoolInfoTranslation attribute)@\spxentry{master\_id}\spxextra{core.models.SwimmingPoolInfoTranslation attribute}|hyperpage}{10}
+\indexentry{objects (core.models.SwimmingPoolInfoTranslation attribute)@\spxentry{objects}\spxextra{core.models.SwimmingPoolInfoTranslation attribute}|hyperpage}{10}
+\indexentry{pool\_opening\_end (core.models.SwimmingPoolInfoTranslation attribute)@\spxentry{pool\_opening\_end}\spxextra{core.models.SwimmingPoolInfoTranslation attribute}|hyperpage}{10}
+\indexentry{pool\_opening\_start (core.models.SwimmingPoolInfoTranslation attribute)@\spxentry{pool\_opening\_start}\spxextra{core.models.SwimmingPoolInfoTranslation attribute}|hyperpage}{11}
 \indexentry{module@\spxentry{module}!core.views@\spxentry{core.views}|hyperpage}{11}
 \indexentry{core.views@\spxentry{core.views}!module@\spxentry{module}|hyperpage}{11}
-\indexentry{home\_view() (dans le module core.views)@\spxentry{home\_view()}\spxextra{dans le module core.views}|hyperpage}{11}
-\indexentry{about\_view() (dans le module core.views)@\spxentry{about\_view()}\spxextra{dans le module core.views}|hyperpage}{11}
-\indexentry{infos\_view() (dans le module core.views)@\spxentry{infos\_view()}\spxextra{dans le module core.views}|hyperpage}{11}
-\indexentry{services\_view() (dans le module core.views)@\spxentry{services\_view()}\spxextra{dans le module core.views}|hyperpage}{11}
-\indexentry{accommodations\_view() (dans le module core.views)@\spxentry{accommodations\_view()}\spxextra{dans le module core.views}|hyperpage}{11}
-\indexentry{activities\_view() (dans le module core.views)@\spxentry{activities\_view()}\spxextra{dans le module core.views}|hyperpage}{11}
-\indexentry{legal\_view() (dans le module core.views)@\spxentry{legal\_view()}\spxextra{dans le module core.views}|hyperpage}{11}
-\indexentry{privacy\_view() (dans le module core.views)@\spxentry{privacy\_view()}\spxextra{dans le module core.views}|hyperpage}{11}
-\indexentry{not\_found\_view() (dans le module core.views)@\spxentry{not\_found\_view()}\spxextra{dans le module core.views}|hyperpage}{11}
+\indexentry{home\_view() (in module core.views)@\spxentry{home\_view()}\spxextra{in module core.views}|hyperpage}{11}
+\indexentry{about\_view() (in module core.views)@\spxentry{about\_view()}\spxextra{in module core.views}|hyperpage}{11}
+\indexentry{infos\_view() (in module core.views)@\spxentry{infos\_view()}\spxextra{in module core.views}|hyperpage}{11}
+\indexentry{services\_view() (in module core.views)@\spxentry{services\_view()}\spxextra{in module core.views}|hyperpage}{11}
+\indexentry{accommodations\_view() (in module core.views)@\spxentry{accommodations\_view()}\spxextra{in module core.views}|hyperpage}{11}
+\indexentry{activities\_view() (in module core.views)@\spxentry{activities\_view()}\spxextra{in module core.views}|hyperpage}{11}
+\indexentry{legal\_view() (in module core.views)@\spxentry{legal\_view()}\spxextra{in module core.views}|hyperpage}{12}
+\indexentry{privacy\_view() (in module core.views)@\spxentry{privacy\_view()}\spxextra{in module core.views}|hyperpage}{12}
+\indexentry{not\_found\_view() (in module core.views)@\spxentry{not\_found\_view()}\spxextra{in module core.views}|hyperpage}{12}
+\indexentry{robots\_txt() (in module core.views)@\spxentry{robots\_txt()}\spxextra{in module core.views}|hyperpage}{12}
 \indexentry{module@\spxentry{module}!core.apps@\spxentry{core.apps}|hyperpage}{12}
 \indexentry{core.apps@\spxentry{core.apps}!module@\spxentry{module}|hyperpage}{12}
-\indexentry{CoreConfig (classe dans core.apps)@\spxentry{CoreConfig}\spxextra{classe dans core.apps}|hyperpage}{12}
-\indexentry{default\_auto\_field (attribut core.apps.CoreConfig)@\spxentry{default\_auto\_field}\spxextra{attribut core.apps.CoreConfig}|hyperpage}{12}
-\indexentry{name (attribut core.apps.CoreConfig)@\spxentry{name}\spxextra{attribut core.apps.CoreConfig}|hyperpage}{12}
-\indexentry{verbose\_name (attribut core.apps.CoreConfig)@\spxentry{verbose\_name}\spxextra{attribut core.apps.CoreConfig}|hyperpage}{12}
-\indexentry{module@\spxentry{module}!core.tests.test\_models@\spxentry{core.tests.test\_models}|hyperpage}{12}
-\indexentry{core.tests.test\_models@\spxentry{core.tests.test\_models}!module@\spxentry{module}|hyperpage}{12}
-\indexentry{test\_campinginfo\_fixture() (dans le module core.tests.test\_models)@\spxentry{test\_campinginfo\_fixture()}\spxextra{dans le module core.tests.test\_models}|hyperpage}{12}
-\indexentry{test\_swimmingpoolinfo\_fixture() (dans le module core.tests.test\_models)@\spxentry{test\_swimmingpoolinfo\_fixture()}\spxextra{dans le module core.tests.test\_models}|hyperpage}{12}
-\indexentry{test\_foodinfo\_fixture() (dans le module core.tests.test\_models)@\spxentry{test\_foodinfo\_fixture()}\spxextra{dans le module core.tests.test\_models}|hyperpage}{12}
-\indexentry{test\_laundryinfo\_fixture() (dans le module core.tests.test\_models)@\spxentry{test\_laundryinfo\_fixture()}\spxextra{dans le module core.tests.test\_models}|hyperpage}{12}
-\indexentry{module@\spxentry{module}!core.tests.test\_views@\spxentry{core.tests.test\_views}|hyperpage}{12}
-\indexentry{core.tests.test\_views@\spxentry{core.tests.test\_views}!module@\spxentry{module}|hyperpage}{12}
-\indexentry{test\_home\_view() (dans le module core.tests.test\_views)@\spxentry{test\_home\_view()}\spxextra{dans le module core.tests.test\_views}|hyperpage}{12}
-\indexentry{test\_about\_view() (dans le module core.tests.test\_views)@\spxentry{test\_about\_view()}\spxextra{dans le module core.tests.test\_views}|hyperpage}{12}
-\indexentry{test\_accommodations\_view() (dans le module core.tests.test\_views)@\spxentry{test\_accommodations\_view()}\spxextra{dans le module core.tests.test\_views}|hyperpage}{12}
-\indexentry{test\_activities\_view() (dans le module core.tests.test\_views)@\spxentry{test\_activities\_view()}\spxextra{dans le module core.tests.test\_views}|hyperpage}{12}
-\indexentry{test\_legal\_view() (dans le module core.tests.test\_views)@\spxentry{test\_legal\_view()}\spxextra{dans le module core.tests.test\_views}|hyperpage}{12}
-\indexentry{test\_privacy\_view() (dans le module core.tests.test\_views)@\spxentry{test\_privacy\_view()}\spxextra{dans le module core.tests.test\_views}|hyperpage}{12}
-\indexentry{test\_not\_found\_view() (dans le module core.tests.test\_views)@\spxentry{test\_not\_found\_view()}\spxextra{dans le module core.tests.test\_views}|hyperpage}{12}
-\indexentry{test\_infos\_view() (dans le module core.tests.test\_views)@\spxentry{test\_infos\_view()}\spxextra{dans le module core.tests.test\_views}|hyperpage}{12}
-\indexentry{test\_services\_view() (dans le module core.tests.test\_views)@\spxentry{test\_services\_view()}\spxextra{dans le module core.tests.test\_views}|hyperpage}{12}
-\indexentry{module@\spxentry{module}!reservations.views@\spxentry{reservations.views}|hyperpage}{13}
-\indexentry{reservations.views@\spxentry{reservations.views}!module@\spxentry{module}|hyperpage}{13}
-\indexentry{reservation\_request\_view() (dans le module reservations.views)@\spxentry{reservation\_request\_view()}\spxextra{dans le module reservations.views}|hyperpage}{13}
-\indexentry{module@\spxentry{module}!reservations.forms@\spxentry{reservations.forms}|hyperpage}{13}
-\indexentry{reservations.forms@\spxentry{reservations.forms}!module@\spxentry{module}|hyperpage}{13}
-\indexentry{ReservationRequestForm (classe dans reservations.forms)@\spxentry{ReservationRequestForm}\spxextra{classe dans reservations.forms}|hyperpage}{13}
-\indexentry{ACCOMMODATION\_CHOICES (attribut reservations.forms.ReservationRequestForm)@\spxentry{ACCOMMODATION\_CHOICES}\spxextra{attribut reservations.forms.ReservationRequestForm}|hyperpage}{13}
-\indexentry{ELECTRICITY\_CHOICES (attribut reservations.forms.ReservationRequestForm)@\spxentry{ELECTRICITY\_CHOICES}\spxextra{attribut reservations.forms.ReservationRequestForm}|hyperpage}{13}
-\indexentry{clean() (méthode reservations.forms.ReservationRequestForm)@\spxentry{clean()}\spxextra{méthode reservations.forms.ReservationRequestForm}|hyperpage}{13}
-\indexentry{base\_fields (attribut reservations.forms.ReservationRequestForm)@\spxentry{base\_fields}\spxextra{attribut reservations.forms.ReservationRequestForm}|hyperpage}{13}
-\indexentry{declared\_fields (attribut reservations.forms.ReservationRequestForm)@\spxentry{declared\_fields}\spxextra{attribut reservations.forms.ReservationRequestForm}|hyperpage}{14}
-\indexentry{media (propriété reservations.forms.ReservationRequestForm)@\spxentry{media}\spxextra{propriété reservations.forms.ReservationRequestForm}|hyperpage}{14}
-\indexentry{module@\spxentry{module}!reservations.apps@\spxentry{reservations.apps}|hyperpage}{14}
-\indexentry{reservations.apps@\spxentry{reservations.apps}!module@\spxentry{module}|hyperpage}{14}
-\indexentry{ReservationsConfig (classe dans reservations.apps)@\spxentry{ReservationsConfig}\spxextra{classe dans reservations.apps}|hyperpage}{14}
-\indexentry{default\_auto\_field (attribut reservations.apps.ReservationsConfig)@\spxentry{default\_auto\_field}\spxextra{attribut reservations.apps.ReservationsConfig}|hyperpage}{14}
-\indexentry{name (attribut reservations.apps.ReservationsConfig)@\spxentry{name}\spxextra{attribut reservations.apps.ReservationsConfig}|hyperpage}{14}
-\indexentry{module@\spxentry{module}!reservations.tests.test\_views@\spxentry{reservations.tests.test\_views}|hyperpage}{14}
-\indexentry{reservations.tests.test\_views@\spxentry{reservations.tests.test\_views}!module@\spxentry{module}|hyperpage}{14}
-\indexentry{valid\_reservation\_data() (dans le module reservations.tests.test\_views)@\spxentry{valid\_reservation\_data()}\spxextra{dans le module reservations.tests.test\_views}|hyperpage}{14}
-\indexentry{test\_get\_reservation\_request\_view() (dans le module reservations.tests.test\_views)@\spxentry{test\_get\_reservation\_request\_view()}\spxextra{dans le module reservations.tests.test\_views}|hyperpage}{14}
-\indexentry{test\_post\_valid\_reservation\_with\_datetime\_and\_label() (dans le module reservations.tests.test\_views)@\spxentry{test\_post\_valid\_reservation\_with\_datetime\_and\_label()}\spxextra{dans le module reservations.tests.test\_views}|hyperpage}{15}
-\indexentry{test\_post\_invalid\_reservation() (dans le module reservations.tests.test\_views)@\spxentry{test\_post\_invalid\_reservation()}\spxextra{dans le module reservations.tests.test\_views}|hyperpage}{15}
-\indexentry{module@\spxentry{module}!reservations.tests.test\_forms@\spxentry{reservations.tests.test\_forms}|hyperpage}{15}
-\indexentry{reservations.tests.test\_forms@\spxentry{reservations.tests.test\_forms}!module@\spxentry{module}|hyperpage}{15}
-\indexentry{valid\_form\_data() (dans le module reservations.tests.test\_forms)@\spxentry{valid\_form\_data()}\spxextra{dans le module reservations.tests.test\_forms}|hyperpage}{15}
-\indexentry{test\_form\_valid() (dans le module reservations.tests.test\_forms)@\spxentry{test\_form\_valid()}\spxextra{dans le module reservations.tests.test\_forms}|hyperpage}{15}
-\indexentry{test\_form\_missing\_required\_field() (dans le module reservations.tests.test\_forms)@\spxentry{test\_form\_missing\_required\_field()}\spxextra{dans le module reservations.tests.test\_forms}|hyperpage}{15}
-\indexentry{test\_form\_dates\_invalid() (dans le module reservations.tests.test\_forms)@\spxentry{test\_form\_dates\_invalid()}\spxextra{dans le module reservations.tests.test\_forms}|hyperpage}{15}
-\indexentry{test\_form\_tent\_requires\_dimensions() (dans le module reservations.tests.test\_forms)@\spxentry{test\_form\_tent\_requires\_dimensions()}\spxextra{dans le module reservations.tests.test\_forms}|hyperpage}{15}
-\indexentry{test\_form\_vehicle\_requires\_length() (dans le module reservations.tests.test\_forms)@\spxentry{test\_form\_vehicle\_requires\_length()}\spxextra{dans le module reservations.tests.test\_forms}|hyperpage}{15}
-\indexentry{test\_form\_cable\_requires\_if\_electricity\_yes() (dans le module reservations.tests.test\_forms)@\spxentry{test\_form\_cable\_requires\_if\_electricity\_yes()}\spxextra{dans le module reservations.tests.test\_forms}|hyperpage}{15}
-\indexentry{module@\spxentry{module}!bookings.models@\spxentry{bookings.models}|hyperpage}{15}
-\indexentry{bookings.models@\spxentry{bookings.models}!module@\spxentry{module}|hyperpage}{15}
-\indexentry{SupplementPrice (classe dans bookings.models)@\spxentry{SupplementPrice}\spxextra{classe dans bookings.models}|hyperpage}{15}
-\indexentry{extra\_adult\_price (attribut bookings.models.SupplementPrice)@\spxentry{extra\_adult\_price}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{15}
-\indexentry{child\_over\_8\_price (attribut bookings.models.SupplementPrice)@\spxentry{child\_over\_8\_price}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{child\_under\_8\_price (attribut bookings.models.SupplementPrice)@\spxentry{child\_under\_8\_price}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{pet\_price (attribut bookings.models.SupplementPrice)@\spxentry{pet\_price}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{extra\_vehicle\_price (attribut bookings.models.SupplementPrice)@\spxentry{extra\_vehicle\_price}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{extra\_tent\_price (attribut bookings.models.SupplementPrice)@\spxentry{extra\_tent\_price}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{visitor\_price\_without\_swimming\_pool (attribut bookings.models.SupplementPrice)@\spxentry{visitor\_price\_without\_swimming\_pool}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{visitor\_price\_with\_swimming\_pool (attribut bookings.models.SupplementPrice)@\spxentry{visitor\_price\_with\_swimming\_pool}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{SupplementPrice.DoesNotExist@\spxentry{SupplementPrice.DoesNotExist}|hyperpage}{16}
-\indexentry{SupplementPrice.MultipleObjectsReturned@\spxentry{SupplementPrice.MultipleObjectsReturned}|hyperpage}{16}
-\indexentry{id (attribut bookings.models.SupplementPrice)@\spxentry{id}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{objects (attribut bookings.models.SupplementPrice)@\spxentry{objects}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{prices (attribut bookings.models.SupplementPrice)@\spxentry{prices}\spxextra{attribut bookings.models.SupplementPrice}|hyperpage}{16}
-\indexentry{Price (classe dans bookings.models)@\spxentry{Price}\spxextra{classe dans bookings.models}|hyperpage}{16}
-\indexentry{SEASON\_CHOICES (attribut bookings.models.Price)@\spxentry{SEASON\_CHOICES}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{TYPE\_CHOICES (attribut bookings.models.Price)@\spxentry{TYPE\_CHOICES}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{booking\_type (attribut bookings.models.Price)@\spxentry{booking\_type}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{season (attribut bookings.models.Price)@\spxentry{season}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{is\_worker (attribut bookings.models.Price)@\spxentry{is\_worker}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{price\_1\_person\_with\_electricity (attribut bookings.models.Price)@\spxentry{price\_1\_person\_with\_electricity}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{price\_2\_persons\_with\_electricity (attribut bookings.models.Price)@\spxentry{price\_2\_persons\_with\_electricity}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{price\_1\_person\_without\_electricity (attribut bookings.models.Price)@\spxentry{price\_1\_person\_without\_electricity}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{price\_2\_persons\_without\_electricity (attribut bookings.models.Price)@\spxentry{price\_2\_persons\_without\_electricity}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{included\_people (attribut bookings.models.Price)@\spxentry{included\_people}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{worker\_week\_price (attribut bookings.models.Price)@\spxentry{worker\_week\_price}\spxextra{attribut bookings.models.Price}|hyperpage}{17}
-\indexentry{weekend\_price\_without\_electricity (attribut bookings.models.Price)@\spxentry{weekend\_price\_without\_electricity}\spxextra{attribut bookings.models.Price}|hyperpage}{18}
-\indexentry{weekend\_price\_with\_electricity (attribut bookings.models.Price)@\spxentry{weekend\_price\_with\_electricity}\spxextra{attribut bookings.models.Price}|hyperpage}{18}
-\indexentry{supplements (attribut bookings.models.Price)@\spxentry{supplements}\spxextra{attribut bookings.models.Price}|hyperpage}{18}
-\indexentry{save() (méthode bookings.models.Price)@\spxentry{save()}\spxextra{méthode bookings.models.Price}|hyperpage}{18}
-\indexentry{clean() (méthode bookings.models.Price)@\spxentry{clean()}\spxextra{méthode bookings.models.Price}|hyperpage}{18}
-\indexentry{Price.DoesNotExist@\spxentry{Price.DoesNotExist}|hyperpage}{18}
-\indexentry{Price.MultipleObjectsReturned@\spxentry{Price.MultipleObjectsReturned}|hyperpage}{18}
-\indexentry{get\_booking\_type\_display() (méthode bookings.models.Price)@\spxentry{get\_booking\_type\_display()}\spxextra{méthode bookings.models.Price}|hyperpage}{18}
-\indexentry{get\_season\_display() (méthode bookings.models.Price)@\spxentry{get\_season\_display()}\spxextra{méthode bookings.models.Price}|hyperpage}{18}
-\indexentry{id (attribut bookings.models.Price)@\spxentry{id}\spxextra{attribut bookings.models.Price}|hyperpage}{18}
-\indexentry{objects (attribut bookings.models.Price)@\spxentry{objects}\spxextra{attribut bookings.models.Price}|hyperpage}{18}
-\indexentry{supplements\_id (attribut bookings.models.Price)@\spxentry{supplements\_id}\spxextra{attribut bookings.models.Price}|hyperpage}{18}
-\indexentry{OtherPrice (classe dans bookings.models)@\spxentry{OtherPrice}\spxextra{classe dans bookings.models}|hyperpage}{18}
-\indexentry{translations (attribut bookings.models.OtherPrice)@\spxentry{translations}\spxextra{attribut bookings.models.OtherPrice}|hyperpage}{19}
-\indexentry{OtherPrice.DoesNotExist@\spxentry{OtherPrice.DoesNotExist}|hyperpage}{19}
-\indexentry{OtherPrice.MultipleObjectsReturned@\spxentry{OtherPrice.MultipleObjectsReturned}|hyperpage}{19}
-\indexentry{current\_year (attribut bookings.models.OtherPrice)@\spxentry{current\_year}\spxextra{attribut bookings.models.OtherPrice}|hyperpage}{19}
-\indexentry{id (attribut bookings.models.OtherPrice)@\spxentry{id}\spxextra{attribut bookings.models.OtherPrice}|hyperpage}{19}
-\indexentry{price\_tourist\_tax (attribut bookings.models.OtherPrice)@\spxentry{price\_tourist\_tax}\spxextra{attribut bookings.models.OtherPrice}|hyperpage}{19}
-\indexentry{tourist\_tax\_date (attribut bookings.models.OtherPrice)@\spxentry{tourist\_tax\_date}\spxextra{attribut bookings.models.OtherPrice}|hyperpage}{19}
-\indexentry{Capacity (classe dans bookings.models)@\spxentry{Capacity}\spxextra{classe dans bookings.models}|hyperpage}{19}
-\indexentry{booking\_type (attribut bookings.models.Capacity)@\spxentry{booking\_type}\spxextra{attribut bookings.models.Capacity}|hyperpage}{19}
-\indexentry{max\_places (attribut bookings.models.Capacity)@\spxentry{max\_places}\spxextra{attribut bookings.models.Capacity}|hyperpage}{19}
-\indexentry{number\_locations (attribut bookings.models.Capacity)@\spxentry{number\_locations}\spxextra{attribut bookings.models.Capacity}|hyperpage}{19}
-\indexentry{number\_mobile\_homes (attribut bookings.models.Capacity)@\spxentry{number\_mobile\_homes}\spxextra{attribut bookings.models.Capacity}|hyperpage}{20}
-\indexentry{Capacity.DoesNotExist@\spxentry{Capacity.DoesNotExist}|hyperpage}{20}
-\indexentry{Capacity.MultipleObjectsReturned@\spxentry{Capacity.MultipleObjectsReturned}|hyperpage}{20}
-\indexentry{get\_booking\_type\_display() (méthode bookings.models.Capacity)@\spxentry{get\_booking\_type\_display()}\spxextra{méthode bookings.models.Capacity}|hyperpage}{20}
-\indexentry{id (attribut bookings.models.Capacity)@\spxentry{id}\spxextra{attribut bookings.models.Capacity}|hyperpage}{20}
-\indexentry{objects (attribut bookings.models.Capacity)@\spxentry{objects}\spxextra{attribut bookings.models.Capacity}|hyperpage}{20}
-\indexentry{Booking (classe dans bookings.models)@\spxentry{Booking}\spxextra{classe dans bookings.models}|hyperpage}{20}
-\indexentry{TYPE\_CHOICES (attribut bookings.models.Booking)@\spxentry{TYPE\_CHOICES}\spxextra{attribut bookings.models.Booking}|hyperpage}{20}
-\indexentry{SUBTYPE\_CHOICES (attribut bookings.models.Booking)@\spxentry{SUBTYPE\_CHOICES}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{ELECTRICITY\_CHOICES (attribut bookings.models.Booking)@\spxentry{ELECTRICITY\_CHOICES}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{last\_name (attribut bookings.models.Booking)@\spxentry{last\_name}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{first\_name (attribut bookings.models.Booking)@\spxentry{first\_name}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{address (attribut bookings.models.Booking)@\spxentry{address}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{postal\_code (attribut bookings.models.Booking)@\spxentry{postal\_code}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{city (attribut bookings.models.Booking)@\spxentry{city}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{phone (attribut bookings.models.Booking)@\spxentry{phone}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{email (attribut bookings.models.Booking)@\spxentry{email}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{start\_date (attribut bookings.models.Booking)@\spxentry{start\_date}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{end\_date (attribut bookings.models.Booking)@\spxentry{end\_date}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{booking\_type (attribut bookings.models.Booking)@\spxentry{booking\_type}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{booking\_subtype (attribut bookings.models.Booking)@\spxentry{booking\_subtype}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{electricity (attribut bookings.models.Booking)@\spxentry{electricity}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{deposit\_paid (attribut bookings.models.Booking)@\spxentry{deposit\_paid}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{tent\_length (attribut bookings.models.Booking)@\spxentry{tent\_length}\spxextra{attribut bookings.models.Booking}|hyperpage}{21}
-\indexentry{tent\_width (attribut bookings.models.Booking)@\spxentry{tent\_width}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{vehicle\_length (attribut bookings.models.Booking)@\spxentry{vehicle\_length}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{cable\_length (attribut bookings.models.Booking)@\spxentry{cable\_length}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{adults (attribut bookings.models.Booking)@\spxentry{adults}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{children\_over\_8 (attribut bookings.models.Booking)@\spxentry{children\_over\_8}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{children\_under\_8 (attribut bookings.models.Booking)@\spxentry{children\_under\_8}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{pets (attribut bookings.models.Booking)@\spxentry{pets}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{extra\_vehicle (attribut bookings.models.Booking)@\spxentry{extra\_vehicle}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{extra\_tent (attribut bookings.models.Booking)@\spxentry{extra\_tent}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{created\_at (attribut bookings.models.Booking)@\spxentry{created\_at}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{updated\_at (attribut bookings.models.Booking)@\spxentry{updated\_at}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{MAIN\_TYPE\_MAP (attribut bookings.models.Booking)@\spxentry{MAIN\_TYPE\_MAP}\spxextra{attribut bookings.models.Booking}|hyperpage}{22}
-\indexentry{created\_at\_display() (méthode bookings.models.Booking)@\spxentry{created\_at\_display()}\spxextra{méthode bookings.models.Booking}|hyperpage}{22}
-\indexentry{updated\_at\_display() (méthode bookings.models.Booking)@\spxentry{updated\_at\_display()}\spxextra{méthode bookings.models.Booking}|hyperpage}{22}
-\indexentry{get\_season() (méthode bookings.models.Booking)@\spxentry{get\_season()}\spxextra{méthode bookings.models.Booking}|hyperpage}{22}
-\indexentry{calculate\_total\_price() (méthode bookings.models.Booking)@\spxentry{calculate\_total\_price()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{calculate\_deposit() (méthode bookings.models.Booking)@\spxentry{calculate\_deposit()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{save() (méthode bookings.models.Booking)@\spxentry{save()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{check\_capacity() (méthode bookings.models.Booking)@\spxentry{check\_capacity()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{clean() (méthode bookings.models.Booking)@\spxentry{clean()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{Booking.DoesNotExist@\spxentry{Booking.DoesNotExist}|hyperpage}{23}
-\indexentry{Booking.MultipleObjectsReturned@\spxentry{Booking.MultipleObjectsReturned}|hyperpage}{23}
-\indexentry{get\_booking\_subtype\_display() (méthode bookings.models.Booking)@\spxentry{get\_booking\_subtype\_display()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_booking\_type\_display() (méthode bookings.models.Booking)@\spxentry{get\_booking\_type\_display()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_electricity\_display() (méthode bookings.models.Booking)@\spxentry{get\_electricity\_display()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_next\_by\_created\_at() (méthode bookings.models.Booking)@\spxentry{get\_next\_by\_created\_at()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_next\_by\_end\_date() (méthode bookings.models.Booking)@\spxentry{get\_next\_by\_end\_date()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_next\_by\_start\_date() (méthode bookings.models.Booking)@\spxentry{get\_next\_by\_start\_date()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_next\_by\_updated\_at() (méthode bookings.models.Booking)@\spxentry{get\_next\_by\_updated\_at()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_previous\_by\_created\_at() (méthode bookings.models.Booking)@\spxentry{get\_previous\_by\_created\_at()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_previous\_by\_end\_date() (méthode bookings.models.Booking)@\spxentry{get\_previous\_by\_end\_date()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_previous\_by\_start\_date() (méthode bookings.models.Booking)@\spxentry{get\_previous\_by\_start\_date()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{get\_previous\_by\_updated\_at() (méthode bookings.models.Booking)@\spxentry{get\_previous\_by\_updated\_at()}\spxextra{méthode bookings.models.Booking}|hyperpage}{23}
-\indexentry{id (attribut bookings.models.Booking)@\spxentry{id}\spxextra{attribut bookings.models.Booking}|hyperpage}{23}
-\indexentry{objects (attribut bookings.models.Booking)@\spxentry{objects}\spxextra{attribut bookings.models.Booking}|hyperpage}{24}
-\indexentry{MobileHome (classe dans bookings.models)@\spxentry{MobileHome}\spxextra{classe dans bookings.models}|hyperpage}{24}
-\indexentry{name (attribut bookings.models.MobileHome)@\spxentry{name}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{24}
-\indexentry{name\_en (attribut bookings.models.MobileHome)@\spxentry{name\_en}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{24}
-\indexentry{name\_es (attribut bookings.models.MobileHome)@\spxentry{name\_es}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{24}
-\indexentry{name\_de (attribut bookings.models.MobileHome)@\spxentry{name\_de}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{24}
-\indexentry{name\_nl (attribut bookings.models.MobileHome)@\spxentry{name\_nl}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{24}
-\indexentry{description\_text (attribut bookings.models.MobileHome)@\spxentry{description\_text}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{24}
-\indexentry{description\_en (attribut bookings.models.MobileHome)@\spxentry{description\_en}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{24}
-\indexentry{description\_es (attribut bookings.models.MobileHome)@\spxentry{description\_es}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{24}
-\indexentry{description\_de (attribut bookings.models.MobileHome)@\spxentry{description\_de}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{24}
-\indexentry{description\_nl (attribut bookings.models.MobileHome)@\spxentry{description\_nl}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{night\_price (attribut bookings.models.MobileHome)@\spxentry{night\_price}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{night\_price\_mid (attribut bookings.models.MobileHome)@\spxentry{night\_price\_mid}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{week\_low (attribut bookings.models.MobileHome)@\spxentry{week\_low}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{week\_mid (attribut bookings.models.MobileHome)@\spxentry{week\_mid}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{week\_high (attribut bookings.models.MobileHome)@\spxentry{week\_high}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{is\_worker\_home (attribut bookings.models.MobileHome)@\spxentry{is\_worker\_home}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{worker\_price\_1p (attribut bookings.models.MobileHome)@\spxentry{worker\_price\_1p}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{worker\_price\_2p (attribut bookings.models.MobileHome)@\spxentry{worker\_price\_2p}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{worker\_price\_3p (attribut bookings.models.MobileHome)@\spxentry{worker\_price\_3p}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{save() (méthode bookings.models.MobileHome)@\spxentry{save()}\spxextra{méthode bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{MobileHome.DoesNotExist@\spxentry{MobileHome.DoesNotExist}|hyperpage}{25}
-\indexentry{MobileHome.MultipleObjectsReturned@\spxentry{MobileHome.MultipleObjectsReturned}|hyperpage}{25}
-\indexentry{id (attribut bookings.models.MobileHome)@\spxentry{id}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{objects (attribut bookings.models.MobileHome)@\spxentry{objects}\spxextra{attribut bookings.models.MobileHome}|hyperpage}{25}
-\indexentry{SupplementMobileHome (classe dans bookings.models)@\spxentry{SupplementMobileHome}\spxextra{classe dans bookings.models}|hyperpage}{26}
-\indexentry{translations (attribut bookings.models.SupplementMobileHome)@\spxentry{translations}\spxextra{attribut bookings.models.SupplementMobileHome}|hyperpage}{26}
-\indexentry{SupplementMobileHome.DoesNotExist@\spxentry{SupplementMobileHome.DoesNotExist}|hyperpage}{26}
-\indexentry{SupplementMobileHome.MultipleObjectsReturned@\spxentry{SupplementMobileHome.MultipleObjectsReturned}|hyperpage}{26}
-\indexentry{bed\_linen\_rental (attribut bookings.models.SupplementMobileHome)@\spxentry{bed\_linen\_rental}\spxextra{attribut bookings.models.SupplementMobileHome}|hyperpage}{26}
-\indexentry{cleaning\_deposit (attribut bookings.models.SupplementMobileHome)@\spxentry{cleaning\_deposit}\spxextra{attribut bookings.models.SupplementMobileHome}|hyperpage}{26}
-\indexentry{id (attribut bookings.models.SupplementMobileHome)@\spxentry{id}\spxextra{attribut bookings.models.SupplementMobileHome}|hyperpage}{26}
-\indexentry{mobile\_home\_deposit (attribut bookings.models.SupplementMobileHome)@\spxentry{mobile\_home\_deposit}\spxextra{attribut bookings.models.SupplementMobileHome}|hyperpage}{26}
-\indexentry{SeasonInfo (classe dans bookings.models)@\spxentry{SeasonInfo}\spxextra{classe dans bookings.models}|hyperpage}{26}
-\indexentry{translations (attribut bookings.models.SeasonInfo)@\spxentry{translations}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{SeasonInfo.DoesNotExist@\spxentry{SeasonInfo.DoesNotExist}|hyperpage}{27}
-\indexentry{SeasonInfo.MultipleObjectsReturned@\spxentry{SeasonInfo.MultipleObjectsReturned}|hyperpage}{27}
-\indexentry{high\_season\_end (attribut bookings.models.SeasonInfo)@\spxentry{high\_season\_end}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{high\_season\_start (attribut bookings.models.SeasonInfo)@\spxentry{high\_season\_start}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{id (attribut bookings.models.SeasonInfo)@\spxentry{id}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{low\_season\_end (attribut bookings.models.SeasonInfo)@\spxentry{low\_season\_end}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{low\_season\_start (attribut bookings.models.SeasonInfo)@\spxentry{low\_season\_start}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{mid\_season\_end\_1 (attribut bookings.models.SeasonInfo)@\spxentry{mid\_season\_end\_1}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{mid\_season\_end\_2 (attribut bookings.models.SeasonInfo)@\spxentry{mid\_season\_end\_2}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{mid\_season\_start\_1 (attribut bookings.models.SeasonInfo)@\spxentry{mid\_season\_start\_1}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{mid\_season\_start\_2 (attribut bookings.models.SeasonInfo)@\spxentry{mid\_season\_start\_2}\spxextra{attribut bookings.models.SeasonInfo}|hyperpage}{27}
-\indexentry{OtherPriceTranslation (classe dans bookings.models)@\spxentry{OtherPriceTranslation}\spxextra{classe dans bookings.models}|hyperpage}{28}
-\indexentry{OtherPriceTranslation.DoesNotExist@\spxentry{OtherPriceTranslation.DoesNotExist}|hyperpage}{28}
-\indexentry{OtherPriceTranslation.MultipleObjectsReturned@\spxentry{OtherPriceTranslation.MultipleObjectsReturned}|hyperpage}{28}
-\indexentry{current\_year (attribut bookings.models.OtherPriceTranslation)@\spxentry{current\_year}\spxextra{attribut bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{get\_language\_code\_display() (méthode bookings.models.OtherPriceTranslation)@\spxentry{get\_language\_code\_display()}\spxextra{méthode bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{get\_next\_by\_tourist\_tax\_date() (méthode bookings.models.OtherPriceTranslation)@\spxentry{get\_next\_by\_tourist\_tax\_date()}\spxextra{méthode bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{get\_previous\_by\_tourist\_tax\_date() (méthode bookings.models.OtherPriceTranslation)@\spxentry{get\_previous\_by\_tourist\_tax\_date()}\spxextra{méthode bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{id (attribut bookings.models.OtherPriceTranslation)@\spxentry{id}\spxextra{attribut bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{language\_code (attribut bookings.models.OtherPriceTranslation)@\spxentry{language\_code}\spxextra{attribut bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{master (attribut bookings.models.OtherPriceTranslation)@\spxentry{master}\spxextra{attribut bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{master\_id (attribut bookings.models.OtherPriceTranslation)@\spxentry{master\_id}\spxextra{attribut bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{objects (attribut bookings.models.OtherPriceTranslation)@\spxentry{objects}\spxextra{attribut bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{price\_tourist\_tax (attribut bookings.models.OtherPriceTranslation)@\spxentry{price\_tourist\_tax}\spxextra{attribut bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{tourist\_tax\_date (attribut bookings.models.OtherPriceTranslation)@\spxentry{tourist\_tax\_date}\spxextra{attribut bookings.models.OtherPriceTranslation}|hyperpage}{28}
-\indexentry{SeasonInfoTranslation (classe dans bookings.models)@\spxentry{SeasonInfoTranslation}\spxextra{classe dans bookings.models}|hyperpage}{28}
-\indexentry{SeasonInfoTranslation.DoesNotExist@\spxentry{SeasonInfoTranslation.DoesNotExist}|hyperpage}{28}
-\indexentry{SeasonInfoTranslation.MultipleObjectsReturned@\spxentry{SeasonInfoTranslation.MultipleObjectsReturned}|hyperpage}{28}
-\indexentry{get\_language\_code\_display() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_language\_code\_display()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_next\_by\_high\_season\_end() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_next\_by\_high\_season\_end()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_next\_by\_high\_season\_start() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_next\_by\_high\_season\_start()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_next\_by\_low\_season\_end() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_next\_by\_low\_season\_end()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_next\_by\_low\_season\_start() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_next\_by\_low\_season\_start()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_next\_by\_mid\_season\_end\_1() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_next\_by\_mid\_season\_end\_1()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_next\_by\_mid\_season\_end\_2() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_next\_by\_mid\_season\_end\_2()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_next\_by\_mid\_season\_start\_1() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_next\_by\_mid\_season\_start\_1()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_next\_by\_mid\_season\_start\_2() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_next\_by\_mid\_season\_start\_2()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_previous\_by\_high\_season\_end() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_previous\_by\_high\_season\_end()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_previous\_by\_high\_season\_start() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_previous\_by\_high\_season\_start()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_previous\_by\_low\_season\_end() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_previous\_by\_low\_season\_end()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_previous\_by\_low\_season\_start() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_previous\_by\_low\_season\_start()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_previous\_by\_mid\_season\_end\_1() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_previous\_by\_mid\_season\_end\_1()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_previous\_by\_mid\_season\_end\_2() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_previous\_by\_mid\_season\_end\_2()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_previous\_by\_mid\_season\_start\_1() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_previous\_by\_mid\_season\_start\_1()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{get\_previous\_by\_mid\_season\_start\_2() (méthode bookings.models.SeasonInfoTranslation)@\spxentry{get\_previous\_by\_mid\_season\_start\_2()}\spxextra{méthode bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{high\_season\_end (attribut bookings.models.SeasonInfoTranslation)@\spxentry{high\_season\_end}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{high\_season\_start (attribut bookings.models.SeasonInfoTranslation)@\spxentry{high\_season\_start}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{29}
-\indexentry{id (attribut bookings.models.SeasonInfoTranslation)@\spxentry{id}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{language\_code (attribut bookings.models.SeasonInfoTranslation)@\spxentry{language\_code}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{low\_season\_end (attribut bookings.models.SeasonInfoTranslation)@\spxentry{low\_season\_end}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{low\_season\_start (attribut bookings.models.SeasonInfoTranslation)@\spxentry{low\_season\_start}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{master (attribut bookings.models.SeasonInfoTranslation)@\spxentry{master}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{master\_id (attribut bookings.models.SeasonInfoTranslation)@\spxentry{master\_id}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{mid\_season\_end\_1 (attribut bookings.models.SeasonInfoTranslation)@\spxentry{mid\_season\_end\_1}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{mid\_season\_end\_2 (attribut bookings.models.SeasonInfoTranslation)@\spxentry{mid\_season\_end\_2}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{mid\_season\_start\_1 (attribut bookings.models.SeasonInfoTranslation)@\spxentry{mid\_season\_start\_1}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{mid\_season\_start\_2 (attribut bookings.models.SeasonInfoTranslation)@\spxentry{mid\_season\_start\_2}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{objects (attribut bookings.models.SeasonInfoTranslation)@\spxentry{objects}\spxextra{attribut bookings.models.SeasonInfoTranslation}|hyperpage}{30}
-\indexentry{SupplementMobileHomeTranslation (classe dans bookings.models)@\spxentry{SupplementMobileHomeTranslation}\spxextra{classe dans bookings.models}|hyperpage}{30}
-\indexentry{SupplementMobileHomeTranslation.DoesNotExist@\spxentry{SupplementMobileHomeTranslation.DoesNotExist}|hyperpage}{30}
-\indexentry{SupplementMobileHomeTranslation.MultipleObjectsReturned@\spxentry{SupplementMobileHomeTranslation.MultipleObjectsReturned}|hyperpage}{30}
-\indexentry{bed\_linen\_rental (attribut bookings.models.SupplementMobileHomeTranslation)@\spxentry{bed\_linen\_rental}\spxextra{attribut bookings.models.SupplementMobileHomeTranslation}|hyperpage}{30}
-\indexentry{cleaning\_deposit (attribut bookings.models.SupplementMobileHomeTranslation)@\spxentry{cleaning\_deposit}\spxextra{attribut bookings.models.SupplementMobileHomeTranslation}|hyperpage}{30}
-\indexentry{get\_language\_code\_display() (méthode bookings.models.SupplementMobileHomeTranslation)@\spxentry{get\_language\_code\_display()}\spxextra{méthode bookings.models.SupplementMobileHomeTranslation}|hyperpage}{31}
-\indexentry{id (attribut bookings.models.SupplementMobileHomeTranslation)@\spxentry{id}\spxextra{attribut bookings.models.SupplementMobileHomeTranslation}|hyperpage}{31}
-\indexentry{language\_code (attribut bookings.models.SupplementMobileHomeTranslation)@\spxentry{language\_code}\spxextra{attribut bookings.models.SupplementMobileHomeTranslation}|hyperpage}{31}
-\indexentry{master (attribut bookings.models.SupplementMobileHomeTranslation)@\spxentry{master}\spxextra{attribut bookings.models.SupplementMobileHomeTranslation}|hyperpage}{31}
-\indexentry{master\_id (attribut bookings.models.SupplementMobileHomeTranslation)@\spxentry{master\_id}\spxextra{attribut bookings.models.SupplementMobileHomeTranslation}|hyperpage}{31}
-\indexentry{mobile\_home\_deposit (attribut bookings.models.SupplementMobileHomeTranslation)@\spxentry{mobile\_home\_deposit}\spxextra{attribut bookings.models.SupplementMobileHomeTranslation}|hyperpage}{31}
-\indexentry{objects (attribut bookings.models.SupplementMobileHomeTranslation)@\spxentry{objects}\spxextra{attribut bookings.models.SupplementMobileHomeTranslation}|hyperpage}{31}
-\indexentry{module@\spxentry{module}!bookings.views@\spxentry{bookings.views}|hyperpage}{31}
-\indexentry{bookings.views@\spxentry{bookings.views}!module@\spxentry{module}|hyperpage}{31}
-\indexentry{booking\_form() (dans le module bookings.views)@\spxentry{booking\_form()}\spxextra{dans le module bookings.views}|hyperpage}{31}
-\indexentry{booking\_summary() (dans le module bookings.views)@\spxentry{booking\_summary()}\spxextra{dans le module bookings.views}|hyperpage}{31}
-\indexentry{booking\_details() (dans le module bookings.views)@\spxentry{booking\_details()}\spxextra{dans le module bookings.views}|hyperpage}{31}
-\indexentry{booking\_confirm() (dans le module bookings.views)@\spxentry{booking\_confirm()}\spxextra{dans le module bookings.views}|hyperpage}{31}
-\indexentry{module@\spxentry{module}!bookings.forms@\spxentry{bookings.forms}|hyperpage}{31}
-\indexentry{bookings.forms@\spxentry{bookings.forms}!module@\spxentry{module}|hyperpage}{31}
-\indexentry{BookingFormClassic (classe dans bookings.forms)@\spxentry{BookingFormClassic}\spxextra{classe dans bookings.forms}|hyperpage}{31}
-\indexentry{BOOKING\_TYPE\_CHOICES\_FOR\_FORM (attribut bookings.forms.BookingFormClassic)@\spxentry{BOOKING\_TYPE\_CHOICES\_FOR\_FORM}\spxextra{attribut bookings.forms.BookingFormClassic}|hyperpage}{32}
-\indexentry{SUBTYPE\_TO\_MAIN\_TYPE (attribut bookings.forms.BookingFormClassic)@\spxentry{SUBTYPE\_TO\_MAIN\_TYPE}\spxextra{attribut bookings.forms.BookingFormClassic}|hyperpage}{32}
-\indexentry{ELECTRICITY\_CHOICES (attribut bookings.forms.BookingFormClassic)@\spxentry{ELECTRICITY\_CHOICES}\spxextra{attribut bookings.forms.BookingFormClassic}|hyperpage}{32}
-\indexentry{BookingFormClassic.Meta (classe dans bookings.forms)@\spxentry{BookingFormClassic.Meta}\spxextra{classe dans bookings.forms}|hyperpage}{32}
-\indexentry{model (attribut bookings.forms.BookingFormClassic.Meta)@\spxentry{model}\spxextra{attribut bookings.forms.BookingFormClassic.Meta}|hyperpage}{32}
-\indexentry{fields (attribut bookings.forms.BookingFormClassic.Meta)@\spxentry{fields}\spxextra{attribut bookings.forms.BookingFormClassic.Meta}|hyperpage}{32}
-\indexentry{labels (attribut bookings.forms.BookingFormClassic.Meta)@\spxentry{labels}\spxextra{attribut bookings.forms.BookingFormClassic.Meta}|hyperpage}{32}
-\indexentry{widgets (attribut bookings.forms.BookingFormClassic.Meta)@\spxentry{widgets}\spxextra{attribut bookings.forms.BookingFormClassic.Meta}|hyperpage}{32}
-\indexentry{clean() (méthode bookings.forms.BookingFormClassic)@\spxentry{clean()}\spxextra{méthode bookings.forms.BookingFormClassic}|hyperpage}{32}
-\indexentry{base\_fields (attribut bookings.forms.BookingFormClassic)@\spxentry{base\_fields}\spxextra{attribut bookings.forms.BookingFormClassic}|hyperpage}{32}
-\indexentry{declared\_fields (attribut bookings.forms.BookingFormClassic)@\spxentry{declared\_fields}\spxextra{attribut bookings.forms.BookingFormClassic}|hyperpage}{33}
-\indexentry{media (propriété bookings.forms.BookingFormClassic)@\spxentry{media}\spxextra{propriété bookings.forms.BookingFormClassic}|hyperpage}{33}
-\indexentry{BookingDetailsForm (classe dans bookings.forms)@\spxentry{BookingDetailsForm}\spxextra{classe dans bookings.forms}|hyperpage}{33}
-\indexentry{clean() (méthode bookings.forms.BookingDetailsForm)@\spxentry{clean()}\spxextra{méthode bookings.forms.BookingDetailsForm}|hyperpage}{33}
-\indexentry{base\_fields (attribut bookings.forms.BookingDetailsForm)@\spxentry{base\_fields}\spxextra{attribut bookings.forms.BookingDetailsForm}|hyperpage}{33}
-\indexentry{declared\_fields (attribut bookings.forms.BookingDetailsForm)@\spxentry{declared\_fields}\spxextra{attribut bookings.forms.BookingDetailsForm}|hyperpage}{33}
-\indexentry{media (propriété bookings.forms.BookingDetailsForm)@\spxentry{media}\spxextra{propriété bookings.forms.BookingDetailsForm}|hyperpage}{33}
-\indexentry{module@\spxentry{module}!bookings.admin@\spxentry{bookings.admin}|hyperpage}{33}
-\indexentry{bookings.admin@\spxentry{bookings.admin}!module@\spxentry{module}|hyperpage}{33}
-\indexentry{CapacityAdmin (classe dans bookings.admin)@\spxentry{CapacityAdmin}\spxextra{classe dans bookings.admin}|hyperpage}{33}
-\indexentry{list\_display (attribut bookings.admin.CapacityAdmin)@\spxentry{list\_display}\spxextra{attribut bookings.admin.CapacityAdmin}|hyperpage}{34}
-\indexentry{list\_filter (attribut bookings.admin.CapacityAdmin)@\spxentry{list\_filter}\spxextra{attribut bookings.admin.CapacityAdmin}|hyperpage}{34}
-\indexentry{search\_fields (attribut bookings.admin.CapacityAdmin)@\spxentry{search\_fields}\spxextra{attribut bookings.admin.CapacityAdmin}|hyperpage}{34}
-\indexentry{fieldsets (attribut bookings.admin.CapacityAdmin)@\spxentry{fieldsets}\spxextra{attribut bookings.admin.CapacityAdmin}|hyperpage}{34}
-\indexentry{media (propriété bookings.admin.CapacityAdmin)@\spxentry{media}\spxextra{propriété bookings.admin.CapacityAdmin}|hyperpage}{34}
-\indexentry{SupplementPriceAdmin (classe dans bookings.admin)@\spxentry{SupplementPriceAdmin}\spxextra{classe dans bookings.admin}|hyperpage}{34}
-\indexentry{list\_display (attribut bookings.admin.SupplementPriceAdmin)@\spxentry{list\_display}\spxextra{attribut bookings.admin.SupplementPriceAdmin}|hyperpage}{34}
-\indexentry{search\_fields (attribut bookings.admin.SupplementPriceAdmin)@\spxentry{search\_fields}\spxextra{attribut bookings.admin.SupplementPriceAdmin}|hyperpage}{34}
-\indexentry{fieldsets (attribut bookings.admin.SupplementPriceAdmin)@\spxentry{fieldsets}\spxextra{attribut bookings.admin.SupplementPriceAdmin}|hyperpage}{34}
-\indexentry{media (propriété bookings.admin.SupplementPriceAdmin)@\spxentry{media}\spxextra{propriété bookings.admin.SupplementPriceAdmin}|hyperpage}{34}
-\indexentry{PriceAdminForm (classe dans bookings.admin)@\spxentry{PriceAdminForm}\spxextra{classe dans bookings.admin}|hyperpage}{34}
-\indexentry{PriceAdminForm.Meta (classe dans bookings.admin)@\spxentry{PriceAdminForm.Meta}\spxextra{classe dans bookings.admin}|hyperpage}{34}
-\indexentry{model (attribut bookings.admin.PriceAdminForm.Meta)@\spxentry{model}\spxextra{attribut bookings.admin.PriceAdminForm.Meta}|hyperpage}{34}
-\indexentry{fields (attribut bookings.admin.PriceAdminForm.Meta)@\spxentry{fields}\spxextra{attribut bookings.admin.PriceAdminForm.Meta}|hyperpage}{34}
-\indexentry{clean() (méthode bookings.admin.PriceAdminForm)@\spxentry{clean()}\spxextra{méthode bookings.admin.PriceAdminForm}|hyperpage}{34}
-\indexentry{base\_fields (attribut bookings.admin.PriceAdminForm)@\spxentry{base\_fields}\spxextra{attribut bookings.admin.PriceAdminForm}|hyperpage}{34}
-\indexentry{declared\_fields (attribut bookings.admin.PriceAdminForm)@\spxentry{declared\_fields}\spxextra{attribut bookings.admin.PriceAdminForm}|hyperpage}{35}
-\indexentry{media (propriété bookings.admin.PriceAdminForm)@\spxentry{media}\spxextra{propriété bookings.admin.PriceAdminForm}|hyperpage}{35}
-\indexentry{PriceAdmin (classe dans bookings.admin)@\spxentry{PriceAdmin}\spxextra{classe dans bookings.admin}|hyperpage}{35}
-\indexentry{form (attribut bookings.admin.PriceAdmin)@\spxentry{form}\spxextra{attribut bookings.admin.PriceAdmin}|hyperpage}{35}
-\indexentry{list\_display (attribut bookings.admin.PriceAdmin)@\spxentry{list\_display}\spxextra{attribut bookings.admin.PriceAdmin}|hyperpage}{35}
-\indexentry{list\_filter (attribut bookings.admin.PriceAdmin)@\spxentry{list\_filter}\spxextra{attribut bookings.admin.PriceAdmin}|hyperpage}{35}
-\indexentry{search\_fields (attribut bookings.admin.PriceAdmin)@\spxentry{search\_fields}\spxextra{attribut bookings.admin.PriceAdmin}|hyperpage}{35}
-\indexentry{ordering (attribut bookings.admin.PriceAdmin)@\spxentry{ordering}\spxextra{attribut bookings.admin.PriceAdmin}|hyperpage}{35}
-\indexentry{exclude (attribut bookings.admin.PriceAdmin)@\spxentry{exclude}\spxextra{attribut bookings.admin.PriceAdmin}|hyperpage}{35}
-\indexentry{fieldsets (attribut bookings.admin.PriceAdmin)@\spxentry{fieldsets}\spxextra{attribut bookings.admin.PriceAdmin}|hyperpage}{35}
-\indexentry{media (propriété bookings.admin.PriceAdmin)@\spxentry{media}\spxextra{propriété bookings.admin.PriceAdmin}|hyperpage}{35}
-\indexentry{OtherPriceAdmin (classe dans bookings.admin)@\spxentry{OtherPriceAdmin}\spxextra{classe dans bookings.admin}|hyperpage}{35}
-\indexentry{list\_display (attribut bookings.admin.OtherPriceAdmin)@\spxentry{list\_display}\spxextra{attribut bookings.admin.OtherPriceAdmin}|hyperpage}{36}
-\indexentry{fieldsets (attribut bookings.admin.OtherPriceAdmin)@\spxentry{fieldsets}\spxextra{attribut bookings.admin.OtherPriceAdmin}|hyperpage}{36}
-\indexentry{media (propriété bookings.admin.OtherPriceAdmin)@\spxentry{media}\spxextra{propriété bookings.admin.OtherPriceAdmin}|hyperpage}{36}
-\indexentry{BookingAdmin (classe dans bookings.admin)@\spxentry{BookingAdmin}\spxextra{classe dans bookings.admin}|hyperpage}{36}
-\indexentry{list\_display (attribut bookings.admin.BookingAdmin)@\spxentry{list\_display}\spxextra{attribut bookings.admin.BookingAdmin}|hyperpage}{36}
-\indexentry{list\_editable (attribut bookings.admin.BookingAdmin)@\spxentry{list\_editable}\spxextra{attribut bookings.admin.BookingAdmin}|hyperpage}{36}
-\indexentry{list\_filter (attribut bookings.admin.BookingAdmin)@\spxentry{list\_filter}\spxextra{attribut bookings.admin.BookingAdmin}|hyperpage}{36}
-\indexentry{search\_fields (attribut bookings.admin.BookingAdmin)@\spxentry{search\_fields}\spxextra{attribut bookings.admin.BookingAdmin}|hyperpage}{36}
-\indexentry{ordering (attribut bookings.admin.BookingAdmin)@\spxentry{ordering}\spxextra{attribut bookings.admin.BookingAdmin}|hyperpage}{36}
-\indexentry{readonly\_fields (attribut bookings.admin.BookingAdmin)@\spxentry{readonly\_fields}\spxextra{attribut bookings.admin.BookingAdmin}|hyperpage}{36}
-\indexentry{fieldsets (attribut bookings.admin.BookingAdmin)@\spxentry{fieldsets}\spxextra{attribut bookings.admin.BookingAdmin}|hyperpage}{36}
-\indexentry{media (propriété bookings.admin.BookingAdmin)@\spxentry{media}\spxextra{propriété bookings.admin.BookingAdmin}|hyperpage}{36}
-\indexentry{MobileHomeAdmin (classe dans bookings.admin)@\spxentry{MobileHomeAdmin}\spxextra{classe dans bookings.admin}|hyperpage}{36}
-\indexentry{list\_display (attribut bookings.admin.MobileHomeAdmin)@\spxentry{list\_display}\spxextra{attribut bookings.admin.MobileHomeAdmin}|hyperpage}{36}
-\indexentry{search\_fields (attribut bookings.admin.MobileHomeAdmin)@\spxentry{search\_fields}\spxextra{attribut bookings.admin.MobileHomeAdmin}|hyperpage}{36}
-\indexentry{list\_filter (attribut bookings.admin.MobileHomeAdmin)@\spxentry{list\_filter}\spxextra{attribut bookings.admin.MobileHomeAdmin}|hyperpage}{36}
-\indexentry{fieldsets (attribut bookings.admin.MobileHomeAdmin)@\spxentry{fieldsets}\spxextra{attribut bookings.admin.MobileHomeAdmin}|hyperpage}{36}
-\indexentry{media (propriété bookings.admin.MobileHomeAdmin)@\spxentry{media}\spxextra{propriété bookings.admin.MobileHomeAdmin}|hyperpage}{37}
-\indexentry{SupplementMobileHomeAdmin (classe dans bookings.admin)@\spxentry{SupplementMobileHomeAdmin}\spxextra{classe dans bookings.admin}|hyperpage}{37}
-\indexentry{list\_display (attribut bookings.admin.SupplementMobileHomeAdmin)@\spxentry{list\_display}\spxextra{attribut bookings.admin.SupplementMobileHomeAdmin}|hyperpage}{37}
-\indexentry{fieldsets (attribut bookings.admin.SupplementMobileHomeAdmin)@\spxentry{fieldsets}\spxextra{attribut bookings.admin.SupplementMobileHomeAdmin}|hyperpage}{37}
-\indexentry{media (propriété bookings.admin.SupplementMobileHomeAdmin)@\spxentry{media}\spxextra{propriété bookings.admin.SupplementMobileHomeAdmin}|hyperpage}{37}
-\indexentry{SeasonInfoAdmin (classe dans bookings.admin)@\spxentry{SeasonInfoAdmin}\spxextra{classe dans bookings.admin}|hyperpage}{37}
-\indexentry{list\_display (attribut bookings.admin.SeasonInfoAdmin)@\spxentry{list\_display}\spxextra{attribut bookings.admin.SeasonInfoAdmin}|hyperpage}{37}
-\indexentry{fieldsets (attribut bookings.admin.SeasonInfoAdmin)@\spxentry{fieldsets}\spxextra{attribut bookings.admin.SeasonInfoAdmin}|hyperpage}{37}
-\indexentry{media (propriété bookings.admin.SeasonInfoAdmin)@\spxentry{media}\spxextra{propriété bookings.admin.SeasonInfoAdmin}|hyperpage}{37}
-\indexentry{module@\spxentry{module}!bookings.apps@\spxentry{bookings.apps}|hyperpage}{37}
-\indexentry{bookings.apps@\spxentry{bookings.apps}!module@\spxentry{module}|hyperpage}{37}
-\indexentry{BookingsConfig (classe dans bookings.apps)@\spxentry{BookingsConfig}\spxextra{classe dans bookings.apps}|hyperpage}{37}
-\indexentry{default\_auto\_field (attribut bookings.apps.BookingsConfig)@\spxentry{default\_auto\_field}\spxextra{attribut bookings.apps.BookingsConfig}|hyperpage}{37}
-\indexentry{name (attribut bookings.apps.BookingsConfig)@\spxentry{name}\spxextra{attribut bookings.apps.BookingsConfig}|hyperpage}{37}
-\indexentry{verbose\_name (attribut bookings.apps.BookingsConfig)@\spxentry{verbose\_name}\spxextra{attribut bookings.apps.BookingsConfig}|hyperpage}{37}
-\indexentry{module@\spxentry{module}!bookings.tests.test\_models@\spxentry{bookings.tests.test\_models}|hyperpage}{37}
-\indexentry{bookings.tests.test\_models@\spxentry{bookings.tests.test\_models}!module@\spxentry{module}|hyperpage}{37}
-\indexentry{test\_supplementprice\_creation() (dans le module bookings.tests.test\_models)@\spxentry{test\_supplementprice\_creation()}\spxextra{dans le module bookings.tests.test\_models}|hyperpage}{37}
-\indexentry{test\_price\_save\_and\_clean() (dans le module bookings.tests.test\_models)@\spxentry{test\_price\_save\_and\_clean()}\spxextra{dans le module bookings.tests.test\_models}|hyperpage}{37}
-\indexentry{test\_booking\_save\_total\_and\_deposit() (dans le module bookings.tests.test\_models)@\spxentry{test\_booking\_save\_total\_and\_deposit()}\spxextra{dans le module bookings.tests.test\_models}|hyperpage}{38}
-\indexentry{test\_booking\_capacity\_validation() (dans le module bookings.tests.test\_models)@\spxentry{test\_booking\_capacity\_validation()}\spxextra{dans le module bookings.tests.test\_models}|hyperpage}{38}
-\indexentry{test\_capacity\_str() (dans le module bookings.tests.test\_models)@\spxentry{test\_capacity\_str()}\spxextra{dans le module bookings.tests.test\_models}|hyperpage}{38}
-\indexentry{test\_mobilehome\_creation() (dans le module bookings.tests.test\_models)@\spxentry{test\_mobilehome\_creation()}\spxextra{dans le module bookings.tests.test\_models}|hyperpage}{38}
-\indexentry{test\_supplementmobilehome\_creation() (dans le module bookings.tests.test\_models)@\spxentry{test\_supplementmobilehome\_creation()}\spxextra{dans le module bookings.tests.test\_models}|hyperpage}{38}
-\indexentry{test\_seasoninfo\_creation() (dans le module bookings.tests.test\_models)@\spxentry{test\_seasoninfo\_creation()}\spxextra{dans le module bookings.tests.test\_models}|hyperpage}{38}
-\indexentry{module@\spxentry{module}!bookings.tests.test\_views@\spxentry{bookings.tests.test\_views}|hyperpage}{38}
-\indexentry{bookings.tests.test\_views@\spxentry{bookings.tests.test\_views}!module@\spxentry{module}|hyperpage}{38}
-\indexentry{valid\_booking\_data() (dans le module bookings.tests.test\_views)@\spxentry{valid\_booking\_data()}\spxextra{dans le module bookings.tests.test\_views}|hyperpage}{38}
-\indexentry{client\_details\_data() (dans le module bookings.tests.test\_views)@\spxentry{client\_details\_data()}\spxextra{dans le module bookings.tests.test\_views}|hyperpage}{38}
-\indexentry{supplements() (dans le module bookings.tests.test\_views)@\spxentry{supplements()}\spxextra{dans le module bookings.tests.test\_views}|hyperpage}{38}
-\indexentry{set\_booking\_session() (dans le module bookings.tests.test\_views)@\spxentry{set\_booking\_session()}\spxextra{dans le module bookings.tests.test\_views}|hyperpage}{38}
-\indexentry{test\_booking\_form\_valid() (dans le module bookings.tests.test\_views)@\spxentry{test\_booking\_form\_valid()}\spxextra{dans le module bookings.tests.test\_views}|hyperpage}{38}
-\indexentry{test\_booking\_summary\_displays\_correct\_prices() (dans le module bookings.tests.test\_views)@\spxentry{test\_booking\_summary\_displays\_correct\_prices()}\spxextra{dans le module bookings.tests.test\_views}|hyperpage}{38}
-\indexentry{test\_booking\_details\_creates\_stripe\_session() (dans le module bookings.tests.test\_views)@\spxentry{test\_booking\_details\_creates\_stripe\_session()}\spxextra{dans le module bookings.tests.test\_views}|hyperpage}{38}
-\indexentry{test\_booking\_confirm\_saves\_booking\_and\_sends\_emails() (dans le module bookings.tests.test\_views)@\spxentry{test\_booking\_confirm\_saves\_booking\_and\_sends\_emails()}\spxextra{dans le module bookings.tests.test\_views}|hyperpage}{38}
-\indexentry{module@\spxentry{module}!bookings.tests.test\_forms@\spxentry{bookings.tests.test\_forms}|hyperpage}{38}
-\indexentry{bookings.tests.test\_forms@\spxentry{bookings.tests.test\_forms}!module@\spxentry{module}|hyperpage}{38}
-\indexentry{TestBookingFormClassic (classe dans bookings.tests.test\_forms)@\spxentry{TestBookingFormClassic}\spxextra{classe dans bookings.tests.test\_forms}|hyperpage}{38}
-\indexentry{test\_valid\_data\_tent() (méthode bookings.tests.test\_forms.TestBookingFormClassic)@\spxentry{test\_valid\_data\_tent()}\spxextra{méthode bookings.tests.test\_forms.TestBookingFormClassic}|hyperpage}{39}
-\indexentry{test\_missing\_required\_field() (méthode bookings.tests.test\_forms.TestBookingFormClassic)@\spxentry{test\_missing\_required\_field()}\spxextra{méthode bookings.tests.test\_forms.TestBookingFormClassic}|hyperpage}{39}
-\indexentry{test\_past\_start\_date() (méthode bookings.tests.test\_forms.TestBookingFormClassic)@\spxentry{test\_past\_start\_date()}\spxextra{méthode bookings.tests.test\_forms.TestBookingFormClassic}|hyperpage}{39}
-\indexentry{test\_invalid\_type\_field() (méthode bookings.tests.test\_forms.TestBookingFormClassic)@\spxentry{test\_invalid\_type\_field()}\spxextra{méthode bookings.tests.test\_forms.TestBookingFormClassic}|hyperpage}{39}
-\indexentry{TestBookingDetailsForm (classe dans bookings.tests.test\_forms)@\spxentry{TestBookingDetailsForm}\spxextra{classe dans bookings.tests.test\_forms}|hyperpage}{39}
-\indexentry{test\_valid\_data() (méthode bookings.tests.test\_forms.TestBookingDetailsForm)@\spxentry{test\_valid\_data()}\spxextra{méthode bookings.tests.test\_forms.TestBookingDetailsForm}|hyperpage}{39}
-\indexentry{test\_invalid\_phone() (méthode bookings.tests.test\_forms.TestBookingDetailsForm)@\spxentry{test\_invalid\_phone()}\spxextra{méthode bookings.tests.test\_forms.TestBookingDetailsForm}|hyperpage}{39}
-\indexentry{test\_missing\_required\_fields() (méthode bookings.tests.test\_forms.TestBookingDetailsForm)@\spxentry{test\_missing\_required\_fields()}\spxextra{méthode bookings.tests.test\_forms.TestBookingDetailsForm}|hyperpage}{39}
-\indexentry{pytestmark (attribut bookings.tests.test\_forms.TestBookingDetailsForm)@\spxentry{pytestmark}\spxextra{attribut bookings.tests.test\_forms.TestBookingDetailsForm}|hyperpage}{39}
+\indexentry{CoreConfig (class in core.apps)@\spxentry{CoreConfig}\spxextra{class in core.apps}|hyperpage}{12}
+\indexentry{default\_auto\_field (core.apps.CoreConfig attribute)@\spxentry{default\_auto\_field}\spxextra{core.apps.CoreConfig attribute}|hyperpage}{12}
+\indexentry{name (core.apps.CoreConfig attribute)@\spxentry{name}\spxextra{core.apps.CoreConfig attribute}|hyperpage}{12}
+\indexentry{verbose\_name (core.apps.CoreConfig attribute)@\spxentry{verbose\_name}\spxextra{core.apps.CoreConfig attribute}|hyperpage}{12}
+\indexentry{module@\spxentry{module}!core.templatetags@\spxentry{core.templatetags}|hyperpage}{12}
+\indexentry{core.templatetags@\spxentry{core.templatetags}!module@\spxentry{module}|hyperpage}{12}
+\indexentry{module@\spxentry{module}!core.sitemaps@\spxentry{core.sitemaps}|hyperpage}{12}
+\indexentry{core.sitemaps@\spxentry{core.sitemaps}!module@\spxentry{module}|hyperpage}{12}
+\indexentry{MultilingualStaticSitemap (class in core.sitemaps)@\spxentry{MultilingualStaticSitemap}\spxextra{class in core.sitemaps}|hyperpage}{12}
+\indexentry{changefreq (core.sitemaps.MultilingualStaticSitemap attribute)@\spxentry{changefreq}\spxextra{core.sitemaps.MultilingualStaticSitemap attribute}|hyperpage}{12}
+\indexentry{priority (core.sitemaps.MultilingualStaticSitemap attribute)@\spxentry{priority}\spxextra{core.sitemaps.MultilingualStaticSitemap attribute}|hyperpage}{12}
+\indexentry{pages (core.sitemaps.MultilingualStaticSitemap attribute)@\spxentry{pages}\spxextra{core.sitemaps.MultilingualStaticSitemap attribute}|hyperpage}{12}
+\indexentry{languages (core.sitemaps.MultilingualStaticSitemap attribute)@\spxentry{languages}\spxextra{core.sitemaps.MultilingualStaticSitemap attribute}|hyperpage}{12}
+\indexentry{items() (core.sitemaps.MultilingualStaticSitemap method)@\spxentry{items()}\spxextra{core.sitemaps.MultilingualStaticSitemap method}|hyperpage}{13}
+\indexentry{location() (core.sitemaps.MultilingualStaticSitemap method)@\spxentry{location()}\spxextra{core.sitemaps.MultilingualStaticSitemap method}|hyperpage}{13}
+\indexentry{alternates() (core.sitemaps.MultilingualStaticSitemap method)@\spxentry{alternates()}\spxextra{core.sitemaps.MultilingualStaticSitemap method}|hyperpage}{13}
+\indexentry{module@\spxentry{module}!core.tests.test\_models@\spxentry{core.tests.test\_models}|hyperpage}{13}
+\indexentry{core.tests.test\_models@\spxentry{core.tests.test\_models}!module@\spxentry{module}|hyperpage}{13}
+\indexentry{test\_campinginfo\_fixture() (in module core.tests.test\_models)@\spxentry{test\_campinginfo\_fixture()}\spxextra{in module core.tests.test\_models}|hyperpage}{13}
+\indexentry{test\_swimmingpoolinfo\_fixture() (in module core.tests.test\_models)@\spxentry{test\_swimmingpoolinfo\_fixture()}\spxextra{in module core.tests.test\_models}|hyperpage}{13}
+\indexentry{test\_foodinfo\_fixture() (in module core.tests.test\_models)@\spxentry{test\_foodinfo\_fixture()}\spxextra{in module core.tests.test\_models}|hyperpage}{13}
+\indexentry{test\_laundryinfo\_fixture() (in module core.tests.test\_models)@\spxentry{test\_laundryinfo\_fixture()}\spxextra{in module core.tests.test\_models}|hyperpage}{13}
+\indexentry{module@\spxentry{module}!core.tests.test\_views@\spxentry{core.tests.test\_views}|hyperpage}{13}
+\indexentry{core.tests.test\_views@\spxentry{core.tests.test\_views}!module@\spxentry{module}|hyperpage}{13}
+\indexentry{test\_home\_view() (in module core.tests.test\_views)@\spxentry{test\_home\_view()}\spxextra{in module core.tests.test\_views}|hyperpage}{13}
+\indexentry{test\_about\_view() (in module core.tests.test\_views)@\spxentry{test\_about\_view()}\spxextra{in module core.tests.test\_views}|hyperpage}{13}
+\indexentry{test\_accommodations\_view() (in module core.tests.test\_views)@\spxentry{test\_accommodations\_view()}\spxextra{in module core.tests.test\_views}|hyperpage}{13}
+\indexentry{test\_activities\_view() (in module core.tests.test\_views)@\spxentry{test\_activities\_view()}\spxextra{in module core.tests.test\_views}|hyperpage}{13}
+\indexentry{test\_legal\_view() (in module core.tests.test\_views)@\spxentry{test\_legal\_view()}\spxextra{in module core.tests.test\_views}|hyperpage}{13}
+\indexentry{test\_privacy\_view() (in module core.tests.test\_views)@\spxentry{test\_privacy\_view()}\spxextra{in module core.tests.test\_views}|hyperpage}{13}
+\indexentry{test\_not\_found\_view() (in module core.tests.test\_views)@\spxentry{test\_not\_found\_view()}\spxextra{in module core.tests.test\_views}|hyperpage}{13}
+\indexentry{test\_infos\_view() (in module core.tests.test\_views)@\spxentry{test\_infos\_view()}\spxextra{in module core.tests.test\_views}|hyperpage}{13}
+\indexentry{test\_services\_view() (in module core.tests.test\_views)@\spxentry{test\_services\_view()}\spxextra{in module core.tests.test\_views}|hyperpage}{13}
+\indexentry{module@\spxentry{module}!reservations.views@\spxentry{reservations.views}|hyperpage}{14}
+\indexentry{reservations.views@\spxentry{reservations.views}!module@\spxentry{module}|hyperpage}{14}
+\indexentry{reservation\_request\_view() (in module reservations.views)@\spxentry{reservation\_request\_view()}\spxextra{in module reservations.views}|hyperpage}{14}
+\indexentry{module@\spxentry{module}!reservations.forms@\spxentry{reservations.forms}|hyperpage}{14}
+\indexentry{reservations.forms@\spxentry{reservations.forms}!module@\spxentry{module}|hyperpage}{14}
+\indexentry{ReservationRequestForm (class in reservations.forms)@\spxentry{ReservationRequestForm}\spxextra{class in reservations.forms}|hyperpage}{14}
+\indexentry{ACCOMMODATION\_CHOICES (reservations.forms.ReservationRequestForm attribute)@\spxentry{ACCOMMODATION\_CHOICES}\spxextra{reservations.forms.ReservationRequestForm attribute}|hyperpage}{14}
+\indexentry{ELECTRICITY\_CHOICES (reservations.forms.ReservationRequestForm attribute)@\spxentry{ELECTRICITY\_CHOICES}\spxextra{reservations.forms.ReservationRequestForm attribute}|hyperpage}{14}
+\indexentry{clean() (reservations.forms.ReservationRequestForm method)@\spxentry{clean()}\spxextra{reservations.forms.ReservationRequestForm method}|hyperpage}{14}
+\indexentry{base\_fields (reservations.forms.ReservationRequestForm attribute)@\spxentry{base\_fields}\spxextra{reservations.forms.ReservationRequestForm attribute}|hyperpage}{15}
+\indexentry{declared\_fields (reservations.forms.ReservationRequestForm attribute)@\spxentry{declared\_fields}\spxextra{reservations.forms.ReservationRequestForm attribute}|hyperpage}{15}
+\indexentry{media (reservations.forms.ReservationRequestForm property)@\spxentry{media}\spxextra{reservations.forms.ReservationRequestForm property}|hyperpage}{15}
+\indexentry{module@\spxentry{module}!reservations.apps@\spxentry{reservations.apps}|hyperpage}{15}
+\indexentry{reservations.apps@\spxentry{reservations.apps}!module@\spxentry{module}|hyperpage}{15}
+\indexentry{ReservationsConfig (class in reservations.apps)@\spxentry{ReservationsConfig}\spxextra{class in reservations.apps}|hyperpage}{15}
+\indexentry{default\_auto\_field (reservations.apps.ReservationsConfig attribute)@\spxentry{default\_auto\_field}\spxextra{reservations.apps.ReservationsConfig attribute}|hyperpage}{15}
+\indexentry{name (reservations.apps.ReservationsConfig attribute)@\spxentry{name}\spxextra{reservations.apps.ReservationsConfig attribute}|hyperpage}{15}
+\indexentry{module@\spxentry{module}!reservations.tests.test\_views@\spxentry{reservations.tests.test\_views}|hyperpage}{16}
+\indexentry{reservations.tests.test\_views@\spxentry{reservations.tests.test\_views}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{valid\_reservation\_data() (in module reservations.tests.test\_views)@\spxentry{valid\_reservation\_data()}\spxextra{in module reservations.tests.test\_views}|hyperpage}{16}
+\indexentry{test\_get\_reservation\_request\_view() (in module reservations.tests.test\_views)@\spxentry{test\_get\_reservation\_request\_view()}\spxextra{in module reservations.tests.test\_views}|hyperpage}{16}
+\indexentry{test\_post\_valid\_reservation\_with\_datetime\_and\_label() (in module reservations.tests.test\_views)@\spxentry{test\_post\_valid\_reservation\_with\_datetime\_and\_label()}\spxextra{in module reservations.tests.test\_views}|hyperpage}{16}
+\indexentry{test\_post\_invalid\_reservation() (in module reservations.tests.test\_views)@\spxentry{test\_post\_invalid\_reservation()}\spxextra{in module reservations.tests.test\_views}|hyperpage}{16}
+\indexentry{module@\spxentry{module}!reservations.tests.test\_forms@\spxentry{reservations.tests.test\_forms}|hyperpage}{16}
+\indexentry{reservations.tests.test\_forms@\spxentry{reservations.tests.test\_forms}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{valid\_form\_data() (in module reservations.tests.test\_forms)@\spxentry{valid\_form\_data()}\spxextra{in module reservations.tests.test\_forms}|hyperpage}{16}
+\indexentry{test\_form\_valid() (in module reservations.tests.test\_forms)@\spxentry{test\_form\_valid()}\spxextra{in module reservations.tests.test\_forms}|hyperpage}{16}
+\indexentry{test\_form\_missing\_required\_field() (in module reservations.tests.test\_forms)@\spxentry{test\_form\_missing\_required\_field()}\spxextra{in module reservations.tests.test\_forms}|hyperpage}{16}
+\indexentry{test\_form\_dates\_invalid() (in module reservations.tests.test\_forms)@\spxentry{test\_form\_dates\_invalid()}\spxextra{in module reservations.tests.test\_forms}|hyperpage}{16}
+\indexentry{test\_form\_tent\_requires\_dimensions() (in module reservations.tests.test\_forms)@\spxentry{test\_form\_tent\_requires\_dimensions()}\spxextra{in module reservations.tests.test\_forms}|hyperpage}{16}
+\indexentry{test\_form\_vehicle\_requires\_length() (in module reservations.tests.test\_forms)@\spxentry{test\_form\_vehicle\_requires\_length()}\spxextra{in module reservations.tests.test\_forms}|hyperpage}{16}
+\indexentry{test\_form\_cable\_requires\_if\_electricity\_yes() (in module reservations.tests.test\_forms)@\spxentry{test\_form\_cable\_requires\_if\_electricity\_yes()}\spxextra{in module reservations.tests.test\_forms}|hyperpage}{16}
+\indexentry{module@\spxentry{module}!bookings.models@\spxentry{bookings.models}|hyperpage}{16}
+\indexentry{bookings.models@\spxentry{bookings.models}!module@\spxentry{module}|hyperpage}{16}
+\indexentry{SupplementPrice (class in bookings.models)@\spxentry{SupplementPrice}\spxextra{class in bookings.models}|hyperpage}{16}
+\indexentry{extra\_adult\_price (bookings.models.SupplementPrice attribute)@\spxentry{extra\_adult\_price}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{child\_over\_8\_price (bookings.models.SupplementPrice attribute)@\spxentry{child\_over\_8\_price}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{child\_under\_8\_price (bookings.models.SupplementPrice attribute)@\spxentry{child\_under\_8\_price}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{pet\_price (bookings.models.SupplementPrice attribute)@\spxentry{pet\_price}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{extra\_vehicle\_price (bookings.models.SupplementPrice attribute)@\spxentry{extra\_vehicle\_price}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{extra\_tent\_price (bookings.models.SupplementPrice attribute)@\spxentry{extra\_tent\_price}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{visitor\_price\_without\_swimming\_pool (bookings.models.SupplementPrice attribute)@\spxentry{visitor\_price\_without\_swimming\_pool}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{visitor\_price\_with\_swimming\_pool (bookings.models.SupplementPrice attribute)@\spxentry{visitor\_price\_with\_swimming\_pool}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{SupplementPrice.DoesNotExist@\spxentry{SupplementPrice.DoesNotExist}|hyperpage}{17}
+\indexentry{SupplementPrice.MultipleObjectsReturned@\spxentry{SupplementPrice.MultipleObjectsReturned}|hyperpage}{17}
+\indexentry{id (bookings.models.SupplementPrice attribute)@\spxentry{id}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{objects (bookings.models.SupplementPrice attribute)@\spxentry{objects}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{17}
+\indexentry{prices (bookings.models.SupplementPrice attribute)@\spxentry{prices}\spxextra{bookings.models.SupplementPrice attribute}|hyperpage}{18}
+\indexentry{Price (class in bookings.models)@\spxentry{Price}\spxextra{class in bookings.models}|hyperpage}{18}
+\indexentry{SEASON\_CHOICES (bookings.models.Price attribute)@\spxentry{SEASON\_CHOICES}\spxextra{bookings.models.Price attribute}|hyperpage}{18}
+\indexentry{TYPE\_CHOICES (bookings.models.Price attribute)@\spxentry{TYPE\_CHOICES}\spxextra{bookings.models.Price attribute}|hyperpage}{18}
+\indexentry{booking\_type (bookings.models.Price attribute)@\spxentry{booking\_type}\spxextra{bookings.models.Price attribute}|hyperpage}{18}
+\indexentry{season (bookings.models.Price attribute)@\spxentry{season}\spxextra{bookings.models.Price attribute}|hyperpage}{18}
+\indexentry{is\_worker (bookings.models.Price attribute)@\spxentry{is\_worker}\spxextra{bookings.models.Price attribute}|hyperpage}{18}
+\indexentry{price\_1\_person\_with\_electricity (bookings.models.Price attribute)@\spxentry{price\_1\_person\_with\_electricity}\spxextra{bookings.models.Price attribute}|hyperpage}{19}
+\indexentry{price\_2\_persons\_with\_electricity (bookings.models.Price attribute)@\spxentry{price\_2\_persons\_with\_electricity}\spxextra{bookings.models.Price attribute}|hyperpage}{19}
+\indexentry{price\_1\_person\_without\_electricity (bookings.models.Price attribute)@\spxentry{price\_1\_person\_without\_electricity}\spxextra{bookings.models.Price attribute}|hyperpage}{19}
+\indexentry{price\_2\_persons\_without\_electricity (bookings.models.Price attribute)@\spxentry{price\_2\_persons\_without\_electricity}\spxextra{bookings.models.Price attribute}|hyperpage}{19}
+\indexentry{included\_people (bookings.models.Price attribute)@\spxentry{included\_people}\spxextra{bookings.models.Price attribute}|hyperpage}{19}
+\indexentry{worker\_week\_price (bookings.models.Price attribute)@\spxentry{worker\_week\_price}\spxextra{bookings.models.Price attribute}|hyperpage}{19}
+\indexentry{weekend\_price\_without\_electricity (bookings.models.Price attribute)@\spxentry{weekend\_price\_without\_electricity}\spxextra{bookings.models.Price attribute}|hyperpage}{19}
+\indexentry{weekend\_price\_with\_electricity (bookings.models.Price attribute)@\spxentry{weekend\_price\_with\_electricity}\spxextra{bookings.models.Price attribute}|hyperpage}{19}
+\indexentry{supplements (bookings.models.Price attribute)@\spxentry{supplements}\spxextra{bookings.models.Price attribute}|hyperpage}{19}
+\indexentry{save() (bookings.models.Price method)@\spxentry{save()}\spxextra{bookings.models.Price method}|hyperpage}{19}
+\indexentry{clean() (bookings.models.Price method)@\spxentry{clean()}\spxextra{bookings.models.Price method}|hyperpage}{19}
+\indexentry{Price.DoesNotExist@\spxentry{Price.DoesNotExist}|hyperpage}{19}
+\indexentry{Price.MultipleObjectsReturned@\spxentry{Price.MultipleObjectsReturned}|hyperpage}{19}
+\indexentry{get\_booking\_type\_display() (bookings.models.Price method)@\spxentry{get\_booking\_type\_display()}\spxextra{bookings.models.Price method}|hyperpage}{20}
+\indexentry{get\_season\_display() (bookings.models.Price method)@\spxentry{get\_season\_display()}\spxextra{bookings.models.Price method}|hyperpage}{20}
+\indexentry{id (bookings.models.Price attribute)@\spxentry{id}\spxextra{bookings.models.Price attribute}|hyperpage}{20}
+\indexentry{objects (bookings.models.Price attribute)@\spxentry{objects}\spxextra{bookings.models.Price attribute}|hyperpage}{20}
+\indexentry{supplements\_id (bookings.models.Price attribute)@\spxentry{supplements\_id}\spxextra{bookings.models.Price attribute}|hyperpage}{20}
+\indexentry{OtherPrice (class in bookings.models)@\spxentry{OtherPrice}\spxextra{class in bookings.models}|hyperpage}{20}
+\indexentry{translations (bookings.models.OtherPrice attribute)@\spxentry{translations}\spxextra{bookings.models.OtherPrice attribute}|hyperpage}{20}
+\indexentry{OtherPrice.DoesNotExist@\spxentry{OtherPrice.DoesNotExist}|hyperpage}{20}
+\indexentry{OtherPrice.MultipleObjectsReturned@\spxentry{OtherPrice.MultipleObjectsReturned}|hyperpage}{20}
+\indexentry{current\_year (bookings.models.OtherPrice attribute)@\spxentry{current\_year}\spxextra{bookings.models.OtherPrice attribute}|hyperpage}{20}
+\indexentry{id (bookings.models.OtherPrice attribute)@\spxentry{id}\spxextra{bookings.models.OtherPrice attribute}|hyperpage}{20}
+\indexentry{price\_tourist\_tax (bookings.models.OtherPrice attribute)@\spxentry{price\_tourist\_tax}\spxextra{bookings.models.OtherPrice attribute}|hyperpage}{20}
+\indexentry{tourist\_tax\_date (bookings.models.OtherPrice attribute)@\spxentry{tourist\_tax\_date}\spxextra{bookings.models.OtherPrice attribute}|hyperpage}{21}
+\indexentry{Capacity (class in bookings.models)@\spxentry{Capacity}\spxextra{class in bookings.models}|hyperpage}{21}
+\indexentry{booking\_type (bookings.models.Capacity attribute)@\spxentry{booking\_type}\spxextra{bookings.models.Capacity attribute}|hyperpage}{21}
+\indexentry{max\_places (bookings.models.Capacity attribute)@\spxentry{max\_places}\spxextra{bookings.models.Capacity attribute}|hyperpage}{21}
+\indexentry{number\_locations (bookings.models.Capacity attribute)@\spxentry{number\_locations}\spxextra{bookings.models.Capacity attribute}|hyperpage}{21}
+\indexentry{number\_mobile\_homes (bookings.models.Capacity attribute)@\spxentry{number\_mobile\_homes}\spxextra{bookings.models.Capacity attribute}|hyperpage}{21}
+\indexentry{Capacity.DoesNotExist@\spxentry{Capacity.DoesNotExist}|hyperpage}{21}
+\indexentry{Capacity.MultipleObjectsReturned@\spxentry{Capacity.MultipleObjectsReturned}|hyperpage}{21}
+\indexentry{get\_booking\_type\_display() (bookings.models.Capacity method)@\spxentry{get\_booking\_type\_display()}\spxextra{bookings.models.Capacity method}|hyperpage}{21}
+\indexentry{id (bookings.models.Capacity attribute)@\spxentry{id}\spxextra{bookings.models.Capacity attribute}|hyperpage}{21}
+\indexentry{objects (bookings.models.Capacity attribute)@\spxentry{objects}\spxextra{bookings.models.Capacity attribute}|hyperpage}{21}
+\indexentry{Booking (class in bookings.models)@\spxentry{Booking}\spxextra{class in bookings.models}|hyperpage}{21}
+\indexentry{TYPE\_CHOICES (bookings.models.Booking attribute)@\spxentry{TYPE\_CHOICES}\spxextra{bookings.models.Booking attribute}|hyperpage}{22}
+\indexentry{SUBTYPE\_CHOICES (bookings.models.Booking attribute)@\spxentry{SUBTYPE\_CHOICES}\spxextra{bookings.models.Booking attribute}|hyperpage}{22}
+\indexentry{ELECTRICITY\_CHOICES (bookings.models.Booking attribute)@\spxentry{ELECTRICITY\_CHOICES}\spxextra{bookings.models.Booking attribute}|hyperpage}{22}
+\indexentry{last\_name (bookings.models.Booking attribute)@\spxentry{last\_name}\spxextra{bookings.models.Booking attribute}|hyperpage}{22}
+\indexentry{first\_name (bookings.models.Booking attribute)@\spxentry{first\_name}\spxextra{bookings.models.Booking attribute}|hyperpage}{22}
+\indexentry{address (bookings.models.Booking attribute)@\spxentry{address}\spxextra{bookings.models.Booking attribute}|hyperpage}{22}
+\indexentry{postal\_code (bookings.models.Booking attribute)@\spxentry{postal\_code}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{city (bookings.models.Booking attribute)@\spxentry{city}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{phone (bookings.models.Booking attribute)@\spxentry{phone}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{email (bookings.models.Booking attribute)@\spxentry{email}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{start\_date (bookings.models.Booking attribute)@\spxentry{start\_date}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{end\_date (bookings.models.Booking attribute)@\spxentry{end\_date}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{booking\_type (bookings.models.Booking attribute)@\spxentry{booking\_type}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{booking\_subtype (bookings.models.Booking attribute)@\spxentry{booking\_subtype}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{electricity (bookings.models.Booking attribute)@\spxentry{electricity}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{deposit\_paid (bookings.models.Booking attribute)@\spxentry{deposit\_paid}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{tent\_length (bookings.models.Booking attribute)@\spxentry{tent\_length}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{tent\_width (bookings.models.Booking attribute)@\spxentry{tent\_width}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{vehicle\_length (bookings.models.Booking attribute)@\spxentry{vehicle\_length}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{cable\_length (bookings.models.Booking attribute)@\spxentry{cable\_length}\spxextra{bookings.models.Booking attribute}|hyperpage}{23}
+\indexentry{adults (bookings.models.Booking attribute)@\spxentry{adults}\spxextra{bookings.models.Booking attribute}|hyperpage}{24}
+\indexentry{children\_over\_8 (bookings.models.Booking attribute)@\spxentry{children\_over\_8}\spxextra{bookings.models.Booking attribute}|hyperpage}{24}
+\indexentry{children\_under\_8 (bookings.models.Booking attribute)@\spxentry{children\_under\_8}\spxextra{bookings.models.Booking attribute}|hyperpage}{24}
+\indexentry{pets (bookings.models.Booking attribute)@\spxentry{pets}\spxextra{bookings.models.Booking attribute}|hyperpage}{24}
+\indexentry{extra\_vehicle (bookings.models.Booking attribute)@\spxentry{extra\_vehicle}\spxextra{bookings.models.Booking attribute}|hyperpage}{24}
+\indexentry{extra\_tent (bookings.models.Booking attribute)@\spxentry{extra\_tent}\spxextra{bookings.models.Booking attribute}|hyperpage}{24}
+\indexentry{created\_at (bookings.models.Booking attribute)@\spxentry{created\_at}\spxextra{bookings.models.Booking attribute}|hyperpage}{24}
+\indexentry{updated\_at (bookings.models.Booking attribute)@\spxentry{updated\_at}\spxextra{bookings.models.Booking attribute}|hyperpage}{24}
+\indexentry{MAIN\_TYPE\_MAP (bookings.models.Booking attribute)@\spxentry{MAIN\_TYPE\_MAP}\spxextra{bookings.models.Booking attribute}|hyperpage}{24}
+\indexentry{created\_at\_display() (bookings.models.Booking method)@\spxentry{created\_at\_display()}\spxextra{bookings.models.Booking method}|hyperpage}{24}
+\indexentry{updated\_at\_display() (bookings.models.Booking method)@\spxentry{updated\_at\_display()}\spxextra{bookings.models.Booking method}|hyperpage}{24}
+\indexentry{get\_season() (bookings.models.Booking method)@\spxentry{get\_season()}\spxextra{bookings.models.Booking method}|hyperpage}{24}
+\indexentry{calculate\_total\_price() (bookings.models.Booking method)@\spxentry{calculate\_total\_price()}\spxextra{bookings.models.Booking method}|hyperpage}{24}
+\indexentry{calculate\_deposit() (bookings.models.Booking method)@\spxentry{calculate\_deposit()}\spxextra{bookings.models.Booking method}|hyperpage}{24}
+\indexentry{save() (bookings.models.Booking method)@\spxentry{save()}\spxextra{bookings.models.Booking method}|hyperpage}{24}
+\indexentry{check\_capacity() (bookings.models.Booking method)@\spxentry{check\_capacity()}\spxextra{bookings.models.Booking method}|hyperpage}{24}
+\indexentry{clean() (bookings.models.Booking method)@\spxentry{clean()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{Booking.DoesNotExist@\spxentry{Booking.DoesNotExist}|hyperpage}{25}
+\indexentry{Booking.MultipleObjectsReturned@\spxentry{Booking.MultipleObjectsReturned}|hyperpage}{25}
+\indexentry{get\_booking\_subtype\_display() (bookings.models.Booking method)@\spxentry{get\_booking\_subtype\_display()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_booking\_type\_display() (bookings.models.Booking method)@\spxentry{get\_booking\_type\_display()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_electricity\_display() (bookings.models.Booking method)@\spxentry{get\_electricity\_display()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_next\_by\_created\_at() (bookings.models.Booking method)@\spxentry{get\_next\_by\_created\_at()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_next\_by\_end\_date() (bookings.models.Booking method)@\spxentry{get\_next\_by\_end\_date()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_next\_by\_start\_date() (bookings.models.Booking method)@\spxentry{get\_next\_by\_start\_date()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_next\_by\_updated\_at() (bookings.models.Booking method)@\spxentry{get\_next\_by\_updated\_at()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_previous\_by\_created\_at() (bookings.models.Booking method)@\spxentry{get\_previous\_by\_created\_at()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_previous\_by\_end\_date() (bookings.models.Booking method)@\spxentry{get\_previous\_by\_end\_date()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_previous\_by\_start\_date() (bookings.models.Booking method)@\spxentry{get\_previous\_by\_start\_date()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{get\_previous\_by\_updated\_at() (bookings.models.Booking method)@\spxentry{get\_previous\_by\_updated\_at()}\spxextra{bookings.models.Booking method}|hyperpage}{25}
+\indexentry{id (bookings.models.Booking attribute)@\spxentry{id}\spxextra{bookings.models.Booking attribute}|hyperpage}{25}
+\indexentry{objects (bookings.models.Booking attribute)@\spxentry{objects}\spxextra{bookings.models.Booking attribute}|hyperpage}{25}
+\indexentry{MobileHome (class in bookings.models)@\spxentry{MobileHome}\spxextra{class in bookings.models}|hyperpage}{25}
+\indexentry{name (bookings.models.MobileHome attribute)@\spxentry{name}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{name\_en (bookings.models.MobileHome attribute)@\spxentry{name\_en}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{name\_es (bookings.models.MobileHome attribute)@\spxentry{name\_es}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{name\_de (bookings.models.MobileHome attribute)@\spxentry{name\_de}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{name\_nl (bookings.models.MobileHome attribute)@\spxentry{name\_nl}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{description\_text (bookings.models.MobileHome attribute)@\spxentry{description\_text}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{description\_en (bookings.models.MobileHome attribute)@\spxentry{description\_en}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{description\_es (bookings.models.MobileHome attribute)@\spxentry{description\_es}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{description\_de (bookings.models.MobileHome attribute)@\spxentry{description\_de}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{description\_nl (bookings.models.MobileHome attribute)@\spxentry{description\_nl}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{night\_price (bookings.models.MobileHome attribute)@\spxentry{night\_price}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{night\_price\_mid (bookings.models.MobileHome attribute)@\spxentry{night\_price\_mid}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{26}
+\indexentry{week\_low (bookings.models.MobileHome attribute)@\spxentry{week\_low}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{27}
+\indexentry{week\_mid (bookings.models.MobileHome attribute)@\spxentry{week\_mid}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{27}
+\indexentry{week\_high (bookings.models.MobileHome attribute)@\spxentry{week\_high}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{27}
+\indexentry{is\_worker\_home (bookings.models.MobileHome attribute)@\spxentry{is\_worker\_home}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{27}
+\indexentry{worker\_price\_1p (bookings.models.MobileHome attribute)@\spxentry{worker\_price\_1p}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{27}
+\indexentry{worker\_price\_2p (bookings.models.MobileHome attribute)@\spxentry{worker\_price\_2p}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{27}
+\indexentry{worker\_price\_3p (bookings.models.MobileHome attribute)@\spxentry{worker\_price\_3p}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{27}
+\indexentry{save() (bookings.models.MobileHome method)@\spxentry{save()}\spxextra{bookings.models.MobileHome method}|hyperpage}{27}
+\indexentry{MobileHome.DoesNotExist@\spxentry{MobileHome.DoesNotExist}|hyperpage}{27}
+\indexentry{MobileHome.MultipleObjectsReturned@\spxentry{MobileHome.MultipleObjectsReturned}|hyperpage}{27}
+\indexentry{id (bookings.models.MobileHome attribute)@\spxentry{id}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{27}
+\indexentry{objects (bookings.models.MobileHome attribute)@\spxentry{objects}\spxextra{bookings.models.MobileHome attribute}|hyperpage}{27}
+\indexentry{SupplementMobileHome (class in bookings.models)@\spxentry{SupplementMobileHome}\spxextra{class in bookings.models}|hyperpage}{27}
+\indexentry{translations (bookings.models.SupplementMobileHome attribute)@\spxentry{translations}\spxextra{bookings.models.SupplementMobileHome attribute}|hyperpage}{28}
+\indexentry{SupplementMobileHome.DoesNotExist@\spxentry{SupplementMobileHome.DoesNotExist}|hyperpage}{28}
+\indexentry{SupplementMobileHome.MultipleObjectsReturned@\spxentry{SupplementMobileHome.MultipleObjectsReturned}|hyperpage}{28}
+\indexentry{bed\_linen\_rental (bookings.models.SupplementMobileHome attribute)@\spxentry{bed\_linen\_rental}\spxextra{bookings.models.SupplementMobileHome attribute}|hyperpage}{28}
+\indexentry{cleaning\_deposit (bookings.models.SupplementMobileHome attribute)@\spxentry{cleaning\_deposit}\spxextra{bookings.models.SupplementMobileHome attribute}|hyperpage}{28}
+\indexentry{id (bookings.models.SupplementMobileHome attribute)@\spxentry{id}\spxextra{bookings.models.SupplementMobileHome attribute}|hyperpage}{28}
+\indexentry{mobile\_home\_deposit (bookings.models.SupplementMobileHome attribute)@\spxentry{mobile\_home\_deposit}\spxextra{bookings.models.SupplementMobileHome attribute}|hyperpage}{28}
+\indexentry{SeasonInfo (class in bookings.models)@\spxentry{SeasonInfo}\spxextra{class in bookings.models}|hyperpage}{28}
+\indexentry{translations (bookings.models.SeasonInfo attribute)@\spxentry{translations}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{28}
+\indexentry{SeasonInfo.DoesNotExist@\spxentry{SeasonInfo.DoesNotExist}|hyperpage}{29}
+\indexentry{SeasonInfo.MultipleObjectsReturned@\spxentry{SeasonInfo.MultipleObjectsReturned}|hyperpage}{29}
+\indexentry{high\_season\_end (bookings.models.SeasonInfo attribute)@\spxentry{high\_season\_end}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{29}
+\indexentry{high\_season\_start (bookings.models.SeasonInfo attribute)@\spxentry{high\_season\_start}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{29}
+\indexentry{id (bookings.models.SeasonInfo attribute)@\spxentry{id}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{29}
+\indexentry{low\_season\_end (bookings.models.SeasonInfo attribute)@\spxentry{low\_season\_end}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{29}
+\indexentry{low\_season\_start (bookings.models.SeasonInfo attribute)@\spxentry{low\_season\_start}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{29}
+\indexentry{mid\_season\_end\_1 (bookings.models.SeasonInfo attribute)@\spxentry{mid\_season\_end\_1}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{29}
+\indexentry{mid\_season\_end\_2 (bookings.models.SeasonInfo attribute)@\spxentry{mid\_season\_end\_2}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{29}
+\indexentry{mid\_season\_start\_1 (bookings.models.SeasonInfo attribute)@\spxentry{mid\_season\_start\_1}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{29}
+\indexentry{mid\_season\_start\_2 (bookings.models.SeasonInfo attribute)@\spxentry{mid\_season\_start\_2}\spxextra{bookings.models.SeasonInfo attribute}|hyperpage}{29}
+\indexentry{OtherPriceTranslation (class in bookings.models)@\spxentry{OtherPriceTranslation}\spxextra{class in bookings.models}|hyperpage}{29}
+\indexentry{OtherPriceTranslation.DoesNotExist@\spxentry{OtherPriceTranslation.DoesNotExist}|hyperpage}{30}
+\indexentry{OtherPriceTranslation.MultipleObjectsReturned@\spxentry{OtherPriceTranslation.MultipleObjectsReturned}|hyperpage}{30}
+\indexentry{current\_year (bookings.models.OtherPriceTranslation attribute)@\spxentry{current\_year}\spxextra{bookings.models.OtherPriceTranslation attribute}|hyperpage}{30}
+\indexentry{get\_language\_code\_display() (bookings.models.OtherPriceTranslation method)@\spxentry{get\_language\_code\_display()}\spxextra{bookings.models.OtherPriceTranslation method}|hyperpage}{30}
+\indexentry{get\_next\_by\_tourist\_tax\_date() (bookings.models.OtherPriceTranslation method)@\spxentry{get\_next\_by\_tourist\_tax\_date()}\spxextra{bookings.models.OtherPriceTranslation method}|hyperpage}{30}
+\indexentry{get\_previous\_by\_tourist\_tax\_date() (bookings.models.OtherPriceTranslation method)@\spxentry{get\_previous\_by\_tourist\_tax\_date()}\spxextra{bookings.models.OtherPriceTranslation method}|hyperpage}{30}
+\indexentry{id (bookings.models.OtherPriceTranslation attribute)@\spxentry{id}\spxextra{bookings.models.OtherPriceTranslation attribute}|hyperpage}{30}
+\indexentry{language\_code (bookings.models.OtherPriceTranslation attribute)@\spxentry{language\_code}\spxextra{bookings.models.OtherPriceTranslation attribute}|hyperpage}{30}
+\indexentry{master (bookings.models.OtherPriceTranslation attribute)@\spxentry{master}\spxextra{bookings.models.OtherPriceTranslation attribute}|hyperpage}{30}
+\indexentry{master\_id (bookings.models.OtherPriceTranslation attribute)@\spxentry{master\_id}\spxextra{bookings.models.OtherPriceTranslation attribute}|hyperpage}{30}
+\indexentry{objects (bookings.models.OtherPriceTranslation attribute)@\spxentry{objects}\spxextra{bookings.models.OtherPriceTranslation attribute}|hyperpage}{30}
+\indexentry{price\_tourist\_tax (bookings.models.OtherPriceTranslation attribute)@\spxentry{price\_tourist\_tax}\spxextra{bookings.models.OtherPriceTranslation attribute}|hyperpage}{30}
+\indexentry{tourist\_tax\_date (bookings.models.OtherPriceTranslation attribute)@\spxentry{tourist\_tax\_date}\spxextra{bookings.models.OtherPriceTranslation attribute}|hyperpage}{30}
+\indexentry{SeasonInfoTranslation (class in bookings.models)@\spxentry{SeasonInfoTranslation}\spxextra{class in bookings.models}|hyperpage}{30}
+\indexentry{SeasonInfoTranslation.DoesNotExist@\spxentry{SeasonInfoTranslation.DoesNotExist}|hyperpage}{30}
+\indexentry{SeasonInfoTranslation.MultipleObjectsReturned@\spxentry{SeasonInfoTranslation.MultipleObjectsReturned}|hyperpage}{30}
+\indexentry{get\_language\_code\_display() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_language\_code\_display()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{30}
+\indexentry{get\_next\_by\_high\_season\_end() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_next\_by\_high\_season\_end()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_next\_by\_high\_season\_start() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_next\_by\_high\_season\_start()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_next\_by\_low\_season\_end() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_next\_by\_low\_season\_end()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_next\_by\_low\_season\_start() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_next\_by\_low\_season\_start()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_next\_by\_mid\_season\_end\_1() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_next\_by\_mid\_season\_end\_1()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_next\_by\_mid\_season\_end\_2() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_next\_by\_mid\_season\_end\_2()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_next\_by\_mid\_season\_start\_1() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_next\_by\_mid\_season\_start\_1()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_next\_by\_mid\_season\_start\_2() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_next\_by\_mid\_season\_start\_2()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_previous\_by\_high\_season\_end() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_previous\_by\_high\_season\_end()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_previous\_by\_high\_season\_start() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_previous\_by\_high\_season\_start()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_previous\_by\_low\_season\_end() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_previous\_by\_low\_season\_end()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_previous\_by\_low\_season\_start() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_previous\_by\_low\_season\_start()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_previous\_by\_mid\_season\_end\_1() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_previous\_by\_mid\_season\_end\_1()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_previous\_by\_mid\_season\_end\_2() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_previous\_by\_mid\_season\_end\_2()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_previous\_by\_mid\_season\_start\_1() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_previous\_by\_mid\_season\_start\_1()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{get\_previous\_by\_mid\_season\_start\_2() (bookings.models.SeasonInfoTranslation method)@\spxentry{get\_previous\_by\_mid\_season\_start\_2()}\spxextra{bookings.models.SeasonInfoTranslation method}|hyperpage}{31}
+\indexentry{high\_season\_end (bookings.models.SeasonInfoTranslation attribute)@\spxentry{high\_season\_end}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{31}
+\indexentry{high\_season\_start (bookings.models.SeasonInfoTranslation attribute)@\spxentry{high\_season\_start}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{31}
+\indexentry{id (bookings.models.SeasonInfoTranslation attribute)@\spxentry{id}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{31}
+\indexentry{language\_code (bookings.models.SeasonInfoTranslation attribute)@\spxentry{language\_code}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{low\_season\_end (bookings.models.SeasonInfoTranslation attribute)@\spxentry{low\_season\_end}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{low\_season\_start (bookings.models.SeasonInfoTranslation attribute)@\spxentry{low\_season\_start}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{master (bookings.models.SeasonInfoTranslation attribute)@\spxentry{master}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{master\_id (bookings.models.SeasonInfoTranslation attribute)@\spxentry{master\_id}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{mid\_season\_end\_1 (bookings.models.SeasonInfoTranslation attribute)@\spxentry{mid\_season\_end\_1}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{mid\_season\_end\_2 (bookings.models.SeasonInfoTranslation attribute)@\spxentry{mid\_season\_end\_2}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{mid\_season\_start\_1 (bookings.models.SeasonInfoTranslation attribute)@\spxentry{mid\_season\_start\_1}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{mid\_season\_start\_2 (bookings.models.SeasonInfoTranslation attribute)@\spxentry{mid\_season\_start\_2}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{objects (bookings.models.SeasonInfoTranslation attribute)@\spxentry{objects}\spxextra{bookings.models.SeasonInfoTranslation attribute}|hyperpage}{32}
+\indexentry{SupplementMobileHomeTranslation (class in bookings.models)@\spxentry{SupplementMobileHomeTranslation}\spxextra{class in bookings.models}|hyperpage}{32}
+\indexentry{SupplementMobileHomeTranslation.DoesNotExist@\spxentry{SupplementMobileHomeTranslation.DoesNotExist}|hyperpage}{32}
+\indexentry{SupplementMobileHomeTranslation.MultipleObjectsReturned@\spxentry{SupplementMobileHomeTranslation.MultipleObjectsReturned}|hyperpage}{32}
+\indexentry{bed\_linen\_rental (bookings.models.SupplementMobileHomeTranslation attribute)@\spxentry{bed\_linen\_rental}\spxextra{bookings.models.SupplementMobileHomeTranslation attribute}|hyperpage}{32}
+\indexentry{cleaning\_deposit (bookings.models.SupplementMobileHomeTranslation attribute)@\spxentry{cleaning\_deposit}\spxextra{bookings.models.SupplementMobileHomeTranslation attribute}|hyperpage}{32}
+\indexentry{get\_language\_code\_display() (bookings.models.SupplementMobileHomeTranslation method)@\spxentry{get\_language\_code\_display()}\spxextra{bookings.models.SupplementMobileHomeTranslation method}|hyperpage}{32}
+\indexentry{id (bookings.models.SupplementMobileHomeTranslation attribute)@\spxentry{id}\spxextra{bookings.models.SupplementMobileHomeTranslation attribute}|hyperpage}{33}
+\indexentry{language\_code (bookings.models.SupplementMobileHomeTranslation attribute)@\spxentry{language\_code}\spxextra{bookings.models.SupplementMobileHomeTranslation attribute}|hyperpage}{33}
+\indexentry{master (bookings.models.SupplementMobileHomeTranslation attribute)@\spxentry{master}\spxextra{bookings.models.SupplementMobileHomeTranslation attribute}|hyperpage}{33}
+\indexentry{master\_id (bookings.models.SupplementMobileHomeTranslation attribute)@\spxentry{master\_id}\spxextra{bookings.models.SupplementMobileHomeTranslation attribute}|hyperpage}{33}
+\indexentry{mobile\_home\_deposit (bookings.models.SupplementMobileHomeTranslation attribute)@\spxentry{mobile\_home\_deposit}\spxextra{bookings.models.SupplementMobileHomeTranslation attribute}|hyperpage}{33}
+\indexentry{objects (bookings.models.SupplementMobileHomeTranslation attribute)@\spxentry{objects}\spxextra{bookings.models.SupplementMobileHomeTranslation attribute}|hyperpage}{33}
+\indexentry{module@\spxentry{module}!bookings.views@\spxentry{bookings.views}|hyperpage}{33}
+\indexentry{bookings.views@\spxentry{bookings.views}!module@\spxentry{module}|hyperpage}{33}
+\indexentry{booking\_form() (in module bookings.views)@\spxentry{booking\_form()}\spxextra{in module bookings.views}|hyperpage}{33}
+\indexentry{booking\_summary() (in module bookings.views)@\spxentry{booking\_summary()}\spxextra{in module bookings.views}|hyperpage}{33}
+\indexentry{booking\_details() (in module bookings.views)@\spxentry{booking\_details()}\spxextra{in module bookings.views}|hyperpage}{33}
+\indexentry{booking\_confirm() (in module bookings.views)@\spxentry{booking\_confirm()}\spxextra{in module bookings.views}|hyperpage}{33}
+\indexentry{module@\spxentry{module}!bookings.forms@\spxentry{bookings.forms}|hyperpage}{33}
+\indexentry{bookings.forms@\spxentry{bookings.forms}!module@\spxentry{module}|hyperpage}{33}
+\indexentry{BookingFormClassic (class in bookings.forms)@\spxentry{BookingFormClassic}\spxextra{class in bookings.forms}|hyperpage}{33}
+\indexentry{BOOKING\_TYPE\_CHOICES\_FOR\_FORM (bookings.forms.BookingFormClassic attribute)@\spxentry{BOOKING\_TYPE\_CHOICES\_FOR\_FORM}\spxextra{bookings.forms.BookingFormClassic attribute}|hyperpage}{34}
+\indexentry{SUBTYPE\_TO\_MAIN\_TYPE (bookings.forms.BookingFormClassic attribute)@\spxentry{SUBTYPE\_TO\_MAIN\_TYPE}\spxextra{bookings.forms.BookingFormClassic attribute}|hyperpage}{34}
+\indexentry{ELECTRICITY\_CHOICES (bookings.forms.BookingFormClassic attribute)@\spxentry{ELECTRICITY\_CHOICES}\spxextra{bookings.forms.BookingFormClassic attribute}|hyperpage}{34}
+\indexentry{BookingFormClassic.Meta (class in bookings.forms)@\spxentry{BookingFormClassic.Meta}\spxextra{class in bookings.forms}|hyperpage}{34}
+\indexentry{model (bookings.forms.BookingFormClassic.Meta attribute)@\spxentry{model}\spxextra{bookings.forms.BookingFormClassic.Meta attribute}|hyperpage}{34}
+\indexentry{fields (bookings.forms.BookingFormClassic.Meta attribute)@\spxentry{fields}\spxextra{bookings.forms.BookingFormClassic.Meta attribute}|hyperpage}{34}
+\indexentry{labels (bookings.forms.BookingFormClassic.Meta attribute)@\spxentry{labels}\spxextra{bookings.forms.BookingFormClassic.Meta attribute}|hyperpage}{34}
+\indexentry{widgets (bookings.forms.BookingFormClassic.Meta attribute)@\spxentry{widgets}\spxextra{bookings.forms.BookingFormClassic.Meta attribute}|hyperpage}{34}
+\indexentry{clean() (bookings.forms.BookingFormClassic method)@\spxentry{clean()}\spxextra{bookings.forms.BookingFormClassic method}|hyperpage}{34}
+\indexentry{base\_fields (bookings.forms.BookingFormClassic attribute)@\spxentry{base\_fields}\spxextra{bookings.forms.BookingFormClassic attribute}|hyperpage}{34}
+\indexentry{declared\_fields (bookings.forms.BookingFormClassic attribute)@\spxentry{declared\_fields}\spxextra{bookings.forms.BookingFormClassic attribute}|hyperpage}{35}
+\indexentry{media (bookings.forms.BookingFormClassic property)@\spxentry{media}\spxextra{bookings.forms.BookingFormClassic property}|hyperpage}{35}
+\indexentry{BookingDetailsForm (class in bookings.forms)@\spxentry{BookingDetailsForm}\spxextra{class in bookings.forms}|hyperpage}{35}
+\indexentry{clean() (bookings.forms.BookingDetailsForm method)@\spxentry{clean()}\spxextra{bookings.forms.BookingDetailsForm method}|hyperpage}{35}
+\indexentry{base\_fields (bookings.forms.BookingDetailsForm attribute)@\spxentry{base\_fields}\spxextra{bookings.forms.BookingDetailsForm attribute}|hyperpage}{35}
+\indexentry{declared\_fields (bookings.forms.BookingDetailsForm attribute)@\spxentry{declared\_fields}\spxextra{bookings.forms.BookingDetailsForm attribute}|hyperpage}{35}
+\indexentry{media (bookings.forms.BookingDetailsForm property)@\spxentry{media}\spxextra{bookings.forms.BookingDetailsForm property}|hyperpage}{35}
+\indexentry{module@\spxentry{module}!bookings.admin@\spxentry{bookings.admin}|hyperpage}{36}
+\indexentry{bookings.admin@\spxentry{bookings.admin}!module@\spxentry{module}|hyperpage}{36}
+\indexentry{CapacityAdmin (class in bookings.admin)@\spxentry{CapacityAdmin}\spxextra{class in bookings.admin}|hyperpage}{36}
+\indexentry{list\_display (bookings.admin.CapacityAdmin attribute)@\spxentry{list\_display}\spxextra{bookings.admin.CapacityAdmin attribute}|hyperpage}{36}
+\indexentry{list\_filter (bookings.admin.CapacityAdmin attribute)@\spxentry{list\_filter}\spxextra{bookings.admin.CapacityAdmin attribute}|hyperpage}{36}
+\indexentry{search\_fields (bookings.admin.CapacityAdmin attribute)@\spxentry{search\_fields}\spxextra{bookings.admin.CapacityAdmin attribute}|hyperpage}{36}
+\indexentry{fieldsets (bookings.admin.CapacityAdmin attribute)@\spxentry{fieldsets}\spxextra{bookings.admin.CapacityAdmin attribute}|hyperpage}{36}
+\indexentry{media (bookings.admin.CapacityAdmin property)@\spxentry{media}\spxextra{bookings.admin.CapacityAdmin property}|hyperpage}{36}
+\indexentry{SupplementPriceAdmin (class in bookings.admin)@\spxentry{SupplementPriceAdmin}\spxextra{class in bookings.admin}|hyperpage}{36}
+\indexentry{list\_display (bookings.admin.SupplementPriceAdmin attribute)@\spxentry{list\_display}\spxextra{bookings.admin.SupplementPriceAdmin attribute}|hyperpage}{36}
+\indexentry{search\_fields (bookings.admin.SupplementPriceAdmin attribute)@\spxentry{search\_fields}\spxextra{bookings.admin.SupplementPriceAdmin attribute}|hyperpage}{36}
+\indexentry{fieldsets (bookings.admin.SupplementPriceAdmin attribute)@\spxentry{fieldsets}\spxextra{bookings.admin.SupplementPriceAdmin attribute}|hyperpage}{36}
+\indexentry{media (bookings.admin.SupplementPriceAdmin property)@\spxentry{media}\spxextra{bookings.admin.SupplementPriceAdmin property}|hyperpage}{36}
+\indexentry{PriceAdminForm (class in bookings.admin)@\spxentry{PriceAdminForm}\spxextra{class in bookings.admin}|hyperpage}{36}
+\indexentry{PriceAdminForm.Meta (class in bookings.admin)@\spxentry{PriceAdminForm.Meta}\spxextra{class in bookings.admin}|hyperpage}{36}
+\indexentry{model (bookings.admin.PriceAdminForm.Meta attribute)@\spxentry{model}\spxextra{bookings.admin.PriceAdminForm.Meta attribute}|hyperpage}{36}
+\indexentry{fields (bookings.admin.PriceAdminForm.Meta attribute)@\spxentry{fields}\spxextra{bookings.admin.PriceAdminForm.Meta attribute}|hyperpage}{36}
+\indexentry{clean() (bookings.admin.PriceAdminForm method)@\spxentry{clean()}\spxextra{bookings.admin.PriceAdminForm method}|hyperpage}{36}
+\indexentry{base\_fields (bookings.admin.PriceAdminForm attribute)@\spxentry{base\_fields}\spxextra{bookings.admin.PriceAdminForm attribute}|hyperpage}{37}
+\indexentry{declared\_fields (bookings.admin.PriceAdminForm attribute)@\spxentry{declared\_fields}\spxextra{bookings.admin.PriceAdminForm attribute}|hyperpage}{37}
+\indexentry{media (bookings.admin.PriceAdminForm property)@\spxentry{media}\spxextra{bookings.admin.PriceAdminForm property}|hyperpage}{37}
+\indexentry{PriceAdmin (class in bookings.admin)@\spxentry{PriceAdmin}\spxextra{class in bookings.admin}|hyperpage}{37}
+\indexentry{form (bookings.admin.PriceAdmin attribute)@\spxentry{form}\spxextra{bookings.admin.PriceAdmin attribute}|hyperpage}{37}
+\indexentry{list\_display (bookings.admin.PriceAdmin attribute)@\spxentry{list\_display}\spxextra{bookings.admin.PriceAdmin attribute}|hyperpage}{37}
+\indexentry{list\_filter (bookings.admin.PriceAdmin attribute)@\spxentry{list\_filter}\spxextra{bookings.admin.PriceAdmin attribute}|hyperpage}{37}
+\indexentry{search\_fields (bookings.admin.PriceAdmin attribute)@\spxentry{search\_fields}\spxextra{bookings.admin.PriceAdmin attribute}|hyperpage}{37}
+\indexentry{ordering (bookings.admin.PriceAdmin attribute)@\spxentry{ordering}\spxextra{bookings.admin.PriceAdmin attribute}|hyperpage}{37}
+\indexentry{exclude (bookings.admin.PriceAdmin attribute)@\spxentry{exclude}\spxextra{bookings.admin.PriceAdmin attribute}|hyperpage}{37}
+\indexentry{fieldsets (bookings.admin.PriceAdmin attribute)@\spxentry{fieldsets}\spxextra{bookings.admin.PriceAdmin attribute}|hyperpage}{37}
+\indexentry{media (bookings.admin.PriceAdmin property)@\spxentry{media}\spxextra{bookings.admin.PriceAdmin property}|hyperpage}{38}
+\indexentry{OtherPriceAdmin (class in bookings.admin)@\spxentry{OtherPriceAdmin}\spxextra{class in bookings.admin}|hyperpage}{38}
+\indexentry{list\_display (bookings.admin.OtherPriceAdmin attribute)@\spxentry{list\_display}\spxextra{bookings.admin.OtherPriceAdmin attribute}|hyperpage}{38}
+\indexentry{fieldsets (bookings.admin.OtherPriceAdmin attribute)@\spxentry{fieldsets}\spxextra{bookings.admin.OtherPriceAdmin attribute}|hyperpage}{38}
+\indexentry{media (bookings.admin.OtherPriceAdmin property)@\spxentry{media}\spxextra{bookings.admin.OtherPriceAdmin property}|hyperpage}{38}
+\indexentry{BookingAdmin (class in bookings.admin)@\spxentry{BookingAdmin}\spxextra{class in bookings.admin}|hyperpage}{38}
+\indexentry{list\_display (bookings.admin.BookingAdmin attribute)@\spxentry{list\_display}\spxextra{bookings.admin.BookingAdmin attribute}|hyperpage}{38}
+\indexentry{list\_editable (bookings.admin.BookingAdmin attribute)@\spxentry{list\_editable}\spxextra{bookings.admin.BookingAdmin attribute}|hyperpage}{38}
+\indexentry{list\_filter (bookings.admin.BookingAdmin attribute)@\spxentry{list\_filter}\spxextra{bookings.admin.BookingAdmin attribute}|hyperpage}{38}
+\indexentry{search\_fields (bookings.admin.BookingAdmin attribute)@\spxentry{search\_fields}\spxextra{bookings.admin.BookingAdmin attribute}|hyperpage}{38}
+\indexentry{ordering (bookings.admin.BookingAdmin attribute)@\spxentry{ordering}\spxextra{bookings.admin.BookingAdmin attribute}|hyperpage}{38}
+\indexentry{readonly\_fields (bookings.admin.BookingAdmin attribute)@\spxentry{readonly\_fields}\spxextra{bookings.admin.BookingAdmin attribute}|hyperpage}{38}
+\indexentry{fieldsets (bookings.admin.BookingAdmin attribute)@\spxentry{fieldsets}\spxextra{bookings.admin.BookingAdmin attribute}|hyperpage}{38}
+\indexentry{media (bookings.admin.BookingAdmin property)@\spxentry{media}\spxextra{bookings.admin.BookingAdmin property}|hyperpage}{39}
+\indexentry{MobileHomeAdmin (class in bookings.admin)@\spxentry{MobileHomeAdmin}\spxextra{class in bookings.admin}|hyperpage}{39}
+\indexentry{list\_display (bookings.admin.MobileHomeAdmin attribute)@\spxentry{list\_display}\spxextra{bookings.admin.MobileHomeAdmin attribute}|hyperpage}{39}
+\indexentry{search\_fields (bookings.admin.MobileHomeAdmin attribute)@\spxentry{search\_fields}\spxextra{bookings.admin.MobileHomeAdmin attribute}|hyperpage}{39}
+\indexentry{list\_filter (bookings.admin.MobileHomeAdmin attribute)@\spxentry{list\_filter}\spxextra{bookings.admin.MobileHomeAdmin attribute}|hyperpage}{39}
+\indexentry{fieldsets (bookings.admin.MobileHomeAdmin attribute)@\spxentry{fieldsets}\spxextra{bookings.admin.MobileHomeAdmin attribute}|hyperpage}{39}
+\indexentry{media (bookings.admin.MobileHomeAdmin property)@\spxentry{media}\spxextra{bookings.admin.MobileHomeAdmin property}|hyperpage}{39}
+\indexentry{SupplementMobileHomeAdmin (class in bookings.admin)@\spxentry{SupplementMobileHomeAdmin}\spxextra{class in bookings.admin}|hyperpage}{39}
+\indexentry{list\_display (bookings.admin.SupplementMobileHomeAdmin attribute)@\spxentry{list\_display}\spxextra{bookings.admin.SupplementMobileHomeAdmin attribute}|hyperpage}{39}
+\indexentry{fieldsets (bookings.admin.SupplementMobileHomeAdmin attribute)@\spxentry{fieldsets}\spxextra{bookings.admin.SupplementMobileHomeAdmin attribute}|hyperpage}{39}
+\indexentry{media (bookings.admin.SupplementMobileHomeAdmin property)@\spxentry{media}\spxextra{bookings.admin.SupplementMobileHomeAdmin property}|hyperpage}{39}
+\indexentry{SeasonInfoAdmin (class in bookings.admin)@\spxentry{SeasonInfoAdmin}\spxextra{class in bookings.admin}|hyperpage}{39}
+\indexentry{list\_display (bookings.admin.SeasonInfoAdmin attribute)@\spxentry{list\_display}\spxextra{bookings.admin.SeasonInfoAdmin attribute}|hyperpage}{39}
+\indexentry{fieldsets (bookings.admin.SeasonInfoAdmin attribute)@\spxentry{fieldsets}\spxextra{bookings.admin.SeasonInfoAdmin attribute}|hyperpage}{39}
+\indexentry{media (bookings.admin.SeasonInfoAdmin property)@\spxentry{media}\spxextra{bookings.admin.SeasonInfoAdmin property}|hyperpage}{40}
+\indexentry{module@\spxentry{module}!bookings.apps@\spxentry{bookings.apps}|hyperpage}{40}
+\indexentry{bookings.apps@\spxentry{bookings.apps}!module@\spxentry{module}|hyperpage}{40}
+\indexentry{BookingsConfig (class in bookings.apps)@\spxentry{BookingsConfig}\spxextra{class in bookings.apps}|hyperpage}{40}
+\indexentry{default\_auto\_field (bookings.apps.BookingsConfig attribute)@\spxentry{default\_auto\_field}\spxextra{bookings.apps.BookingsConfig attribute}|hyperpage}{40}
+\indexentry{name (bookings.apps.BookingsConfig attribute)@\spxentry{name}\spxextra{bookings.apps.BookingsConfig attribute}|hyperpage}{40}
+\indexentry{verbose\_name (bookings.apps.BookingsConfig attribute)@\spxentry{verbose\_name}\spxextra{bookings.apps.BookingsConfig attribute}|hyperpage}{40}
+\indexentry{module@\spxentry{module}!bookings.tests.test\_models@\spxentry{bookings.tests.test\_models}|hyperpage}{40}
+\indexentry{bookings.tests.test\_models@\spxentry{bookings.tests.test\_models}!module@\spxentry{module}|hyperpage}{40}
+\indexentry{test\_supplementprice\_creation() (in module bookings.tests.test\_models)@\spxentry{test\_supplementprice\_creation()}\spxextra{in module bookings.tests.test\_models}|hyperpage}{40}
+\indexentry{test\_price\_save\_and\_clean() (in module bookings.tests.test\_models)@\spxentry{test\_price\_save\_and\_clean()}\spxextra{in module bookings.tests.test\_models}|hyperpage}{40}
+\indexentry{test\_booking\_save\_total\_and\_deposit() (in module bookings.tests.test\_models)@\spxentry{test\_booking\_save\_total\_and\_deposit()}\spxextra{in module bookings.tests.test\_models}|hyperpage}{40}
+\indexentry{test\_booking\_capacity\_validation() (in module bookings.tests.test\_models)@\spxentry{test\_booking\_capacity\_validation()}\spxextra{in module bookings.tests.test\_models}|hyperpage}{40}
+\indexentry{test\_capacity\_str() (in module bookings.tests.test\_models)@\spxentry{test\_capacity\_str()}\spxextra{in module bookings.tests.test\_models}|hyperpage}{40}
+\indexentry{test\_mobilehome\_creation() (in module bookings.tests.test\_models)@\spxentry{test\_mobilehome\_creation()}\spxextra{in module bookings.tests.test\_models}|hyperpage}{40}
+\indexentry{test\_supplementmobilehome\_creation() (in module bookings.tests.test\_models)@\spxentry{test\_supplementmobilehome\_creation()}\spxextra{in module bookings.tests.test\_models}|hyperpage}{40}
+\indexentry{test\_seasoninfo\_creation() (in module bookings.tests.test\_models)@\spxentry{test\_seasoninfo\_creation()}\spxextra{in module bookings.tests.test\_models}|hyperpage}{40}
+\indexentry{module@\spxentry{module}!bookings.tests.test\_views@\spxentry{bookings.tests.test\_views}|hyperpage}{40}
+\indexentry{bookings.tests.test\_views@\spxentry{bookings.tests.test\_views}!module@\spxentry{module}|hyperpage}{40}
+\indexentry{valid\_booking\_data() (in module bookings.tests.test\_views)@\spxentry{valid\_booking\_data()}\spxextra{in module bookings.tests.test\_views}|hyperpage}{40}
+\indexentry{client\_details\_data() (in module bookings.tests.test\_views)@\spxentry{client\_details\_data()}\spxextra{in module bookings.tests.test\_views}|hyperpage}{40}
+\indexentry{supplements() (in module bookings.tests.test\_views)@\spxentry{supplements()}\spxextra{in module bookings.tests.test\_views}|hyperpage}{40}
+\indexentry{set\_booking\_session() (in module bookings.tests.test\_views)@\spxentry{set\_booking\_session()}\spxextra{in module bookings.tests.test\_views}|hyperpage}{40}
+\indexentry{test\_booking\_form\_valid() (in module bookings.tests.test\_views)@\spxentry{test\_booking\_form\_valid()}\spxextra{in module bookings.tests.test\_views}|hyperpage}{41}
+\indexentry{test\_booking\_summary\_displays\_correct\_prices() (in module bookings.tests.test\_views)@\spxentry{test\_booking\_summary\_displays\_correct\_prices()}\spxextra{in module bookings.tests.test\_views}|hyperpage}{41}
+\indexentry{test\_booking\_details\_creates\_stripe\_session() (in module bookings.tests.test\_views)@\spxentry{test\_booking\_details\_creates\_stripe\_session()}\spxextra{in module bookings.tests.test\_views}|hyperpage}{41}
+\indexentry{test\_booking\_confirm\_saves\_booking\_and\_sends\_emails() (in module bookings.tests.test\_views)@\spxentry{test\_booking\_confirm\_saves\_booking\_and\_sends\_emails()}\spxextra{in module bookings.tests.test\_views}|hyperpage}{41}
+\indexentry{module@\spxentry{module}!bookings.tests.test\_forms@\spxentry{bookings.tests.test\_forms}|hyperpage}{41}
+\indexentry{bookings.tests.test\_forms@\spxentry{bookings.tests.test\_forms}!module@\spxentry{module}|hyperpage}{41}
+\indexentry{TestBookingFormClassic (class in bookings.tests.test\_forms)@\spxentry{TestBookingFormClassic}\spxextra{class in bookings.tests.test\_forms}|hyperpage}{41}
+\indexentry{test\_valid\_data\_tent() (bookings.tests.test\_forms.TestBookingFormClassic method)@\spxentry{test\_valid\_data\_tent()}\spxextra{bookings.tests.test\_forms.TestBookingFormClassic method}|hyperpage}{41}
+\indexentry{test\_missing\_required\_field() (bookings.tests.test\_forms.TestBookingFormClassic method)@\spxentry{test\_missing\_required\_field()}\spxextra{bookings.tests.test\_forms.TestBookingFormClassic method}|hyperpage}{41}
+\indexentry{test\_past\_start\_date() (bookings.tests.test\_forms.TestBookingFormClassic method)@\spxentry{test\_past\_start\_date()}\spxextra{bookings.tests.test\_forms.TestBookingFormClassic method}|hyperpage}{41}
+\indexentry{test\_invalid\_type\_field() (bookings.tests.test\_forms.TestBookingFormClassic method)@\spxentry{test\_invalid\_type\_field()}\spxextra{bookings.tests.test\_forms.TestBookingFormClassic method}|hyperpage}{41}
+\indexentry{TestBookingDetailsForm (class in bookings.tests.test\_forms)@\spxentry{TestBookingDetailsForm}\spxextra{class in bookings.tests.test\_forms}|hyperpage}{41}
+\indexentry{test\_valid\_data() (bookings.tests.test\_forms.TestBookingDetailsForm method)@\spxentry{test\_valid\_data()}\spxextra{bookings.tests.test\_forms.TestBookingDetailsForm method}|hyperpage}{41}
+\indexentry{test\_invalid\_phone() (bookings.tests.test\_forms.TestBookingDetailsForm method)@\spxentry{test\_invalid\_phone()}\spxextra{bookings.tests.test\_forms.TestBookingDetailsForm method}|hyperpage}{41}
+\indexentry{test\_missing\_required\_fields() (bookings.tests.test\_forms.TestBookingDetailsForm method)@\spxentry{test\_missing\_required\_fields()}\spxextra{bookings.tests.test\_forms.TestBookingDetailsForm method}|hyperpage}{41}
+\indexentry{pytestmark (bookings.tests.test\_forms.TestBookingDetailsForm attribute)@\spxentry{pytestmark}\spxextra{bookings.tests.test\_forms.TestBookingDetailsForm attribute}|hyperpage}{41}

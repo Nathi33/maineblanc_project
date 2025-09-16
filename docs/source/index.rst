@@ -1,12 +1,12 @@
 Camping Le Maine Blanc - Documentation
 ======================================
 
-Bienvenue dans la documentation du site du Camping Le Maine Blanc.
+Welcome to the Camping Le Maine Blanc site documentation
 
-Cette documentation couvre les modules Python, les vues, les formulaires, les admin et les tests du projet.
+This documentation covers the Python modules, views, forms, admin, and tests of the project.
 
-Vous pouvez ajouter votre contenu en utilisant la syntaxe ``reStructuredText``. 
-Pour plus de détails, consultez la documentation :
+You can add your content using the ``reStructuredText`` syntax.
+For more details, see the documentation:
 `reStructuredText <https://www.sphinx-doc.org/en/master/usage/restructuredtext/index.html>`_
 
 
@@ -48,6 +48,21 @@ Core
  - Configuration App
 
 .. automodule:: core.apps
+      :members:
+      :undoc-members:
+      :show-inheritance:
+
+
+- Templates Tags
+
+.. automodule:: core.templatetags
+      :members:
+      :undoc-members:
+      :show-inheritance:
+
+- Sitemaps
+
+.. automodule:: core.sitemaps
       :members:
       :undoc-members:
       :show-inheritance:
