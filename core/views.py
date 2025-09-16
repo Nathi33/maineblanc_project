@@ -1,5 +1,6 @@
 from django.utils.translation import gettext as _, get_language
 from django.shortcuts import render
+from django.http import HttpResponse
 from bookings.models import Price, SupplementPrice, SeasonInfo, Capacity, MobileHome, SupplementMobileHome, OtherPrice
 from .models import CampingInfo, SwimmingPoolInfo, FoodInfo, LaundryInfo
 
@@ -8,10 +9,23 @@ def home_view(request):
     """
     Render the homepage.
 
+    Template:
+        core/home.html
+
+    Context:
+        languages (list of tuples): list of supported languages and their flag filenames.
+
     Security:
         - No user input processed; safe from XSS or injection.
     """
-    return render(request, 'core/home.html')
+    languages = [
+        ("fr", "flag-french.png"),
+        ("en", "flag-UK.png"),
+        ("es", "flag-spain.png"),
+        ("de", "flag-deutsch.png"),
+        ("nl", "flag-nederlands.png"),
+    ]
+    return render(request, 'core/home.html', {'languages': languages})
 
 
 def about_view(request):
@@ -188,3 +202,23 @@ def not_found_view(request, exception=None):
         - Exception handling passed safely
     """
     return render(request, 'core/not_found.html', status=404)
+
+
+def robots_txt(request):
+    """
+    Serve the robots.txt file for search engines.
+
+    Returns:
+        Plain text response with crawling rules for bots.
+    """
+    content = """
+User-agent: *
+Disallow: /admin/
+Disallow: /accounts/
+Disallow: /private/
+Disallow: /media/private/
+Allow: /static/
+Allow: /media/
+Sitemap: https://www.camping-le-maine-blanc.com/sitemap.xml
+"""
+    return HttpResponse(content, content_type="text/plain")

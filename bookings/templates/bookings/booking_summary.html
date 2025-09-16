@@ -9,11 +9,11 @@
 {% endblock %}
 
 {% block content %}
-<section class="container py-5">
+<section class="container py-5" role="region" aria-labelledby="booking-title">
     <div class="container-title text-center">
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
-        <h1 class="title-booking text-center mb-4">{% trans "Résumé de votre réservation" %} </h1>
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left"/>
+        <h1 id="booking-title" class="title-booking text-center mb-4">{% trans "Résumé de votre réservation" %} </h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right"/>
     </div>
 
     <div class="card p-4 mb-4">
@@ -33,7 +33,6 @@
         <p><strong>{% trans "Enfants < 8 ans" %}:</strong> {{ booking.children_under_8 }}</p>
         <p><strong>{% trans "Animaux" %}:</strong> {{ booking.pets }}</p>
 
-        {# Électricité et longueur de câble #}
         <p><strong>{% trans "Électricité" %} :</strong>
             {% if booking.electricity == "yes" %}
                 {% trans "Avec électricité" %}

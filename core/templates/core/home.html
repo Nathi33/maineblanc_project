@@ -9,13 +9,13 @@
 {% endblock %}
 
 {% block content %}
-  <section class="home-image">
+  <section class="home-image" role="banner" aria-labelledby="home-title">
     <div class="home-content">
-      <h1>{% trans "Bienvenue au Camping Le Maine Blanc" %}</h1>
+      <h1 id="home-title">{% trans "Bienvenue au Camping Le Maine Blanc" %}</h1>
       <p>{% trans "Un coin de nature au cœur de la Gironde" %}</p>
     </div>
 
-    <div class="ribbon">
+    <div class="ribbon" aria-label="{% trans "Ouvert toute l'année" %}">
       <span>{% trans "Ouvert toute l'année" %}</span>
     </div>
   </section>

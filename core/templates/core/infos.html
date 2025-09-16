@@ -9,14 +9,14 @@
 {% endblock %}
 
 {% block content %}
-<section class="container py-5">
+<section class="container py-5" role="region" aria-labelledby="infos-title">
 
     <div class="container-title">
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans 'Décoration' %}" class="img-deco-left" />
-        <h1 class="title-infos">{% trans "Informations pratiques" %}</h1>
-        <img src="{% static 'pictures/peindre.png' %}" alt="'Décoration" class="img-deco-right" />
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left" />
+        <h1 id="infos-title" class="title-infos">{% trans "Informations pratiques" %}</h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right" />
     </div>
-    <!-- Horaires -->
+    <!--Schedules  -->
     <div class="info-section mb-5">
         <h2 class="under-title-infos">{% trans 'Horaires' %}</h2>
         <ul>
@@ -39,7 +39,7 @@
         </ul>
     </div>
 
-    <!-- Accessibilité -->
+    <!-- Accessibility -->
     <div class="info-section mb-5">
         <h2 class="under-title-infos">{% trans 'Accessibilité' %}</h2>
         <p>{% trans "Parce que nous tenons à accueillir chacun dans les meilleures conditions, notre camping dispose d’aménagements adaptés aux personnes à mobilité réduite afin de leur garantir un séjour agréable et serein." %}</p>
@@ -55,7 +55,7 @@
         </ul>
     </div>
 
-    <!-- Paiement et conditions -->
+    <!-- Payment et conditions -->
     <div class="info-section mb-5">
         <h2 class="under-title-infos">{% trans "Conditions de séjour & Paiement" %}</h2>
         <ul>
@@ -78,7 +78,7 @@
         </ul>
     </div>
 
-    <!-- Tarifs -->
+    <!-- Prices -->
     <div class="info-section mb-5">
         <h2 class="under-title-infos">{% trans "Tarifs pour l'année" %} {{ other_prices.current_year }}</h2>
         <p class="small text-muted mb-0">{% trans "Taxe de séjour à compter du" %} {{ other_prices.tourist_tax_date|format_date_by_locale }} : {{ other_prices.price_tourist_tax }}€ {% trans "par personne/nuit (incluse dans le prix)" %}</p>
@@ -100,19 +100,19 @@
                         <td class="container-type">
                             <span class="under-title">{% trans "Camping-car (1-2 pers.)" %}</span><br>
                             <div>
-                                <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" class=" logo-infos">
+                                <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" loading="lazy" class=" logo-infos">
                                 <span class="full-text">{% trans "Avec électricité" %}</span>
                                 <span class="short-text">{% trans "Avec élec." %}</span>
                                 <br>
                             </div>
                             <div>
-                                <img src="{% static 'pictures/no-elec.png' %}" alt="{% trans "Pas d'électricité" %}" class="logo-infos">
+                                <img src="{% static 'pictures/no-elec.png' %}" alt="{% trans "Pas d'électricité" %}" loading="lazy" class="logo-infos">
                                 <span class="full-text">{% trans "Sans électricité" %}</span>
                                 <span class="short-text">{% trans "Sans élec." %}</span>
                             </div>
                         </td>
                         
-                        {# --- Basse saison --- #}
+                        {# --- Low season --- #}
                         <td class="align-bottom">
                             {% for p in grouped_prices.camping_car %}
                                 {% if p.season == "low" %}
@@ -122,7 +122,7 @@
                             {% endfor %}
                         </td>
 
-                        {# --- Moyenne saison --- #}
+                        {# --- Mid season --- #}
                         <td class="align-bottom">
                             {% for p in grouped_prices.camping_car %}
                                 {% if p.season == "mid" %}
@@ -132,7 +132,7 @@
                             {% endfor %}
                         </td>
 
-                        {# --- Haute saison --- #}
+                        {# --- High season --- #}
                         <td class="align-bottom">
                             {% for p in grouped_prices.camping_car %}
                                 {% if p.season == "high" %}
@@ -144,19 +144,19 @@
                     </tr>
 
 
-                    <!-- Caravane / Fourgon -->
+                    <!-- Caravan / Converted Van -->
                     <tr class="text-center">
                         <td>
                             <span class="under-title">{% trans "Caravane / Fourgon / Van" %}</span><br>
                             <div>
                                 <div>
-                                    <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" class=" logo-infos">
+                                    <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" loading="lazy" class=" logo-infos">
                                         <span class="full-text">{% trans "Avec électricité" %}</span>
                                         <span class="short-text">{% trans "Avec élec." %}</span>
                                         <br>
                                 </div>
                                 <div>
-                                    <img src="{% static 'pictures/no-elec.png' %}" alt="{% trans "Pas d'électricité" %}" class="logo-infos">
+                                    <img src="{% static 'pictures/no-elec.png' %}" alt="{% trans "Pas d'électricité" %}" loading="lazy" class="logo-infos">
                                     <span class="full-text">{% trans "Sans électricité" %}</span>
                                     <span class="short-text">{% trans "Sans élec." %}</span>
                                 </div>
@@ -177,7 +177,7 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    {# --- Basse saison --- #}
+                                    {# --- Low season --- #}
                                     <td>
                                         {% for p in grouped_prices.caravan %}
                                             {% if p.season == "low" %}
@@ -198,7 +198,7 @@
                             </table>
                         </td>
 
-                        <!-- Moyenne Saison -->
+                        <!-- Mid Season -->
                         <td class="p-0">
                             <table class="w-100 text-center">
                                 <tr>
@@ -226,7 +226,7 @@
                             </table>
                         </td>
 
-                        <!-- Haute Saison -->
+                        <!-- High Season -->
                         <td class="p-0">
                             <table class="w-100 text-center">
                                 <tr>
@@ -256,22 +256,24 @@
                     </tr>
                         
 
-                    <!-- Tente / Voiture -->
+                    <!-- Tent / Car Tent -->
                     <tr class="text-center">
                         <td>
                             <span class="under-title">{% trans "Tente / Voiture Tente" %}</span><br>
                             <div>
-                                <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" class=" logo-infos">
+                                <img src="{% static 'pictures/elec.png' %}" alt="{% trans "Electricité" %}" loading="lazy" class=" logo-infos">
                                 <span class="full-text">{% trans "Avec électricité" %}</span>
                                 <span class="short-text">{% trans "Avec élec." %}</span>
                                 <br>
                             </div>
                             <div>
-                                <img src="{% static 'pictures/no-elec.png' %}" alt="{% trans "Pas d'électricité" %}" class="logo-infos">
+                                <img src="{% static 'pictures/no-elec.png' %}" alt="{% trans "Pas d'électricité" %}" loading="lazy" class="logo-infos">
                                 <span class="full-text">{% trans "Sans électricité" %}</span>
                                 <span class="short-text">{% trans "Sans élec." %}</span>
                             </div>
                         </td>
+
+                        <!-- Low Season -->
                         <td class="p-0">
                             <table class="w-100 text-center">
                                 <tr>
@@ -299,7 +301,7 @@
                             </table>
                         </td>
 
-                        <!-- Moyenne Saison -->
+                        <!-- Mid Season -->
                         <td class="p-0">
                             <table class="w-100 text-center">
                                 <tr>
@@ -327,7 +329,7 @@
                             </table>
                         </td>
 
-                        <!-- Haute Saison -->
+                        <!-- High Season -->
                         <td class="p-0">
                             <table class="w-100 text-center">
                                 <tr>
@@ -357,7 +359,7 @@
                     </tr>
 
 
-                    <!-- Ouvriers -->
+                    <!-- Workers -->
                     <tr>
                         <td class="text-center">
                             <span class="under-title">{% trans "Ouvriers" %}</span><br>
@@ -391,7 +393,7 @@
                         </td>
                     </tr>
 
-                    <!-- Suppléments -->
+                    <!-- Supplements -->
                     <tr >
                         <td class="text-center">
                             <span class="under-title">{% trans "Suppléments emplacements" %}</span>
@@ -418,9 +420,10 @@
     </div>
 
 
-    <!-- Tarifs Mobil-homes -->
+    <!-- Mobil-homes prices -->
     <div class="table-wrapper">
-        <table class="table table-bordered align-middle text-center">
+        <table class="table table-bordered align-middle text-center" aria-label="{% trans 'Tarifs des Mobil-homes' %}">
+            <caption>{% trans 'Tarifs par type de mobil-home et saison' %}</caption>
             <thead>
                 <tr>
                     <th scope="col" class="align-middle text-center">{% trans "Mobil-home" %}</th>
@@ -436,7 +439,7 @@
             <tbody>
                 {% for home in mobilhomes %}
                 <tr>
-                    <!-- Nom et description -->
+                    <!-- Name and description -->
                     <td>
                         <strong>{{ home.name_display }}</strong><br>
                         <small>{{ home.description_display }}</small>
@@ -447,7 +450,7 @@
                         {% endif %}
                     </td>
 
-                    <!-- Prix à la nuitée -->
+                    <!-- Price per night -->
                     <td>
                         {% if home.night_price_mid %}
                             {{ home.night_price}} € ({% trans "basse saison" %})<br>
@@ -458,14 +461,14 @@
                     </td>
 
                     {% if home.is_worker_home %}
-                        <!-- Cas spécial mobil-home ouvrier : fusionne les 3 colonnes -->
+                        <!-- Special case for worker mobile home: merges the 3 columns -->
                         <td colspan="3">
                             {{ home.worker_price_1p }} {% trans "€/semaine (1 pers)" %}<br>
                             {{ home.worker_price_2p }} {% trans "€/semaine (2 pers)" %}<br>
                             {{ home.worker_price_3p }} {% trans "€/semaine (3 pers)" %}
                         </td>
                     {% else %}
-                        <!-- Prix à la semaine -->
+                        <!-- Price per week -->
                         <td>{% if home.week_low %}{{ home.week_low }} {% trans "€/semaine" %}{% else %}-{% endif %}</td>
                         <td>{% if home.week_mid %}{{ home.week_mid }} {% trans "€/semaine" %}{% else %}-{% endif %}</td>
                         <td>{% if home.week_high %}{{ home.week_high }} {% trans "€/semaine" %}{% else %}-{% endif %}</td>
@@ -475,7 +478,7 @@
             </tbody>
         </table>
 
-        <!-- Notes globales -->
+        <!-- Notes -->
         <div class="mt-3">
             <p class="small text-muted mb-0">
                 {% trans "Caution à prévoir : " %}
@@ -499,7 +502,10 @@
     <div class="info-section row align-items-center">
         <div class="col-md-6">
             <h2 class="under-title-infos">{% trans "Plan du camping" %}</h2>
-            <img src="{% static 'pictures/plan.jpg' %}" alt="{% trans "Plan du camping" %}" class="img-fluid rounded shadow">
+            <picture>
+                <source srcset="{% static 'pictures/plan.webp' %}" type="image/webp">
+                <img src="{% static 'pictures/plan.jpg' %}" alt="{% trans "Plan du camping" %}" class="img-fluid rounded shadow">
+            </picture>
         </div>
         <div class="container-plan-text col-md-6 d-flex">
             <div class="contenair-text">

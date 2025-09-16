@@ -9,16 +9,15 @@
 {% endblock %}
 
 {% block content %}
-<div class="container my-5">
+<section class="container my-5" role="region" aria-labelledby="booking-confirm-title">
     <div class="row justify-content-center">
         <div class="col-lg-8">
 
-            <!-- Section confirmation -->
             <div class="text-center mb-4">
                 <div class="container-title text-center">
-                    <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
-                    <h1 class="title-booking text-center mb-4">{% trans "Réservation confirmée" %} </h1>
-                    <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+                    <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left"/>
+                    <h1 id="booking-confirm-title" class="title-booking text-center mb-4">{% trans "Réservation confirmée" %} </h1>
+                    <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right"/>
                 </div>
             </div>
 
@@ -30,7 +29,6 @@
                 {% endfor %}
             {% endif %}
 
-            <!-- Bande Dates -->
             <div class="dates-bar shadow">
                 <div class="dates-content">
                     <img src="{% static 'pictures/date-limite.png' %}" alt="{% trans "Calendrier" %}" class="logo-dates img-fluid">
@@ -38,7 +36,6 @@
                 </div>
             </div>
 
-            <!-- Carte 1 : Coordonnées client -->
             <div class="card shadow card-section">
                 <div class="card-header card-header-custom">
                     {% trans "Vos coordonnées" %}
@@ -51,7 +48,6 @@
                 </div>
             </div>
 
-            <!-- Carte 2 : Nombre de personnes -->
             <div class="card shadow card-section">
                 <div class="card-header card-header-custom">
                     {% trans "Nombre de personnes" %}
@@ -64,7 +60,6 @@
                 </div>
             </div>
 
-            <!-- Carte 3 : Emplacement / véhicule -->
             <div class="card shadow card-section">
                 <div class="card-header card-header-custom">
                     {% trans "Emplacement / Véhicule" %}
@@ -108,7 +103,6 @@
                 </div>
             </div>
 
-            <!-- Bande Prix -->
             <div class="price-bar shadow">
                 <div class="price-row">
                     <span>{% trans "Total à payer" %} :</span>
@@ -125,7 +119,6 @@
                 </div>
             </div>
 
-            <!-- Bouton nouvelle réservation -->
             <div class="btn-container text-center mt-4">
                 <a href="{% url 'booking_form' %}" class="btn">{% trans "Faire une nouvelle réservation" %}</a>
             </div>

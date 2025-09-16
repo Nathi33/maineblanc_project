@@ -5,35 +5,64 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Le Maine Blanc, camping familial en Gironde, près de Bordeaux. Emplacements ombragés, mobil-homes, piscine, nature et convivialité à Saint-Christoly-de-Blaye.">
 
+    <!-- SEO -->
+    <meta name="description" content="Le Maine Blanc, camping familial en Gironde, près de Bordeaux. Emplacements ombragés, mobil-homes, piscine, nature et convivialité à Saint-Christoly-de-Blaye.">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="{% static 'pictures/faviconMB.png' %}"/>
+    <link rel="apple-touch-icon" href="{% static 'pictures/faviconMB.png' %}">
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link
-        rel="icon"
-        type="image/png"
-        href="{% static 'pictures/faviconMB.ico' %}"
-    />
+    
     <title>{% block title %}{% trans "Accueil | Camping Le Maine Blanc" %}{% endblock %}</title>
     {% block styles %}{% endblock %}
+
+    <!-- SEO Multilingue -->
+    <link rel="alternate" hreflang="fr" href="https://www.lesterresdumaineblanc.com/fr{{ request.path }}" />
+    <link rel="alternate" hreflang="en" href="https://www.lesterresdumaineblanc.com/en{{ request.path }}" />
+    <link rel="alternate" hreflang="es" href="https://www.lesterresdumaineblanc.com/es{{ request.path }}" />
+    <link rel="alternate" hreflang="de" href="https://www.lesterresdumaineblanc.com/de{{ request.path }}" />
+    <link rel="alternate" hreflang="nl" href="https://www.lesterresdumaineblanc.com/nl{{ request.path }}" />
+
+    <!-- JSON-LD LodgingBusiness -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LodgingBusiness",
+      "name": "Camping Le Maine Blanc",
+      "image": "{% static 'pictures/logoMB.png' %}",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Lieu-Dit Le Maine Blanc",
+        "addressLocality": "Saint Christoly de Blaye",
+        "postalCode": "33920",
+        "addressCountry": "FR"
+      },
+      "telephone": "+33557425281",
+      "url": "https://www.lesterresdumaineblanc.com",
+      "description": "Camping familial avec piscine, mobil-homes et emplacements ombragés."
+    }
+    </script>
 </head>
 
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg fixed-top">
+        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
             <div class="container-fluid">
                 <!-- Logo -->
                 <a class="navbar-brand" href="{% url 'home' %}">
                     <img
                     src="{% static 'pictures/logoMB.png' %}"
                     alt="{% trans 'Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus du nom camping le Maine Blanc' %}"
-                    class="logo"
+                    class="logo" loading="lazy"
                     />
                 </a>
 
                 <!-- Toggle button for mobile view -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="{% trans 'Basculer la navigation'%}">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
@@ -81,56 +110,18 @@
                                 {% endif %}
                             </a>
                             <ul class="dropdown-menu flag-menu">
+                                {% for lang, flag in languages %}
                                 <li>
                                     <form action="{% url 'set_language' %}" method="post">
                                         {% csrf_token %}
-                                        <input type="hidden" name="language" value="fr">
+                                        <input type="hidden" name="language" value="{{ lang }}">
                                         <input type="hidden" name="next" value="{{ request.path }}">
-                                        <button type="submit" class="dropdown-item">
-                                            <img src="{% static 'pictures/flag-french.png' %}" alt="FR" class="flag"/>
+                                        <button type="submit" class="dropdown-item" aria-label="{% trans 'Changer la langue vers' %} {{ lang|upper }}">
+                                            <img src="{% static 'pictures/'|add:flag %}" alt="{{ lang|upper }}" class="flag" loading="lazy"/>
                                         </button>
                                     </form>
                                 </li>
-                                <li>
-                                    <form action="{% url 'set_language' %}" method="post">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="language" value="en">
-                                        <input type="hidden" name="next" value="{{ request.path }}">
-                                        <button type="submit" class="dropdown-item">
-                                            <img src="{% static 'pictures/flag-UK.png' %}" alt="EN" class="flag"/>
-                                        </button>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form action="{% url 'set_language' %}" method="post">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="language" value="es">
-                                        <input type="hidden" name="next" value="{{ request.path }}">
-                                        <button type="submit" class="dropdown-item">
-                                            <img src="{% static 'pictures/flag-spain.png' %}" alt="ES" class="flag"/>
-                                        </button>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form action="{% url 'set_language' %}" method="post">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="language" value="de">
-                                        <input type="hidden" name="next" value="{{ request.path }}">
-                                        <button type="submit" class="dropdown-item">
-                                            <img src="{% static 'pictures/flag-deutsch.png' %}" alt="DE" class="flag"/>
-                                        </button>
-                                    </form>
-                                </li>
-                                <li>
-                                    <form action="{% url 'set_language' %}" method="post">
-                                        {% csrf_token %}
-                                        <input type="hidden" name="language" value="nl">
-                                        <input type="hidden" name="next" value="{{ request.path }}">
-                                        <button type="submit" class="dropdown-item">
-                                            <img src="{% static 'pictures/flag-nederlands.png' %}" alt="NL" class="flag"/>
-                                        </button>
-                                    </form>
-                                </li>
+                                {% endfor %}
                             </ul>
                         </li>
                     </ul>
@@ -146,35 +137,29 @@
     <footer class="pt-5 pb-3">
         <div class="container">
             <div class="row align-items-start">
-            <!-- À propos -->
-            <div class="col-md-4 mb-4">
-                <h4>{% trans "Camping Le Maine Blanc" %}</h4>
-                <a class="navbar-brand" href="{% url 'home' %}">
-                    <img
-                    src="{% static 'pictures/logoMB.png' %}"
-                    alt="{% trans 'Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus du nom camping le Maine Blanc' %}"
-                    class="logo"
-                    />
-                </a>
-                <p>{% trans "Profitez d’un séjour nature en Gironde, dans une ambiance conviviale et familiale." %}</p>
-            </div>
+                <!-- À propos -->
+                <div class="col-md-4 mb-4">
+                    <h4>{% trans "Camping Le Maine Blanc" %}</h4>
+                    <a class="navbar-brand" href="{% url 'home' %}">
+                        <img src="{% static 'pictures/logoMB.png' %}" alt="{% trans 'Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus du nom camping le Maine Blanc' %}" class="logo" loading="lazy"/>
+                    </a>
+                    <p>{% trans "Profitez d’un séjour nature en Gironde, dans une ambiance conviviale et familiale." %}</p>
+                </div>
+                <!-- Infos pratiques -->
+                <div class="col-md-5 mb-4">
+                    <h4>{% trans "Informations & Accès" %}</h4>
+                    <p><img src="{% static 'pictures/carte.png' %}" alt="{% trans "Logo Carte" %}" class="logo-footer" loading="lazy">{% trans "Lieu-Dit Le Maine Blanc" %} </br>33920 Saint Christoly de Blaye, Gironde</p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="tel:+33557425281"><img src="{% static 'pictures/telephone.png' %}" alt="{% trans "Logo Téléphone" %}" class="logo-footer" loading="lazy">{% trans "05 57 42 52 81" %}</a></p>
+                    <p><a target="_blank" rel="noopener noreferrer" href="mailto:camping@lesterresdumaineblanc.com"><img src="{% static 'pictures/e-mail.png' %}" alt="{% trans "Logo Email" %}" class="logo-footer" loading="lazy">camping@lesterresdumaineblanc.com</a></p>
+                    <a target="_blank" rel="noopener noreferrer" href="https://www.google.com/maps/place/Camping+Le+Maine+Blanc/@45.1395843,-0.489334,585m/data=!3m2!1e3!4b1!4m9!3m8!1s0x48002e3f944d6d01:0xb22125c18d297349!5m2!4m1!1i2!8m2!3d45.1395805!4d-0.4867591!16s%2Fg%2F1tdyvqyd?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D">{% trans "Voir sur Google Maps" %}</a>
+                </div>
 
-
-            <!-- Infos pratiques -->
-            <div class="col-md-5 mb-4">
-                <h4>{% trans "Informations & Accès" %}</h4>
-                <p><img src="{% static 'pictures/carte.png' %}" alt="{% trans "Logo Carte" %}" class="logo-footer">{% trans "Lieu-Dit Le Maine Blanc" %} </br>33920 Saint Christoly de Blaye, Gironde</p>
-                <p><a target="_blank" href="tel:+33557425281"><img src="{% static 'pictures/telephone.png' %}" alt="{% trans "Logo Téléphone" %}" class="logo-footer">{% trans "05 57 42 52 81" %}</a></p>
-                <p><a target="_blank" href="mailto:camping@lesterresdumaineblanc.com"><img src="{% static 'pictures/e-mail.png' %}" alt="{% trans "Logo Email" %}" class="logo-footer">camping@lesterresdumaineblanc.com</a></p>
-                <a href="https://www.google.com/maps/place/Camping+Le+Maine+Blanc/@45.1395843,-0.489334,585m/data=!3m2!1e3!4b1!4m9!3m8!1s0x48002e3f944d6d01:0xb22125c18d297349!5m2!4m1!1i2!8m2!3d45.1395805!4d-0.4867591!16s%2Fg%2F1tdyvqyd?entry=ttu&g_ep=EgoyMDI1MDgxMy4wIKXMDSoASAFQAw%3D%3D" target="_blank">{% trans "Voir sur Google Maps" %}</a>
-            </div>
-
-            <!-- Réseaux sociaux -->
-            <div class="col-md-3 mb-4">
-                <h4>{% trans "Suivez-nous" %}</h4>
-                <a href="https://www.facebook.com/profile.php?id=100075675799356#" target="_blank"><img src="{% static 'pictures/facebook.png' %}" alt="{% trans "Logo Facebook" %}" class="logo-social"></a>
-                <a href="https://www.instagram.com/camping_le_maine_blanc/" target="_blank"><img src="{% static 'pictures/instagram.png' %}" alt="{% trans "Logo Instagram" %}" class="logo-social"></a>
-            </div>
+                <!-- Réseaux sociaux -->
+                <div class="col-md-3 mb-4">
+                    <h4>{% trans "Suivez-nous" %}</h4>
+                    <a href="https://www.facebook.com/profile.php?id=100075675799356#" target="_blank" rel="noopener noreferrer"><img src="{% static 'pictures/facebook.png' %}" alt="{% trans "Logo Facebook" %}" class="logo-social" loading="lazy"></a>
+                    <a href="https://www.instagram.com/camping_le_maine_blanc/" target="_blank" rel="noopener noreferrer"><img src="{% static 'pictures/instagram.png' %}" alt="{% trans "Logo Instagram" %}" class="logo-social" loading="lazy"></a>
+                </div>
             </div>
 
             <hr class="bg-light">

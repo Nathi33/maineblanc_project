@@ -9,12 +9,12 @@
 {% endblock %}
 
 {% block content %}
-<section class="container py-5">
+<section class="container py-5" role="region" aria-labelledby="activities-title">
 
     <div class="container-title">
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
-        <h1 class="title-services">{% trans "Activités aux alentours du camping" %}</h1>
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left"/>
+        <h1 id="activities-title" class="title-services">{% trans "Activités aux alentours du camping" %}</h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right"/>
     </div>
 
     <div class="activities-list-1">
@@ -22,7 +22,10 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/lac-moulin-blanc.jpg' %}" class="img-activities card-img-top" alt="{% trans "Lac du Moulin Blanc" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/lac-moulin-blanc.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/lac-moulin-blanc.jpg' %}" class="img-activities card-img-top" alt="{% trans "Lac du Moulin Blanc" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Lac du Moulin Blanc" %}</h3>
                         <p class="card-text">
@@ -36,7 +39,10 @@
             </div>
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/Natea.jpg' %}" class="img-activities card-img-top" alt="{% trans "Natéa" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/Natea.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/Natea.jpg' %}" class="img-activities card-img-top" alt="{% trans "Natéa" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Natéa" %}</h3>
                         <p class="card-text">
@@ -51,7 +57,10 @@
             </div>
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/califourchon.png' %}" class="img-activities card-img-top" alt="{% trans "Califourchon" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/califourchon.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/califourchon.png' %}" class="img-activities card-img-top" alt="{% trans "Califourchon" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Califourchon" %}</h3>
                         <p class="card-text">
@@ -65,7 +74,10 @@
             </div>
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/castor-wakepark.jpg' %}" class="img-activities card-img-top" alt="{% trans "CastorWakePark" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/castor-wakepark.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/castor-wakepark.jpg' %}" class="img-activities card-img-top" alt="{% trans "CastorWakePark" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "CastorWakePark" %}</h3>
                         <p class="card-text">
@@ -85,7 +97,10 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/citadelle-blaye.jpg' %}" class="img-activities card-img-top" alt="{% trans "La citadelle de Blaye" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/citadelle-blaye.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/citadelle-blaye.jpg' %}" class="img-activities card-img-top" alt="{% trans "La citadelle de Blaye" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "La citadelle de Blaye" %}</h3>
                         <p class="card-text">
@@ -99,7 +114,10 @@
             </div>
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/terres-oiseaux.jpg' %}" class="img-activities card-img-top" alt="{% trans "Terres d'oiseaux" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/terres-oiseaux.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/terres-oiseaux.jpg' %}" class="img-activities card-img-top" alt="{% trans "Terres d'oiseaux" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Terres d'oiseaux" %}</h3>
                         <p class="card-text">
@@ -114,7 +132,10 @@
             </div>
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/grotte.jpg' %}" class="img-activities card-img-top" alt="{% trans "Grotte : Pair-non-Pair" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/grotte.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/grotte.jpg' %}" class="img-activities card-img-top" alt="{% trans "Grotte : Pair-non-Pair" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Grotte : Pair-non-Pair" %}</h3>
                         <p class="card-text">
@@ -128,7 +149,10 @@
             </div>
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/cro-magnon.png' %}" class="img-activities card-img-top" alt="{% trans "Au ptit Cro Magnon" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/cro-magnon.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/cro-magnon.png' %}" class="img-activities card-img-top" alt="{% trans "Au ptit Cro Magnon" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Au ptit Cro Magnon" %}</h3>
                         <p class="card-text">
@@ -148,7 +172,10 @@
         <div class="row row-cols-1 row-cols-md-3 g-4">
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/jonzac.jpg' %}" class="img-activities card-img-top" alt="{% trans "Les Antilles de Jonzac" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/jonzac.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/jonzac.jpg' %}" class="img-activities card-img-top" alt="{% trans "Les Antilles de Jonzac" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Les Antilles de Jonzac" %}</h3>
                         <p class="card-text">
@@ -163,7 +190,10 @@
             
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/bordeaux.jpg' %}" class="img-activities card-img-top" alt="{% trans "Bordeaux" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/bordeaux.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/bordeaux.jpg' %}" class="img-activities card-img-top" alt="{% trans "Bordeaux" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Bordeaux" %}</h3>
                         <p class="card-text">
@@ -177,7 +207,10 @@
             </div>
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/st-emilion.jpg' %}" class="img-activities card-img-top" alt="{% trans "Saint-Émilion" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/st-emilion.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/st-emilion.jpg' %}" class="img-activities card-img-top" alt="{% trans "Saint-Émilion" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Saint-Émilion" %}</h3>
                         <p class="card-text">
@@ -192,7 +225,10 @@
 
             <div class="col-lg-4 col-md-6 d-flex">
                 <div class="card h-100 flex-fill d-flex flex-column">
-                    <img src="{% static 'pictures/arcachon.jpg' %}" class="img-activities card-img-top" alt="{% trans "Bassin d'Arcachon" %}">
+                    <picture>
+                        <source srcset="{% static 'pictures/arcachon.webp' %}" type="image/webp">
+                        <img src="{% static 'pictures/arcachon.jpg' %}" class="img-activities card-img-top" alt="{% trans "Bassin d'Arcachon" %}">
+                    </picture>
                     <div class="card-body d-flex flex-column">
                         <h3 class="card-title">{% trans "Bassin d'Arcachon" %}</h3>
                         <p class="card-text">

@@ -84,13 +84,11 @@
     <p>{% trans "Bonjour" %} <strong>{{ booking.last_name }} {{ booking.first_name }}</strong>,</p>
     <p>{% trans "Merci pour votre réservation au Camping Le Maine Blanc ! Voici le récapitulatif :" %}</p>
 
-    <!-- Dates -->
     <div class="card">
       <h2>📅 {% trans "Dates" %}</h2>
       <p>{% trans "Du" %} <strong>{{ booking.start_date|date:"d/m/Y" }}</strong> {% trans "au" %} <strong>{{ booking.end_date|date:"d/m/Y" }}</strong></p>
     </div>
 
-    <!-- Hébergement -->
     <div class="card">
       <h2>🏕 {% trans "Type d’hébergement" %}</h2>
       <p><strong>{{ booking.booking_subtype_display }}</strong></p>
@@ -99,7 +97,6 @@
       {% endif %}
     </div>
 
-    <!-- Électricité -->
     <div class="card">
       <h2>🔌 {% trans "Électricité" %}</h2>
       <p>{{ booking.electricity_display }}</p>
@@ -108,7 +105,6 @@
       {% endif %}
     </div>
 
-    <!-- Nombre de personnes -->
     <div class="card">
       <h2>👥 {% trans "Nombre de personnes" %}</h2>
       <p>{% trans "Adultes" %} : <strong>{{ booking.adults }}</strong></p>
@@ -117,14 +113,12 @@
       <p>{% trans "Animaux" %} : <strong>{{ booking.pets }}</strong></p>
     </div>
 
-    <!-- Montants -->
     <div class="totals">
       <p><strong>💰 {% trans "Total à payer" %} : {{ total_price }} €</strong></p>
       <p>💳 {% trans "Acompte versé" %} : {{ deposit }} €</p>
       <p>📌 {% trans "Solde restant" %} : {{ remaining_balance }} €</p>
     </div>
 
-    <!-- Message final -->
     <p style="margin-top: 20px;">🌞 {% trans "Nous avons hâte de vous accueillir !" %}</p>
     <p><strong>{% trans "Camping Le Maine Blanc" %}</strong></p>
 

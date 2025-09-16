@@ -11,7 +11,8 @@ urlpatterns = [
     path('activites/', views.activities_view, name='activities'),
     path('mentions-legales/', views.legal_view, name='legal'),
     path('politique-de-confidentialite/', views.privacy_view, name='privacy-policy'),
-    path('notfound-test/', views.not_found_view, name='not_found'),  # Optional: direct access to 404 page for testing
+    path('notfound-test/', views.not_found_view, name='not_found'),
+    path('robots.txt', views.robots_txt, name='robots_txt')
 ]
 
 handler404 = views.not_found_view
