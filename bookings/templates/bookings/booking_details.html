@@ -9,13 +9,13 @@
 {% endblock %}
 
 {% block content %}
-<section class="container py-5">
+<section class="container py-5" role="region" aria-labelledby="booking-title">
     <div class="row justify-content-center">
         <div class="col-lg-6">
         <div class="container-title text-center">
-            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
-            <h1 class="title-booking text-center mb-4">{% trans "Vos coordonnées" %} </h1>
-            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+            <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left"/>
+            <h1 id="booking-title" class="title-booking text-center mb-4">{% trans "Vos coordonnées" %} </h1>
+            <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right"/>
         </div>
 
         {% if form.errors %}

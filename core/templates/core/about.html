@@ -9,15 +9,25 @@
 {% endblock %}
 
 {% block content %}
-<section id="about" class="about-section">
+<section id="about" class="about-section" role="region" aria-labelledby="about-title">
   <div class="card mb-3 about-card">
     <div class="row g-0">
       <div class="col-12 col-md-4 about-image-col">
-        <img src="{% static 'pictures/maine-blanc.jpg' %}" class="img-fluid rounded-start about-image" alt="{% trans 'Camping le Maine Blanc' %}">
+        <picture>
+          <source srcset="{% static 'pictures/maine-blanc.webp' %}" type="image/webp">
+          <img src="{% static 'pictures/maine-blanc.jpg' %}" 
+            class="img-fluid rounded-start about-image"   
+            alt="{% trans 'Camping le Maine Blanc' %}"
+            loading="lazy">
+        </picture>
       </div>
       <div class="col-12 col-md-8 about-text-col">
         <div class="card-body">
-          <h1 class="about-title">{% trans "Camping le Maine Blanc" %} <img src="{% static 'pictures/etoile.png' %}" alt="{% trans 'étoile' %}" class="about-star"> - {% trans "Ouvert à l'année" %}</h1>
+          <h1 id="about-title" class="about-title">
+            {% trans "Camping le Maine Blanc" %} 
+            <img src="{% static 'pictures/etoile.png' %}" alt="{% trans 'étoile' %}" class="about-star" loading="lazy" aria-hidden="true"> 
+            - {% trans "Ouvert à l'année" %}
+          </h1>
           <p class="card-text">{% trans "Envie de nature, de calme et de simplicité ?" %}</p>
           <p class="card-text">{% trans "Bienvenue au Camping Le Maine Blanc, un petit coin de paradis niché en pleine forêt de la Gironde, à seulement 5 minutes de Saint-Christoly-de-Blaye et 40 minutes de Bordeaux, dans un cadre verdoyant et paisible. Ici, on pose ses valises au coeur de la forêt, entre chant des oiseaux, emplacements ombragés et ambiance familiale à taille humaine." %}</p>
           <p class="card-text">{% trans "Notre camping est <strong>ouvert toute l'année</strong>, pour vous accueillir aussi bien lors de vos vacances d'été que pour unes escapade nature hors saison." %}</p>

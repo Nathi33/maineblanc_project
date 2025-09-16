@@ -9,11 +9,11 @@
 {% endblock %}
 
 {% block content %}
-<section class="container py-5">
+<section class="container py-5" role="region" aria-labelledby="legal-title">
     <header class="container-title text-center mb-4">
-        <img src="{% static 'pictures/peindre.png' %}" alt="" class="img-deco-left" aria-hidden="true"/>
-        <h1 class="title-ml">{% trans "Mentions Légales" %}</h1>
-        <img src="{% static 'pictures/peindre.png' %}" alt="" class="img-deco-right" aria-hidden="true"/>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left" aria-hidden="true"/>
+        <h1 id="legal-title" class="title-ml">{% trans "Mentions Légales" %}</h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right" aria-hidden="true"/>
     </header>
 
     <article class="legal-section mb-4">

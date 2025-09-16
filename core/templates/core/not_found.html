@@ -9,19 +9,22 @@
 {% endblock %}
 
 {% block content %}
-  <section class="container py-5">
+  <section class="container py-5" role="region" aria-labelledby="notfound-title">
     <div class="container-notfound-image text-center mb-4">
+      <picture>
+        <source srcset="{% static 'pictures/oops.webp' %}" type="image/webp">
         <img src="{% static 'pictures/oops.png' %}" alt="{% trans "Erreur 404" %}" class="notfound-image" />
+      </picture>
     </div>
     <div class="container-title text-center">
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
-        <h1 class="title-notfound">{% trans "Erreur 404 - Page non trouvée" %}</h1>
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+      <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left" aria-hidden="true"/>
+      <h1 id="notfound-title" class="title-notfound">{% trans "Erreur 404 - Page non trouvée" %}</h1>
+      <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right" aria-hidden="true"/>
     </div>
 
     <div class="text-center mt-4">
-        <p class="under-title-notfound">{% trans "Désolé, la page que vous recherchez n'existe pas." %}</p>
-        <a href="{% url 'home' %}" class="link-home">{% trans "Retour à l'accueil" %}</a>
+      <p class="under-title-notfound">{% trans "Désolé, la page que vous recherchez n'existe pas." %}</p>
+      <a href="{% url 'home' %}" class="link-home">{% trans "Retour à l'accueil" %}</a>
     </div>
   </section>
 

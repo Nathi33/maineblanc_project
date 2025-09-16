@@ -9,18 +9,20 @@
 {% endblock %}
 
 {% block content %}
-<section class="container">
+<section class="container" role="region" aria-labelledby="accommodations-title">
     <div class="container-title text-center">
-            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
-            <h1 class="title-accommodations">{% trans "Nos hébergements" %} </h1>
-            <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+            <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left"/>
+            <h1 id="accommodations-title" class="title-accommodations">{% trans "Nos hébergements" %} </h1>
+            <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right"/>
     </div>
 
     <div class="row">
-        <!-- Première carte -->
         <div class="col-md-6 mb-4">
             <div class="card h-100">
-                <img src="{% static 'pictures/bus.jpg' %}" class="pictures-card card-img-top w-100" alt="{% trans "Photo d'un bus sur parcelle" %}">
+                <picture>
+                    <source srcset="{% static 'pictures/bus.webp' %}" type="image/webp">
+                    <img src="{% static 'pictures/bus.jpg' %}" class="pictures-card card-img-top w-100" alt="{% trans "Photo d'un bus sur parcelle" %}">
+                </picture>
                 <div class="card-body">
                     <h2 class="card-title">{% trans "Emplacements Tentes, Caravanes, Camping-Cars" %}</h2>
                     <p class="card-text">{% trans "Profitez d’un séjour au plus près de la nature grâce à nos emplacements spacieux et ombragés, avec ou sans électricité, adaptés aux tentes, caravanes et camping-cars. Chaque parcelle est délimitée et située à proximité des sanitaires pour votre confort." %}</p>
@@ -30,10 +32,12 @@
             </div>
         </div>
 
-        <!-- Deuxième carte -->
         <div class="col-md-6 mb-4">
             <div class="card h-100">
-                <img src="{% static 'pictures/mobil-home.jpg' %}" class="pictures-card card-img-top w-100" alt="{% trans "Photo d'un mobil-home" %}">
+                <picture>
+                    <source srcset="{% static 'pictures/mobil-home.webp' %}" type="image/webp">
+                    <img src="{% static 'pictures/mobil-home.jpg' %}" class="pictures-card card-img-top w-100" alt="{% trans "Photo d'un mobil-home" %}">
+                </picture>
                 <div class="card-body">
                     <h2 class="card-title">{% trans "Location de Mobil-Homes" %}</h2>
                     <p class="card-text">{% trans "Confort et tranquillité vous attendent dans nos mobil-homes tout équipés, idéals pour un séjour en famille ou entre amis. Chaque hébergement dispose d’un espace extérieur avec terrasse, table et chaises, pour profiter pleinement du cadre verdoyant du camping." %}</p>

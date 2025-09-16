@@ -9,11 +9,11 @@
 {% block title %}{% trans "Contact | Camping Le Maine Blanc" %}{% endblock %}
 
 {% block content %}
-<section class="container py-5">
+<section class="container py-5" role="region" aria-labelledby="contact-title">
     <div class="container-title text-center">
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
-        <h1 class="title-accommodations">{% trans "Nous contacter" %}</h1>
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left"/>
+        <h1 id="contact-title" class="title-accommodations">{% trans "Nous contacter" %}</h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right"/>
     </div>
 
     <p class="text-accommodation">
@@ -52,7 +52,7 @@
             <form method="post" action='{% url "reservation_request" %}' novalidate>
                 {% csrf_token %}
                 <div class="row">
-                    <!-- Colonne gauche : coordonnées -->
+                    <!--Contact details -->
                     <div class="col-md-6">
                         <h2 class="title-form">{% trans "Vos coordonnées" %}</h2>
 
@@ -98,7 +98,7 @@
                         </div>
                     </div>
 
-                    <!-- Colonne droite : réservation -->
+                    <!-- Reservation details -->
                     <div class="col-md-6">
                         <h2 class="title-form">{% trans "Détails de la réservation" %}</h2>
 
@@ -236,7 +236,7 @@
                 });
             }, 5000);
 
-            // --- Hébergement ---
+            // --- Accommodation ---
             const accommodationSelect = document.getElementById("{{ form.accommodation_type.id_for_label }}");
             const tentDimensions = document.getElementById("tent-dimensions");
             const vehicleLengthContainer = document.getElementById("vehicle-length-container");
@@ -262,7 +262,7 @@
             accommodationSelect.addEventListener("change", toggleFields);
             toggleFields();
 
-            // --- Électricité ---
+            // --- Electricity ---
             const electricityRadios = document.querySelectorAll("input[name='{{ form.electricity.html_name }}']");
             const cableLengthContainer = document.getElementById("cable-length-container");
 
@@ -300,13 +300,12 @@
                     const formatted = nextDay.toISOString().split("T")[0];
                     endDateInput.setAttribute("min", formatted);
 
-                    // Si la date de départ est invalide, on la vide
                     if (endDateInput.value && endDateInput.value <= startDateInput.value) {
                         endDateInput.value = "";
                     }
                 }
 
-                updateEndDate(); // initialisation au chargement
+                updateEndDate();
                 startDateInput.addEventListener("change", updateEndDate);
             }
         });

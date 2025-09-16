@@ -82,7 +82,6 @@
     <h1>📩 {% trans "Nouvelle demande de réservation" %}</h1>
     <p>{% trans "Une nouvelle demande de réservation a été effectuée le" %} <strong>{{ submission_datetime|date:"d/m/Y" }} à {{ submission_datetime|time:"H:i" }}</strong>.</p>
 
-    <!-- Informations client -->
     <div class="card">
       <h2>👤 {% trans "Informations du client" %}</h2>
       <p><strong>{% trans "Nom" %} :</strong> {{ name }} {{ first_name }}</p>
@@ -91,13 +90,11 @@
       <p><strong>{% trans "Email" %} :</strong> {{ email }}</p>
     </div>
 
-    <!-- Dates -->
     <div class="card">
       <h2>📅 {% trans "Dates" %}</h2>
       <p>{% trans "Du" %} <strong>{{ start_date|date:"d/m/Y" }}</strong> {% trans "au" %} <strong>{{ end_date|date:"d/m/Y" }}</strong></p>
     </div>
 
-    <!-- Hébergement -->
     <div class="card">
       <h2>🏕 {% trans "Type d’hébergement" %}</h2>
       <p><strong>{{ accommodation_label }}</strong></p>
@@ -108,7 +105,6 @@
       {% endif %}
     </div>
 
-    <!-- Électricité -->
     <div class="card">
       <h2>🔌 {% trans "Électricité" %}</h2>
       <p>{% if electricity == "yes" %}<strong>{% trans "Avec électricité" %}</strong>{% else %}<strong>{% trans "Sans électricité" %}</strong>{% endif %}</p>
@@ -117,7 +113,6 @@
       {% endif %}
     </div>
 
-    <!-- Nombre de personnes -->
     <div class="card">
       <h2>👥 {% trans "Nombre de personnes" %}</h2>
       <p>{% trans "Adultes" %} : <strong>{{ adults }}</strong></p>
@@ -126,7 +121,6 @@
       <p>{% trans "Animaux" %} : <strong>{{ pets }}</strong></p>
     </div>
 
-    <!-- Message -->
     <div class="card">
       <h2>💬 {% trans "Message du client" %}</h2>
       <p>{{ translated_message|linebreaks }}</p>

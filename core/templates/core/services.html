@@ -9,49 +9,49 @@
 {% endblock %}
 
 {% block content %}
-<section class="container py-5">
+<section class="container py-5" role="region" aria-labelledby="services-title">
     <div class="container-title text-center">
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-left"/>
-        <h1 class="title-services">{% trans "Nos Services" %}</h1>
-        <img src="{% static 'pictures/peindre.png' %}" alt="{% trans "Décoration" %}" class="img-deco-right"/>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-left"/>
+        <h1 id="services-title" class="title-services">{% trans "Nos Services" %}</h1>
+        <img src="{% static 'pictures/peindre.png' %}" alt="" loading="lazy" class="img-deco-right"/>
     </div>
 
   <p class="text-center mb-5">{% trans "Confort, détente et convivialité au cœur de votre séjour"%}</p>
 
   <div class="row g-4">
-    <!-- Piscine -->
+    <!-- Swimming Pool -->
     <div class="col-lg-4 col-md-6 col-12">
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
             <h2 class="card-title">{% trans "Piscine" %}</h2>
-            <img src="{% static 'pictures/piscine.png' %}" alt="{% trans "Piscine" %}" class=" logo-services img-fluid mb-3">
+            <img src="{% static 'pictures/piscine.png' %}" alt="{% trans "Piscine" %}" loading="lazy" class=" logo-services img-fluid mb-3">
           </div>
           <p class="card-text">{% trans "Ouverte en haute saison, de mi-juin à mi-septembre, notre piscine extérieure vous accueille tous les jours de" %} {{ swimming_info.pool_opening_start|format_time_by_locale }} {% trans "à" %} {{ swimming_info.pool_opening_end|format_time_by_locale }} {% trans "pour un moment de fraîcheur et de détente." %}</p>
           <p class="card-text">{% trans "Non couverte et non chauffée, elle est idéale pour se rafraîchir durant les belles journées d'été." %}</p>
           <div class="info">
-            <img src="{% static 'pictures/attention.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <img src="{% static 'pictures/attention.png' %}" alt="{% trans "Attention" %}" loading="lazy" class="logo-services-info">
             <p class="card-text"><strong>{% trans "Attention : la baignade n'est pas surveillée." %}</strong> {% trans "Les enfants doivent être accompagnés et rester sous la vigilance des parents." %}</p>
           </div>
           <div class="info">
-            <img src="{% static 'pictures/cadenas.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <img src="{% static 'pictures/cadenas.png' %}" alt="{% trans "Cadenas" %}" loading="lazy" class="logo-services-info">
             <p class="card-text"><strong>{% trans "Piscine privée" %}</strong> {% trans "réservée exclusivement à la clientèle du camping." %}</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Restauration -->
+    <!-- Restoration -->
     <div class="col-lg-4 col-md-6 col-12">
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
             <h2 class="card-title">{% trans "Restauration" %}</h2>
-            <img src="{% static 'pictures/food-restaurant.png' %}" alt="{% trans "Restauration" %}" class="logo-services img-fluid mb-3">
+            <img src="{% static 'pictures/food-restaurant.png' %}" alt="{% trans "Logo Restauration" %}" loading="lazy" class="logo-services img-fluid mb-3">
           </div>
 
           <div class="info">
-            <img src="{% static 'pictures/camion.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <img src="{% static 'pictures/camion.png' %}" alt="{% trans "Image Camion Food Truck" %}" loading="lazy" class="logo-services-info">
             <p class="card-text-title">{% trans "Food trucks en soirée pour tous les goûts :"%}</p>
           </div>
           <ul class="list-unstyled">
@@ -60,19 +60,19 @@
           </ul>
           
           <div class="info">
-            <img src="{% static 'pictures/croissant.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <img src="{% static 'pictures/croissant.png' %}" alt="{% trans "Image Croissant" %}" loading="lazy" class="logo-services-info">
             <p class="card-text-title">{% trans "Pain frais et viennoiseries chaque matin entre" %} {{ food_info.bread_hours_start|format_time_by_locale }} {% trans "et" %} {{ food_info.bread_hours_end|format_time_by_locale }} : </p>
           </div>
           <p class="card-text">{% trans "Pensez à commander la veille avant" %} {{ food_info.bread_hours_reservations|format_time_by_locale }} {% trans "à l'accueil, auprès d'Isabelle." %}</p>
 
           <div class="info">
-            <img src="{% static 'pictures/caddie.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <img src="{% static 'pictures/caddie.png' %}" alt="{% trans "Image Caddie" %}" loading="lazy" class="logo-services-info">
             <p class="card-text-title">{% trans "Epicerie ouverte toute l'année : "%}</p>
           </div>
           <p class="card-text">{% trans "Produits salés, sucrés, d'entretien... L'épicerie du camping est toujours là pour vous sauver la mise !" %}</p>
 
           <div class="info">
-            <img src="{% static 'pictures/bar.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <img src="{% static 'pictures/bar.png' %}" alt="{% trans "Image Bar" %}" loading="lazy" class="logo-services-info">
             <p class="card-text-title">{% trans "Bar ouvert tous les jours de" %} {{ food_info.bar_hours_start|format_time_by_locale }} {% trans "à" %} {{ food_info.bar_hours_end|format_time_by_locale }} : </p>
           </div>
           <p class="card-text">{% trans "Un lieu idéal pour boire un verre, savourer une glace et profiter de l’ambiance du camping." %}</p>
@@ -81,13 +81,13 @@
       </div>
     </div>
 
-    <!-- Laverie -->
+    <!-- Laundry -->
     <div class="col-lg-4 col-md-6 col-12">
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
             <h2 class="card-title">{% trans "Laverie" %}</h2>
-            <img src="{% static 'pictures/machine.png' %}" alt="{% trans "Laverie" %}" class="logo-services img-fluid mb-3">
+            <img src="{% static 'pictures/machine.png' %}" alt="{% trans "Image Machine à laver" %}" loading="lazy" class="logo-services img-fluid mb-3">
           </div>
           <p class="card-text-title pb-2">{% trans "Du linge à faire ?" %}</p>
           <p class="card-text">{% trans "Pas de panique, même en vacances, on a pensé à tout :" %}</p>
@@ -102,34 +102,34 @@
       </div>
     </div>
 
-    <!-- Animaux -->
+    <!-- Pets -->
     <div class="col-lg-4 col-md-6 col-12">
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
             <h2 class="card-title">{% trans "Animaux bienvenus" %}</h2>
-            <img src="{% static 'pictures/animaux.png' %}" alt="{% trans "Animaux" %}" class="logo-services img-fluid mb-3">
+            <img src="{% static 'pictures/animaux.png' %}" alt="{% trans "Image Chien et Chat" %}" loading="lazy" class="logo-services img-fluid mb-3">
           </div>
           <p class="card-text">({% trans "sauf catégories 1 & 2, désolés les toutous costauds" %}
-            <img src="{% static 'pictures/chien.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">)
+            <img src="{% static 'pictures/chien.png' %}" alt="{% trans "Image d'un chien musclé" %}" loading="lazy" class="logo-services-info">
           </p>                   
           <p class="card-text"><strong>{% trans "La laisse ?" %}</strong> {% trans "Oui, même pour une petite balade, dans le camping ou juste devant la tente !" %}</p>
           <p class="card-text"><strong>{% trans "Un petit besoin ?" %}</strong> {% trans "On ramasse, c'est plus sympa pour tout le monde." %}</p>
           <div class="info">
-            <img src="{% static 'pictures/interdit.png' %}" alt="{% trans "Attention" %}" class="logo-services-info">
+            <img src="{% static 'pictures/interdit.png' %}" alt="{% trans "Panneau interdit" %}" loading="lazy" class="logo-services-info">
             <p class="card-text"><strong>{% trans "Les sanitaires" %}</strong> {% trans "c'est réservé aux humains !"%}</p>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Wi-Fi -->
+    <!-- WiFi -->
     <div class="col-lg-4 col-md-6 col-12">
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
             <h2 class="card-title">{% trans "Wi-Fi gratuit" %}</h2>
-            <img src="{% static 'pictures/wifi.png' %}" alt="{% trans "Wi-Fi" %}" class="logo-services img-fluid mb-3">
+            <img src="{% static 'pictures/wifi.png' %}" alt="{% trans "Logo Wi-Fi" %}" loading="lazy" class="logo-services img-fluid mb-3">
           </div>
           <p class="card-text-title-wifi">{% trans "Besoin de rester connecté ?" %}</p>
           <p class="card-text">{% trans "Le wifi est gratuit sur le camping !" %}</p>
@@ -139,13 +139,13 @@
     </div>
 
 
-    <!-- Paiements -->
+    <!-- Payments -->
     <div class="col-lg-4 col-md-6 col-12">
       <div class="card h-100">
         <div class="card-body">
           <div class="card-title text-center">
             <h2 class="card-title">{% trans "Paiements sécurisés" %}</h2>
-            <img src="{% static 'pictures/paiements.png' %}" alt="{% trans "Paiements" %}" class="logo-services img-fluid mb-3">
+            <img src="{% static 'pictures/paiements.png' %}" alt="{% trans "Logo Terminal Paiements" %}" loading="lazy" class="logo-services img-fluid mb-3">
           </div>
           <p class="card-text-title-pay">{% trans "Pour régler votre séjour, plusieurs options s'offrent à vous à l'arrivée : " %}</p>
           <ul>
