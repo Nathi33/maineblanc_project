@@ -18,14 +18,7 @@ def home_view(request):
     Security:
         - No user input processed; safe from XSS or injection.
     """
-    languages = [
-        ("fr", "flag-french.png"),
-        ("en", "flag-UK.png"),
-        ("es", "flag-spain.png"),
-        ("de", "flag-deutsch.png"),
-        ("nl", "flag-nederlands.png"),
-    ]
-    return render(request, 'core/home.html', {'languages': languages})
+    return render(request, 'core/home.html')
 
 
 def about_view(request):

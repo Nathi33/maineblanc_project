@@ -75,7 +75,9 @@ TEMPLATES = [
                 'django.template.context_processors.static',
                 'django.template.context_processors.tz',
                 'django.contrib.messages.context_processors.messages',
+                'core.context_processors.available_languages',
                 'django.template.context_processors.i18n',
+                'core.context_processors.global_static_version',
             ],
         },
     },
@@ -166,3 +168,14 @@ STRIPE_PUBLIC_KEY = config('STRIPE_PUBLIC_KEY')
 # SITE URL
 # ============================================
 SITE_URL = config('SITE_URL', default='http://localhost:8000')
+
+# ============================================
+# CACHE-BUSTING
+# ============================================
+from datetime import datetime
+
+STATIC_VERSION = datetime.now().strftime("%Y%m%d%H%M%S")
+
+def global_static_version(request):
+    from django.conf import settings
+    return {'STATIC_VERSION': settings.STATIC_VERSION}
