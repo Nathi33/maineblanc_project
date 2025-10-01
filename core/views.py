@@ -1,4 +1,5 @@
 from django.utils.translation import gettext as _, get_language
+from parler.utils.context import switch_language
 from django.shortcuts import render
 from django.http import HttpResponse
 from bookings.models import Price, SupplementPrice, SeasonInfo, Capacity, MobileHome, SupplementMobileHome, OtherPrice
@@ -103,8 +104,15 @@ def infos_view(request):
     season_info = SeasonInfo.objects.first()
     capacity_info = Capacity.objects.first()
 
-    # --- Mobile homes pricing and translated descriptions ---
+    # --- Language-specific handling ---
     lang = get_language()
+
+    if camping_info:
+        with switch_language(camping_info, lang):
+            pass
+    
+
+    # --- Mobile homes pricing and translated descriptions ---
     mobilhomes = MobileHome.objects.all()
     for home in mobilhomes:
         # Dynamically choose name and description based on language
