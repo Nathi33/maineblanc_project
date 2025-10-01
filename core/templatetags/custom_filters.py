@@ -1,4 +1,4 @@
-from datetime import datetime, date
+from datetime import datetime, date, time
 from django import template
 from django.utils.translation import get_language
 
@@ -23,7 +23,7 @@ def format_time_by_locale(value):
         str: Formatted time string based on the active locale,
              or an empty string if value is None or invalid.
     """
-    if not isinstance(value, (datetime, date)):
+    if not isinstance(value, (datetime, date, time)):
         return ""
 
     current_lang = get_language()
