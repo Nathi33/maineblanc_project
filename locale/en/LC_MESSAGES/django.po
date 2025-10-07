@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-09-16 08:56+0200\n"
+"POT-Creation-Date: 2025-10-07 13:05+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -95,7 +95,7 @@ msgstr "Departure Date"
 #: .\bookings\templates\emails\client_booking.html:110
 #: .\reservations\forms.py:122
 #: .\reservations\templates\reservations\email_admin.html:118
-#: .\reservations\templates\reservations\reservation_request.html:142
+#: .\reservations\templates\reservations\reservation_request.html:141
 msgid "Adultes"
 msgstr "Adults"
 
@@ -123,10 +123,12 @@ msgid "Longueur de la tente (m)"
 msgstr "Tent length (m)"
 
 #: .\bookings\forms.py:91
+#: .\reservations\templates\reservations\reservation_request.html:150
 msgid "Enfants +8 ans"
 msgstr "Child +8 years"
 
 #: .\bookings\forms.py:92
+#: .\reservations\templates\reservations\reservation_request.html:159
 msgid "Enfants -8 ans"
 msgstr "Child -8 years"
 
@@ -137,7 +139,7 @@ msgstr "Child -8 years"
 #: .\bookings\templates\emails\client_booking.html:113
 #: .\reservations\forms.py:149
 #: .\reservations\templates\reservations\email_admin.html:121
-#: .\reservations\templates\reservations\reservation_request.html:169
+#: .\reservations\templates\reservations\reservation_request.html:168
 msgid "Animaux"
 msgstr "Pets"
 
@@ -836,7 +838,7 @@ msgstr ""
 "cream or tapas."
 
 #: .\core\templates\core\activities.html:96
-msgid "Activités 20 minutes du camping"
+msgid "Activités à 20 minutes du camping"
 msgstr "Activities 20 minutes from the campsite"
 
 #: .\core\templates\core\activities.html:102
@@ -2009,8 +2011,7 @@ msgstr "Please note : swimming is not supervised."
 #: .\core\templates\core\services.html:34
 msgid ""
 "Les enfants doivent être accompagnés et rester sous la vigilance des parents."
-msgstr ""
-"Children must be accompanied and remain under parental supervision."
+msgstr "Children must be accompanied and remain under parental supervision."
 
 #: .\core\templates\core\services.html:37
 msgid "Cadenas"
@@ -2276,60 +2277,60 @@ msgid ""
 "Petit rappel : par mesure de sécurité, nous ne prenons plus les chèques."
 msgstr "Important: Due to past issues, we no longer accept cheques."
 
-#: .\core\views.py:77
+#: .\core\views.py:72
 msgid "Adulte supplémentaire"
 msgstr "Extra Adult"
 
-#: .\core\views.py:78
+#: .\core\views.py:73
 msgid "Enfant +8 ans"
 msgstr "Child +8 years"
 
-#: .\core\views.py:79
+#: .\core\views.py:74
 msgid "Enfant -8 ans"
 msgstr "Child -8 years"
 
-#: .\core\views.py:80
+#: .\core\views.py:75
 msgid "Animal"
 msgstr "Pet"
 
-#: .\core\views.py:81
+#: .\core\views.py:76
 msgid "Véhicule supplémentaire"
 msgstr "Extra Vehicle"
 
-#: .\core\views.py:82
+#: .\core\views.py:77
 msgid "Tente supplémentaire"
 msgstr "Extra Tent"
 
-#: .\core\views.py:83
+#: .\core\views.py:78
 msgid ""
 "Caution - Prêt de matériel (adaptateur, fer à repasser, sèche-cheveux...)"
 msgstr "Deposit - Equipment Loan (adapter, iron, hair dryer...)"
 
-#: .\core\views.py:97
+#: .\core\views.py:92
 msgid "(sans piscine)"
 msgstr "(without pool)"
 
-#: .\core\views.py:102
+#: .\core\views.py:97
 msgid "(avec piscine)"
 msgstr "(with pool)"
 
-#: .\maineblanc_project\settings.py:109
+#: .\maineblanc_project\settings.py:112
 msgid "French"
 msgstr "French"
 
-#: .\maineblanc_project\settings.py:110
+#: .\maineblanc_project\settings.py:113
 msgid "English"
 msgstr "English"
 
-#: .\maineblanc_project\settings.py:111
+#: .\maineblanc_project\settings.py:114
 msgid "Spanish"
 msgstr "Spanish"
 
-#: .\maineblanc_project\settings.py:112
+#: .\maineblanc_project\settings.py:115
 msgid "German"
 msgstr "German"
 
-#: .\maineblanc_project\settings.py:113
+#: .\maineblanc_project\settings.py:116
 msgid "Nederlands"
 msgstr "Dutch"
 
@@ -2359,12 +2360,10 @@ msgid "Type d'hébergement"
 msgstr "Accommodation Type"
 
 #: .\reservations\forms.py:131
-#: .\reservations\templates\reservations\reservation_request.html:151
 msgid "+8 ans"
 msgstr "+8 Years"
 
 #: .\reservations\forms.py:140
-#: .\reservations\templates\reservations\reservation_request.html:160
 msgid "-8 ans"
 msgstr "-8 Years"
 
@@ -2433,6 +2432,13 @@ msgstr "or simply fill out the form below, we will get back to you quickly!"
 #: .\reservations\templates\reservations\reservation_request.html:103
 msgid "Détails de la réservation"
 msgstr "Reservation Details"
+
+#: .\reservations\templates\reservations\reservation_request.html:143
+#: .\reservations\templates\reservations\reservation_request.html:152
+#: .\reservations\templates\reservations\reservation_request.html:161
+#: .\reservations\templates\reservations\reservation_request.html:170
+msgid "Sélectionner"
+msgstr "Select"
 
 #: .\reservations\templates\reservations\reservation_request.html:204
 msgid "Localisation du camping"
