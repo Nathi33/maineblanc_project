@@ -450,6 +450,10 @@ class Booking(models.Model):
             'van': 'caravan',
             'camping_car': 'camping_car',
         }
+
+        if self.start_date is None or self.end_date is None:
+            raise ValidationError(_("Les dates de réservations sont requises pour vérifier la disponibilité."))
+        
         main_type = MAIN_TYPE_MAP.get(self.booking_type, self.booking_type)
 
         try:

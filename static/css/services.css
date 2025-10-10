@@ -62,3 +62,8 @@
     font-style: italic;
 }
 
+.card-text-opening {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+

@@ -43,7 +43,10 @@ def booking_form(request):
             start_date = booking_data.get('start_date')
             end_date = booking_data.get('end_date')
 
-            # Create a temporary booking object for validation
+            # Temporary booking to check capacity
+            if not start_date or not end_date:
+                return render(request, 'bookings/booking_form.html', {'form': form})
+            
             temp_booking = Booking(
                 booking_type=booking_subtype,
                 start_date=start_date,

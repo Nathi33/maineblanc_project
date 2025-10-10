@@ -50,14 +50,9 @@
             <img src="{% static 'pictures/food-restaurant.png' %}" alt="{% trans "Logo Restauration" %}" loading="lazy" class="logo-services img-fluid mb-3">
           </div>
 
-          <div class="info">
-            <img src="{% static 'pictures/camion.png' %}" alt="{% trans "Image Camion Food Truck" %}" loading="lazy" class="logo-services-info">
-            <p class="card-text-title">{% trans "Food trucks en soirée pour tous les goûts :"%}</p>
-          </div>
-          <ul class="list-unstyled">
-            <li><span class="list-title">{% trans "Burger" %}</span> : {% trans "tous les soirs sauf le" %} {{ food_info.burger_food_days }}, {% trans "de" %} {{ food_info.burger_food_hours_start|format_time_by_locale }} {% trans "à" %} {{ food_info.burger_food_hours_end|format_time_by_locale }} </li>
-            <li><span class="list-title">{% trans "Pizza" %}</span> : {% trans "uniquement le" %} {{ food_info.pizza_food_days }} {% trans "soir" %}, {% trans "mêmes horaires." %} </li>
-          </ul>
+          <p class="card-text-opening">
+            <strong>{% trans "Ouverture :" %}</strong> {% trans "Le service pain, viennoiseries et l’épicerie sont ouverts toute l’année." %}
+          </p>
           
           <div class="info">
             <img src="{% static 'pictures/croissant.png' %}" alt="{% trans "Image Croissant" %}" loading="lazy" class="logo-services-info">
@@ -67,15 +62,28 @@
 
           <div class="info">
             <img src="{% static 'pictures/caddie.png' %}" alt="{% trans "Image Caddie" %}" loading="lazy" class="logo-services-info">
-            <p class="card-text-title">{% trans "Epicerie ouverte toute l'année : "%}</p>
+            <p class="card-text-title">{% trans "Epicerie : "%}</p>
           </div>
           <p class="card-text">{% trans "Produits salés, sucrés, d'entretien... L'épicerie du camping est toujours là pour vous sauver la mise !" %}</p>
 
+          <p class="card-text-opening">
+            <strong>{% trans "En pleine saison (de juin à septembre) :" %}</strong> {% trans "le bar et les food trucks vous accueillent pour des moments gourmands et conviviaux." %}
+          </p>
+
           <div class="info">
             <img src="{% static 'pictures/bar.png' %}" alt="{% trans "Image Bar" %}" loading="lazy" class="logo-services-info">
-            <p class="card-text-title">{% trans "Bar ouvert tous les jours de" %} {{ food_info.bar_hours_start|format_time_by_locale }} {% trans "à" %} {{ food_info.bar_hours_end|format_time_by_locale }} : </p>
+            <p class="card-text-title">{% trans "Bar ouvert de" %} {{ food_info.bar_hours_start|format_time_by_locale }} {% trans "à" %} {{ food_info.bar_hours_end|format_time_by_locale }} : </p>
           </div>
           <p class="card-text">{% trans "Un lieu idéal pour boire un verre, savourer une glace et profiter de l’ambiance du camping." %}</p>
+
+          <div class="info">
+            <img src="{% static 'pictures/camion.png' %}" alt="{% trans "Image Camion Food Truck" %}" loading="lazy" class="logo-services-info">
+            <p class="card-text-title">{% trans "Food trucks en soirée pour tous les goûts :"%}</p>
+          </div>
+          <ul class="list-unstyled">
+            <li><span class="list-title">{% trans "Burger" %}</span> : {% trans "tous les soirs sauf le" %} {{ food_info.burger_food_days }}, {% trans "de" %} {{ food_info.burger_food_hours_start|format_time_by_locale }} {% trans "à" %} {{ food_info.burger_food_hours_end|format_time_by_locale }} </li>
+            <li><span class="list-title">{% trans "Pizza" %}</span> : {% trans "uniquement le" %} {{ food_info.pizza_food_days }} {% trans "soir" %}, {% trans "mêmes horaires." %} </li>
+          </ul>
 
         </div>
       </div>
@@ -111,8 +119,11 @@
             <img src="{% static 'pictures/animaux.png' %}" alt="{% trans "Image Chien et Chat" %}" loading="lazy" class="logo-services img-fluid mb-3">
           </div>
           <p class="card-text">({% trans "sauf catégories 1 & 2, désolés les toutous costauds" %}
-            <img src="{% static 'pictures/chien.png' %}" alt="{% trans "Image d'un chien musclé" %}" loading="lazy" class="logo-services-info">
-          </p>                   
+            <img src="{% static 'pictures/chien.png' %}" alt="{% trans "Image d'un chien musclé" %}" loading="lazy" class="logo-services-info">)
+          </p>   
+          <p class="card-text"><strong>{% trans "Carnet de vaccination :" %}</strong>
+            {% trans "Il doit être présenté à l’arrivée et à jour — une simple formalité pour garantir le bien-être de tous nos compagnons à quatre pattes !" %}
+          </p>                
           <p class="card-text"><strong>{% trans "La laisse ?" %}</strong> {% trans "Oui, même pour une petite balade, dans le camping ou juste devant la tente !" %}</p>
           <p class="card-text"><strong>{% trans "Un petit besoin ?" %}</strong> {% trans "On ramasse, c'est plus sympa pour tout le monde." %}</p>
           <div class="info">
