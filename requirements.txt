@@ -9,6 +9,7 @@ Django==5.2.4
 django-parler==2.3
 docutils==0.21.2
 git-filter-repo==2.47.0
+gunicorn==23.0.0
 idna==3.10
 imagesize==1.4.1
 iniconfig==2.1.0

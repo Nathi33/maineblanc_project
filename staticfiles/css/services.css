@@ -1,0 +1,69 @@
+.container {
+    padding-top: 40px;
+}
+
+.container-title {
+    display: flex;
+    justify-content: center;
+}
+
+.img-deco-left,
+.img-deco-right {
+    width: 25px;
+    height: 25px;  
+}
+
+.img-deco-left {
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+
+.img-deco-right {
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+.title-services {
+    padding: 0 10px;
+    font-weight:900;
+}
+
+.logo-services {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+.info {
+    display: flex;
+}
+
+.logo-services-info {
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+}
+
+.card-text-title {
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
+.list-title {
+    font-style: italic;
+}
+
+.card-text-title-wifi,
+.card-text-title-pay {
+    font-weight: bold;
+}
+
+.card-text-pay {
+    font-style: italic;
+}
+
+.card-text-opening {
+    font-style: italic;
+    margin-bottom: 15px;
+}
+
