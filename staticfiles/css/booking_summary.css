@@ -1,0 +1,80 @@
+.container {
+    padding-top: 40px;
+}
+
+.container-title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.img-deco-left,
+.img-deco-right {
+    width: 25px;
+    height: 25px;  
+}
+
+.img-deco-left {
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+
+.img-deco-right {
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+.title-booking {
+    padding: 0 10px;
+    font-weight:900;
+}
+
+.container-btns {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 40px;
+}
+
+.btn, .btn-bis {
+    text-decoration: none;
+    display: inline-block;
+    align-self: unset;
+}
+
+.btn {
+  background-color: #483D8B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  align-self: flex-start;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #483D8B;
+  border: 1px solid #483D8B;
+}
+
+.btn-bis {
+  background-color: #f0f0f0 !important;
+  color: #838181 !important; 
+  border: 1px solid #838181 !important;
+  border-radius: 5px !important;
+  padding: 10px 15px !important;
+  font-size: 1rem !important;
+  margin-bottom: 15px !important;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-bis:hover {
+  background-color: #838181 !important;
+  color: #fff !important;
+  border: none !important;
+}

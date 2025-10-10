@@ -20,7 +20,7 @@ LOCALE_PATHS = [BASE_DIR / 'locale']
 # ============================================
 SECRET_KEY = config('SECRET_KEY')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 # ============================================
 # APPLICATIONS
@@ -131,6 +131,7 @@ DEEPL_API_KEY = config('DEEPL_API_KEY')
 # ============================================
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 # ============================================
 # DEFAULT PRIMARY KEY

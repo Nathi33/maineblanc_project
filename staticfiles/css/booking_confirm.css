@@ -1,0 +1,128 @@
+.container-title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+}
+
+.img-deco-left,
+.img-deco-right {
+    width: 25px;
+    height: 25px;  
+}
+
+.img-deco-left {
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+
+.img-deco-right {
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+.title-booking {
+    padding: 0 10px;
+    font-weight:900;
+}
+
+.card-section {
+    border-radius: 15px;
+    overflow: hidden;
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+}
+
+.card-header-custom {
+    background: linear-gradient(90deg, #483D8B, #7B68EE);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.dates-bar,
+.price-bar {
+    max-width: 600px;
+    margin: 0 auto 1.5rem auto;
+    border-radius: 12px;
+    padding: 1rem 1.5rem;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.dates-bar {
+    background: #e6f4ea;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; 
+}
+
+.logo-dates {
+    width: 25px;
+    height: 25px;
+}
+
+.dates-bar .dates-content {
+    display: flex;
+    align-items:flex-start; 
+    justify-content: flex-start; 
+    gap: 10px;
+}
+
+.dates-bar .dates-text {
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+.price-bar {
+    background: #f0f4ff;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: left;
+    color: #483D8B;
+}
+
+.price-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #483D8B;
+}
+
+.info-item-label {
+    margin-left: 1.5rem;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.btn {
+  background-color: #483D8B;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  font-size: 1rem;
+  margin-bottom: 15px;
+  margin-top: 20px;
+  align-self: center;
+  text-align: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #fff;
+  color: #483D8B;
+  border: 1px solid #483D8B;
+}

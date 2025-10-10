@@ -1,0 +1,162 @@
+.container {
+    padding-top: 40px;
+}
+
+.container-title {
+    display: flex;
+    justify-content: center;
+}
+
+.img-deco-left,
+.img-deco-right {
+    width: 25px;
+    height: 25px;  
+}
+
+.img-deco-left {
+    transform: rotate(-45deg);
+    display: inline-block;
+}
+
+.img-deco-right {
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+.title-infos {
+    padding: 0 10px;
+    font-weight:900;
+}
+
+.under-title-infos {
+    font-weight: bold;
+    font-style: italic;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.container-plan-text {
+    margin-top: 90px;
+}
+
+.list-board {
+    list-style-type: circle;
+}
+
+.logo-infos {
+    width: 20px;
+    height: 20px;
+}
+
+.under-title {
+    font-weight: 600;
+    font-style: italic;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.number-people {
+    font-style: italic;
+}
+
+.short-text {
+    display: none;
+}
+
+.table-wrapper table {
+    width: 100%;
+    table-layout: fixed; 
+}
+
+/* Responsive tablette */
+@media (max-width: 768px) {
+  .table-wrapper table {
+    width: 100%; 
+  }
+
+  .table-wrapper td {
+    padding: 0.4rem;
+  }
+
+  .table-wrapper td .number-people {
+    font-size: 0.85rem;
+  }
+
+  .table-wrapper td .elec-label img.logo-infos {
+    width: 18px;
+  }
+
+  .table-wrapper td, 
+  .table-wrapper th {
+    font-size: 0.85rem; 
+  }
+
+  .price-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; 
+    height: 100%; 
+  }
+
+  .price-wrapper table {
+    width: 100%;
+    margin-top: auto;
+  }
+}
+
+/* Responsive mobile */
+@media (max-width: 480px) {
+  .table-wrapper td, 
+  .table-wrapper th {
+    font-size: 0.75rem; 
+  }
+
+  .table-wrapper table {
+    width: 100%;
+  }
+
+  .short-text {
+    display: inline;
+  }
+
+  .full-text {
+    display: none;
+  }
+
+  .logo-infos {
+    width: 12px;
+    height: 12px;
+    margin-right: 0.2rem;
+    vertical-align: middle;
+  }
+
+  .table-wrapper td .under-title {
+    display: block;
+    margin-top: 0.2rem;
+  }
+
+  .table-wrapper td .number-people {
+    display: block;
+    margin-bottom: 0.2rem;
+  }
+
+  .table-wrapper td table tr:nth-child(2) td:first-child {
+    position: relative; 
+    padding-right: 0.8rem; 
+  }
+
+  .table-wrapper td table tr:nth-child(2) td:first-child::after {
+    content: "";
+    position: absolute;
+    top: 20%;            
+    bottom: 20%;          
+    right: -3px;          
+    width: 2px;           
+    background-color: #d3d3d3; 
+    border-radius: 1px;   
+  }
+
+  .table-wrapper td table tr:nth-child(2) td:last-child {
+    padding-left: 0.5rem;
+  }
+}
