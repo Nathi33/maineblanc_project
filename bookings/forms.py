@@ -64,7 +64,7 @@ class BookingFormClassic(forms.ModelForm):
     )
 
     adults = forms.IntegerField(
-        widget=forms.Select(choices=[(i, i) for i in range(1, 11)], attrs={'class': 'form-select'}),
+        widget=forms.Select(choices=[(i, i) for i in range(1, 7)], attrs={'class': 'form-select'}),
         label=_("Adultes"),
         required=True
     )
@@ -90,15 +90,15 @@ class BookingFormClassic(forms.ModelForm):
             'tent_length': _("Longueur de la tente (m)"),
             'children_over_8': _("Enfants +8 ans"),
             'children_under_8': _("Enfants -8 ans"),
-            'pets': _("Animaux"),
+            'pets': _("Animaux (2 max)"),
             'cable_length': _("Longueur du câble électrique (m)"),
         }
         widgets = {
             'vehicle_length': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),
             'tent_width': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),
             'tent_length': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),
-            'children_over_8': forms.Select(choices=[(i, i) for i in range(0, 11)], attrs={'class': 'form-select'}),
-            'children_under_8': forms.Select(choices=[(i, i) for i in range(0, 11)], attrs={'class': 'form-select'}),
+            'children_over_8': forms.Select(choices=[(i, i) for i in range(0, 6)], attrs={'class': 'form-select'}),
+            'children_under_8': forms.Select(choices=[(i, i) for i in range(0, 6)], attrs={'class': 'form-select'}),
             'pets': forms.Select(choices=[(i, i) for i in range(0, 3)], attrs={'class': 'form-select'}),
             'cable_length': forms.NumberInput(attrs={'class': 'form-control', 'min': 0}),
         }
@@ -117,11 +117,23 @@ class BookingFormClassic(forms.ModelForm):
         end_date = cleaned_data.get("end_date")
         today = timezone.localdate()
 
+        # Ensure dates are provided
+        if not start_date or not end_date:
+            raise forms.ValidationError(_("Les dates de réservations sont requises."))
+
         # Date validation
-        if start_date and start_date < today:
-            self.add_error("start_date", _("La date d'arrivée ne peut pas être antérieure à aujourd'hui."))
-        if start_date and end_date and start_date > end_date:
-            self.add_error("end_date", _("La date de départ doit être postérieure à la date d'arrivée."))
+        if start_date < today:
+            raise forms.ValidationError(_("La date d'arrivée ne peut pas être antérieure à aujourd'hui."))
+        if start_date > end_date:
+            raise forms.ValidationError(_("La date de départ doit être postérieure à la date d'arrivée."))
+
+        # Check the maximum length of stay (3 weeks = 21 days)
+        duration = (end_date - start_date).days
+        if duration > 21:
+            raise forms.ValidationError(
+                _("La durée maximale de séjour est de 3 semaines. "
+                  "Pour toute demande particulière, merci de contacter directement le camping.")
+            )
 
         # Type and subtype validation
         booking_subtype = cleaned_data.get("booking_type")
@@ -158,6 +170,18 @@ class BookingFormClassic(forms.ModelForm):
             cable_length = cleaned_data.get("cable_length")
             if not cable_length:
                 self.add_error("cable_length", _("Le champ 'Longueur du câble' est obligatoire si l'électricité est incluse."))
+
+        # Total people validation
+        adults = cleaned_data.get("adults") or 0
+        children_over_8 = cleaned_data.get("children_over_8") or 0
+        children_under_8 = cleaned_data.get("children_under_8") or 0
+        total_people = adults + children_over_8 + children_under_8
+
+        if total_people > 6:
+            raise forms.ValidationError(
+                _("Le nombre maximum de personnes (adultes et enfants) ne peut pas dépasser 6."
+                  " Pour toute demande particulière, merci de contacter directement le camping.")
+            )
 
         return cleaned_data
 
