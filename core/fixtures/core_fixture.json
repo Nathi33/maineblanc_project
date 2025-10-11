@@ -1,0 +1,145 @@
+[
+{
+    "model": "core.campinginfotranslation",
+    "pk": 1,
+    "fields": {
+        "language_code": "fr",
+        "welcome_start": "09:00:00",
+        "welcome_end": "12:00:00",
+        "welcome_afternoon_start": "14:00:00",
+        "welcome_afternoon_end": "19:00:00",
+        "arrivals_start_high": "14:00:00",
+        "arrivals_end_high": "21:00:00",
+        "arrivals_end_low": "19:00:00",
+        "departure_end": "12:00:00",
+        "portal_start": "22:00:00",
+        "portal_end": "06:00:00",
+        "master": 1
+    }
+},
+{
+    "model": "core.campinginfo",
+    "pk": 1,
+    "fields": {}
+},
+{
+    "model": "core.swimmingpoolinfotranslation",
+    "pk": 1,
+    "fields": {
+        "language_code": "fr",
+        "pool_opening_start": "10:00:00",
+        "pool_opening_end": "21:00:00",
+        "master": 1
+    }
+},
+{
+    "model": "core.swimmingpoolinfo",
+    "pk": 1,
+    "fields": {}
+},
+{
+    "model": "core.foodinfotranslation",
+    "pk": 1,
+    "fields": {
+        "language_code": "fr",
+        "burger_food_days": "jeudi",
+        "burger_food_hours_start": "18:30:00",
+        "burger_food_hours_end": "20:30:00",
+        "pizza_food_days": "jeudi",
+        "bread_hours_reservations": "19:00:00",
+        "bread_hours_start": "08:15:00",
+        "bread_hours_end": "09:30:00",
+        "bar_hours_start": "18:00:00",
+        "bar_hours_end": "21:00:00",
+        "master": 1
+    }
+},
+{
+    "model": "core.foodinfotranslation",
+    "pk": 2,
+    "fields": {
+        "language_code": "en",
+        "burger_food_days": "Thursday",
+        "burger_food_hours_start": "18:30:00",
+        "burger_food_hours_end": "20:30:00",
+        "pizza_food_days": "Thursday",
+        "bread_hours_reservations": "19:00:00",
+        "bread_hours_start": "08:15:00",
+        "bread_hours_end": "09:30:00",
+        "bar_hours_start": "18:00:00",
+        "bar_hours_end": "21:00:00",
+        "master": 1
+    }
+},
+{
+    "model": "core.foodinfotranslation",
+    "pk": 3,
+    "fields": {
+        "language_code": "es",
+        "burger_food_days": "Jueves",
+        "burger_food_hours_start": "18:30:00",
+        "burger_food_hours_end": "20:30:00",
+        "pizza_food_days": "Jueves",
+        "bread_hours_reservations": "19:00:00",
+        "bread_hours_start": "08:15:00",
+        "bread_hours_end": "09:30:00",
+        "bar_hours_start": "18:00:00",
+        "bar_hours_end": "21:00:00",
+        "master": 1
+    }
+},
+{
+    "model": "core.foodinfotranslation",
+    "pk": 4,
+    "fields": {
+        "language_code": "de",
+        "burger_food_days": "Donnerstag",
+        "burger_food_hours_start": "18:30:00",
+        "burger_food_hours_end": "20:30:00",
+        "pizza_food_days": "Donnerstag",
+        "bread_hours_reservations": "19:00:00",
+        "bread_hours_start": "08:15:00",
+        "bread_hours_end": "09:30:00",
+        "bar_hours_start": "18:00:00",
+        "bar_hours_end": "21:00:00",
+        "master": 1
+    }
+},
+{
+    "model": "core.foodinfotranslation",
+    "pk": 5,
+    "fields": {
+        "language_code": "nl",
+        "burger_food_days": "Donderdag",
+        "burger_food_hours_start": "18:30:00",
+        "burger_food_hours_end": "20:30:00",
+        "pizza_food_days": "Donderdag",
+        "bread_hours_reservations": "19:00:00",
+        "bread_hours_start": "08:15:00",
+        "bread_hours_end": "09:30:00",
+        "bar_hours_start": "18:00:00",
+        "bar_hours_end": "21:00:00",
+        "master": 1
+    }
+},
+{
+    "model": "core.foodinfo",
+    "pk": 1,
+    "fields": {}
+},
+{
+    "model": "core.laundryinfotranslation",
+    "pk": 1,
+    "fields": {
+        "language_code": "fr",
+        "washing_machine_price": "4",
+        "dryer_price": "2",
+        "master": 1
+    }
+},
+{
+    "model": "core.laundryinfo",
+    "pk": 1,
+    "fields": {}
+}
+]

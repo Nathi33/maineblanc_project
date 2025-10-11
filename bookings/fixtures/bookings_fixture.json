@@ -1,0 +1,564 @@
+[
+{
+    "model": "bookings.supplementprice",
+    "pk": 1,
+    "fields": {
+        "extra_adult_price": "5.00",
+        "child_over_8_price": "5.00",
+        "child_under_8_price": "3.50",
+        "pet_price": "2.00",
+        "extra_vehicle_price": "1.80",
+        "extra_tent_price": "2.00",
+        "visitor_price_without_swimming_pool": "2.50",
+        "visitor_price_with_swimming_pool": "4.00"
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 1,
+    "fields": {
+        "booking_type": "tent",
+        "season": "low",
+        "is_worker": false,
+        "price_1_person_with_electricity": "14.00",
+        "price_2_persons_with_electricity": "16.00",
+        "price_1_person_without_electricity": "11.00",
+        "price_2_persons_without_electricity": "14.00",
+        "included_people": 2,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 2,
+    "fields": {
+        "booking_type": "tent",
+        "season": "mid",
+        "is_worker": false,
+        "price_1_person_with_electricity": "15.50",
+        "price_2_persons_with_electricity": "17.90",
+        "price_1_person_without_electricity": "12.50",
+        "price_2_persons_without_electricity": "15.90",
+        "included_people": 2,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 3,
+    "fields": {
+        "booking_type": "tent",
+        "season": "high",
+        "is_worker": false,
+        "price_1_person_with_electricity": "17.50",
+        "price_2_persons_with_electricity": "20.90",
+        "price_1_person_without_electricity": "15.50",
+        "price_2_persons_without_electricity": "18.90",
+        "included_people": 2,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 4,
+    "fields": {
+        "booking_type": "caravan",
+        "season": "low",
+        "is_worker": false,
+        "price_1_person_with_electricity": "15.50",
+        "price_2_persons_with_electricity": "18.90",
+        "price_1_person_without_electricity": "11.50",
+        "price_2_persons_without_electricity": "15.00",
+        "included_people": 2,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 5,
+    "fields": {
+        "booking_type": "caravan",
+        "season": "mid",
+        "is_worker": false,
+        "price_1_person_with_electricity": "17.00",
+        "price_2_persons_with_electricity": "19.70",
+        "price_1_person_without_electricity": "13.00",
+        "price_2_persons_without_electricity": "17.00",
+        "included_people": 2,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 6,
+    "fields": {
+        "booking_type": "caravan",
+        "season": "high",
+        "is_worker": false,
+        "price_1_person_with_electricity": "19.00",
+        "price_2_persons_with_electricity": "23.00",
+        "price_1_person_without_electricity": "16.00",
+        "price_2_persons_without_electricity": "19.70",
+        "included_people": 2,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 7,
+    "fields": {
+        "booking_type": "camping_car",
+        "season": "low",
+        "is_worker": false,
+        "price_1_person_with_electricity": null,
+        "price_2_persons_with_electricity": "19.00",
+        "price_1_person_without_electricity": null,
+        "price_2_persons_without_electricity": "16.00",
+        "included_people": 2,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 8,
+    "fields": {
+        "booking_type": "camping_car",
+        "season": "mid",
+        "is_worker": false,
+        "price_1_person_with_electricity": null,
+        "price_2_persons_with_electricity": "21.00",
+        "price_1_person_without_electricity": null,
+        "price_2_persons_without_electricity": "19.00",
+        "included_people": 2,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 9,
+    "fields": {
+        "booking_type": "camping_car",
+        "season": "high",
+        "is_worker": false,
+        "price_1_person_with_electricity": null,
+        "price_2_persons_with_electricity": "23.00",
+        "price_1_person_without_electricity": null,
+        "price_2_persons_without_electricity": "21.00",
+        "included_people": 2,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 10,
+    "fields": {
+        "booking_type": "tent",
+        "season": null,
+        "is_worker": true,
+        "price_1_person_with_electricity": null,
+        "price_2_persons_with_electricity": null,
+        "price_1_person_without_electricity": null,
+        "price_2_persons_without_electricity": null,
+        "included_people": 1,
+        "worker_week_price": "13.50",
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 11,
+    "fields": {
+        "booking_type": "caravan",
+        "season": null,
+        "is_worker": true,
+        "price_1_person_with_electricity": null,
+        "price_2_persons_with_electricity": null,
+        "price_1_person_without_electricity": null,
+        "price_2_persons_without_electricity": null,
+        "included_people": 1,
+        "worker_week_price": "14.50",
+        "weekend_price_without_electricity": null,
+        "weekend_price_with_electricity": null,
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.price",
+    "pk": 12,
+    "fields": {
+        "booking_type": "other",
+        "season": null,
+        "is_worker": true,
+        "price_1_person_with_electricity": null,
+        "price_2_persons_with_electricity": null,
+        "price_1_person_without_electricity": null,
+        "price_2_persons_without_electricity": null,
+        "included_people": 1,
+        "worker_week_price": null,
+        "weekend_price_without_electricity": "3.50",
+        "weekend_price_with_electricity": "8.50",
+        "supplements": 1
+    }
+},
+{
+    "model": "bookings.otherpricetranslation",
+    "pk": 1,
+    "fields": {
+        "language_code": "fr",
+        "current_year": 2025,
+        "tourist_tax_date": "2025-01-01",
+        "price_tourist_tax": "0.29",
+        "master": 1
+    }
+},
+{
+    "model": "bookings.otherprice",
+    "pk": 1,
+    "fields": {}
+},
+{
+    "model": "bookings.capacity",
+    "pk": 1,
+    "fields": {
+        "booking_type": "tent",
+        "max_places": 15,
+        "number_locations": 66,
+        "number_mobile_homes": 5
+    }
+},
+{
+    "model": "bookings.capacity",
+    "pk": 2,
+    "fields": {
+        "booking_type": "caravan",
+        "max_places": 15,
+        "number_locations": 66,
+        "number_mobile_homes": 5
+    }
+},
+{
+    "model": "bookings.capacity",
+    "pk": 3,
+    "fields": {
+        "booking_type": "camping_car",
+        "max_places": 15,
+        "number_locations": 66,
+        "number_mobile_homes": 5
+    }
+},
+{
+    "model": "bookings.booking",
+    "pk": 6,
+    "fields": {
+        "last_name": "Darnaudat",
+        "first_name": "Nathalie",
+        "address": "7, chemin des Rosiers",
+        "postal_code": "33650",
+        "city": "Saint-Médard-d'Eyrans",
+        "phone": "0768012450",
+        "email": "nathaliedarnaudat@outlook.com",
+        "start_date": "2025-10-02",
+        "end_date": "2025-10-03",
+        "booking_type": "caravan",
+        "booking_subtype": "van",
+        "electricity": "yes",
+        "deposit_paid": true,
+        "tent_length": null,
+        "tent_width": null,
+        "vehicle_length": "6.00",
+        "cable_length": "1.00",
+        "adults": 1,
+        "children_over_8": 0,
+        "children_under_8": 0,
+        "pets": 0,
+        "extra_vehicle": 0,
+        "extra_tent": 0,
+        "created_at": "2025-10-02T11:24:29.145Z",
+        "updated_at": "2025-10-02T11:24:29.145Z"
+    }
+},
+{
+    "model": "bookings.booking",
+    "pk": 7,
+    "fields": {
+        "last_name": "Darnaudat",
+        "first_name": "Nathalie",
+        "address": "7, chemin des Rosiers",
+        "postal_code": "33650",
+        "city": "Saint-Médard-d'Eyrans",
+        "phone": "0768012450",
+        "email": "nathaliedarnaudat@outlook.com",
+        "start_date": "2025-10-04",
+        "end_date": "2025-10-05",
+        "booking_type": "caravan",
+        "booking_subtype": "fourgon",
+        "electricity": "yes",
+        "deposit_paid": true,
+        "tent_length": null,
+        "tent_width": null,
+        "vehicle_length": "5.00",
+        "cable_length": "1.50",
+        "adults": 1,
+        "children_over_8": 0,
+        "children_under_8": 0,
+        "pets": 0,
+        "extra_vehicle": 0,
+        "extra_tent": 0,
+        "created_at": "2025-10-04T14:45:02.607Z",
+        "updated_at": "2025-10-04T14:45:02.607Z"
+    }
+},
+{
+    "model": "bookings.booking",
+    "pk": 8,
+    "fields": {
+        "last_name": "Darnaudat",
+        "first_name": "Nathalie",
+        "address": "7, chemin des Rosiers",
+        "postal_code": "33650",
+        "city": "Saint-Médard-d'Eyrans",
+        "phone": "0768012450",
+        "email": "nathaliedarnaudat@outlook.com",
+        "start_date": "2025-10-06",
+        "end_date": "2025-10-07",
+        "booking_type": "tent",
+        "booking_subtype": "tent",
+        "electricity": "no",
+        "deposit_paid": true,
+        "tent_length": "4.00",
+        "tent_width": "1.98",
+        "vehicle_length": null,
+        "cable_length": null,
+        "adults": 1,
+        "children_over_8": 0,
+        "children_under_8": 0,
+        "pets": 0,
+        "extra_vehicle": 0,
+        "extra_tent": 0,
+        "created_at": "2025-10-06T13:28:11.643Z",
+        "updated_at": "2025-10-06T13:28:11.643Z"
+    }
+},
+{
+    "model": "bookings.booking",
+    "pk": 10,
+    "fields": {
+        "last_name": "Darnaudat",
+        "first_name": "Nathalie",
+        "address": "7, chemin des Rosiers",
+        "postal_code": "33650",
+        "city": "Saint-Médard-d'Eyrans",
+        "phone": "0768012450",
+        "email": "nathaliedarnaudat@outlook.com",
+        "start_date": "2025-10-10",
+        "end_date": "2025-10-31",
+        "booking_type": "caravan",
+        "booking_subtype": "caravan",
+        "electricity": "no",
+        "deposit_paid": true,
+        "tent_length": null,
+        "tent_width": null,
+        "vehicle_length": "8.00",
+        "cable_length": null,
+        "adults": 1,
+        "children_over_8": 0,
+        "children_under_8": 0,
+        "pets": 0,
+        "extra_vehicle": 0,
+        "extra_tent": 0,
+        "created_at": "2025-10-10T10:06:01.801Z",
+        "updated_at": "2025-10-10T10:06:01.801Z"
+    }
+},
+{
+    "model": "bookings.mobilehome",
+    "pk": 1,
+    "fields": {
+        "name": "Sabot de Vénus",
+        "name_en": "Sabot de Vénus",
+        "name_es": "Sabot de Vénus",
+        "name_de": "Huf der Venus",
+        "name_nl": "Sabot van Venus",
+        "description_text": "2 chambres - 5 à 6 couchages - climatisé - terrasse",
+        "description_en": "2 bedrooms - sleeps 5 to 6 - air-conditioned - terrace",
+        "description_es": "2 habitaciones - 5 a 6 personas - aire acondicionado - terraza",
+        "description_de": "2 Schlafzimmer - 5 bis 6 Schlafplätze - klimatisiert - Terrasse",
+        "description_nl": "2 slaapkamers - 5 tot 6 personen - airconditioning - terras",
+        "night_price": "80",
+        "night_price_mid": null,
+        "week_low": "290",
+        "week_mid": "310",
+        "week_high": "460",
+        "is_worker_home": false,
+        "worker_price_1p": null,
+        "worker_price_2p": null,
+        "worker_price_3p": null
+    }
+},
+{
+    "model": "bookings.mobilehome",
+    "pk": 2,
+    "fields": {
+        "name": "Belle Dame / Rose Trémière",
+        "name_en": "Belle Dame / Rose Trémière",
+        "name_es": "Belle Dame / Rose Trémière",
+        "name_de": "Belle Dame / Rose Tremière",
+        "name_nl": "Belle Dame / Rose Trémière",
+        "description_text": "2 chambres - 4 couchages - climatisé - terrasse",
+        "description_en": "2 bedrooms - sleeps 4 - air-conditioned - terrace",
+        "description_es": "2 habitaciones - para 4 personas - aire acondicionado - terraza",
+        "description_de": "2 Schlafzimmer - 4 Schlafplätze - klimatisiert - Terrasse",
+        "description_nl": "2 slaapkamers - 4 slaapplaatsen - airconditioning - terras",
+        "night_price": "80",
+        "night_price_mid": null,
+        "week_low": "290",
+        "week_mid": "310",
+        "week_high": "460",
+        "is_worker_home": false,
+        "worker_price_1p": null,
+        "worker_price_2p": null,
+        "worker_price_3p": null
+    }
+},
+{
+    "model": "bookings.mobilehome",
+    "pk": 3,
+    "fields": {
+        "name": "Bleuet",
+        "name_en": "Cornflower",
+        "name_es": "Aciano",
+        "name_de": "Kornblume",
+        "name_nl": "Korenbloem",
+        "description_text": "3 chambres - 6 à 8 couchages - climatisé - terrasse",
+        "description_en": "3 bedrooms - sleeps 6 to 8 - air-conditioned - terrace",
+        "description_es": "3 habitaciones - de 6 a 8 plazas - aire acondicionado - terraza",
+        "description_de": "3 Schlafzimmer - 6 bis 8 Schlafplätze - klimatisiert - Terrasse",
+        "description_nl": "3 slaapkamers - 6 tot 8 personen - airconditioning - terras",
+        "night_price": "90",
+        "night_price_mid": "110",
+        "week_low": "340",
+        "week_mid": "410",
+        "week_high": "590",
+        "is_worker_home": false,
+        "worker_price_1p": null,
+        "worker_price_2p": null,
+        "worker_price_3p": null
+    }
+},
+{
+    "model": "bookings.mobilehome",
+    "pk": 4,
+    "fields": {
+        "name": "Capucine",
+        "name_en": "Capucine",
+        "name_es": "Capucine",
+        "name_de": "Capucine",
+        "name_nl": "Capucijn",
+        "description_text": "1 chambre - 2 couchages - climatisé - terrasse",
+        "description_en": "1 bedroom - sleeps 2 - air-conditioned - terrace",
+        "description_es": "1 habitación - 2 personas - aire acondicionado - terraza",
+        "description_de": "1 Schlafzimmer - 2 Schlafplätze - klimatisiert - Terrasse",
+        "description_nl": "1 slaapkamer - 2 personen - airconditioning - terras",
+        "night_price": "70",
+        "night_price_mid": null,
+        "week_low": "225",
+        "week_mid": "300",
+        "week_high": "410",
+        "is_worker_home": false,
+        "worker_price_1p": null,
+        "worker_price_2p": null,
+        "worker_price_3p": null
+    }
+},
+{
+    "model": "bookings.mobilehome",
+    "pk": 5,
+    "fields": {
+        "name": "Graminé",
+        "name_en": "Grass",
+        "name_es": "Hierba",
+        "name_de": "Gräser",
+        "name_nl": "Gras",
+        "description_text": "2 chambres - 4 couchages - non climatisé - sans terrasse",
+        "description_en": "2 bedrooms - sleeps 4 - no air conditioning - no terrace",
+        "description_es": "2 dormitorios - para 4 personas - sin aire acondicionado - sin terraza",
+        "description_de": "2 Schlafzimmer - 4 Schlafplätze - nicht klimatisiert - ohne Terrasse",
+        "description_nl": "2 slaapkamers - 4 slaapplaatsen - geen airconditioning - geen terras",
+        "night_price": "50",
+        "night_price_mid": null,
+        "week_low": null,
+        "week_mid": null,
+        "week_high": null,
+        "is_worker_home": true,
+        "worker_price_1p": "175",
+        "worker_price_2p": "200",
+        "worker_price_3p": "250"
+    }
+},
+{
+    "model": "bookings.supplementmobilehometranslation",
+    "pk": 1,
+    "fields": {
+        "language_code": "fr",
+        "mobile_home_deposit": "350",
+        "cleaning_deposit": "70",
+        "bed_linen_rental": "15",
+        "master": 1
+    }
+},
+{
+    "model": "bookings.supplementmobilehome",
+    "pk": 1,
+    "fields": {}
+},
+{
+    "model": "bookings.seasoninfotranslation",
+    "pk": 1,
+    "fields": {
+        "language_code": "fr",
+        "low_season_start": "2024-09-27",
+        "low_season_end": "2024-04-26",
+        "mid_season_start_1": "2024-04-27",
+        "mid_season_end_1": "2024-07-05",
+        "mid_season_start_2": "2024-08-30",
+        "mid_season_end_2": "2024-09-26",
+        "high_season_start": "2024-07-06",
+        "high_season_end": "2024-08-29",
+        "master": 1
+    }
+},
+{
+    "model": "bookings.seasoninfo",
+    "pk": 1,
+    "fields": {}
+}
+]
