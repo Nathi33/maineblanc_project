@@ -24,7 +24,10 @@ DEBUG = config('DEBUG', default=True, cast=bool)
 if DEBUG:
     ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 else:
-    ALLOWED_HOSTS = ['maineblanc-project.onrender.com']
+    ALLOWED_HOSTS = [
+        'maineblanc-project.onrender.com',
+        '.onrender.com',
+        ]
 
 # ============================================
 # APPLICATIONS
