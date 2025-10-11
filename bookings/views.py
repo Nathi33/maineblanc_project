@@ -191,26 +191,31 @@ def booking_details(request):
             deposit = booking.calculate_deposit()
 
             # Create Stripe Checkout session
-            checkout_session = stripe.checkout.Session.create(
-                payment_method_types=['card'],
-                line_items=[{
-                    'price_data': {
-                        'currency': 'eur',
-                        'product_data': {
-                            'name': f"Acompte réservation camping ({booking.start_date} - {booking.end_date})",
+            try:
+                checkout_session = stripe.checkout.Session.create(
+                    payment_method_types=['card'],
+                    line_items=[{
+                        'price_data': {
+                            'currency': 'eur',
+                            'product_data': {
+                                'name': f"Acompte réservation camping ({booking.start_date} - {booking.end_date})",
+                            },
+                            'unit_amount': int(deposit * 100),  # Amount in cents
                         },
-                        'unit_amount': int(deposit * 100),  # Montant en centimes
-                    },
-                    'quantity': 1,
-                }],
-                mode='payment',
-                success_url=request.build_absolute_uri(reverse('booking_confirm')),
-                cancel_url=request.build_absolute_uri(reverse('booking_details')),
-                customer_email=booking_data.get('email'),
-            )
-
-            return redirect(checkout_session.url, code=303)
-
+                        'quantity': 1,
+                    }],
+                    mode='payment',
+                    success_url=request.build_absolute_uri(reverse('booking_confirm')),
+                    cancel_url=request.build_absolute_uri(reverse('booking_details')),
+                    customer_email=booking_data.get('email'),
+                )
+                return redirect(checkout_session.url, code=303)
+            except stripe.error.StripeError as e:
+                return render(request, 'bookings/booking_details.html', {
+                    'form': form,
+                    'STRIPE_PUBLIC_KEY': settings.STRIPE_PUBLIC_KEY,
+                    'error_message': _("Impossible de traiter le paiement pour le moment. Veuillez réessayer.")
+                })
     else:
         form = BookingDetailsForm(initial=booking_data)
 
