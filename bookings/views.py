@@ -1,4 +1,5 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect
+from django.urls import reverse
 from .forms import BookingFormClassic,BookingDetailsForm
 from .models import Booking, SupplementPrice
 from django.core.mail import EmailMessage
@@ -11,6 +12,7 @@ from datetime import date
 from django.utils import translation
 from django.core.exceptions import ValidationError
 import stripe
+import traceback
 
 # Stripe configuration
 stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -211,7 +213,6 @@ def booking_details(request):
                 )
                 return redirect(checkout_session.url, code=303)
             except stripe.error.StripeError as e:
-                import traceback
                 print("⚠️ Stripe Error:", e)
                 traceback.print_exc()
                 return render(request, 'bookings/booking_details.html', {
@@ -303,83 +304,88 @@ def booking_confirm(request):
     site_url = getattr(settings, "SITE_URL", "http://localhost:8000")
 
     # Email to admin
-    with translation.override('fr'):
-        extra_info_1 = ""
-        extra_info_2 = ""
+    try:
+        with translation.override('fr'):
+            extra_info_1 = ""
+            extra_info_2 = ""
 
-        if booking.is_tent:
-            extra_info_1 = _("Dimensions tente : {length} m x {width} m").format(
-                length=booking.tent_length, width=booking.tent_width
+            if booking.is_tent:
+                extra_info_1 = _("Dimensions tente : {length} m x {width} m").format(
+                    length=booking.tent_length, width=booking.tent_width
+                )
+            elif booking.is_vehicle:
+                extra_info_1 = _("Longueur véhicule : {length} m").format(
+                    length=booking.vehicle_length
+                )
+            if booking.electricity == 'yes':
+                extra_info_2 = _("Longueur câble : {length} m").format(
+                    length=booking.cable_length
+                )
+        
+            admin_subject = _("Nouvelle réservation de {booking.first_name} {booking.last_name}").format(booking=booking)
+            admin_message_final = render_to_string('emails/admin_booking.html', {
+                'booking': booking,
+                'total_price': total_price,
+                'deposit': deposit,
+                'extra_info_1': extra_info_1,
+                'extra_info_2': extra_info_2,
+                'site_url': site_url,
+                'address': client_address,
+                'postal_code': client_postal_code,
+                'city': client_city,
+                'remaining_balance': round(total_price - deposit, 2)
+            })
+
+            email_admin = EmailMessage(
+                subject=admin_subject,
+                body=admin_message_final,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                to=[settings.ADMIN_EMAIL],
             )
-        elif booking.is_vehicle:
-            extra_info_1 = _("Longueur véhicule : {length} m").format(
-                length=booking.vehicle_length
-            )
-        if booking.electricity == 'yes':
-            extra_info_2 = _("Longueur câble : {length} m").format(
-                length=booking.cable_length
-            )
+            email_admin.content_subtype = "html"
+            email_admin.send(fail_silently=False)
+
+        # Email to client in selected language
+        with translation.override(request.LANGUAGE_CODE):
+            extra_info_1 = ""
+            extra_info_2 = ""
+            if booking.is_tent:
+                extra_info_1 = _("Dimensions tente : {length} m x {width} m").format(
+                    length=booking.tent_length, width=booking.tent_width
+                )
+            elif booking.is_vehicle:
+                extra_info_1 = _("Longueur véhicule : {length} m").format(
+                    length=booking.vehicle_length
+                )
+            if booking.electricity == 'yes':
+                extra_info_2 = _("Longueur câble : {length} m").format(
+                    length=booking.cable_length
+                )
+                
+            client_subject = _("Confirmation de votre réservation - Camping Le Maine Blanc")
+
+            client_message = render_to_string('emails/client_booking.html', {
+                'booking': booking,
+                'total_price': total_price,
+                'deposit': deposit,
+                'extra_info_1': extra_info_1,
+                'extra_info_2': extra_info_2,
+                'site_url': site_url,
+                'remaining_balance': round(total_price - deposit, 2)
+            })
     
-        admin_subject = _("Nouvelle réservation de {booking.first_name} {booking.last_name}").format(booking=booking)
-        admin_message_final = render_to_string('emails/admin_booking.html', {
-            'booking': booking,
-            'total_price': total_price,
-            'deposit': deposit,
-            'extra_info_1': extra_info_1,
-            'extra_info_2': extra_info_2,
-            'site_url': site_url,
-            'address': client_address,
-            'postal_code': client_postal_code,
-            'city': client_city,
-            'remaining_balance': round(total_price - deposit, 2)
-        })
-
-    email_admin = EmailMessage(
-        subject=admin_subject,
-        body=admin_message_final,
-        from_email=settings.DEFAULT_FROM_EMAIL,
-        to=[settings.ADMIN_EMAIL],
-    )
-    email_admin.content_subtype = "html"
-    email_admin.send(fail_silently=False)
-
-    # Email to client in selected language
-    with translation.override(request.LANGUAGE_CODE):
-        extra_info_1 = ""
-        extra_info_2 = ""
-        if booking.is_tent:
-            extra_info_1 = _("Dimensions tente : {length} m x {width} m").format(
-                length=booking.tent_length, width=booking.tent_width
+            email_client = EmailMessage(
+                subject=client_subject,
+                body=client_message,
+                from_email=settings.DEFAULT_FROM_EMAIL,
+                to=[booking.email],
             )
-        elif booking.is_vehicle:
-            extra_info_1 = _("Longueur véhicule : {length} m").format(
-                length=booking.vehicle_length
-            )
-        if booking.electricity == 'yes':
-            extra_info_2 = _("Longueur câble : {length} m").format(
-                length=booking.cable_length
-            )
-            
-        client_subject = _("Confirmation de votre réservation - Camping Le Maine Blanc")
-
-        client_message = render_to_string('emails/client_booking.html', {
-            'booking': booking,
-            'total_price': total_price,
-            'deposit': deposit,
-            'extra_info_1': extra_info_1,
-            'extra_info_2': extra_info_2,
-            'site_url': site_url,
-            'remaining_balance': round(total_price - deposit, 2)
-        })
+            email_client.content_subtype = "html"
+            email_client.send(fail_silently=False)
     
-    email_client = EmailMessage(
-        subject=client_subject,
-        body=client_message,
-        from_email=settings.EMAIL_FROM_CLIENT,
-        to=[booking.email],
-    )
-    email_client.content_subtype = "html"
-    email_client.send(fail_silently=False)
+    except Exception as e:
+        print("⚠️ Erreur lors de l'envoi des emails :", e)
+        messages.warning(request, _("Votre réservation est enregistrée, mais une erreur est survenue lors de l'envoi des emails. Veuillez contacter l'administrateur."))
 
     # Clean session
     if 'booking_data' in request.session:

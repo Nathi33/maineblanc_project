@@ -168,7 +168,6 @@ EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ADMIN_EMAIL = EMAIL_HOST_USER
-EMAIL_FROM_CLIENT = config('EMAIL_FROM_CLIENT', default='')
 
 # ============================================
 # LOGIN / LOGOUT
