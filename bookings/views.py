@@ -205,12 +205,15 @@ def booking_details(request):
                         'quantity': 1,
                     }],
                     mode='payment',
-                    success_url=request.build_absolute_uri(reverse('booking_confirm')),
-                    cancel_url=request.build_absolute_uri(reverse('booking_details')),
+                    success_url=f"{settings.SITE_URL}{reverse('booking_confirm')}",
+                    cancel_url=f"{settings.SITE_URL}{reverse('booking_details')}",
                     customer_email=booking_data.get('email'),
                 )
                 return redirect(checkout_session.url, code=303)
             except stripe.error.StripeError as e:
+                import traceback
+                print("⚠️ Stripe Error:", e)
+                traceback.print_exc()
                 return render(request, 'bookings/booking_details.html', {
                     'form': form,
                     'STRIPE_PUBLIC_KEY': settings.STRIPE_PUBLIC_KEY,
