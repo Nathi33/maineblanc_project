@@ -5,6 +5,7 @@ services:
     buildCommand: |
       pip install -r requirements.txt
       python manage.py collectstatic --noinput
+      python load_fixtures.py
     startCommand: gunicorn maineblanc_project.wsgi:application
     envVars:
       - key: DEBUG
