@@ -18,9 +18,13 @@ LOCALE_PATHS = [BASE_DIR / 'locale']
 # ============================================
 # SECURITY
 # ============================================
-SECRET_KEY = config('SECRET_KEY')
+SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key-for-dev-only')
 DEBUG = config('DEBUG', default=True, cast=bool)
-ALLOWED_HOSTS = ['*']
+
+if DEBUG:
+    ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+else:
+    ALLOWED_HOSTS = ['maineblanc-project.onrender.com']
 
 # ============================================
 # APPLICATIONS
@@ -47,6 +51,7 @@ INSTALLED_APPS = [
 # ============================================
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -124,7 +129,7 @@ USE_TZ = True
 # ============================================
 # TRANSLATION
 # ============================================
-DEEPL_API_KEY = config('DEEPL_API_KEY')
+DEEPL_API_KEY = config('DEEPL_API_KEY', default='')
 
 # ============================================
 # STATIC & MEDIA FILES
@@ -132,6 +137,7 @@ DEEPL_API_KEY = config('DEEPL_API_KEY')
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # ============================================
 # DEFAULT PRIMARY KEY
@@ -146,12 +152,12 @@ EMAIL_HOST = 'smtp.gmail.com'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
 
-EMAIL_HOST_USER = config('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD')
+EMAIL_HOST_USER = config('EMAIL_HOST_USER', default='')
+EMAIL_HOST_PASSWORD = config('EMAIL_HOST_PASSWORD', default='')
 
 DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
 ADMIN_EMAIL = EMAIL_HOST_USER
-EMAIL_FROM_CLIENT = config('EMAIL_FROM_CLIENT')
+EMAIL_FROM_CLIENT = config('EMAIL_FROM_CLIENT', default='')
 
 # ============================================
 # LOGIN / LOGOUT
@@ -162,8 +168,8 @@ LOGOUT_REDIRECT_URL = '/'
 # ============================================
 # STRIPE CONFIGURATION
 # ============================================
-STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY')
-STRIPE_PUBLIC_KEY = config('STRIPE_PUBLIC_KEY')
+STRIPE_SECRET_KEY = config('STRIPE_SECRET_KEY', default='')
+STRIPE_PUBLIC_KEY = config('STRIPE_PUBLIC_KEY', default='')
 
 # ============================================
 # SITE URL
