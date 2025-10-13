@@ -7,7 +7,7 @@ from django.utils.translation import override
 from django.template.loader import render_to_string
 from django.core.mail import EmailMessage
 from django.utils import timezone
-import deepl
+import deepl, socket
 
 
 def reservation_request_view(request):
@@ -73,32 +73,44 @@ def reservation_request_view(request):
                 'submission_datetime': timezone.localtime(timezone.now()),
             }
 
+            site_url = getattr(settings, 'SITE_URL', 'http://127.0.0.1:8000')
+            hostname = socket.gethostname()
+            is_render = "render" in hostname or "onrender" in site_url
+
             # --- Send admin email (HTML) ---
-            with override('fr'): 
-                subject = _("Nouvelle demande de réservation")
-                message_html = render_to_string('reservations/email_admin.html', booking_info)
-                
-                email_admin = EmailMessage(
-                    subject = subject,
-                    body = message_html,
-                    from_email = settings.DEFAULT_FROM_EMAIL,
-                    to = [settings.ADMIN_EMAIL],
+            try:
+                with override('fr'): 
+                    subject = _("Nouvelle demande de réservation")
+                    message_html = render_to_string('reservations/email_admin.html', booking_info)
+                    
+                    if is_render:
+                        print("📧 [SIMULATION ADMIN EMAIL] →", settings.ADMIN_EMAIL)
+                        print(message_html)
+                    else:
+                        email_admin = EmailMessage(
+                            subject = subject,
+                            body = message_html,
+                            from_email = settings.DEFAULT_FROM_EMAIL,
+                            to = [settings.ADMIN_EMAIL],
+                        )
+                        email_admin.content_subtype = "html" 
+                        email_admin.send(fail_silently=False) 
+
+                # --- Notify user of successful submission ---
+                messages.success(
+                    request, 
+                    _("Votre demande de réservation a été envoyée avec succès. Nous reviendrons vers vous très rapidement.")
                 )
-                email_admin.content_subtype = "html" 
 
-                if settings.EMAIL_BACKEND == 'django.core.mail.backends.console.EmailBackend':
-                    print(f"--- Simulation Email ---\nà: {settings.ADMIN_EMAIL}\nSubject: {subject}\n\n{message_html}\n--- Fin Simulation ---")
-                else:
-                    email_admin.send(fail_silently=False) 
-
-            # --- Notify user of successful submission ---
-            messages.success(
-                request, 
-                _("Votre demande de réservation a été envoyée avec succès. Nous reviendrons vers vous très rapidement.")
-            )
-
-            # Reset form for next submission
-            form = ReservationRequestForm()
+                # Reset form for next submission
+                form = ReservationRequestForm()
+            
+            except Exception as e:
+                print("⚠️ Erreur lors de l'envoi de l'email :", e)
+                messages.warning(
+                    request,
+                    _("Votre demande a été enregistrée, mais l'email n'a pas pu être envoyé. Veuillez contacter l'administrateur.")
+                )
 
     else:
         # GET : render empty form
