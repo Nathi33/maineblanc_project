@@ -101,13 +101,15 @@ def booking_summary(request):
         return redirect('booking_form')
     
     # Convert stored ISO dates back to date objects
-    booking_data['start_date'] = date.fromisoformat(booking_data['start_date'])
-    booking_data['end_date'] = date.fromisoformat(booking_data['end_date'])
+    start_date = date.fromisoformat(booking_data['start_date'])
+    end_date = date.fromisoformat(booking_data['end_date'])
 
     # Keep only model fields to avoid injection
     model_fields = [f.name for f in Booking._meta.get_fields()]
-    booking_data = {k: v for k, v in booking_data.items() if k in model_fields}
-    booking = Booking(**booking_data)
+    booking_data_for_model = {k: v for k, v in booking_data.items() if k in model_fields}
+    booking_data_for_model['start_date'] = start_date
+    booking_data_for_model['end_date'] = end_date
+    booking = Booking(**booking_data_for_model)
 
     # Electricity display
     electricity_choice = booking_data.get('electricity', 'yes')

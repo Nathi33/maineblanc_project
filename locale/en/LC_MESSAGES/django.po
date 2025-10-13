@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-07 13:05+0200\n"
+"POT-Creation-Date: 2025-10-13 11:59+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,35 +18,35 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: .\bookings\forms.py:25 .\bookings\models.py:253 .\bookings\views.py:116
-#: .\bookings\views.py:272 .\core\templates\core\infos.html:374
+#: .\bookings\forms.py:25 .\bookings\models.py:253 .\bookings\views.py:122
+#: .\bookings\views.py:287 .\core\templates\core\infos.html:382
 #: .\reservations\forms.py:80
 msgid "Tente"
 msgstr "Tent"
 
-#: .\bookings\forms.py:26 .\bookings\models.py:254 .\bookings\views.py:117
-#: .\bookings\views.py:273
+#: .\bookings\forms.py:26 .\bookings\models.py:254 .\bookings\views.py:123
+#: .\bookings\views.py:288
 msgid "Voiture Tente"
 msgstr "Car Tent"
 
-#: .\bookings\forms.py:27 .\bookings\models.py:255 .\bookings\views.py:118
-#: .\bookings\views.py:274 .\core\templates\core\infos.html:372
+#: .\bookings\forms.py:27 .\bookings\models.py:255 .\bookings\views.py:124
+#: .\bookings\views.py:289 .\core\templates\core\infos.html:380
 #: .\reservations\forms.py:82
 msgid "Caravane"
 msgstr "Caravan"
 
-#: .\bookings\forms.py:28 .\bookings\models.py:256 .\bookings\views.py:119
-#: .\bookings\views.py:275
+#: .\bookings\forms.py:28 .\bookings\models.py:256 .\bookings\views.py:125
+#: .\bookings\views.py:290
 msgid "Fourgon"
 msgstr "Converted Van"
 
-#: .\bookings\forms.py:29 .\bookings\models.py:257 .\bookings\views.py:120
-#: .\bookings\views.py:276 .\reservations\forms.py:84
+#: .\bookings\forms.py:29 .\bookings\models.py:257 .\bookings\views.py:126
+#: .\bookings\views.py:291 .\reservations\forms.py:84
 msgid "Van"
 msgstr "Van"
 
-#: .\bookings\forms.py:30 .\bookings\models.py:258 .\bookings\views.py:121
-#: .\bookings\views.py:277 .\core\templates\core\infos.html:50
+#: .\bookings\forms.py:30 .\bookings\models.py:258 .\bookings\views.py:127
+#: .\bookings\views.py:292 .\core\templates\core\infos.html:50
 #: .\reservations\forms.py:85
 msgid "Camping-car"
 msgstr "Motorhome"
@@ -54,8 +54,8 @@ msgstr "Motorhome"
 #: .\bookings\forms.py:43 .\bookings\models.py:262
 #: .\bookings\templates\bookings\booking_confirm.html:90
 #: .\bookings\templates\bookings\booking_summary.html:38
-#: .\bookings\views.py:269 .\core\templates\core\infos.html:104
-#: .\core\templates\core\infos.html:154 .\core\templates\core\infos.html:265
+#: .\bookings\views.py:284 .\core\templates\core\infos.html:112
+#: .\core\templates\core\infos.html:162 .\core\templates\core\infos.html:273
 #: .\reservations\forms.py:159
 #: .\reservations\templates\reservations\email_admin.html:110
 msgid "Avec électricité"
@@ -64,8 +64,8 @@ msgstr "With Electricity"
 #: .\bookings\forms.py:44 .\bookings\models.py:263
 #: .\bookings\templates\bookings\booking_confirm.html:92
 #: .\bookings\templates\bookings\booking_summary.html:43
-#: .\bookings\views.py:269 .\core\templates\core\infos.html:110
-#: .\core\templates\core\infos.html:160 .\core\templates\core\infos.html:271
+#: .\bookings\views.py:284 .\core\templates\core\infos.html:118
+#: .\core\templates\core\infos.html:168 .\core\templates\core\infos.html:279
 #: .\reservations\forms.py:160
 #: .\reservations\templates\reservations\email_admin.html:110
 msgid "Sans électricité"
@@ -133,53 +133,64 @@ msgid "Enfants -8 ans"
 msgstr "Child -8 years"
 
 #: .\bookings\forms.py:93
-#: .\bookings\templates\bookings\booking_confirm.html:59
-#: .\bookings\templates\bookings\booking_summary.html:34
-#: .\bookings\templates\emails\admin_booking.html:119
-#: .\bookings\templates\emails\client_booking.html:113
-#: .\reservations\forms.py:149
-#: .\reservations\templates\reservations\email_admin.html:121
-#: .\reservations\templates\reservations\reservation_request.html:168
-msgid "Animaux"
-msgstr "Pets"
+msgid "Animaux (2 max)"
+msgstr "Pets (2 max)"
 
 #: .\bookings\forms.py:94 .\reservations\forms.py:169
 #: .\reservations\templates\reservations\reservation_request.html:192
 msgid "Longueur du câble électrique (m)"
 msgstr "Length of electrical cable (m)"
 
-#: .\bookings\forms.py:122 .\reservations\forms.py:205
+#: .\bookings\forms.py:122
+msgid "Les dates de réservations sont requises."
+msgstr "Booking dates are required."
+
+#: .\bookings\forms.py:126 .\reservations\forms.py:205
 msgid "La date d'arrivée ne peut pas être antérieure à aujourd'hui."
 msgstr "The arrival date cannot be earlier than today."
 
-#: .\bookings\forms.py:124 .\reservations\forms.py:208
+#: .\bookings\forms.py:128 .\reservations\forms.py:208
 msgid "La date de départ doit être postérieure à la date d'arrivée."
 msgstr "The departure date must be later than the arrival date."
 
-#: .\bookings\forms.py:144
+#: .\bookings\forms.py:134
+msgid ""
+"La durée maximale de séjour est de 3 semaines. Pour toute demande "
+"particulière, merci de contacter directement le camping."
+msgstr ""
+"The maximum length of stay is 3 weeks. For any special requests, "
+"please contact the campsite directly."
+
+#: .\bookings\forms.py:156
 msgid "Le champ 'Type d'emplacement' est obligatoire."
 msgstr "The 'Location Type' field is required."
 
-#: .\bookings\forms.py:149
+#: .\bookings\forms.py:161
 msgid ""
 "Le champ 'Longueur du véhicule' est obligatoire pour les caravanes et "
 "camping-cars."
 msgstr "The 'Vehicle Length' field is required for caravans and motorhomes."
 
-#: .\bookings\forms.py:153
+#: .\bookings\forms.py:165
 msgid "Le champ 'Largeur de la tente' est obligatoire pour les tentes."
 msgstr "The 'Tent Width' field is required for tents."
 
-#: .\bookings\forms.py:155
+#: .\bookings\forms.py:167
 msgid "Le champ 'Longueur de la tente' est obligatoire pour les tentes."
 msgstr "The 'Tent Length' field is required for tents."
 
-#: .\bookings\forms.py:160
+#: .\bookings\forms.py:172
 msgid ""
 "Le champ 'Longueur du câble' est obligatoire si l'électricité est incluse."
 msgstr "The 'Cable Length' field is required if electricity is included."
 
-#: .\bookings\forms.py:176
+#: .\bookings\forms.py:182
+msgid ""
+"Le nombre maximum de personnes (adultes et enfants) ne peut pas dépasser 6. "
+"Pour toute demande particulière, merci de contacter directement le camping."
+msgstr ""
+
+#: .\bookings\forms.py:200
 #: .\bookings\templates\bookings\booking_confirm.html:44
 #: .\bookings\templates\emails\admin_booking.html:87
 #: .\reservations\forms.py:23
@@ -187,27 +198,27 @@ msgstr "The 'Cable Length' field is required if electricity is included."
 msgid "Nom"
 msgstr "Name"
 
-#: .\bookings\forms.py:181
+#: .\bookings\forms.py:205
 #: .\bookings\templates\bookings\booking_confirm.html:45
 #: .\reservations\forms.py:27
 msgid "Prénom"
 msgstr "First Name"
 
-#: .\bookings\forms.py:186 .\bookings\templates\emails\admin_booking.html:88
+#: .\bookings\forms.py:210 .\bookings\templates\emails\admin_booking.html:88
 #: .\reservations\forms.py:31
 #: .\reservations\templates\reservations\email_admin.html:88
 msgid "Adresse"
 msgstr "Address"
 
-#: .\bookings\forms.py:191 .\reservations\forms.py:35
+#: .\bookings\forms.py:215 .\reservations\forms.py:35
 msgid "Code postal"
 msgstr "Postal Code"
 
-#: .\bookings\forms.py:196 .\reservations\forms.py:39
+#: .\bookings\forms.py:220 .\reservations\forms.py:39
 msgid "Ville"
 msgstr "City"
 
-#: .\bookings\forms.py:201
+#: .\bookings\forms.py:225
 #: .\bookings\templates\bookings\booking_confirm.html:47
 #: .\bookings\templates\emails\admin_booking.html:89
 #: .\reservations\forms.py:43
@@ -215,21 +226,25 @@ msgstr "City"
 msgid "Téléphone"
 msgstr "Phone"
 
-#: .\bookings\forms.py:206
+#: .\bookings\forms.py:230
 #: .\bookings\templates\bookings\booking_confirm.html:46
 msgid "Adresse mail"
 msgstr "Email Address"
 
-#: .\bookings\forms.py:236
+#: .\bookings\forms.py:260
 msgid "Enter a valid phone number."
 msgstr "Enter a valid phone number."
 
-#: .\bookings\models.py:458
+#: .\bookings\models.py:455
+msgid "Les dates de réservations sont requises pour vérifier la disponibilité."
+msgstr "Dates are required to check availability."
+
+#: .\bookings\models.py:462
 #, python-format
 msgid "La capacité pour %(type)s n'est pas définie."
 msgstr "The capacity for %(type)s is not defined."
 
-#: .\bookings\models.py:468
+#: .\bookings\models.py:472
 msgid ""
 "Plus de places disponibles pour ces dates. Veuillez choisir d'autres dates "
 "ou contacter le camping."
@@ -279,6 +294,16 @@ msgstr "Child > 8 years"
 #: .\bookings\templates\bookings\booking_summary.html:33
 msgid "Enfants < 8 ans"
 msgstr "Child < 8 years"
+
+#: .\bookings\templates\bookings\booking_confirm.html:59
+#: .\bookings\templates\bookings\booking_summary.html:34
+#: .\bookings\templates\emails\admin_booking.html:119
+#: .\bookings\templates\emails\client_booking.html:113
+#: .\reservations\forms.py:149
+#: .\reservations\templates\reservations\email_admin.html:121
+#: .\reservations\templates\reservations\reservation_request.html:168
+msgid "Animaux"
+msgstr "Pets"
 
 #: .\bookings\templates\bookings\booking_confirm.html:65
 msgid "Emplacement / Véhicule"
@@ -380,8 +405,8 @@ msgid "Nombre d'occupants"
 msgstr "Number of Occupants"
 
 #: .\bookings\templates\bookings\booking_form.html:85
-#: .\core\templates\core\infos.html:103 .\core\templates\core\infos.html:153
-#: .\core\templates\core\infos.html:264
+#: .\core\templates\core\infos.html:111 .\core\templates\core\infos.html:161
+#: .\core\templates\core\infos.html:272
 msgid "Electricité"
 msgstr "Electricity"
 
@@ -457,16 +482,16 @@ msgstr "From"
 
 #: .\bookings\templates\emails\admin_booking.html:95
 #: .\bookings\templates\emails\client_booking.html:89
-#: .\core\templates\core\infos.html:92 .\core\templates\core\infos.html:93
-#: .\core\templates\core\infos.html:94 .\core\templates\core\infos.html:434
-#: .\core\templates\core\infos.html:435 .\core\templates\core\infos.html:436
+#: .\core\templates\core\infos.html:100 .\core\templates\core\infos.html:101
+#: .\core\templates\core\infos.html:102 .\core\templates\core\infos.html:442
+#: .\core\templates\core\infos.html:443 .\core\templates\core\infos.html:444
 #: .\reservations\templates\reservations\email_admin.html:95
 msgid "au"
 msgstr "to"
 
 #: .\bookings\templates\emails\admin_booking.html:99
 #: .\bookings\templates\emails\client_booking.html:93
-#: .\core\templates\core\infos.html:91
+#: .\core\templates\core\infos.html:99
 #: .\reservations\templates\reservations\email_admin.html:99
 msgid "Type d’hébergement"
 msgstr "Accommodation Type"
@@ -489,8 +514,9 @@ msgid "Solde restant"
 msgstr "Remaining balance"
 
 #: .\bookings\templates\emails\admin_booking.html:129
-msgid "Consulter la réservation sur le site :"
-msgstr "View the reservation on the site :"
+#: .\bookings\templates\emails\client_booking.html:131
+msgid "Pour plus d'informations, consultez notre site : "
+msgstr ""
 
 #: .\bookings\templates\emails\client_booking.html:6
 msgid "Confirmation de réservation"
@@ -526,47 +552,68 @@ msgid "Camping Le Maine Blanc"
 msgstr "Camping Le Maine Blanc"
 
 #: .\bookings\templates\emails\client_booking.html:126
-msgid "Consulter la réservation sur le site : "
-msgstr "View the reservation on the site : "
+msgid "Annulation par le camping"
+msgstr "Cancellation by the campsite"
 
-#: .\bookings\views.py:238
+#: .\bookings\templates\emails\client_booking.html:127
+msgid ""
+"Les propriétaires se réservent le droit d'annuler une réservation si "
+"nécessaire. En cas d'annulation, vous serez informé(e) dans les plus brefs "
+"délais."
+msgstr ""
+"The owners reserve the right to cancel a reservation if necessary. In case "
+"of cancellation, you will be informed as soon as possible."
+
+#: .\bookings\views.py:223
+msgid "Impossible de traiter le paiement pour le moment. Veuillez réessayer."
+msgstr "Unable to process payment at this time. Please try again."
+
+#: .\bookings\views.py:253
 msgid ""
 "Aucune donnée de réservation trouvée. Veuillez recommencer le processus de "
 "réservation."
 msgstr "No booking data found. Please restart the booking process."
 
-#: .\bookings\views.py:243
+#: .\bookings\views.py:258
 msgid ""
 "Les informations de contact sont incomplètes. Veuillez compléter vos "
 "coordonnées."
 msgstr ""
 "Contact information is incomplete. Please complete your contact details."
 
-#: .\bookings\views.py:300 .\bookings\views.py:340
+#: .\bookings\views.py:320 .\bookings\views.py:364
 #, python-brace-format
 msgid "Dimensions tente : {length} m x {width} m"
 msgstr "Tent dimensions : {length} m x {width} m"
 
-#: .\bookings\views.py:304 .\bookings\views.py:344
+#: .\bookings\views.py:324 .\bookings\views.py:368
 #, python-brace-format
 msgid "Longueur véhicule : {length} m"
 msgstr "Vehicle length : {length} m"
 
-#: .\bookings\views.py:308 .\bookings\views.py:348
+#: .\bookings\views.py:328 .\bookings\views.py:372
 #, python-brace-format
 msgid "Longueur câble : {length} m"
 msgstr "Cable length : {length} m"
 
-#: .\bookings\views.py:312
+#: .\bookings\views.py:332
 #, python-brace-format
 msgid "Nouvelle réservation de {booking.first_name} {booking.last_name}"
 msgstr "New reservation from {booking.first_name} {booking.last_name}"
 
-#: .\bookings\views.py:352
+#: .\bookings\views.py:376
 msgid "Confirmation de votre réservation - Camping Le Maine Blanc"
 msgstr "Booking Confirmation | Camping Le Maine Blanc"
 
-#: .\bookings\views.py:379
+#: .\bookings\views.py:403
+msgid ""
+"Votre réservation est enregistrée, mais une erreur est survenue lors de "
+"l'envoi des emails. Veuillez contacter l'administrateur."
+msgstr ""
+"Your booking has been recorded, but an error occurred while sending the "
+"emails. Please contact the administrator."
+
+#: .\bookings\views.py:411
 msgid ""
 "Merci ! Votre réservation a été confirmée. Un email de confirmation vous a "
 "été envoyé."
@@ -728,10 +775,11 @@ msgstr ""
 
 #: .\core\templates\core\accommodations.html:45
 msgid ""
-"La réservation se fait uniquement par téléphone afin de vous proposer la "
-"meilleure disponibilité."
+"La réservation se fait uniquement par téléphone ou via le formulaire de "
+"contact afin de vous proposer la meilleure disponibilité."
 msgstr ""
-"Reservations are made by phone only to offer you the best availability."
+"Reservations can only be made by phone or via the "
+"contact form to offer you the best availability."
 
 #: .\core\templates\core\accommodations.html:46
 msgid "Contactez-nous"
@@ -1117,8 +1165,8 @@ msgstr "Isabelle and Franck welcome you every day from"
 
 #: .\core\templates\core\infos.html:25 .\core\templates\core\infos.html:37
 #: .\core\templates\core\services.html:30
-#: .\core\templates\core\services.html:58
-#: .\core\templates\core\services.html:76
+#: .\core\templates\core\services.html:75
+#: .\core\templates\core\services.html:84
 msgid "à"
 msgstr "to"
 
@@ -1138,7 +1186,7 @@ msgstr "Arrivals :"
 msgid "Les arrivées se font entre"
 msgstr "Arrivals are between"
 
-#: .\core\templates\core\infos.html:29 .\core\templates\core\services.html:64
+#: .\core\templates\core\infos.html:29 .\core\templates\core\services.html:59
 msgid "et"
 msgstr "and"
 
@@ -1245,10 +1293,24 @@ msgstr ""
 "before their departure in order to organize the inventory."
 
 #: .\core\templates\core\infos.html:75
+msgid "Visiteurs et animaux :"
+msgstr "Visitors and Animals :"
+
+#: .\core\templates\core\infos.html:76
+msgid ""
+"Chaque visiteur doit obligatoirement se présenter à l’accueil dès son "
+"arrivée et présenter une pièce d’identité. Les animaux de compagnie sont les "
+"bienvenus sous réserve de présenter un carnet de vaccination à jour."
+msgstr ""
+"Each visitor must present themselves at the reception upon arrival and show "
+"a piece of identification. Pets are welcome provided "
+"that an up-to-date vaccination record is presented."
+
+#: .\core\templates\core\infos.html:79
 msgid "Conditions de remboursement :"
 msgstr "Refund Conditions :"
 
-#: .\core\templates\core\infos.html:76
+#: .\core\templates\core\infos.html:80
 msgid ""
 "Aucun remboursement n’est possible en cas de mauvais temps, d’arrivée "
 "tardive ou de départ anticipé, sauf circonstances particulières justifiées "
@@ -1258,181 +1320,197 @@ msgstr ""
 "departure, except in justified special circumstances (e.g.: hospitalization)."
 
 #: .\core\templates\core\infos.html:83
+msgid "Annulation par le camping :"
+msgstr "Cancellation by the campsite :"
+
+#: .\core\templates\core\infos.html:84
+msgid ""
+"Les propriétaires se réservent le droit d’annuler une réservation en cas de "
+"force majeure, d’erreur manifeste de disponibilité, ou de non-respect du "
+"règlement intérieur. Dans ce cas, le client sera intégralement remboursé des "
+"sommes versées."
+msgstr ""
+"The owners reserve the right to cancel a reservation in case of force "
+"majeure, obvious availability error, or non-compliance with the internal "
+"regulations. In this case, the customer will be fully refunded the amounts "
+"paid."
+
+#: .\core\templates\core\infos.html:91
 msgid "Tarifs pour l'année"
 msgstr "Rates for the year"
 
-#: .\core\templates\core\infos.html:84
+#: .\core\templates\core\infos.html:92
 msgid "Taxe de séjour à compter du"
 msgstr "Tourist tax from"
 
-#: .\core\templates\core\infos.html:84
+#: .\core\templates\core\infos.html:92
 msgid "par personne/nuit (incluse dans le prix)"
 msgstr "per person/night (included in the price)"
 
-#: .\core\templates\core\infos.html:85
+#: .\core\templates\core\infos.html:93
 msgid "Tous les prix sont TTC."
 msgstr "All prices are inclusive of VAT."
 
-#: .\core\templates\core\infos.html:92 .\core\templates\core\infos.html:434
+#: .\core\templates\core\infos.html:100 .\core\templates\core\infos.html:442
 msgid "Basse Saison"
 msgstr "Low Season"
 
-#: .\core\templates\core\infos.html:92 .\core\templates\core\infos.html:93
-#: .\core\templates\core\infos.html:94 .\core\templates\core\infos.html:434
-#: .\core\templates\core\infos.html:435 .\core\templates\core\infos.html:436
+#: .\core\templates\core\infos.html:100 .\core\templates\core\infos.html:101
+#: .\core\templates\core\infos.html:102 .\core\templates\core\infos.html:442
+#: .\core\templates\core\infos.html:443 .\core\templates\core\infos.html:444
 msgid "du"
 msgstr "from"
 
-#: .\core\templates\core\infos.html:93
+#: .\core\templates\core\infos.html:101
 msgid "Moyenne Saison"
 msgstr "Mid Season"
 
-#: .\core\templates\core\infos.html:93 .\core\templates\core\infos.html:435
+#: .\core\templates\core\infos.html:101 .\core\templates\core\infos.html:443
 msgid "et du"
 msgstr "and from"
 
-#: .\core\templates\core\infos.html:94
+#: .\core\templates\core\infos.html:102
 msgid "Haute Saison"
 msgstr "High Season"
 
-#: .\core\templates\core\infos.html:101
+#: .\core\templates\core\infos.html:109
 msgid "Camping-car (1-2 pers.)"
 msgstr "Motorhome (1-2 pers.)"
 
-#: .\core\templates\core\infos.html:105 .\core\templates\core\infos.html:155
-#: .\core\templates\core\infos.html:266
+#: .\core\templates\core\infos.html:113 .\core\templates\core\infos.html:163
+#: .\core\templates\core\infos.html:274
 msgid "Avec élec."
 msgstr "With Elec."
 
-#: .\core\templates\core\infos.html:109 .\core\templates\core\infos.html:159
-#: .\core\templates\core\infos.html:270
+#: .\core\templates\core\infos.html:117 .\core\templates\core\infos.html:167
+#: .\core\templates\core\infos.html:278
 msgid "Pas d'électricité"
 msgstr "Without Elec."
 
-#: .\core\templates\core\infos.html:111 .\core\templates\core\infos.html:161
-#: .\core\templates\core\infos.html:272
+#: .\core\templates\core\infos.html:119 .\core\templates\core\infos.html:169
+#: .\core\templates\core\infos.html:280
 msgid "Sans élec."
 msgstr "Without Elec."
 
-#: .\core\templates\core\infos.html:150
+#: .\core\templates\core\infos.html:158
 msgid "Caravane / Fourgon / Van"
 msgstr "Caravan / Converted Van / Van"
 
-#: .\core\templates\core\infos.html:170 .\core\templates\core\infos.html:205
-#: .\core\templates\core\infos.html:233 .\core\templates\core\infos.html:280
-#: .\core\templates\core\infos.html:308 .\core\templates\core\infos.html:336
+#: .\core\templates\core\infos.html:178 .\core\templates\core\infos.html:213
+#: .\core\templates\core\infos.html:241 .\core\templates\core\infos.html:288
+#: .\core\templates\core\infos.html:316 .\core\templates\core\infos.html:344
 msgid "1 pers."
 msgstr "1 pers."
 
-#: .\core\templates\core\infos.html:175 .\core\templates\core\infos.html:206
-#: .\core\templates\core\infos.html:234 .\core\templates\core\infos.html:281
-#: .\core\templates\core\infos.html:309 .\core\templates\core\infos.html:337
+#: .\core\templates\core\infos.html:183 .\core\templates\core\infos.html:214
+#: .\core\templates\core\infos.html:242 .\core\templates\core\infos.html:289
+#: .\core\templates\core\infos.html:317 .\core\templates\core\infos.html:345
 msgid "2 pers."
 msgstr "2 pers."
 
-#: .\core\templates\core\infos.html:262
+#: .\core\templates\core\infos.html:270
 msgid "Tente / Voiture Tente"
 msgstr "Tent / Car Tent"
 
-#: .\core\templates\core\infos.html:365
+#: .\core\templates\core\infos.html:373
 msgid "Ouvriers"
 msgstr "Workers"
 
-#: .\core\templates\core\infos.html:366
+#: .\core\templates\core\infos.html:374
 msgid "Tarifs comprenant l'électricité"
 msgstr "Rates including electricity"
 
-#: .\core\templates\core\infos.html:372 .\core\templates\core\infos.html:374
+#: .\core\templates\core\infos.html:380 .\core\templates\core\infos.html:382
 msgid "jour"
 msgstr "day"
 
-#: .\core\templates\core\infos.html:380
+#: .\core\templates\core\infos.html:388
 msgid "Emplacement pour le week-end (si non libéré)"
 msgstr "Pitch for the weekend (if not vacated)"
 
-#: .\core\templates\core\infos.html:383
+#: .\core\templates\core\infos.html:391
 msgid "sans électricité"
 msgstr "without electricity"
 
-#: .\core\templates\core\infos.html:386
+#: .\core\templates\core\infos.html:394
 msgid "avec électricité"
 msgstr "with electricity"
 
-#: .\core\templates\core\infos.html:399
+#: .\core\templates\core\infos.html:407
 msgid "Suppléments emplacements"
 msgstr "Supplements pitches"
 
-#: .\core\templates\core\infos.html:407
+#: .\core\templates\core\infos.html:415
 msgid "Visiteur : "
 msgstr "Visitor : "
 
-#: .\core\templates\core\infos.html:425
+#: .\core\templates\core\infos.html:433
 msgid "Tarifs des Mobil-homes"
 msgstr "Mobile Home Rates"
 
-#: .\core\templates\core\infos.html:426
+#: .\core\templates\core\infos.html:434
 msgid "Tarifs par type de mobil-home et saison"
 msgstr "Rates by type of mobile home and season"
 
-#: .\core\templates\core\infos.html:429 .\core\templates\core\infos.html:486
+#: .\core\templates\core\infos.html:437 .\core\templates\core\infos.html:494
 #: .\reservations\forms.py:86
 msgid "Mobil-home"
 msgstr "Mobile Home"
 
-#: .\core\templates\core\infos.html:430
+#: .\core\templates\core\infos.html:438
 msgid "A la nuitée"
 msgstr "Per night"
 
-#: .\core\templates\core\infos.html:432
+#: .\core\templates\core\infos.html:440
 msgid "(Uniquement en basse et moyenne saison)"
 msgstr "(Only in low and mid season)"
 
-#: .\core\templates\core\infos.html:435
+#: .\core\templates\core\infos.html:443
 msgid "Moyenne saison"
 msgstr "Mid Season"
 
-#: .\core\templates\core\infos.html:436
+#: .\core\templates\core\infos.html:444
 msgid "Haute saison"
 msgstr "High Season"
 
-#: .\core\templates\core\infos.html:449
+#: .\core\templates\core\infos.html:457
 msgid "Réservé aux ouvriers"
 msgstr "Reserved for workers"
 
-#: .\core\templates\core\infos.html:456
+#: .\core\templates\core\infos.html:464
 msgid "basse saison"
 msgstr "low Season"
 
-#: .\core\templates\core\infos.html:457
+#: .\core\templates\core\infos.html:465
 msgid "moyenne saison"
 msgstr "mid Season"
 
-#: .\core\templates\core\infos.html:466
+#: .\core\templates\core\infos.html:474
 msgid "€/semaine (1 pers)"
 msgstr "€/week (1 person)"
 
-#: .\core\templates\core\infos.html:467
+#: .\core\templates\core\infos.html:475
 msgid "€/semaine (2 pers)"
 msgstr "€/week (2 people)"
 
-#: .\core\templates\core\infos.html:468
+#: .\core\templates\core\infos.html:476
 msgid "€/semaine (3 pers)"
 msgstr "€/week (3 people)"
 
-#: .\core\templates\core\infos.html:472 .\core\templates\core\infos.html:473
-#: .\core\templates\core\infos.html:474
+#: .\core\templates\core\infos.html:480 .\core\templates\core\infos.html:481
+#: .\core\templates\core\infos.html:482
 msgid "€/semaine"
 msgstr "€/week"
 
-#: .\core\templates\core\infos.html:484
+#: .\core\templates\core\infos.html:492
 msgid "Caution à prévoir : "
 msgstr "Deposit to be provided :"
 
-#: .\core\templates\core\infos.html:487
+#: .\core\templates\core\infos.html:495
 msgid "Ménage"
 msgstr "Cleaning"
 
-#: .\core\templates\core\infos.html:491
+#: .\core\templates\core\infos.html:499
 msgid ""
 "Oreillers et couettes fournis (taies d’oreillers, housses de couette et "
 "draps disponibles en location à partir de"
@@ -1440,19 +1518,19 @@ msgstr ""
 "Pillows and duvets provided (pillowcases, duvet covers and sheets available "
 "for rent from"
 
-#: .\core\templates\core\infos.html:494
+#: .\core\templates\core\infos.html:502
 msgid "Antennes TV fournies (téléviseur non inclus)."
 msgstr "TV antennas provided (television not included)."
 
-#: .\core\templates\core\infos.html:504 .\core\templates\core\infos.html:507
+#: .\core\templates\core\infos.html:512 .\core\templates\core\infos.html:515
 msgid "Plan du camping"
 msgstr "Campsite Map"
 
-#: .\core\templates\core\infos.html:512
+#: .\core\templates\core\infos.html:520
 msgid "Notre camping propose"
 msgstr "Our campsite offers"
 
-#: .\core\templates\core\infos.html:512
+#: .\core\templates\core\infos.html:520
 msgid ""
 "emplacements pour tous les goûts : ombragés, semi-ombragés ou ensoleillés, "
 "avec ou sans électricité, pour un séjour confortable et personnalisé."
@@ -1460,7 +1538,7 @@ msgstr ""
 "pitches for all tastes: shaded, semi-shaded or sunny, with or without "
 "electricity, for a comfortable and personalized stay."
 
-#: .\core\templates\core\infos.html:513
+#: .\core\templates\core\infos.html:521
 msgid ""
 "Des fontaines à eau sont réparties dans tout le camping pour vous faciliter "
 "la vie pendant votre séjour."
@@ -1468,16 +1546,16 @@ msgstr ""
 "Water fountains are distributed throughout the campsite to make your stay "
 "easier."
 
-#: .\core\templates\core\infos.html:514
+#: .\core\templates\core\infos.html:522
 msgid ""
 "Pour ceux qui préfèrent le confort d’un logement, nous disposons également de"
 msgstr "For those who prefer the comfort of accommodation, we also have"
 
-#: .\core\templates\core\infos.html:514
+#: .\core\templates\core\infos.html:522
 msgid "mobil-homes entièrement équipés."
 msgstr "fully equipped mobile homes."
 
-#: .\core\templates\core\infos.html:515
+#: .\core\templates\core\infos.html:523
 msgid ""
 "Parcourez notre plan pour découvrir l’agencement des emplacements et des "
 "services, et préparer au mieux votre séjour."
@@ -2034,66 +2112,39 @@ msgid "Logo Restauration"
 msgstr "Logo Catering"
 
 #: .\core\templates\core\services.html:54
-msgid "Image Camion Food Truck"
-msgstr "Food Truck Image"
+msgid "Ouverture :"
+msgstr "Opening :"
 
-#: .\core\templates\core\services.html:55
-msgid "Food trucks en soirée pour tous les goûts :"
-msgstr "Evening food trucks for every taste : "
-
-#: .\core\templates\core\services.html:58
-msgid "Burger"
-msgstr "Burger"
+#: .\core\templates\core\services.html:54
+msgid ""
+"Le service pain, viennoiseries et l’épicerie sont ouverts toute l’année."
+msgstr "The bread, pastries, and grocery service is open all year round."
 
 #: .\core\templates\core\services.html:58
-msgid "tous les soirs sauf le"
-msgstr "every evening except on"
-
-#: .\core\templates\core\services.html:58
-msgid "de"
-msgstr "on"
-
-#: .\core\templates\core\services.html:59
-msgid "Pizza"
-msgstr "Pizza"
-
-#: .\core\templates\core\services.html:59
-msgid "uniquement le"
-msgstr "only on"
-
-#: .\core\templates\core\services.html:59
-msgid "soir"
-msgstr "evening"
-
-#: .\core\templates\core\services.html:59
-msgid "mêmes horaires."
-msgstr "the same hours."
-
-#: .\core\templates\core\services.html:63
 msgid "Image Croissant"
 msgstr "Croissant Image"
 
-#: .\core\templates\core\services.html:64
+#: .\core\templates\core\services.html:59
 msgid "Pain frais et viennoiseries chaque matin entre"
 msgstr "Fresh bread and pastries every morning between"
 
-#: .\core\templates\core\services.html:66
+#: .\core\templates\core\services.html:61
 msgid "Pensez à commander la veille avant"
 msgstr "Remember to order the day before by"
 
-#: .\core\templates\core\services.html:66
+#: .\core\templates\core\services.html:61
 msgid "à l'accueil, auprès d'Isabelle."
 msgstr "at reception, with Isabelle."
 
-#: .\core\templates\core\services.html:69
+#: .\core\templates\core\services.html:64
 msgid "Image Caddie"
 msgstr "Trolley Image"
 
-#: .\core\templates\core\services.html:70
-msgid "Epicerie ouverte toute l'année : "
-msgstr "Grocery store open all year round : "
+#: .\core\templates\core\services.html:65
+msgid "Epicerie : "
+msgstr "Grocery Store: "
 
-#: .\core\templates\core\services.html:72
+#: .\core\templates\core\services.html:67
 msgid ""
 "Produits salés, sucrés, d'entretien... L'épicerie du camping est toujours là "
 "pour vous sauver la mise !"
@@ -2101,15 +2152,26 @@ msgstr ""
 "Savory snacks, sweet treats, cleaning products… the campsite’s shop has you "
 "covered !"
 
-#: .\core\templates\core\services.html:75
+#: .\core\templates\core\services.html:70
+msgid "En pleine saison (de juin à septembre) :"
+msgstr "In high season (from June to September) :"
+
+#: .\core\templates\core\services.html:70
+msgid ""
+"le bar et les food trucks vous accueillent pour des moments gourmands et "
+"conviviaux."
+msgstr ""
+"the bar and food trucks welcome you for delicious and friendly moments."
+
+#: .\core\templates\core\services.html:74
 msgid "Image Bar"
 msgstr "Bar Image"
 
-#: .\core\templates\core\services.html:76
-msgid "Bar ouvert tous les jours de"
-msgstr "Bar open every day from"
+#: .\core\templates\core\services.html:75
+msgid "Bar ouvert de"
+msgstr "Bar open from"
 
-#: .\core\templates\core\services.html:78
+#: .\core\templates\core\services.html:77
 msgid ""
 "Un lieu idéal pour boire un verre, savourer une glace et profiter de "
 "l’ambiance du camping."
@@ -2117,162 +2179,210 @@ msgstr ""
 "An ideal place to enjoy a drink, savor an ice cream, and soak up the "
 "campsite atmosphere."
 
-#: .\core\templates\core\services.html:89
+#: .\core\templates\core\services.html:80
+msgid "Image Camion Food Truck"
+msgstr "Food Truck Image"
+
+#: .\core\templates\core\services.html:81
+msgid "Food trucks en soirée pour tous les goûts :"
+msgstr "Evening food trucks for every taste : "
+
+#: .\core\templates\core\services.html:84
+msgid "Burger"
+msgstr "Burger"
+
+#: .\core\templates\core\services.html:84
+msgid "tous les soirs sauf le"
+msgstr "every evening except on"
+
+#: .\core\templates\core\services.html:84
+msgid "de"
+msgstr "on"
+
+#: .\core\templates\core\services.html:85
+msgid "Pizza"
+msgstr "Pizza"
+
+#: .\core\templates\core\services.html:85
+msgid "uniquement le"
+msgstr "only on"
+
+#: .\core\templates\core\services.html:85
+msgid "soir"
+msgstr "evening"
+
+#: .\core\templates\core\services.html:85
+msgid "mêmes horaires."
+msgstr "the same hours."
+
+#: .\core\templates\core\services.html:97
 msgid "Laverie"
 msgstr "Laundry Room"
 
-#: .\core\templates\core\services.html:90
+#: .\core\templates\core\services.html:98
 msgid "Image Machine à laver"
 msgstr "Washing machine Image"
 
-#: .\core\templates\core\services.html:92
+#: .\core\templates\core\services.html:100
 msgid "Du linge à faire ?"
 msgstr "Need to do laundry ?"
 
-#: .\core\templates\core\services.html:93
+#: .\core\templates\core\services.html:101
 msgid "Pas de panique, même en vacances, on a pensé à tout :"
 msgstr "No worries, even on holiday, we’ve got it all covered :"
 
-#: .\core\templates\core\services.html:95
+#: .\core\templates\core\services.html:103
 msgid "Une machine à laver pour"
 msgstr "Washing machine for"
 
-#: .\core\templates\core\services.html:96
+#: .\core\templates\core\services.html:104
 msgid "Un sèche-linge pour"
 msgstr "Dryer for"
 
-#: .\core\templates\core\services.html:96
+#: .\core\templates\core\services.html:104
 msgid "les 20 minutes"
 msgstr "20 minutes"
 
-#: .\core\templates\core\services.html:97
+#: .\core\templates\core\services.html:105
 msgid ""
 "Des lavabos pour les adeptes du lavage à la main (ou pour les chaussettes en "
 "mission spéciale)"
 msgstr "Basins for handwashing fans (or socks on a special mission)"
 
-#: .\core\templates\core\services.html:99
+#: .\core\templates\core\services.html:107
 msgid "Les jetons sont en vente à l'accueil."
 msgstr "Tokens are available at the reception."
 
-#: .\core\templates\core\services.html:100
+#: .\core\templates\core\services.html:108
 msgid "Pensez à votre lessive... ou passez à l'épicerie, on en vend aussi !"
 msgstr "Don't forget your detergent… or grab some at the grocery store !"
 
-#: .\core\templates\core\services.html:110
+#: .\core\templates\core\services.html:118
 msgid "Animaux bienvenus"
 msgstr "Pets Welcome"
 
-#: .\core\templates\core\services.html:111
+#: .\core\templates\core\services.html:119
 msgid "Image Chien et Chat"
 msgstr "Dog and Cat Image"
 
-#: .\core\templates\core\services.html:113
+#: .\core\templates\core\services.html:121
 msgid "sauf catégories 1 & 2, désolés les toutous costauds"
 msgstr "except categories 1 & 2 – sorry, strong doggies"
 
-#: .\core\templates\core\services.html:114
+#: .\core\templates\core\services.html:122
 msgid "Image d'un chien musclé"
 msgstr "Muscular Dog Image"
 
-#: .\core\templates\core\services.html:116
+#: .\core\templates\core\services.html:124
+msgid "Carnet de vaccination :"
+msgstr "Vaccination record :"
+
+#: .\core\templates\core\services.html:125
+msgid ""
+"Il doit être présenté à l’arrivée et à jour — une simple formalité pour "
+"garantir le bien-être de tous nos compagnons à quatre pattes !"
+msgstr ""
+"It must be presented upon arrival and up to date — a simple formality to "
+"ensure the well-being of all our four-legged friends !"
+
+#: .\core\templates\core\services.html:127
 msgid "La laisse ?"
 msgstr "Leash?"
 
-#: .\core\templates\core\services.html:116
+#: .\core\templates\core\services.html:127
 msgid ""
 "Oui, même pour une petite balade, dans le camping ou juste devant la tente !"
 msgstr ""
 "Yes, even for a short walk, inside the campsite or just in front of your "
 "tent !"
 
-#: .\core\templates\core\services.html:117
+#: .\core\templates\core\services.html:128
 msgid "Un petit besoin ?"
 msgstr "A little potty break?"
 
-#: .\core\templates\core\services.html:117
+#: .\core\templates\core\services.html:128
 msgid "On ramasse, c'est plus sympa pour tout le monde."
 msgstr "Let’s clean up — it’s nicer for everyone."
 
-#: .\core\templates\core\services.html:119
+#: .\core\templates\core\services.html:130
 msgid "Panneau interdit"
 msgstr "No Entry Sign"
 
-#: .\core\templates\core\services.html:120
+#: .\core\templates\core\services.html:131
 msgid "Les sanitaires"
 msgstr "The toilets, "
 
-#: .\core\templates\core\services.html:120
+#: .\core\templates\core\services.html:131
 msgid "c'est réservé aux humains !"
 msgstr "they’re for humans only !"
 
-#: .\core\templates\core\services.html:131
+#: .\core\templates\core\services.html:142
 msgid "Wi-Fi gratuit"
 msgstr "Free Wi-Fi"
 
-#: .\core\templates\core\services.html:132
+#: .\core\templates\core\services.html:143
 msgid "Logo Wi-Fi"
 msgstr "Wi-Fi Logo"
 
-#: .\core\templates\core\services.html:134
+#: .\core\templates\core\services.html:145
 msgid "Besoin de rester connecté ?"
 msgstr "Need to stay connected ?"
 
-#: .\core\templates\core\services.html:135
+#: .\core\templates\core\services.html:146
 msgid "Le wifi est gratuit sur le camping !"
 msgstr "Wi-Fi is free throughout the campsite !"
 
-#: .\core\templates\core\services.html:136
+#: .\core\templates\core\services.html:147
 msgid "(Pensez à passer à l'accueil pour les conditions d'accès.)"
 msgstr "(Please visit reception for access details.)"
 
-#: .\core\templates\core\services.html:147
+#: .\core\templates\core\services.html:158
 msgid "Paiements sécurisés"
 msgstr "Secure Payments"
 
-#: .\core\templates\core\services.html:148
+#: .\core\templates\core\services.html:159
 msgid "Logo Terminal Paiements"
 msgstr "Payment Terminal Logo"
 
-#: .\core\templates\core\services.html:150
+#: .\core\templates\core\services.html:161
 msgid ""
 "Pour régler votre séjour, plusieurs options s'offrent à vous à l'arrivée : "
 msgstr ""
 "To pay for your stay, you have several options available upon arrival :"
 
-#: .\core\templates\core\services.html:152
+#: .\core\templates\core\services.html:163
 msgid "American Express"
 msgstr "American Express"
 
-#: .\core\templates\core\services.html:153
+#: .\core\templates\core\services.html:164
 msgid "Espèces"
 msgstr "Cash"
 
-#: .\core\templates\core\services.html:154
+#: .\core\templates\core\services.html:165
 msgid "Maestro"
 msgstr "Maestro"
 
-#: .\core\templates\core\services.html:155
+#: .\core\templates\core\services.html:166
 msgid "Mastercard"
 msgstr "Mastercard"
 
-#: .\core\templates\core\services.html:156
+#: .\core\templates\core\services.html:167
 msgid "Visa"
 msgstr "Visa"
 
-#: .\core\templates\core\services.html:157
+#: .\core\templates\core\services.html:168
 msgid "Chèques vacances (ANCV)"
 msgstr "Holiday vouchers (ANCV)"
 
-#: .\core\templates\core\services.html:158
+#: .\core\templates\core\services.html:169
 msgid "Virement"
 msgstr "Bank transfer"
 
-#: .\core\templates\core\services.html:160
+#: .\core\templates\core\services.html:171
 msgid "La carte bancaire est acceptée à partir de 8€."
 msgstr "Card payments accepted from €8."
 
-#: .\core\templates\core\services.html:161
+#: .\core\templates\core\services.html:172
 msgid ""
 "Petit rappel : par mesure de sécurité, nous ne prenons plus les chèques."
 msgstr "Important: Due to past issues, we no longer accept cheques."
@@ -2314,23 +2424,23 @@ msgstr "(without pool)"
 msgid "(avec piscine)"
 msgstr "(with pool)"
 
-#: .\maineblanc_project\settings.py:112
+#: .\maineblanc_project\settings.py:172
 msgid "French"
 msgstr "French"
 
-#: .\maineblanc_project\settings.py:113
+#: .\maineblanc_project\settings.py:173
 msgid "English"
 msgstr "English"
 
-#: .\maineblanc_project\settings.py:114
+#: .\maineblanc_project\settings.py:174
 msgid "Spanish"
 msgstr "Spanish"
 
-#: .\maineblanc_project\settings.py:115
+#: .\maineblanc_project\settings.py:175
 msgid "German"
 msgstr "German"
 
-#: .\maineblanc_project\settings.py:116
+#: .\maineblanc_project\settings.py:176
 msgid "Nederlands"
 msgstr "Dutch"
 
