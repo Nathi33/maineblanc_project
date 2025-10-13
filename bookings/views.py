@@ -11,8 +11,7 @@ from decimal import Decimal
 from datetime import date
 from django.utils import translation
 from django.core.exceptions import ValidationError
-import stripe
-import traceback
+import stripe, socket, traceback
 
 # Stripe configuration
 stripe.api_key = settings.STRIPE_SECRET_KEY
@@ -211,6 +210,7 @@ def booking_details(request):
                     cancel_url=f"{settings.SITE_URL}{reverse('booking_details')}",
                     customer_email=booking_data.get('email'),
                 )
+            
                 return redirect(checkout_session.url, code=303)
             except stripe.error.StripeError as e:
                 print("⚠️ Stripe Error:", e)
@@ -246,6 +246,7 @@ def booking_confirm(request):
     - Remove all booking data from session after confirmation.
     """
     booking_data = request.session.get('booking_data')
+
     if not booking_data:
         messages.error(request, _("Aucune donnée de réservation trouvée. Veuillez recommencer le processus de réservation."))
         return redirect('booking_form')
@@ -301,7 +302,11 @@ def booking_confirm(request):
     booking.deposit_paid = True
     booking.save()
 
-    site_url = getattr(settings, "SITE_URL", "http://localhost:8000")
+    site_url = getattr(settings, "SITE_URL", "http://127.0.0.1:8000")
+
+    # Render
+    hostname = socket.gethostname()
+    is_render = "render" in hostname or "onrender" in site_url
 
     # Email to admin
     try:
@@ -336,14 +341,18 @@ def booking_confirm(request):
                 'remaining_balance': round(total_price - deposit, 2)
             })
 
-            email_admin = EmailMessage(
-                subject=admin_subject,
-                body=admin_message_final,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                to=[settings.ADMIN_EMAIL],
-            )
-            email_admin.content_subtype = "html"
-            email_admin.send(fail_silently=False)
+            if is_render:
+                print("📧 [SIMULATION ADMIN EMAIL] →", settings.ADMIN_EMAIL)
+                print(admin_message_final)
+            else:
+                email_admin = EmailMessage(
+                    subject=admin_subject,
+                    body=admin_message_final,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=[settings.ADMIN_EMAIL],
+                )
+                email_admin.content_subtype = "html"
+                email_admin.send(fail_silently=False)
 
         # Email to client in selected language
         with translation.override(request.LANGUAGE_CODE):
@@ -373,15 +382,19 @@ def booking_confirm(request):
                 'site_url': site_url,
                 'remaining_balance': round(total_price - deposit, 2)
             })
-    
-            email_client = EmailMessage(
-                subject=client_subject,
-                body=client_message,
-                from_email=settings.DEFAULT_FROM_EMAIL,
-                to=[booking.email],
-            )
-            email_client.content_subtype = "html"
-            email_client.send(fail_silently=False)
+
+            if is_render:
+                print("📧 [SIMULATION CLIENT EMAIL] →", booking.email)
+                print(client_message)
+            else:
+                email_client = EmailMessage(
+                    subject=client_subject,
+                    body=client_message,
+                    from_email=settings.DEFAULT_FROM_EMAIL,
+                    to=[booking.email],
+                )
+                email_client.content_subtype = "html"
+                email_client.send(fail_silently=False)
     
     except Exception as e:
         print("⚠️ Erreur lors de l'envoi des emails :", e)
@@ -393,7 +406,9 @@ def booking_confirm(request):
     
     messages.success(
         request, 
-        _("Merci ! Votre réservation a été confirmée. Un email de confirmation vous a été envoyé."))
+        _("Merci ! Votre réservation a été confirmée. Un email de confirmation vous a été envoyé." if not is_render else
+          "Merci ! Votre réservation a été confirmée. (Simulation d'envoi d'email sur Render.)")
+    )
 
     return render(request, 'bookings/booking_confirm.html', {
         'booking': booking,
