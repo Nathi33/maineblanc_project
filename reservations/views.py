@@ -85,7 +85,11 @@ def reservation_request_view(request):
                     to = [settings.ADMIN_EMAIL],
                 )
                 email_admin.content_subtype = "html" 
-                email_admin.send(fail_silently=False) 
+
+                if settings.EMAIL_BACKEND == 'django.core.mail.backends.console.EmailBackend':
+                    print(f"--- Simulation Email ---\nà: {settings.ADMIN_EMAIL}\nSubject: {subject}\n\n{message_html}\n--- Fin Simulation ---")
+                else:
+                    email_admin.send(fail_silently=False) 
 
             # --- Notify user of successful submission ---
             messages.success(
