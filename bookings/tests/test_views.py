@@ -4,7 +4,7 @@ from django.core import mail
 from django.contrib.messages import get_messages
 from unittest.mock import patch, MagicMock
 from bookings.models import Booking, SupplementPrice
-from datetime import date
+from datetime import date, timedelta
 from decimal import Decimal
 
 pytestmark = pytest.mark.django_db
@@ -73,11 +73,15 @@ def set_booking_session(client, booking_data):
 @patch("bookings.models.Booking.check_capacity", return_value=None)
 def test_booking_form_valid(mock_check_capacity, client):
     """Submitting a valid booking form should redirect to booking_summary and call check_capacity."""
+    
+    start = date.today() + timedelta(days=10)
+    end = start + timedelta(days=5)
+    
     valid_booking_data = {
         "booking_type": "tent",
         "booking_subtype": "tent",
-        "start_date": "2025-09-20",
-        "end_date": "2025-09-25",
+        "start_date": start.strftime("%Y-%m-%d"),
+        "end_date": end.strftime("%Y-%m-%d"),
         "adults": 2,
         "children": 1,
         "children_over_8": 1,

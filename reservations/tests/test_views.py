@@ -1,3 +1,4 @@
+from datetime import date, timedelta
 from django.conf import settings
 import pytest
 from django.urls import reverse
@@ -13,6 +14,9 @@ from reservations.forms import ReservationRequestForm
 @pytest.fixture
 def valid_reservation_data():
     """Valid POST data for the reservation form"""
+    start = date.today() + timedelta(days=10)
+    end = start + timedelta(days=5)
+    
     return {
         'name': 'Dupont',
         'first_name': 'Jean',
@@ -21,8 +25,8 @@ def valid_reservation_data():
         'city': 'Bordeaux',
         'phone': '0600000000',
         'email': 'test@example.com',
-        'start_date': '2025-09-20',
-        'end_date': '2025-09-25',
+        'start_date': start.strftime("%Y-%m-%d"),
+        'end_date': end.strftime("%Y-%m-%d"),
         'accommodation_type': 'tent',
         'adults': 2,
         'children_over_8': 1,

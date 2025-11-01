@@ -54,8 +54,8 @@ class TestBookingFormClassic:
         today = timezone.localdate()
         form_data = {
             "booking_type": "tent",
-            "start_date": today - timedelta(days=1),
-            "end_date": today + timedelta(days=2),
+            "start_date": (today - timedelta(days=1)).strftime("%Y-%m-%d"),
+            "end_date": (today + timedelta(days=2)).strftime("%Y-%m-%d"),
             "adults": 2,
             "children_over_8": 0,
             "children_under_8": 0,
@@ -66,7 +66,8 @@ class TestBookingFormClassic:
         }
         form = BookingFormClassic(data=form_data)
         assert not form.is_valid()
-        assert "start_date" in form.errors
+        errors = form.non_field_errors()
+        assert "La date d'arrivée ne peut pas être antérieure à aujourd'hui." in errors
 
     def test_invalid_type_field(self, mock_check_capacity):
         """Invalid booking type should raise error"""
