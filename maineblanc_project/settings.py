@@ -8,6 +8,7 @@ from pathlib import Path
 from django.utils.translation import gettext_lazy as _
 from decouple import config
 import os, socket
+import sys
 
 # ============================================
 # BASE DIRECTORY
@@ -244,19 +245,15 @@ SITE_URL = config('SITE_URL', default='http://localhost:8000')
 LOGGING = {
     'version': 1,
     'disable_existing_loggers': False,
-    'handlers': {
-        'file': {
-            'level': 'ERROR',
-            'class': 'logging.FileHandler',
-            'filename': BASE_DIR / 'errors.log',  # fichier créé à la racine du projet
+    "handlers": {
+        "console": {
+            "class": "logging.StreamHandler",
+            "stream": sys.stdout,
         },
     },
-    'loggers': {
-        'django': {
-            'handlers': ['file'],
-            'level': 'ERROR',
-            'propagate': True,
-        },
+    "root": {
+        "handlers": ["console"],
+        "level": "ERROR",
     },
 }
 
