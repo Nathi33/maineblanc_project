@@ -383,12 +383,12 @@
                         <strong>{{ home.name_display }}</strong><br>
                         <small>{{ home.description_display }}</small>
 
-                        {% comment %} {% if home.info_pdf %}
+                        {% if home.info_pdf|length %}
                             <br>
                             <a href="{% static home.info_pdf %}" target="_blank" rel="noopener" class="link-info-pdf">
                                 + {% trans "d'infos" %}
                             </a>
-                        {% endif %} {% endcomment %}
+                        {% endif %}
 
                         {% if home.is_worker_home %}
                             <br>
