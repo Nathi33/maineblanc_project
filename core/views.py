@@ -181,8 +181,6 @@ def rates_view(request):
         "other_prices": other_prices,
     })
 
-
-
 def accommodations_view(request):
     """
     Render the Accommodations page.

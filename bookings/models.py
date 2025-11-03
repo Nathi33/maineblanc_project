@@ -9,6 +9,7 @@ from django.utils import formats
 from parler.models import TranslatableModel, TranslatedFields
 import datetime
 import deepl
+from django.utils.text import slugify
     
 
 class SupplementPrice(models.Model):
@@ -525,11 +526,16 @@ class MobileHome(models.Model):
     description_nl = models.TextField(blank=True, verbose_name= "Description NL")
 
     # Informations
-    info_pdf = models.FileField(
-        upload_to='mobilhomes/pdfs/',
-        null=True, 
+    slug = models.SlugField(
+        max_length=100,
+        unique=True,
+    )
+
+    info_pdf = models.CharField(
+        max_length=200,
         blank=True,
-        verbose_name="Fichier PDF d'informations sur le mobil-home"
+        verbose_name="Chemin du fichier PDF (dans static/)",
+        help_text="Exemple : docs/mobilhomes/mobilhome1.pdf",
     )
 
     # Nightly and weekly pricing
@@ -604,6 +610,9 @@ class MobileHome(models.Model):
             except Exception as e:
                 # logger.warning(f"DeepL translation failed: {e}")
                 pass
+
+        if not self.slug:
+            self.slug = slugify(self.name)
 
         super().save(*args, **kwargs)
     

@@ -385,7 +385,7 @@
 
                         {% if home.info_pdf %}
                             <br>
-                            <a href="{{ home.info_pdf.url }}" target="_blank" rel="noopener" class="link-info-pdf">
+                            <a href="{% static home.info_pdf %}" target="_blank" rel="noopener" class="link-info-pdf">
                                 + {% trans "d'infos" %}
                             </a>
                         {% endif %}
@@ -441,7 +441,7 @@
             </p>
             {% if mobilhome_supplements.inventory_pdf %}
                 <p class="small text-muted mb-0">
-                    <a href="{{ mobilhome_supplements.inventory_pdf.url }}" target="_blank" rel="noopener" class="link-info-pdf">
+                    <a href="{% static 'docs/INVENTAIRE_TYPE.pdf' %}" target="_blank" rel="noopener" class="link-info-pdf">
                         {% trans "Voir l'inventaire des mobil-homes" %}
                     </a>
                 </p>
