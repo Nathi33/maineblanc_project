@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-10-13 11:59+0200\n"
+"POT-Creation-Date: 2025-11-03 13:02+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -19,7 +19,7 @@ msgstr ""
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
 #: .\bookings\forms.py:25 .\bookings\models.py:253 .\bookings\views.py:122
-#: .\bookings\views.py:287 .\core\templates\core\infos.html:382
+#: .\bookings\views.py:287 .\core\templates\core\rates.html:313
 #: .\reservations\forms.py:80
 msgid "Tente"
 msgstr "Tent"
@@ -30,7 +30,7 @@ msgid "Voiture Tente"
 msgstr "Car Tent"
 
 #: .\bookings\forms.py:27 .\bookings\models.py:255 .\bookings\views.py:124
-#: .\bookings\views.py:289 .\core\templates\core\infos.html:380
+#: .\bookings\views.py:289 .\core\templates\core\rates.html:311
 #: .\reservations\forms.py:82
 msgid "Caravane"
 msgstr "Caravan"
@@ -54,8 +54,8 @@ msgstr "Motorhome"
 #: .\bookings\forms.py:43 .\bookings\models.py:262
 #: .\bookings\templates\bookings\booking_confirm.html:90
 #: .\bookings\templates\bookings\booking_summary.html:38
-#: .\bookings\views.py:284 .\core\templates\core\infos.html:112
-#: .\core\templates\core\infos.html:162 .\core\templates\core\infos.html:273
+#: .\bookings\views.py:284 .\core\templates\core\rates.html:43
+#: .\core\templates\core\rates.html:93 .\core\templates\core\rates.html:204
 #: .\reservations\forms.py:159
 #: .\reservations\templates\reservations\email_admin.html:110
 msgid "Avec électricité"
@@ -64,8 +64,8 @@ msgstr "With Electricity"
 #: .\bookings\forms.py:44 .\bookings\models.py:263
 #: .\bookings\templates\bookings\booking_confirm.html:92
 #: .\bookings\templates\bookings\booking_summary.html:43
-#: .\bookings\views.py:284 .\core\templates\core\infos.html:118
-#: .\core\templates\core\infos.html:168 .\core\templates\core\infos.html:279
+#: .\bookings\views.py:284 .\core\templates\core\rates.html:49
+#: .\core\templates\core\rates.html:99 .\core\templates\core\rates.html:210
 #: .\reservations\forms.py:160
 #: .\reservations\templates\reservations\email_admin.html:110
 msgid "Sans électricité"
@@ -158,8 +158,8 @@ msgid ""
 "La durée maximale de séjour est de 3 semaines. Pour toute demande "
 "particulière, merci de contacter directement le camping."
 msgstr ""
-"The maximum length of stay is 3 weeks. For any special requests, "
-"please contact the campsite directly."
+"The maximum length of stay is 3 weeks. For any special requests, please "
+"contact the campsite directly."
 
 #: .\bookings\forms.py:156
 msgid "Le champ 'Type d'emplacement' est obligatoire."
@@ -189,6 +189,8 @@ msgid ""
 "Le nombre maximum de personnes (adultes et enfants) ne peut pas dépasser 6. "
 "Pour toute demande particulière, merci de contacter directement le camping."
 msgstr ""
+"The maximum number of people (adults and children) cannot exceed 6."
+"For any special requests, please contact the campsite directly."
 
 #: .\bookings\forms.py:200
 #: .\bookings\templates\bookings\booking_confirm.html:44
@@ -405,8 +407,8 @@ msgid "Nombre d'occupants"
 msgstr "Number of Occupants"
 
 #: .\bookings\templates\bookings\booking_form.html:85
-#: .\core\templates\core\infos.html:111 .\core\templates\core\infos.html:161
-#: .\core\templates\core\infos.html:272
+#: .\core\templates\core\rates.html:42 .\core\templates\core\rates.html:92
+#: .\core\templates\core\rates.html:203
 msgid "Electricité"
 msgstr "Electricity"
 
@@ -482,16 +484,16 @@ msgstr "From"
 
 #: .\bookings\templates\emails\admin_booking.html:95
 #: .\bookings\templates\emails\client_booking.html:89
-#: .\core\templates\core\infos.html:100 .\core\templates\core\infos.html:101
-#: .\core\templates\core\infos.html:102 .\core\templates\core\infos.html:442
-#: .\core\templates\core\infos.html:443 .\core\templates\core\infos.html:444
+#: .\core\templates\core\rates.html:31 .\core\templates\core\rates.html:32
+#: .\core\templates\core\rates.html:33 .\core\templates\core\rates.html:373
+#: .\core\templates\core\rates.html:374 .\core\templates\core\rates.html:375
 #: .\reservations\templates\reservations\email_admin.html:95
 msgid "au"
 msgstr "to"
 
 #: .\bookings\templates\emails\admin_booking.html:99
 #: .\bookings\templates\emails\client_booking.html:93
-#: .\core\templates\core\infos.html:99
+#: .\core\templates\core\rates.html:30
 #: .\reservations\templates\reservations\email_admin.html:99
 msgid "Type d’hébergement"
 msgstr "Accommodation Type"
@@ -516,7 +518,7 @@ msgstr "Remaining balance"
 #: .\bookings\templates\emails\admin_booking.html:129
 #: .\bookings\templates\emails\client_booking.html:131
 msgid "Pour plus d'informations, consultez notre site : "
-msgstr ""
+msgstr "For more information, visit our website : "
 
 #: .\bookings\templates\emails\client_booking.html:6
 msgid "Confirmation de réservation"
@@ -543,7 +545,7 @@ msgid "Nous avons hâte de vous accueillir !"
 msgstr "We look forward to welcoming you!"
 
 #: .\bookings\templates\emails\client_booking.html:123
-#: .\core\templates\core\base.html:142 .\core\templates\core\legal.html:21
+#: .\core\templates\core\base.html:145 .\core\templates\core\legal.html:21
 #: .\core\templates\core\privacy-policy.html:73
 #: .\core\templates\core\privacy-policy.html:78
 #: .\core\templates\core\privacy-policy.html:102
@@ -778,8 +780,8 @@ msgid ""
 "La réservation se fait uniquement par téléphone ou via le formulaire de "
 "contact afin de vous proposer la meilleure disponibilité."
 msgstr ""
-"Reservations can only be made by phone or via the "
-"contact form to offer you the best availability."
+"Reservations can only be made by phone or via the contact form to offer you "
+"the best availability."
 
 #: .\core\templates\core\accommodations.html:46
 msgid "Contactez-nous"
@@ -1027,7 +1029,7 @@ msgstr ""
 msgid "Accueil | Camping Le Maine Blanc"
 msgstr "Home | Camping Le Maine Blanc"
 
-#: .\core\templates\core\base.html:59 .\core\templates\core\base.html:144
+#: .\core\templates\core\base.html:59 .\core\templates\core\base.html:147
 msgid ""
 "Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus "
 "du nom camping le Maine Blanc"
@@ -1055,79 +1057,83 @@ msgstr "Practical Information"
 msgid "Services"
 msgstr "Services"
 
-#: .\core\templates\core\base.html:85
-msgid "Hébergements & Réservations"
-msgstr "Accomadations & Booking"
+#: .\core\templates\core\base.html:85 .\core\templates\core\rates.html:16
+msgid "Tarifs"
+msgstr "Rates"
 
 #: .\core\templates\core\base.html:88
+msgid "Hébergements & Réservations"
+msgstr "Accommodations & Reservations"
+
+#: .\core\templates\core\base.html:91
 msgid "Aux alentours"
 msgstr "Nearby"
 
-#: .\core\templates\core\base.html:91
+#: .\core\templates\core\base.html:94
 #: .\core\templates\core\privacy-policy.html:106
 msgid "Contact"
 msgstr "Contact"
 
-#: .\core\templates\core\base.html:119
+#: .\core\templates\core\base.html:122
 msgid "Changer la langue vers"
 msgstr "Change language to"
 
-#: .\core\templates\core\base.html:146
+#: .\core\templates\core\base.html:149
 msgid ""
 "Profitez d’un séjour nature en Gironde, dans une ambiance conviviale et "
 "familiale."
 msgstr "Enjoy a nature stay in Gironde, in a friendly and family atmosphere."
 
-#: .\core\templates\core\base.html:150
+#: .\core\templates\core\base.html:153
 msgid "Informations & Accès"
 msgstr "Information & Access"
 
-#: .\core\templates\core\base.html:151
+#: .\core\templates\core\base.html:154
 msgid "Logo Carte"
 msgstr "Logo Card"
 
-#: .\core\templates\core\base.html:151
+#: .\core\templates\core\base.html:154
 msgid "Lieu-Dit Le Maine Blanc"
 msgstr "Lieu-Dit Le Maine Blanc"
 
-#: .\core\templates\core\base.html:152
+#: .\core\templates\core\base.html:155
 msgid "Logo Téléphone"
 msgstr "Logo Phone"
 
-#: .\core\templates\core\base.html:152
+#: .\core\templates\core\base.html:155
 #: .\reservations\templates\reservations\reservation_request.html:20
 msgid "05 57 42 52 81"
 msgstr "+33 5 57 42 52 81"
 
-#: .\core\templates\core\base.html:153
+#: .\core\templates\core\base.html:156
 msgid "Logo Email"
 msgstr "Logo Email"
 
-#: .\core\templates\core\base.html:154
+#: .\core\templates\core\base.html:157
 msgid "Voir sur Google Maps"
 msgstr "See on Google Maps"
 
-#: .\core\templates\core\base.html:159
+#: .\core\templates\core\base.html:162
 msgid "Suivez-nous"
 msgstr "Follow us"
 
-#: .\core\templates\core\base.html:160
+#: .\core\templates\core\base.html:163
 msgid "Logo Facebook"
 msgstr "Logo Facebook"
 
-#: .\core\templates\core\base.html:161
+#: .\core\templates\core\base.html:164
 msgid "Logo Instagram"
 msgstr "Logo Instagram"
 
-#: .\core\templates\core\base.html:170
+#: .\core\templates\core\base.html:173
 msgid "Mentions légales"
 msgstr "Legal Notice"
 
-#: .\core\templates\core\base.html:171
+#: .\core\templates\core\base.html:174
 msgid "Politique de confidentialité"
 msgstr "Privacy Policy"
 
-#: .\core\templates\core\base.html:172
+#: .\core\templates\core\base.html:175
 msgid "Règlement intérieur"
 msgstr "Internal Regulations"
 
@@ -1303,8 +1309,8 @@ msgid ""
 "bienvenus sous réserve de présenter un carnet de vaccination à jour."
 msgstr ""
 "Each visitor must present themselves at the reception upon arrival and show "
-"a piece of identification. Pets are welcome provided "
-"that an up-to-date vaccination record is presented."
+"a piece of identification. Pets are welcome provided that an up-to-date "
+"vaccination record is presented."
 
 #: .\core\templates\core\infos.html:79
 msgid "Conditions de remboursement :"
@@ -1335,202 +1341,15 @@ msgstr ""
 "regulations. In this case, the customer will be fully refunded the amounts "
 "paid."
 
-#: .\core\templates\core\infos.html:91
-msgid "Tarifs pour l'année"
-msgstr "Rates for the year"
-
-#: .\core\templates\core\infos.html:92
-msgid "Taxe de séjour à compter du"
-msgstr "Tourist tax from"
-
-#: .\core\templates\core\infos.html:92
-msgid "par personne/nuit (incluse dans le prix)"
-msgstr "per person/night (included in the price)"
-
-#: .\core\templates\core\infos.html:93
-msgid "Tous les prix sont TTC."
-msgstr "All prices are inclusive of VAT."
-
-#: .\core\templates\core\infos.html:100 .\core\templates\core\infos.html:442
-msgid "Basse Saison"
-msgstr "Low Season"
-
-#: .\core\templates\core\infos.html:100 .\core\templates\core\infos.html:101
-#: .\core\templates\core\infos.html:102 .\core\templates\core\infos.html:442
-#: .\core\templates\core\infos.html:443 .\core\templates\core\infos.html:444
-msgid "du"
-msgstr "from"
-
-#: .\core\templates\core\infos.html:101
-msgid "Moyenne Saison"
-msgstr "Mid Season"
-
-#: .\core\templates\core\infos.html:101 .\core\templates\core\infos.html:443
-msgid "et du"
-msgstr "and from"
-
-#: .\core\templates\core\infos.html:102
-msgid "Haute Saison"
-msgstr "High Season"
-
-#: .\core\templates\core\infos.html:109
-msgid "Camping-car (1-2 pers.)"
-msgstr "Motorhome (1-2 pers.)"
-
-#: .\core\templates\core\infos.html:113 .\core\templates\core\infos.html:163
-#: .\core\templates\core\infos.html:274
-msgid "Avec élec."
-msgstr "With Elec."
-
-#: .\core\templates\core\infos.html:117 .\core\templates\core\infos.html:167
-#: .\core\templates\core\infos.html:278
-msgid "Pas d'électricité"
-msgstr "Without Elec."
-
-#: .\core\templates\core\infos.html:119 .\core\templates\core\infos.html:169
-#: .\core\templates\core\infos.html:280
-msgid "Sans élec."
-msgstr "Without Elec."
-
-#: .\core\templates\core\infos.html:158
-msgid "Caravane / Fourgon / Van"
-msgstr "Caravan / Converted Van / Van"
-
-#: .\core\templates\core\infos.html:178 .\core\templates\core\infos.html:213
-#: .\core\templates\core\infos.html:241 .\core\templates\core\infos.html:288
-#: .\core\templates\core\infos.html:316 .\core\templates\core\infos.html:344
-msgid "1 pers."
-msgstr "1 pers."
-
-#: .\core\templates\core\infos.html:183 .\core\templates\core\infos.html:214
-#: .\core\templates\core\infos.html:242 .\core\templates\core\infos.html:289
-#: .\core\templates\core\infos.html:317 .\core\templates\core\infos.html:345
-msgid "2 pers."
-msgstr "2 pers."
-
-#: .\core\templates\core\infos.html:270
-msgid "Tente / Voiture Tente"
-msgstr "Tent / Car Tent"
-
-#: .\core\templates\core\infos.html:373
-msgid "Ouvriers"
-msgstr "Workers"
-
-#: .\core\templates\core\infos.html:374
-msgid "Tarifs comprenant l'électricité"
-msgstr "Rates including electricity"
-
-#: .\core\templates\core\infos.html:380 .\core\templates\core\infos.html:382
-msgid "jour"
-msgstr "day"
-
-#: .\core\templates\core\infos.html:388
-msgid "Emplacement pour le week-end (si non libéré)"
-msgstr "Pitch for the weekend (if not vacated)"
-
-#: .\core\templates\core\infos.html:391
-msgid "sans électricité"
-msgstr "without electricity"
-
-#: .\core\templates\core\infos.html:394
-msgid "avec électricité"
-msgstr "with electricity"
-
-#: .\core\templates\core\infos.html:407
-msgid "Suppléments emplacements"
-msgstr "Supplements pitches"
-
-#: .\core\templates\core\infos.html:415
-msgid "Visiteur : "
-msgstr "Visitor : "
-
-#: .\core\templates\core\infos.html:433
-msgid "Tarifs des Mobil-homes"
-msgstr "Mobile Home Rates"
-
-#: .\core\templates\core\infos.html:434
-msgid "Tarifs par type de mobil-home et saison"
-msgstr "Rates by type of mobile home and season"
-
-#: .\core\templates\core\infos.html:437 .\core\templates\core\infos.html:494
-#: .\reservations\forms.py:86
-msgid "Mobil-home"
-msgstr "Mobile Home"
-
-#: .\core\templates\core\infos.html:438
-msgid "A la nuitée"
-msgstr "Per night"
-
-#: .\core\templates\core\infos.html:440
-msgid "(Uniquement en basse et moyenne saison)"
-msgstr "(Only in low and mid season)"
-
-#: .\core\templates\core\infos.html:443
-msgid "Moyenne saison"
-msgstr "Mid Season"
-
-#: .\core\templates\core\infos.html:444
-msgid "Haute saison"
-msgstr "High Season"
-
-#: .\core\templates\core\infos.html:457
-msgid "Réservé aux ouvriers"
-msgstr "Reserved for workers"
-
-#: .\core\templates\core\infos.html:464
-msgid "basse saison"
-msgstr "low Season"
-
-#: .\core\templates\core\infos.html:465
-msgid "moyenne saison"
-msgstr "mid Season"
-
-#: .\core\templates\core\infos.html:474
-msgid "€/semaine (1 pers)"
-msgstr "€/week (1 person)"
-
-#: .\core\templates\core\infos.html:475
-msgid "€/semaine (2 pers)"
-msgstr "€/week (2 people)"
-
-#: .\core\templates\core\infos.html:476
-msgid "€/semaine (3 pers)"
-msgstr "€/week (3 people)"
-
-#: .\core\templates\core\infos.html:480 .\core\templates\core\infos.html:481
-#: .\core\templates\core\infos.html:482
-msgid "€/semaine"
-msgstr "€/week"
-
-#: .\core\templates\core\infos.html:492
-msgid "Caution à prévoir : "
-msgstr "Deposit to be provided :"
-
-#: .\core\templates\core\infos.html:495
-msgid "Ménage"
-msgstr "Cleaning"
-
-#: .\core\templates\core\infos.html:499
-msgid ""
-"Oreillers et couettes fournis (taies d’oreillers, housses de couette et "
-"draps disponibles en location à partir de"
-msgstr ""
-"Pillows and duvets provided (pillowcases, duvet covers and sheets available "
-"for rent from"
-
-#: .\core\templates\core\infos.html:502
-msgid "Antennes TV fournies (téléviseur non inclus)."
-msgstr "TV antennas provided (television not included)."
-
-#: .\core\templates\core\infos.html:512 .\core\templates\core\infos.html:515
+#: .\core\templates\core\infos.html:92 .\core\templates\core\infos.html:95
 msgid "Plan du camping"
 msgstr "Campsite Map"
 
-#: .\core\templates\core\infos.html:520
+#: .\core\templates\core\infos.html:100
 msgid "Notre camping propose"
 msgstr "Our campsite offers"
 
-#: .\core\templates\core\infos.html:520
+#: .\core\templates\core\infos.html:100
 msgid ""
 "emplacements pour tous les goûts : ombragés, semi-ombragés ou ensoleillés, "
 "avec ou sans électricité, pour un séjour confortable et personnalisé."
@@ -1538,7 +1357,7 @@ msgstr ""
 "pitches for all tastes: shaded, semi-shaded or sunny, with or without "
 "electricity, for a comfortable and personalized stay."
 
-#: .\core\templates\core\infos.html:521
+#: .\core\templates\core\infos.html:101
 msgid ""
 "Des fontaines à eau sont réparties dans tout le camping pour vous faciliter "
 "la vie pendant votre séjour."
@@ -1546,16 +1365,16 @@ msgstr ""
 "Water fountains are distributed throughout the campsite to make your stay "
 "easier."
 
-#: .\core\templates\core\infos.html:522
+#: .\core\templates\core\infos.html:102
 msgid ""
 "Pour ceux qui préfèrent le confort d’un logement, nous disposons également de"
 msgstr "For those who prefer the comfort of accommodation, we also have"
 
-#: .\core\templates\core\infos.html:522
+#: .\core\templates\core\infos.html:102
 msgid "mobil-homes entièrement équipés."
 msgstr "fully equipped mobile homes."
 
-#: .\core\templates\core\infos.html:523
+#: .\core\templates\core\infos.html:103
 msgid ""
 "Parcourez notre plan pour découvrir l’agencement des emplacements et des "
 "services, et préparer au mieux votre séjour."
@@ -1617,12 +1436,11 @@ msgstr "Design and Development"
 
 #: .\core\templates\core\legal.html:36
 msgid ""
-"Site conçu et développé bénévolement par <strong>Nathalie Darnaudat</"
-"strong>, titulaire d'un certificat professionnel en développement web et "
-"mobile."
+"Site conçu et développé par <strong>NDWebApp</strong>, société dirigée par "
+"Nathalie Darnaudat."
 msgstr ""
-"Website designed and developed voluntarily by <strong>Nathalie Darnaudat</"
-"strong>, holder of a professional certificate in web and mobile development."
+"Site designed and developed by <strong>NDWebApp</strong>, a company led by "
+"Nathalie Darnaudat."
 
 #: .\core\templates\core\legal.html:40
 msgid "Hébergement du site"
@@ -2045,6 +1863,205 @@ msgstr ""
 msgid "Email :"
 msgstr "Email :"
 
+#: .\core\templates\core\rates.html:5
+msgid "Tarifs | Camping Le Maine Blanc"
+msgstr "Rates | Camping Le Maine Blanc"
+
+#: .\core\templates\core\rates.html:22
+msgid "Tarifs pour l'année"
+msgstr "Rates for the year"
+
+#: .\core\templates\core\rates.html:23
+msgid "Taxe de séjour à compter du"
+msgstr "Tourist tax from"
+
+#: .\core\templates\core\rates.html:23
+msgid "par personne/nuit (incluse dans le prix)"
+msgstr "per person/night (included in the price)"
+
+#: .\core\templates\core\rates.html:24
+msgid "Tous les prix sont TTC."
+msgstr "All prices are inclusive of VAT."
+
+#: .\core\templates\core\rates.html:31 .\core\templates\core\rates.html:373
+msgid "Basse Saison"
+msgstr "Low Season"
+
+#: .\core\templates\core\rates.html:31 .\core\templates\core\rates.html:32
+#: .\core\templates\core\rates.html:33 .\core\templates\core\rates.html:373
+#: .\core\templates\core\rates.html:374 .\core\templates\core\rates.html:375
+msgid "du"
+msgstr "from"
+
+#: .\core\templates\core\rates.html:32
+msgid "Moyenne Saison"
+msgstr "Mid Season"
+
+#: .\core\templates\core\rates.html:32 .\core\templates\core\rates.html:374
+msgid "et du"
+msgstr "and from"
+
+#: .\core\templates\core\rates.html:33
+msgid "Haute Saison"
+msgstr "High Season"
+
+#: .\core\templates\core\rates.html:40
+msgid "Camping-car (1-2 pers.)"
+msgstr "Motorhome (1-2 pers.)"
+
+#: .\core\templates\core\rates.html:44 .\core\templates\core\rates.html:94
+#: .\core\templates\core\rates.html:205
+msgid "Avec élec."
+msgstr "With Elec."
+
+#: .\core\templates\core\rates.html:48 .\core\templates\core\rates.html:98
+#: .\core\templates\core\rates.html:209
+msgid "Pas d'électricité"
+msgstr "Without Elec."
+
+#: .\core\templates\core\rates.html:50 .\core\templates\core\rates.html:100
+#: .\core\templates\core\rates.html:211
+msgid "Sans élec."
+msgstr "Without Elec."
+
+#: .\core\templates\core\rates.html:89
+msgid "Caravane / Fourgon / Van"
+msgstr "Caravan / Converted Van / Van"
+
+#: .\core\templates\core\rates.html:109 .\core\templates\core\rates.html:144
+#: .\core\templates\core\rates.html:172 .\core\templates\core\rates.html:219
+#: .\core\templates\core\rates.html:247 .\core\templates\core\rates.html:275
+msgid "1 pers."
+msgstr "1 pers."
+
+#: .\core\templates\core\rates.html:114 .\core\templates\core\rates.html:145
+#: .\core\templates\core\rates.html:173 .\core\templates\core\rates.html:220
+#: .\core\templates\core\rates.html:248 .\core\templates\core\rates.html:276
+msgid "2 pers."
+msgstr "2 pers."
+
+#: .\core\templates\core\rates.html:201
+msgid "Tente / Voiture Tente"
+msgstr "Tent / Car Tent"
+
+#: .\core\templates\core\rates.html:304
+msgid "Ouvriers"
+msgstr "Workers"
+
+#: .\core\templates\core\rates.html:305
+msgid "Tarifs comprenant l'électricité"
+msgstr "Rates including electricity"
+
+#: .\core\templates\core\rates.html:311 .\core\templates\core\rates.html:313
+msgid "jour"
+msgstr "day"
+
+#: .\core\templates\core\rates.html:319
+msgid "Emplacement pour le week-end (si non libéré)"
+msgstr "Pitch for the weekend (if not vacated)"
+
+#: .\core\templates\core\rates.html:322
+msgid "sans électricité"
+msgstr "without electricity"
+
+#: .\core\templates\core\rates.html:325
+msgid "avec électricité"
+msgstr "with electricity"
+
+#: .\core\templates\core\rates.html:338
+msgid "Suppléments emplacements"
+msgstr "Supplements pitches"
+
+#: .\core\templates\core\rates.html:346
+msgid "Visiteur : "
+msgstr "Visitor : "
+
+#: .\core\templates\core\rates.html:364
+msgid "Tarifs des Mobil-homes"
+msgstr "Mobile Home Rates"
+
+#: .\core\templates\core\rates.html:365
+msgid "Tarifs par type de mobil-home et saison"
+msgstr "Rates by type of mobile home and season"
+
+#: .\core\templates\core\rates.html:368 .\core\templates\core\rates.html:432
+#: .\reservations\forms.py:86
+msgid "Mobil-home"
+msgstr "Mobile Home"
+
+#: .\core\templates\core\rates.html:369
+msgid "A la nuitée"
+msgstr "Per night"
+
+#: .\core\templates\core\rates.html:371
+msgid "(Uniquement en basse et moyenne saison)"
+msgstr "(Only in low and mid season)"
+
+#: .\core\templates\core\rates.html:374
+msgid "Moyenne saison"
+msgstr "Mid Season"
+
+#: .\core\templates\core\rates.html:375
+msgid "Haute saison"
+msgstr "High Season"
+
+#: .\core\templates\core\rates.html:389
+msgid "d'infos"
+msgstr "of information"
+
+#: .\core\templates\core\rates.html:395
+msgid "Réservé aux ouvriers"
+msgstr "Reserved for workers"
+
+#: .\core\templates\core\rates.html:402
+msgid "basse saison"
+msgstr "low Season"
+
+#: .\core\templates\core\rates.html:403
+msgid "moyenne saison"
+msgstr "mid Season"
+
+#: .\core\templates\core\rates.html:412
+msgid "€/semaine (1 pers)"
+msgstr "€/week (1 person)"
+
+#: .\core\templates\core\rates.html:413
+msgid "€/semaine (2 pers)"
+msgstr "€/week (2 people)"
+
+#: .\core\templates\core\rates.html:414
+msgid "€/semaine (3 pers)"
+msgstr "€/week (3 people)"
+
+#: .\core\templates\core\rates.html:418 .\core\templates\core\rates.html:419
+#: .\core\templates\core\rates.html:420
+msgid "€/semaine"
+msgstr "€/week"
+
+#: .\core\templates\core\rates.html:430
+msgid "Caution à prévoir : "
+msgstr "Deposit to be provided :"
+
+#: .\core\templates\core\rates.html:433
+msgid "Ménage"
+msgstr "Cleaning"
+
+#: .\core\templates\core\rates.html:437
+msgid ""
+"Oreillers et couettes fournis (taies d’oreillers, housses de couette et "
+"draps disponibles en location à partir de"
+msgstr ""
+"Pillows and duvets provided (pillowcases, duvet covers and sheets available "
+"for rent from"
+
+#: .\core\templates\core\rates.html:440
+msgid "Antennes TV fournies (téléviseur non inclus)."
+msgstr "TV antennas provided (television not included)."
+
+#: .\core\templates\core\rates.html:445
+msgid "Voir l'inventaire des mobil-homes"
+msgstr "View the inventory of mobile homes"
+
 #: .\core\templates\core\services.html:5
 msgid "Services | Camping Le Maine Blanc"
 msgstr "Services | Camping Le Maine Blanc"
@@ -2387,40 +2404,40 @@ msgid ""
 "Petit rappel : par mesure de sécurité, nous ne prenons plus les chèques."
 msgstr "Important: Due to past issues, we no longer accept cheques."
 
-#: .\core\views.py:72
+#: .\core\views.py:127
 msgid "Adulte supplémentaire"
 msgstr "Extra Adult"
 
-#: .\core\views.py:73
+#: .\core\views.py:128
 msgid "Enfant +8 ans"
 msgstr "Child +8 years"
 
-#: .\core\views.py:74
+#: .\core\views.py:129
 msgid "Enfant -8 ans"
 msgstr "Child -8 years"
 
-#: .\core\views.py:75
+#: .\core\views.py:130
 msgid "Animal"
 msgstr "Pet"
 
-#: .\core\views.py:76
+#: .\core\views.py:131
 msgid "Véhicule supplémentaire"
 msgstr "Extra Vehicle"
 
-#: .\core\views.py:77
+#: .\core\views.py:132
 msgid "Tente supplémentaire"
 msgstr "Extra Tent"
 
-#: .\core\views.py:78
+#: .\core\views.py:133
 msgid ""
 "Caution - Prêt de matériel (adaptateur, fer à repasser, sèche-cheveux...)"
 msgstr "Deposit - Equipment Loan (adapter, iron, hair dryer...)"
 
-#: .\core\views.py:92
+#: .\core\views.py:147
 msgid "(sans piscine)"
 msgstr "(without pool)"
 
-#: .\core\views.py:97
+#: .\core\views.py:152
 msgid "(avec piscine)"
 msgstr "(with pool)"
 
@@ -2501,7 +2518,7 @@ msgstr ""
 
 #: .\reservations\templates\reservations\email_admin.html:6
 #: .\reservations\templates\reservations\email_admin.html:82
-#: .\reservations\views.py:78
+#: .\reservations\views.py:83
 msgid "Nouvelle demande de réservation"
 msgstr "New reservation request"
 
@@ -2558,10 +2575,18 @@ msgstr "Campsite Location"
 msgid "Envoyer la demande"
 msgstr "Send Request"
 
-#: .\reservations\views.py:93
+#: .\reservations\views.py:102
 msgid ""
 "Votre demande de réservation a été envoyée avec succès. Nous reviendrons "
 "vers vous très rapidement."
 msgstr ""
 "Your reservation request has been sent successfully. We will get back to you "
 "very quickly."
+
+#: .\reservations\views.py:112
+msgid ""
+"Votre demande a été enregistrée, mais l'email n'a pas pu être envoyé. "
+"Veuillez contacter l'administrateur."
+msgstr ""
+"Your request has been recorded, but the email could not be sent."
+"Please contact the administrator."

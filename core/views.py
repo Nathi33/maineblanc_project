@@ -47,6 +47,61 @@ def infos_view(request):
         - No user input is processed
         - Safe against XSS and injection
     """
+
+    # --- Camping general information ---
+    camping_info = CampingInfo.objects.first()
+    other_prices = OtherPrice.objects.first()
+    season_info = SeasonInfo.objects.first()
+    capacity_info = Capacity.objects.first()
+
+    # --- Language-specific handling ---
+    lang = get_language()
+
+    if camping_info:
+        with switch_language(camping_info, lang):
+            pass
+    
+    return render(request, 'core/infos.html', {
+        "camping_info": camping_info,
+        "season_info": season_info,
+        "capacity_info": capacity_info,
+        "other_prices": other_prices,
+    })
+
+def services_view(request):
+    """
+    Render the Services page including swimming pool, food, and laundry info.
+
+    Security:
+        - Only reads database objects
+        - No user input processed
+    """
+
+    swimming_info = SwimmingPoolInfo.objects.first()
+    food_info = FoodInfo.objects.first()
+    laundry_info = LaundryInfo.objects.first()  
+
+    return render(request, 'core/services.html', {
+        "swimming_info": swimming_info,
+        "food_info": food_info,
+        "laundry_info": laundry_info
+    })
+
+def rates_view(request):
+    """
+    Render the information page with pricing, supplements, seasons, mobile homes,
+    camping info, capacity, and other prices.
+
+    Features:
+        - Groups normal and worker prices
+        - Handles supplements and visitor prices
+        - Dynamically sets mobile home descriptions based on current language
+
+    Security:
+        - Only retrieves data from the database
+        - No user input is processed
+        - Safe against XSS and injection
+    """
     # --- Retrieve all standard and worker prices ---
     prices = Price.objects.all()
 
@@ -99,18 +154,12 @@ def infos_view(request):
             })
 
     # --- Camping general information ---
-    camping_info = CampingInfo.objects.first()
     other_prices = OtherPrice.objects.first()
     season_info = SeasonInfo.objects.first()
-    capacity_info = Capacity.objects.first()
 
     # --- Language-specific handling ---
     lang = get_language()
 
-    if camping_info:
-        with switch_language(camping_info, lang):
-            pass
-    
 
     # --- Mobile homes pricing and translated descriptions ---
     mobilhomes = MobileHome.objects.all()
@@ -121,37 +170,17 @@ def infos_view(request):
 
     mobilhome_supplements = SupplementMobileHome.objects.first()
 
-    return render(request, 'core/infos.html', {
+    return render(request, 'core/rates.html', {
         "grouped_prices": grouped_prices,
         "worker_prices": worker_prices,
         "supplements": supplements,
         "visitor_prices": visitor_prices,
         "mobilhomes": mobilhomes,
         "mobilhome_supplements": mobilhome_supplements,
-        "camping_info": camping_info,
         "season_info": season_info,
-        "capacity_info": capacity_info,
         "other_prices": other_prices,
     })
 
-def services_view(request):
-    """
-    Render the Services page including swimming pool, food, and laundry info.
-
-    Security:
-        - Only reads database objects
-        - No user input processed
-    """
-
-    swimming_info = SwimmingPoolInfo.objects.first()
-    food_info = FoodInfo.objects.first()
-    laundry_info = LaundryInfo.objects.first()  
-
-    return render(request, 'core/services.html', {
-        "swimming_info": swimming_info,
-        "food_info": food_info,
-        "laundry_info": laundry_info
-    })
 
 
 def accommodations_view(request):

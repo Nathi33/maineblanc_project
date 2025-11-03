@@ -265,7 +265,8 @@ class MobileHomeAdmin(admin.ModelAdmin):
         ('Informations générales', {
             'fields': (
                 'name',
-                'description_text'
+                'description_text',
+                'info_pdf',
             )
         }),
         ('Prix à la nuitée', {
@@ -304,11 +305,12 @@ class SupplementMobileHomeAdmin(TranslatableAdmin):
     )
     
     fieldsets = (
-        ("Cautions et location de linge", {
+        ("Cautions et suppléments", {
             'fields': (
                 'mobile_home_deposit',
                 'cleaning_deposit',
                 'bed_linen_rental',
+                'inventory_pdf',
             )
         }),
     )

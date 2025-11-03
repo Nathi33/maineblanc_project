@@ -64,7 +64,7 @@
 
 
 \title{Camping Le Maine Blanc}
-\date{Sep 16, 2025}
+\date{Nov 03, 2025}
 \release{1.0}
 \author{Nathalie Darnaudat}
 \newcommand{\sphinxlogo}{\vbox{}}
@@ -1812,6 +1812,54 @@ Only reads database objects
 \item {} 
 \sphinxAtStartPar
 No user input processed
+
+\end{itemize}
+
+\end{description}
+
+\end{fulllineitems}
+
+\index{rates\_view() (in module core.views)@\spxentry{rates\_view()}\spxextra{in module core.views}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{index:core.views.rates_view}}
+\pysigstartsignatures
+\pysiglinewithargsret
+{\sphinxcode{\sphinxupquote{core.views.}}\sphinxbfcode{\sphinxupquote{rates\_view}}}
+{\sphinxparam{\DUrole{n}{request}}}
+{}
+\pysigstopsignatures
+\sphinxAtStartPar
+Render the information page with pricing, supplements, seasons, mobile homes,
+camping info, capacity, and other prices.
+\begin{description}
+\sphinxlineitem{Features:}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Groups normal and worker prices
+
+\item {} 
+\sphinxAtStartPar
+Handles supplements and visitor prices
+
+\item {} 
+\sphinxAtStartPar
+Dynamically sets mobile home descriptions based on current language
+
+\end{itemize}
+
+\sphinxlineitem{Security:}\begin{itemize}
+\item {} 
+\sphinxAtStartPar
+Only retrieves data from the database
+
+\item {} 
+\sphinxAtStartPar
+No user input is processed
+
+\item {} 
+\sphinxAtStartPar
+Safe against XSS and injection
 
 \end{itemize}
 
@@ -4815,6 +4863,34 @@ object the first time, the query is executed.
 
 \end{fulllineitems}
 
+\index{info\_pdf (bookings.models.MobileHome attribute)@\spxentry{info\_pdf}\spxextra{bookings.models.MobileHome attribute}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{index:bookings.models.MobileHome.info_pdf}}
+\pysigstartsignatures
+\pysigline
+{\sphinxbfcode{\sphinxupquote{info\_pdf}}}
+\pysigstopsignatures
+\sphinxAtStartPar
+The descriptor for the file attribute on the model instance. Return a
+FieldFile when accessed so you can write code like:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{myapp}\PYG{n+nn}{.}\PYG{n+nn}{models}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{MyModel}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{instance} \PYG{o}{=} \PYG{n}{MyModel}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{pk}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{instance}\PYG{o}{.}\PYG{n}{file}\PYG{o}{.}\PYG{n}{size}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+Assign a file object on assignment so you can do:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{/path/to/hello.world}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+\PYG{g+gp}{... }    \PYG{n}{instance}\PYG{o}{.}\PYG{n}{file} \PYG{o}{=} \PYG{n}{File}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}
+\end{sphinxVerbatim}
+
+\end{fulllineitems}
+
 \index{night\_price (bookings.models.MobileHome attribute)@\spxentry{night\_price}\spxextra{bookings.models.MobileHome attribute}}
 
 \begin{fulllineitems}
@@ -5151,6 +5227,22 @@ This attribute proxies all get/set calls to the translated model.
 \sphinxAtStartPar
 A wrapper for a deferred\sphinxhyphen{}loading field. When the value is read from this
 object the first time, the query is executed.
+
+\end{fulllineitems}
+
+\index{inventory\_pdf (bookings.models.SupplementMobileHome attribute)@\spxentry{inventory\_pdf}\spxextra{bookings.models.SupplementMobileHome attribute}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{index:bookings.models.SupplementMobileHome.inventory_pdf}}
+\pysigstartsignatures
+\pysigline
+{\sphinxbfcode{\sphinxupquote{inventory\_pdf}}}
+\pysigstopsignatures
+\sphinxAtStartPar
+Descriptor for translated attributes.
+
+\sphinxAtStartPar
+This attribute proxies all get/set calls to the translated model.
 
 \end{fulllineitems}
 
@@ -6021,7 +6113,7 @@ object the first time, the query is executed.
 \pysigstartsignatures
 \pysiglinewithargsret
 {\sphinxbfcode{\sphinxupquote{\DUrole{k}{class}\DUrole{w}{ }}}\sphinxcode{\sphinxupquote{bookings.models.}}\sphinxbfcode{\sphinxupquote{SupplementMobileHomeTranslation}}}
-{\sphinxparam{\DUrole{n}{id}}\sphinxparamcomma \sphinxparam{\DUrole{n}{language\_code}}\sphinxparamcomma \sphinxparam{\DUrole{n}{mobile\_home\_deposit}}\sphinxparamcomma \sphinxparam{\DUrole{n}{cleaning\_deposit}}\sphinxparamcomma \sphinxparam{\DUrole{n}{bed\_linen\_rental}}\sphinxparamcomma \sphinxparam{\DUrole{n}{master}}}
+{\sphinxparam{\DUrole{n}{id}}\sphinxparamcomma \sphinxparam{\DUrole{n}{language\_code}}\sphinxparamcomma \sphinxparam{\DUrole{n}{mobile\_home\_deposit}}\sphinxparamcomma \sphinxparam{\DUrole{n}{cleaning\_deposit}}\sphinxparamcomma \sphinxparam{\DUrole{n}{bed\_linen\_rental}}\sphinxparamcomma \sphinxparam{\DUrole{n}{inventory\_pdf}}\sphinxparamcomma \sphinxparam{\DUrole{n}{master}}}
 {}
 \pysigstopsignatures
 \sphinxAtStartPar
@@ -6103,6 +6195,34 @@ object the first time, the query is executed.
 \sphinxAtStartPar
 A wrapper for a deferred\sphinxhyphen{}loading field. When the value is read from this
 object the first time, the query is executed.
+
+\end{fulllineitems}
+
+\index{inventory\_pdf (bookings.models.SupplementMobileHomeTranslation attribute)@\spxentry{inventory\_pdf}\spxextra{bookings.models.SupplementMobileHomeTranslation attribute}}
+
+\begin{fulllineitems}
+\phantomsection\label{\detokenize{index:bookings.models.SupplementMobileHomeTranslation.inventory_pdf}}
+\pysigstartsignatures
+\pysigline
+{\sphinxbfcode{\sphinxupquote{inventory\_pdf}}}
+\pysigstopsignatures
+\sphinxAtStartPar
+The descriptor for the file attribute on the model instance. Return a
+FieldFile when accessed so you can write code like:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{myapp}\PYG{n+nn}{.}\PYG{n+nn}{models}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{MyModel}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{instance} \PYG{o}{=} \PYG{n}{MyModel}\PYG{o}{.}\PYG{n}{objects}\PYG{o}{.}\PYG{n}{get}\PYG{p}{(}\PYG{n}{pk}\PYG{o}{=}\PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{n}{instance}\PYG{o}{.}\PYG{n}{file}\PYG{o}{.}\PYG{n}{size}
+\end{sphinxVerbatim}
+
+\sphinxAtStartPar
+Assign a file object on assignment so you can do:
+
+\begin{sphinxVerbatim}[commandchars=\\\{\}]
+\PYG{g+gp}{\PYGZgt{}\PYGZgt{}\PYGZgt{} }\PYG{k}{with} \PYG{n+nb}{open}\PYG{p}{(}\PYG{l+s+s1}{\PYGZsq{}}\PYG{l+s+s1}{/path/to/hello.world}\PYG{l+s+s1}{\PYGZsq{}}\PYG{p}{)} \PYG{k}{as} \PYG{n}{f}\PYG{p}{:}
+\PYG{g+gp}{... }    \PYG{n}{instance}\PYG{o}{.}\PYG{n}{file} \PYG{o}{=} \PYG{n}{File}\PYG{p}{(}\PYG{n}{f}\PYG{p}{)}
+\end{sphinxVerbatim}
 
 \end{fulllineitems}
 
@@ -6398,7 +6518,7 @@ alias of {\hyperref[\detokenize{index:bookings.models.Booking}]{\sphinxcrossref{
 \phantomsection\label{\detokenize{index:bookings.forms.BookingFormClassic.Meta.labels}}
 \pysigstartsignatures
 \pysigline
-{\sphinxbfcode{\sphinxupquote{labels}}\sphinxbfcode{\sphinxupquote{\DUrole{w}{ }\DUrole{p}{=}\DUrole{w}{ }\{\textquotesingle{}cable\_length\textquotesingle{}: \textquotesingle{}Longueur du câble électrique (m)\textquotesingle{}, \textquotesingle{}children\_over\_8\textquotesingle{}: \textquotesingle{}Enfants +8 ans\textquotesingle{}, \textquotesingle{}children\_under\_8\textquotesingle{}: \textquotesingle{}Enfants \sphinxhyphen{}8 ans\textquotesingle{}, \textquotesingle{}pets\textquotesingle{}: \textquotesingle{}Animaux\textquotesingle{}, \textquotesingle{}tent\_length\textquotesingle{}: \textquotesingle{}Longueur de la tente (m)\textquotesingle{}, \textquotesingle{}tent\_width\textquotesingle{}: \textquotesingle{}Largeur de la tente (m)\textquotesingle{}, \textquotesingle{}vehicle\_length\textquotesingle{}: \textquotesingle{}Longueur du véhicule (m)\textquotesingle{}\}}}}
+{\sphinxbfcode{\sphinxupquote{labels}}\sphinxbfcode{\sphinxupquote{\DUrole{w}{ }\DUrole{p}{=}\DUrole{w}{ }\{\textquotesingle{}cable\_length\textquotesingle{}: \textquotesingle{}Longueur du câble électrique (m)\textquotesingle{}, \textquotesingle{}children\_over\_8\textquotesingle{}: \textquotesingle{}Enfants +8 ans\textquotesingle{}, \textquotesingle{}children\_under\_8\textquotesingle{}: \textquotesingle{}Enfants \sphinxhyphen{}8 ans\textquotesingle{}, \textquotesingle{}pets\textquotesingle{}: \textquotesingle{}Animaux (2 max)\textquotesingle{}, \textquotesingle{}tent\_length\textquotesingle{}: \textquotesingle{}Longueur de la tente (m)\textquotesingle{}, \textquotesingle{}tent\_width\textquotesingle{}: \textquotesingle{}Largeur de la tente (m)\textquotesingle{}, \textquotesingle{}vehicle\_length\textquotesingle{}: \textquotesingle{}Longueur du véhicule (m)\textquotesingle{}\}}}}
 \pysigstopsignatures
 \end{fulllineitems}
 
@@ -7137,7 +7257,7 @@ Admin for the MobileHome model: display pricing, information, and options.
 \phantomsection\label{\detokenize{index:bookings.admin.MobileHomeAdmin.fieldsets}}
 \pysigstartsignatures
 \pysigline
-{\sphinxbfcode{\sphinxupquote{fieldsets}}\sphinxbfcode{\sphinxupquote{\DUrole{w}{ }\DUrole{p}{=}\DUrole{w}{ }((\textquotesingle{}Informations générales\textquotesingle{}, \{\textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}name\textquotesingle{}, \textquotesingle{}description\_text\textquotesingle{})\}), (\textquotesingle{}Prix à la nuitée\textquotesingle{}, \{\textquotesingle{}description\textquotesingle{}: \textquotesingle{}Prix à la nuitée uniquement en basse et moyenne saison (si le prix moyenne saison diffère, utilisez night\_price\_mid).\textquotesingle{}, \textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}night\_price\textquotesingle{}, \textquotesingle{}night\_price\_mid\textquotesingle{})\}), (\textquotesingle{}Prix par semaine\textquotesingle{}, \{\textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}week\_low\textquotesingle{}, \textquotesingle{}week\_mid\textquotesingle{}, \textquotesingle{}week\_high\textquotesingle{})\}), (\textquotesingle{}Prix ouvriers\textquotesingle{}, \{\textquotesingle{}description\textquotesingle{}: \textquotesingle{}Uniquement pour le mobil\sphinxhyphen{}home ouvrier. Les prix sont fixes selon le nombre de personnes.\textquotesingle{}, \textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}is\_worker\_home\textquotesingle{}, \textquotesingle{}worker\_price\_1p\textquotesingle{}, \textquotesingle{}worker\_price\_2p\textquotesingle{}, \textquotesingle{}worker\_price\_3p\textquotesingle{})\}))}}}
+{\sphinxbfcode{\sphinxupquote{fieldsets}}\sphinxbfcode{\sphinxupquote{\DUrole{w}{ }\DUrole{p}{=}\DUrole{w}{ }((\textquotesingle{}Informations générales\textquotesingle{}, \{\textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}name\textquotesingle{}, \textquotesingle{}description\_text\textquotesingle{}, \textquotesingle{}info\_pdf\textquotesingle{})\}), (\textquotesingle{}Prix à la nuitée\textquotesingle{}, \{\textquotesingle{}description\textquotesingle{}: \textquotesingle{}Prix à la nuitée uniquement en basse et moyenne saison (si le prix moyenne saison diffère, utilisez night\_price\_mid).\textquotesingle{}, \textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}night\_price\textquotesingle{}, \textquotesingle{}night\_price\_mid\textquotesingle{})\}), (\textquotesingle{}Prix par semaine\textquotesingle{}, \{\textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}week\_low\textquotesingle{}, \textquotesingle{}week\_mid\textquotesingle{}, \textquotesingle{}week\_high\textquotesingle{})\}), (\textquotesingle{}Prix ouvriers\textquotesingle{}, \{\textquotesingle{}description\textquotesingle{}: \textquotesingle{}Uniquement pour le mobil\sphinxhyphen{}home ouvrier. Les prix sont fixes selon le nombre de personnes.\textquotesingle{}, \textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}is\_worker\_home\textquotesingle{}, \textquotesingle{}worker\_price\_1p\textquotesingle{}, \textquotesingle{}worker\_price\_2p\textquotesingle{}, \textquotesingle{}worker\_price\_3p\textquotesingle{})\}))}}}
 \pysigstopsignatures
 \end{fulllineitems}
 
@@ -7185,7 +7305,7 @@ Admin for the SupplementMobileHome model: manage deposits and linen rental.
 \phantomsection\label{\detokenize{index:bookings.admin.SupplementMobileHomeAdmin.fieldsets}}
 \pysigstartsignatures
 \pysigline
-{\sphinxbfcode{\sphinxupquote{fieldsets}}\sphinxbfcode{\sphinxupquote{\DUrole{w}{ }\DUrole{p}{=}\DUrole{w}{ }((\textquotesingle{}Cautions et location de linge\textquotesingle{}, \{\textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}mobile\_home\_deposit\textquotesingle{}, \textquotesingle{}cleaning\_deposit\textquotesingle{}, \textquotesingle{}bed\_linen\_rental\textquotesingle{})\}),)}}}
+{\sphinxbfcode{\sphinxupquote{fieldsets}}\sphinxbfcode{\sphinxupquote{\DUrole{w}{ }\DUrole{p}{=}\DUrole{w}{ }((\textquotesingle{}Cautions et suppléments\textquotesingle{}, \{\textquotesingle{}fields\textquotesingle{}: (\textquotesingle{}mobile\_home\_deposit\textquotesingle{}, \textquotesingle{}cleaning\_deposit\textquotesingle{}, \textquotesingle{}bed\_linen\_rental\textquotesingle{}, \textquotesingle{}inventory\_pdf\textquotesingle{})\}),)}}}
 \pysigstopsignatures
 \end{fulllineitems}
 
