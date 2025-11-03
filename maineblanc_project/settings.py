@@ -194,6 +194,8 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, "static")]
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+WHITENOISE_IGNORE_MISSING = True
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -235,6 +237,28 @@ STRIPE_PUBLIC_KEY = config('STRIPE_PUBLIC_KEY', default='')
 # SITE URL
 # ============================================
 SITE_URL = config('SITE_URL', default='http://localhost:8000')
+
+# ============================================
+# LOGGING DES ERREURS 500
+# ============================================
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': BASE_DIR / 'errors.log',  # fichier créé à la racine du projet
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
 
 # ============================================
 # CACHE-BUSTING
