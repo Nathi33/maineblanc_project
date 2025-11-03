@@ -3,6 +3,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.i18n import i18n_patterns
 from django.contrib.sitemaps.views import sitemap
+from django.conf.urls.static import static
 from core.sitemaps import MultilingualStaticSitemap
 
 sitemaps = {
@@ -20,4 +21,7 @@ urlpatterns += i18n_patterns(
     path('reservations/', include('reservations.urls')),
     path('bookings/', include('bookings.urls')),
 )
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 

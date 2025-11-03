@@ -524,6 +524,14 @@ class MobileHome(models.Model):
     description_de = models.TextField(blank=True, verbose_name= "Description DE")
     description_nl = models.TextField(blank=True, verbose_name= "Description NL")
 
+    # Informations
+    info_pdf = models.FileField(
+        upload_to='mobilhomes/pdfs/',
+        null=True, 
+        blank=True,
+        verbose_name="Fichier PDF d'informations sur le mobil-home"
+    )
+
     # Nightly and weekly pricing
     night_price = models.DecimalField(
         max_digits=6, decimal_places=0, null=True, blank=True,
@@ -633,6 +641,12 @@ class SupplementMobileHome(TranslatableModel):
             default=15,
             validators=[MinValueValidator(0)],
             verbose_name="Prix location linge de lit"
+        ),
+        inventory_pdf = models.FileField(
+            upload_to='mobilhomes/inventories/',
+            null=True, 
+            blank=True,
+            verbose_name="Inventaire des mobil-homes (fichier PDF)"
         ),
     )
 

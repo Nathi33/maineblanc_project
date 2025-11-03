@@ -16,7 +16,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{% static 'css/style.css' %}?v={{ STATIC_VERSION }}" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+   
     <title>{% block title %}{% trans "Accueil | Camping Le Maine Blanc" %}{% endblock %}</title>
     {% block styles %}{% endblock %}
 
@@ -50,10 +50,10 @@
 
 <body>
     <header class="header">
-        <nav class="navbar navbar-expand-lg fixed-top" aria-label="Main navigation">
-            <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg fixed-top py-0" aria-label="Main navigation">
+            <div class="container-fluid d-flex align-items-center">
                 <!-- Logo -->
-                <a class="navbar-brand" href="{% url 'home' %}">
+                <a class="navbar-brand d-flex align-items-center" href="{% url 'home' %}">
                     <img
                     src="{% static 'pictures/logoMB.png' %}"
                     alt="{% trans 'Logo représentant un sapin, une tente, un feu de camp et un soleil au-dessus du nom camping le Maine Blanc' %}"
@@ -80,6 +80,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.resolver_match.url_name == 'services' %}active{% endif%}" href="{% url 'services' %}">{% trans "Services" %}</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {% if request.resolver_match.url_name == 'rates' %}active{% endif%}" href="{% url 'rates' %}">{% trans "Tarifs" %}</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link {% if request.resolver_match.url_name == 'accommodations' %}active{% endif%}" href="{% url 'accommodations' %}">{% trans "Hébergements & Réservations" %}</a>
